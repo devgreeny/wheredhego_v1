@@ -226,21 +226,15 @@ def build_formation(players: list) -> dict:
     
     return {"order": formation_order, "by_pos": lineup}
 
-def generate_nfl_quiz(team: str = None, season: int = None, save_dir: str = "quizzes/gridiron11/preloaded") -> bool:
-    """Generate a single NFL quiz."""
-    
-    # Select random team and season if not specified
-    if not team:
-        team = random.choice(NFL_TEAMS)
-    if not season:
-        season = random.randint(2010, 2023)  # Modern era with good data
-    
-    print(f"🏈 Generating NFL quiz for {team.upper()} {season}")
+def generate_nfl_quiz_for_team_season(team: str, season: int, save_dir: str) -> tuple:
+    """Try to generate a quiz for a specific team/season combination."""
+    print(f"🏈 Trying NFL quiz for {team.upper()} {season}")
     
     # Get all games for the team/season
     boxscore_urls = scrape_team_games(team, season)
     if not boxscore_urls:
-        return False
+        print(f"❌ No games found for {team.upper()} {season}")
+        return False, None
     
     # Try random games until we find a valid starting lineup
     random.shuffle(boxscore_urls)
@@ -283,7 +277,7 @@ def generate_nfl_quiz(team: str = None, season: int = None, save_dir: str = "qui
             print(f"⚠️  Not enough players with known colleges ({valid_players}), trying next game")
             continue
         
-        # Create quiz data
+        # Success! Return the quiz data
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         quiz_data = {
             "team": team.upper(),
@@ -293,21 +287,55 @@ def generate_nfl_quiz(team: str = None, season: int = None, save_dir: str = "qui
             "players": quiz_players
         }
         
-        # Save quiz file
-        save_path = Path(save_dir)
-        save_path.mkdir(parents=True, exist_ok=True)
-        
-        filename = f"players_{timestamp}.json"
-        file_path = save_path / filename
-        
-        with file_path.open("w", encoding="utf-8") as f:
-            json.dump(quiz_data, f, indent=2, ensure_ascii=False)
-        
-        print(f"✅ Saved NFL quiz: {file_path}")
-        print(f"📊 Quiz contains {len(quiz_players)} players ({valid_players} with known colleges)")
-        return True
+        return True, quiz_data
     
-    print(f"❌ Could not generate valid quiz for {team.upper()} {season}")
+    print(f"❌ Could not find valid roster for {team.upper()} {season}")
+    return False, None
+
+def generate_nfl_quiz(team: str = None, season: int = None, save_dir: str = "quizzes/gridiron11/preloaded") -> bool:
+    """Generate a single NFL quiz with robust failsafe for missing players."""
+    
+    max_attempts = 10  # Try up to 10 different team/season combinations
+    attempt = 0
+    
+    while attempt < max_attempts:
+        attempt += 1
+        
+        # Select random team and season if not specified, or if previous attempts failed
+        if not team or attempt > 1:
+            current_team = random.choice(NFL_TEAMS)
+        else:
+            current_team = team
+            
+        if not season or attempt > 1:
+            current_season = random.randint(2010, 2023)  # Modern era with good data
+        else:
+            current_season = season
+        
+        print(f"🔄 Attempt {attempt}/{max_attempts}")
+        
+        # Try to generate quiz for this team/season
+        success, quiz_data = generate_nfl_quiz_for_team_season(current_team, current_season, save_dir)
+        
+        if success:
+            # Save the successful quiz
+            save_path = Path(save_dir)
+            save_path.mkdir(parents=True, exist_ok=True)
+            
+            filename = f"players_{quiz_data['generated_at']}.json"
+            file_path = save_path / filename
+            
+            with file_path.open("w", encoding="utf-8") as f:
+                json.dump(quiz_data, f, indent=2, ensure_ascii=False)
+            
+            print(f"✅ Saved NFL quiz: {file_path}")
+            print(f"📊 Quiz contains {len(quiz_data['players'])} players")
+            return True
+        
+        # If this attempt failed, try a different team/season combination
+        print(f"⚠️  Attempt {attempt} failed, trying different team/season...")
+    
+    print(f"❌ Could not generate valid quiz after {max_attempts} attempts")
     return False
 
 def generate_multiple_nfl_quizzes(count: int = 5, save_dir: str = "quizzes/gridiron11/preloaded"):
