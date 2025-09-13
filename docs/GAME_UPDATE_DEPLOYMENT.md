@@ -18,19 +18,18 @@ The `update_games.py` script automatically updates both **Starting5** (NBA Baske
 
 ```
 wheredhego/
-├── update_games.py                    # Main update script
-├── app/
+├── scripts/
+│   └── update_games.py                # Main update script
+├── quizzes/                           # Organized quiz data
 │   ├── starting5/
-│   │   └── static/
-│   │       ├── current_quiz/          # Active Starting5 quiz
-│   │       ├── preloaded_quizzes/     # Starting5 quiz pool
-│   │       ├── archive_quizzes/       # Old Starting5 quizzes
-│   │       └── bonus_quiz/            # Starting5 bonus quiz
+│   │   ├── current/                   # Active Starting5 quiz
+│   │   ├── preloaded/                 # Starting5 quiz pool
+│   │   ├── archive/                   # Old Starting5 quizzes
+│   │   └── bonus/                     # Starting5 bonus quiz
 │   └── gridiron11/
-│       ├── preloaded_quizzes/         # Gridiron11 quiz pool
-│       └── static/
-│           ├── current_quiz/          # Active Gridiron11 quiz
-│           └── archive_quizzes/       # Old Gridiron11 quizzes
+│       ├── current/                   # Active Gridiron11 quiz
+│       ├── preloaded/                 # Gridiron11 quiz pool
+│       └── archive/                   # Old Gridiron11 quizzes
 └── logs/
     └── game_updates.log               # Update logs
 ```
@@ -57,7 +56,7 @@ cd ~/wheredhego
 mkdir -p ~/logs
 
 # Test the script
-python update_games.py
+python scripts/update_games.py
 ```
 
 ### 3. Configure Cron Job
@@ -67,11 +66,11 @@ python update_games.py
 crontab -e
 
 # Add this line for midnight EST updates:
-0 5 * * * cd /home/devgreeny/wheredhego && python3.10 update_games.py >> /home/devgreeny/logs/game_updates.log 2>&1
+0 4 * * * cd /home/devgreeny/wheredhego && python3.10 scripts/update_games.py >> /home/devgreeny/logs/game_updates.log 2>&1
 
-# Note: 5 AM UTC = Midnight EST (adjust for daylight saving time)
-# For EDT (Daylight Saving): 0 4 * * *
-# For EST (Standard Time):   0 5 * * *
+# Note: 4 AM UTC = Midnight EDT (Eastern Daylight Time)
+# For EDT (Mar-Nov): 0 4 * * *
+# For EST (Nov-Mar): 0 5 * * *
 ```
 
 ### 4. Verify Cron Job
@@ -114,11 +113,11 @@ grep "ERROR\|CRITICAL" ~/logs/game_updates.log
 ```bash
 # Test the script manually
 cd ~/wheredhego
-python update_games.py
+python scripts/update_games.py
 
 # Check current quizzes
-ls -la app/starting5/static/current_quiz/
-ls -la app/gridiron11/static/current_quiz/
+ls -la quizzes/starting5/current/
+ls -la quizzes/gridiron11/current/
 ```
 
 ## 🚨 Troubleshooting
@@ -126,7 +125,7 @@ ls -la app/gridiron11/static/current_quiz/
 ### Common Issues
 
 1. **No Quiz Files Found**
-   - Check if `preloaded_quizzes/` directories contain `.json` files
+   - Check if `quizzes/*/preloaded/` directories contain `.json` files
    - Verify file permissions
 
 2. **Permission Errors**
@@ -164,14 +163,14 @@ ls -la app/gridiron11/static/current_quiz/
 
 ### Adding New Quiz Files
 
-1. **Starting5**: Add `.json` files to `app/starting5/static/preloaded_quizzes/`
-2. **Gridiron11**: Add `.json` files to `app/gridiron11/preloaded_quizzes/`
+1. **Starting5**: Add `.json` files to `quizzes/starting5/preloaded/`
+2. **Gridiron11**: Add `.json` files to `quizzes/gridiron11/preloaded/`
 
 ### Archive Cleanup
 
 ```bash
 # Clean old archives (optional - keep last 30 days)
-find app/*/static/archive_quizzes/ -name "*.json" -mtime +30 -delete
+find quizzes/*/archive/ -name "*.json" -mtime +30 -delete
 ```
 
 ### Log Rotation
@@ -195,10 +194,10 @@ touch ~/logs/game_updates.log
 - **EST (Nov-Mar)**: `0 5 * * *` (5 AM UTC = Midnight EST)
 - **EDT (Mar-Nov)**: `0 4 * * *` (4 AM UTC = Midnight EDT)
 
-**Auto-adjusting cron job:**
+**Current recommended cron job:**
 ```bash
-# This adjusts automatically for daylight saving time
-0 5 * * * cd /home/devgreeny/wheredhego && python3.10 update_games.py >> /home/devgreeny/logs/game_updates.log 2>&1
+# Set for 4 AM UTC (midnight EDT) - most of the year
+0 4 * * * cd /home/devgreeny/wheredhego && python3.10 scripts/update_games.py >> /home/devgreeny/logs/game_updates.log 2>&1
 ```
 
 Your games will now update automatically every night! 🎮

@@ -7,13 +7,14 @@ bp = Blueprint('gridiron11', __name__,
               static_folder='static',
               static_url_path='/gridiron11/static')
 
-# Get the directory where this module is located
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+# Get the project root directory (two levels up from this module)
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
-# Quiz files directory (relative to this module)
-CURRENT_QUIZ_DIR = os.path.join(PROJECT_ROOT, "static", "current_quiz")
-PRELOADED_QUIZ_DIR = os.path.join(PROJECT_ROOT, "preloaded_quizzes")
-CFB_DATA_FILE = os.path.join(PROJECT_ROOT, "CFB", "cbb25.csv")
+# Quiz files directory (using new organized quiz folder structure)
+CURRENT_QUIZ_DIR = os.path.join(PROJECT_ROOT, "quizzes", "gridiron11", "current")
+PRELOADED_QUIZ_DIR = os.path.join(PROJECT_ROOT, "quizzes", "gridiron11", "preloaded")
+ARCHIVE_QUIZ_DIR = os.path.join(PROJECT_ROOT, "quizzes", "gridiron11", "archive")
+CFB_DATA_FILE = os.path.join(PROJECT_ROOT, "app", "gridiron11", "CFB", "cbb25.csv")
 
 # Fixed positions that are always present (7 players)
 FIXED_POSITIONS = ["QB", "RB", "C", "LT", "LG", "RG", "RT"]

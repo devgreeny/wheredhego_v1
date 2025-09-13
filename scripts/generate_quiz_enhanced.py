@@ -51,8 +51,8 @@ from io import StringIO
 # ═══════════════════════════════════════════════════════════════════════════════
 
 # Directories for different game types
-NBA_SAVE_DIR = "app/starting5/static/preloaded_quizzes"
-NFL_SAVE_DIR = "app/gridiron11/preloaded_quizzes"
+NBA_SAVE_DIR = "quizzes/starting5/preloaded"
+NFL_SAVE_DIR = "quizzes/gridiron11/preloaded"
 
 # College data path
 COLLEGE_DATA_PATH = Path(__file__).resolve().parent / "starting5" / "app" / "static" / "json" / "cbb25.csv"

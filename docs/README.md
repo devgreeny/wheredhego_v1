@@ -1,11 +1,18 @@
-# Wheredhego.com
+# WheredHeGo v1.0
 
-A retro-style sports trivia platform featuring the Starting5 basketball guessing game.
+A comprehensive sports gaming platform featuring NBA basketball quizzes, NFL football games, and college football creator polls.
 
-## 🏀 Features
+## 📁 Project Organization
 
-- **Starting5**: Basketball trivia game where you guess college players from silhouettes
+This project has been reorganized into a clean folder structure. See `PROJECT_STRUCTURE.md` in the root directory for detailed information about the new organization.
+
+## 🎮 Features
+
+- **Starting5**: NBA basketball quiz game with player silhouettes and stats
+- **Gridiron11**: NFL football quiz game with player data
+- **Creator Poll**: College football weekly ranking polls with team logos
 - **Guest Mode**: Play without creating an account - scores tracked per session
+- **Automated Updates**: Daily quiz updates via scheduled scripts
 - **Clean Interface**: Retro arcade-style design
 - **Score Competition**: Compare your performance with other players
 
@@ -13,11 +20,11 @@ A retro-style sports trivia platform featuring the Starting5 basketball guessing
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/wheredhego.git
-cd wheredhego
+git clone https://github.com/devgreeny/wheredhego_v1.git
+cd wheredhego_v1
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 
 # Run the app
 python run.py

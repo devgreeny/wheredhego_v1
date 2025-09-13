@@ -226,7 +226,7 @@ def build_formation(players: list) -> dict:
     
     return {"order": formation_order, "by_pos": lineup}
 
-def generate_nfl_quiz(team: str = None, season: int = None, save_dir: str = "app/gridiron11/preloaded_quizzes") -> bool:
+def generate_nfl_quiz(team: str = None, season: int = None, save_dir: str = "quizzes/gridiron11/preloaded") -> bool:
     """Generate a single NFL quiz."""
     
     # Select random team and season if not specified
@@ -310,7 +310,7 @@ def generate_nfl_quiz(team: str = None, season: int = None, save_dir: str = "app
     print(f"❌ Could not generate valid quiz for {team.upper()} {season}")
     return False
 
-def generate_multiple_nfl_quizzes(count: int = 5, save_dir: str = "app/gridiron11/preloaded_quizzes"):
+def generate_multiple_nfl_quizzes(count: int = 5, save_dir: str = "quizzes/gridiron11/preloaded"):
     """Generate multiple NFL quizzes."""
     print(f"🚀 Generating {count} NFL quizzes...")
     
@@ -335,7 +335,7 @@ def main():
     parser.add_argument("--count", type=int, default=5, help="Number of quizzes to generate")
     parser.add_argument("--team", type=str, help="Specific NFL team (e.g., 'phi', 'dal')")
     parser.add_argument("--season", type=int, help="Specific season year (e.g., 2023)")
-    parser.add_argument("--save-dir", type=str, default="app/gridiron11/preloaded_quizzes", 
+    parser.add_argument("--save-dir", type=str, default="quizzes/gridiron11/preloaded", 
                        help="Directory to save quiz files")
     
     args = parser.parse_args()

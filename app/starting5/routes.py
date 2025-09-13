@@ -20,13 +20,13 @@ bp = Blueprint('starting5', __name__,
               static_folder='static',
               static_url_path='/starting5/static')
 
-# Paths for quiz data (relative to the starting5 static folder)
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "starting5"))
-CURRENT_DIR  = os.path.join(PROJECT_ROOT, "app", "static", "current_quiz")
-BONUS_DIR    = os.path.join(PROJECT_ROOT, "app", "static", "bonus_quiz")
-ARCHIVE_DIR  = os.path.join(PROJECT_ROOT, "app", "static", "archive_quizzes")
-PRELOADED_DIR = os.path.join(PROJECT_ROOT, "app", "static", "preloaded_quizzes")
-CBB_CSV      = os.path.join(PROJECT_ROOT, "app", "static", "json", "cbb25.csv")
+# Paths for quiz data (using new organized quiz folder structure)
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+CURRENT_DIR  = os.path.join(PROJECT_ROOT, "quizzes", "starting5", "current")
+BONUS_DIR    = os.path.join(PROJECT_ROOT, "quizzes", "starting5", "bonus")
+ARCHIVE_DIR  = os.path.join(PROJECT_ROOT, "quizzes", "starting5", "archive")
+PRELOADED_DIR = os.path.join(PROJECT_ROOT, "quizzes", "starting5", "preloaded")
+CBB_CSV      = os.path.join(PROJECT_ROOT, "app", "starting5", "static", "json", "cbb25.csv")
 
 def load_confs():
     """Return a mapping of college names to conferences and a sorted list of names."""

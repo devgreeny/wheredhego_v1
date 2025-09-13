@@ -24,24 +24,22 @@ from datetime import datetime
 from pathlib import Path
 
 # ─── CONFIGURATION ─────────────────────────────────────────────────────────────
-# Project root - adjust this path for your deployment
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+# Project root - adjust this path for your deployment (script is in scripts/ folder)
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-# Starting5 (NBA Basketball) directories
-STARTING5_ROOT = os.path.join(PROJECT_ROOT, "app", "starting5")
-STARTING5_PRELOADED = os.path.join(STARTING5_ROOT, "static", "preloaded_quizzes")
-STARTING5_CURRENT = os.path.join(STARTING5_ROOT, "static", "current_quiz")
-STARTING5_ARCHIVE = os.path.join(STARTING5_ROOT, "static", "archive_quizzes")
-STARTING5_BONUS = os.path.join(STARTING5_ROOT, "static", "bonus_quiz")
+# Starting5 (NBA Basketball) directories (using new organized quiz folder structure)
+STARTING5_PRELOADED = os.path.join(PROJECT_ROOT, "quizzes", "starting5", "preloaded")
+STARTING5_CURRENT = os.path.join(PROJECT_ROOT, "quizzes", "starting5", "current")
+STARTING5_ARCHIVE = os.path.join(PROJECT_ROOT, "quizzes", "starting5", "archive")
+STARTING5_BONUS = os.path.join(PROJECT_ROOT, "quizzes", "starting5", "bonus")
 
-# Gridiron11 (NFL Football) directories  
-GRIDIRON11_ROOT = os.path.join(PROJECT_ROOT, "app", "gridiron11")
-GRIDIRON11_PRELOADED = os.path.join(GRIDIRON11_ROOT, "preloaded_quizzes")
-GRIDIRON11_CURRENT = os.path.join(GRIDIRON11_ROOT, "static", "current_quiz")
-GRIDIRON11_ARCHIVE = os.path.join(GRIDIRON11_ROOT, "static", "archive_quizzes")
+# Gridiron11 (NFL Football) directories (using new organized quiz folder structure)
+GRIDIRON11_PRELOADED = os.path.join(PROJECT_ROOT, "quizzes", "gridiron11", "preloaded")
+GRIDIRON11_CURRENT = os.path.join(PROJECT_ROOT, "quizzes", "gridiron11", "current")
+GRIDIRON11_ARCHIVE = os.path.join(PROJECT_ROOT, "quizzes", "gridiron11", "archive")
 
-# Fallback: Check standalone gridiron11 directory if app version doesn't exist
-GRIDIRON11_FALLBACK_ROOT = os.path.join(PROJECT_ROOT, "gridiron11")
+# Fallback: Check legacy gridiron11 directory if app version doesn't exist
+GRIDIRON11_FALLBACK_ROOT = os.path.join(PROJECT_ROOT, "legacy", "gridiron11")
 GRIDIRON11_FALLBACK_CURRENT = os.path.join(GRIDIRON11_FALLBACK_ROOT, "static", "current_quiz")
 # ────────────────────────────────────────────────────────────────────────────────
 
