@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Results - CFB Creator Poll</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0f172a;
+            --gold: #facc15;
+            --light-gray: #e2e8f0;
+            --green: #22c55e;
+            --red: #ef4444;
+            --blue: #60a5fa;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: var(--navy);
+            color: var(--light-gray);
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .poll-info {
+            background: #1e293b;
+            border: 2px solid var(--gold);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.5rem;
+            text-align: center;
+        }
+        
+        .poll-title {
+            color: var(--gold);
+            font-size: 0.6rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .poll-meta {
+            margin-bottom: 0.5rem;
+        }
+        
+        .ballot-count {
+            color: var(--blue);
+            font-size: 0.4rem;
+        }
+        
+        .rankings {
+            background: #1e293b;
+            border: 2px solid var(--gold);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .rankings-header {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            background: #334155;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            transition: background-color 0.2s;
+        }
+        
+        .ranking-item:hover {
+            background: #475569;
+        }
+        
+        .rank-number {
+            background: var(--gold);
+            color: var(--navy);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .team-info {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .team-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        
+        .team-details {
+            flex: 1;
+        }
+        
+        .team-name {
+            font-size: 0.6rem;
+            margin-bottom: 0.25rem;
+            font-weight: bold;
+        }
+        
+        .team-stats {
+            font-size: 0.4rem;
+            color: #94a3b8;
+        }
+        
+        .vote-stats {
+            text-align: right;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.25rem;
+        }
+        
+        .vote-count {
+            font-size: 0.5rem;
+            color: var(--green);
+            font-weight: bold;
+        }
+        
+        .movement-indicator {
+            font-size: 0.35rem;
+            font-weight: bold;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.2rem;
+            white-space: nowrap;
+        }
+        
+        .movement-up {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+        
+        .movement-down {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+        
+        .movement-same {
+            background: rgba(156, 163, 175, 0.2);
+            color: #9ca3af;
+        }
+        
+        .movement-new {
+            background: rgba(250, 204, 21, 0.2);
+            color: var(--gold);
+        }
+        
+        .avg-rank {
+            font-size: 0.3rem;
+            color: var(--light-gray);
+        }
+        
+        .points {
+            font-size: 0.3rem;
+            color: var(--gold);
+        }
+        
+        .top-10 {
+            background: #475569;
+        }
+        
+        .navigation {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-size: 0.5rem;
+            border: none;
+            cursor: pointer;
+            margin: 0 0.5rem;
+            font-family: inherit;
+        }
+        
+        .btn:hover {
+            background: #eab308;
+        }
+        
+        .btn-secondary {
+            background: #475569;
+            color: var(--light-gray);
+        }
+        
+        .btn-secondary:hover {
+            background: #64748b;
+        }
+        
+        .no-results {
+            text-align: center;
+            font-size: 0.5rem;
+            color: var(--light-gray);
+            padding: 2rem;
+        }
+        
+        .trophy {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .others-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #475569;
+        }
+        
+        .others-title {
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: var(--light-gray);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .others-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+        
+        .others-team {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid #475569;
+            border-radius: 0.25rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.4rem;
+        }
+        
+        .others-team-logo {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+        }
+        
+        .others-team-name {
+            color: var(--light-gray);
+            font-weight: bold;
+        }
+        
+        .others-vote-count {
+            color: var(--gold);
+            font-size: 0.35rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏆 Poll Results</h1>
+        </div>
+        
+        <!-- Poll Info -->
+        <div class="poll-info">
+            <div class="poll-title">{{ poll.title }}</div>
+            <div class="poll-meta">
+                {{ poll.season_year }} Season - Week {{ poll.week_number }}<br>
+                {% if poll.description %}{{ poll.description }}<br>{% endif %}
+                <div style="margin-top: 0.5rem; padding: 0.5rem; background: rgba(59, 130, 246, 0.1); border-radius: 0.5rem;">
+                    📅 {{ poll.status_message }}
+                </div>
+            </div>
+            <div class="ballot-count">
+                📊 {{ total_ballots }} ballot{{ 's' if total_ballots != 1 else '' }} submitted
+            </div>
+        </div>
+        
+        <!-- Rankings -->
+        <div class="rankings">
+            <div class="rankings-header">
+                🏆 CFB Creator Poll Top 25 🏆
+            </div>
+            
+            {% if rankings %}
+            {% for team in rankings %}
+            <div class="ranking-item {% if team.rank <= 10 %}top-10{% endif %}">
+                <div class="rank-number">
+                    {{ team.rank }}
+                </div>
+                <div class="team-info">
+                    <img src="{{ team.logo_url }}" class="team-logo" alt="{{ team.team_name }}" onerror="this.style.display='none'">
+                    <div class="team-details">
+                        <div class="team-name">{{ team.team_name }}</div>
+                        <div class="team-stats">
+                            {{ team.vote_count }} vote{{ 's' if team.vote_count != 1 else '' }} • Avg: {{ team.avg_rank }}
+                        </div>
+                    </div>
+                </div>
+                <div class="vote-stats">
+                    <div class="vote-count">{{ "%.1f"|format(team.points) }} pts</div>
+                    {% if team.movement_type %}
+                        {% if team.movement_type == 'up' %}
+                            <div class="movement-indicator movement-up">↗ +{{ team.movement }}</div>
+                        {% elif team.movement_type == 'down' %}
+                            <div class="movement-indicator movement-down">↘ {{ team.movement }}</div>
+                        {% elif team.movement_type == 'same' %}
+                            <div class="movement-indicator movement-same">— Same</div>
+                        {% elif team.movement_type == 'new' %}
+                            <div class="movement-indicator movement-new">★ New</div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <!-- Placeholder rankings for Week 3 during lockout period -->
+            {% set placeholder_teams = [
+                {"name": "Ohio State", "id": "194"},
+                {"name": "Penn State", "id": "213"},
+                {"name": "LSU", "id": "99"},
+                {"name": "Oregon", "id": "2483"},
+                {"name": "Miami", "id": "2390"},
+                {"name": "Georgia", "id": "61"},
+                {"name": "Texas", "id": "251"},
+                {"name": "Notre Dame", "id": "87"},
+                {"name": "Illinois", "id": "356"},
+                {"name": "Florida State", "id": "52"},
+                {"name": "South Carolina", "id": "2579"},
+                {"name": "Clemson", "id": "228"},
+                {"name": "Oklahoma", "id": "201"},
+                {"name": "Iowa State", "id": "66"},
+                {"name": "Tennessee", "id": "2633"},
+                {"name": "Texas A&M", "id": "245"},
+                {"name": "Ole Miss", "id": "145"},
+                {"name": "South Florida", "id": "58"},
+                {"name": "Alabama", "id": "333"},
+                {"name": "Utah", "id": "254"},
+                {"name": "Texas Tech", "id": "2641"},
+                {"name": "Indiana", "id": "84"},
+                {"name": "Michigan", "id": "130"},
+                {"name": "Auburn", "id": "2"},
+                {"name": "Missouri", "id": "142"}
+            ] %}
+            {% for team in placeholder_teams %}
+            <div class="ranking-item {% if loop.index <= 10 %}top-10{% endif %}" style="opacity: 0.8;">
+                <div class="rank-number">
+                    {{ loop.index }}
+                </div>
+                <div class="team-info">
+                    <img src="/creatorpoll/logo/{{ team.id }}.png" class="team-logo" alt="{{ team.name }}" onerror="this.style.display='none'">
+                    <div class="team-details">
+                        <div class="team-name">{{ team.name }}</div>
+                        <div class="team-stats" style="color: #94a3b8; font-style: italic;">
+                            Voting opens Sunday at 3:00 PM EST
+                        </div>
+                    </div>
+                </div>
+                <div class="vote-stats">
+                    <div class="vote-count" style="color: #94a3b8;">--</div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            <div style="text-align: center; margin-top: 2rem; color: #94a3b8; font-size: 0.5rem; font-style: italic;">
+                Rankings will update live once voting begins on Sunday at 3:00 PM EST.
+            </div>
+            {% endif %}
+        </div>
+        
+        <!-- Others Receiving Votes -->
+        {% if others_receiving_votes %}
+        <div class="others-section">
+            <div class="others-title">📝 Others Receiving Votes</div>
+            <div class="others-list">
+                {% for team in others_receiving_votes %}
+                <div class="others-team">
+                    <img src="{{ team.logo_url }}" class="others-team-logo" alt="{{ team.team_name }}" onerror="this.style.display='none'">
+                    <span class="others-team-name">{{ team.team_name }}</span>
+                    <span class="others-vote-count">({{ team.vote_count }})</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- Navigation -->
+        <div class="navigation">
+            {% if poll.is_open %}
+            <a href="{{ url_for('creatorpoll.vote', poll_id=poll.id) }}" class="btn">🗳️ Cast Your Vote</a>
+            {% endif %}
+            <a href="{{ url_for('creatorpoll.home') }}" class="btn btn-secondary">← Back to Polls</a>
+        </div>
+    </div>
+</body>
+</html>

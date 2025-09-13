@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Creator Poll - Wheredhego</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0f172a;
+            --gold: #facc15;
+            --light-gray: #e2e8f0;
+            --green: #22c55e;
+            --red: #ef4444;
+            --blue: #60a5fa;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: var(--navy);
+            color: var(--light-gray);
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .header p {
+            font-size: 0.7rem;
+            line-height: 1.8;
+            color: #94a3b8;
+        }
+        
+        .poll-card {
+            background: #1e293b;
+            border: 3px solid var(--gold);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .poll-title {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .poll-meta {
+            color: #94a3b8;
+            font-size: 0.6rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .poll-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .status-open { background: var(--green); color: white; }
+        .status-closed { background: var(--red); color: white; }
+        .status-voted { background: var(--blue); color: white; }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-size: 0.6rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            background: #eab308;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(250, 204, 21, 0.3);
+        }
+        
+        
+        .btn-secondary {
+            background: #475569;
+            color: var(--light-gray);
+        }
+        
+        .btn-secondary:hover {
+            background: #64748b;
+        }
+        
+        .live-rankings {
+            margin-top: 2rem;
+        }
+        
+        .live-rankings h2 {
+            color: var(--gold);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .rankings-info {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .ranking-list {
+            list-style: none;
+        }
+        
+        .ranking-item {
+            background: #334155;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+        
+        .ranking-item:hover {
+            background: #475569;
+        }
+        
+        .rank-badge {
+            background: var(--gold);
+            color: var(--navy);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.5rem;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .team-details {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .team-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        
+        .team-info {
+            flex: 1;
+        }
+        
+        .team-name {
+            font-size: 0.5rem;
+            margin-bottom: 0.25rem;
+            font-weight: bold;
+        }
+        
+        .team-stats {
+            font-size: 0.3rem;
+            color: #94a3b8;
+        }
+        
+        .vote-info {
+            text-align: right;
+            flex-shrink: 0;
+        }
+        
+        .vote-count {
+            font-size: 0.4rem;
+            color: var(--green);
+            font-weight: bold;
+        }
+        
+        
+        .no-votes {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.4rem;
+            padding: 2rem;
+            background: #334155;
+            border-radius: 0.5rem;
+        }
+        
+        .flash-messages {
+            margin-bottom: 1rem;
+        }
+        
+        .flash {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.5rem;
+        }
+        
+        .flash-success { background: var(--green); color: white; }
+        .flash-error { background: var(--red); color: white; }
+        .flash-warning { background: #f59e0b; color: white; }
+        
+        .clock-container {
+            background: #1e293b;
+            border: 2px solid var(--blue);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .clock-title {
+            color: var(--blue);
+            font-size: 0.7rem;
+            margin-bottom: 1rem;
+        }
+        
+        .current-time {
+            color: var(--gold);
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .current-date {
+            color: var(--light-gray);
+            font-size: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cutoff-info {
+            border-top: 1px solid #475569;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .cutoff-label {
+            color: var(--red);
+            font-size: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cutoff-time {
+            color: var(--red);
+            font-size: 0.6rem;
+            font-weight: bold;
+        }
+        
+        .countdown {
+            color: #94a3b8;
+            font-size: 0.4rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏈 CFB Creator Poll</h1>
+            <p>Vote on your top 25 college football teams each week.<br>
+               Make your voice heard in the ultimate fan poll!</p>
+        </div>
+        
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        
+        <!-- Live Clock -->
+        <div class="clock-container">
+            <div class="clock-title">🕒 Live Clock</div>
+            <div class="current-time" id="current-time">--:--:-- --</div>
+            <div class="current-date" id="current-date">Loading...</div>
+            
+            {% if current_poll %}
+            <div class="cutoff-info">
+                <div class="cutoff-label">⏰ Poll Closes:</div>
+                <div class="cutoff-time">{{ current_poll.end_date.strftime('%A, %B %d at %I:%M %p') }}</div>
+                <div class="countdown" id="countdown">Calculating time remaining...</div>
+            </div>
+            {% endif %}
+        </div>
+        
+        <!-- Current Poll -->
+        {% if current_poll %}
+        <div class="poll-card">
+            <h2 class="poll-title">{{ current_poll.title }}</h2>
+            <div class="poll-meta">
+                {{ current_poll.season_year }} Season - Week {{ current_poll.week_number }}<br>
+                {% if current_poll.description %}{{ current_poll.description }}<br>{% endif %}
+                Poll closes: {{ current_poll.end_date.strftime('%B %d, %Y at %I:%M %p') }}
+            </div>
+            
+            <div class="poll-status-message" style="margin-bottom: 1rem; padding: 0.5rem; background: rgba(59, 130, 246, 0.1); border-radius: 0.5rem; color: var(--blue);">
+                📅 {{ current_poll.status_message }}
+            </div>
+            
+            {% if current_poll.is_open %}
+                {% if user_has_voted %}
+                <span class="poll-status status-voted">✅ Your Ballot Submitted!</span><br><br>
+                <a href="{{ url_for('creatorpoll.results', poll_id=current_poll.id) }}" class="btn btn-secondary">🏆 View Current Rankings</a>
+                <a href="{{ url_for('creatorpoll.vote', poll_id=current_poll.id) }}" class="btn">📝 Update My Rankings</a>
+                {% else %}
+                <span class="poll-status status-open">🔴 LIVE POLL - Voting Open</span><br><br>
+                <a href="{{ url_for('creatorpoll.vote', poll_id=current_poll.id) }}" class="btn" style="font-size: 0.7rem; padding: 1rem 2rem;">🗳️ RANK MY TOP 25 TEAMS</a>
+                {% endif %}
+            {% else %}
+            <span class="poll-status status-closed">🔒 Poll Locked</span><br><br>
+            <a href="{{ url_for('creatorpoll.results', poll_id=current_poll.id) }}" class="btn">🏆 View Current Rankings</a>
+            {% endif %}
+        </div>
+        {% else %}
+        <div class="poll-card">
+            <h2 class="poll-title">No Active Poll</h2>
+            <p style="font-size: 0.6rem; color: #94a3b8;">No poll is currently active. Check back soon for the next week's poll!</p>
+        </div>
+        {% endif %}
+        
+        <!-- Live Rankings -->
+        {% if current_poll %}
+        <div class="live-rankings">
+            <h2>🏆 Live Community Poll - Top 15</h2>
+            <div class="rankings-info">
+                {{ total_ballots }} ballot{{ 's' if total_ballots != 1 else '' }} submitted • Updates live as votes come in
+            </div>
+            
+            {% if current_rankings %}
+            <ul class="ranking-list">
+                {% for team in current_rankings %}
+                <li class="ranking-item">
+                    <div class="rank-badge">
+                        {{ team.rank }}
+                    </div>
+                    <div class="team-details">
+                        <img src="{{ team.logo_url }}" class="team-logo" alt="{{ team.team_name }}" onerror="this.style.display='none'">
+                        <div class="team-info">
+                            <div class="team-name">{{ team.team_name }}</div>
+                            <div class="team-stats">
+                                {{ team.vote_count }} vote{{ 's' if team.vote_count != 1 else '' }} • Avg: {{ team.avg_rank }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote-info">
+                        <div class="vote-count">{{ "%.1f"|format(team.points) }} pts</div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="{{ url_for('creatorpoll.results', poll_id=current_poll.id) }}" class="btn btn-secondary">View Full Top 25</a>
+            </div>
+            {% else %}
+            <!-- Placeholder rankings for Week 3 during lockout period -->
+            <ul class="ranking-list">
+                {% set placeholder_teams = [
+                    {"name": "Ohio State", "id": "194"},
+                    {"name": "Penn State", "id": "213"},
+                    {"name": "LSU", "id": "99"},
+                    {"name": "Oregon", "id": "2483"},
+                    {"name": "Miami", "id": "2390"},
+                    {"name": "Georgia", "id": "61"},
+                    {"name": "Texas", "id": "251"},
+                    {"name": "Notre Dame", "id": "87"},
+                    {"name": "Illinois", "id": "356"},
+                    {"name": "Florida State", "id": "52"},
+                    {"name": "South Carolina", "id": "2579"},
+                    {"name": "Clemson", "id": "228"},
+                    {"name": "Oklahoma", "id": "201"},
+                    {"name": "Iowa State", "id": "66"},
+                    {"name": "Tennessee", "id": "2633"}
+                ] %}
+                {% for team in placeholder_teams %}
+                <li class="ranking-item" style="opacity: 0.8;">
+                    <div class="rank-badge">
+                        {{ loop.index }}
+                    </div>
+                    <div class="team-details">
+                        <img src="/creatorpoll/logo/{{ team.id }}.png" class="team-logo" alt="{{ team.name }}" onerror="this.style.display='none'">
+                        <div class="team-info">
+                            <div class="team-name">{{ team.name }}</div>
+                            <div class="team-stats" style="color: #94a3b8; font-style: italic;">
+                                Voting opens Sunday at 3:00 PM EST
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vote-info">
+                        <div class="vote-count" style="color: #94a3b8;">--</div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="{{ url_for('creatorpoll.results', poll_id=current_poll.id) }}" class="btn btn-secondary">View Full Top 25</a>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        <!-- Navigation -->
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ url_for('home') }}" class="btn btn-secondary">← Back to Wheredhego</a>
+        </div>
+    </div>
+    
+    <script>
+        // Live clock functionality
+        function updateClock() {
+            const now = new Date();
+            
+            // Format current time
+            const timeOptions = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            const currentTime = now.toLocaleTimeString('en-US', timeOptions);
+            
+            // Format current date
+            const dateOptions = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+            const currentDate = now.toLocaleDateString('en-US', dateOptions);
+            
+            // Update display
+            document.getElementById('current-time').textContent = currentTime;
+            document.getElementById('current-date').textContent = currentDate;
+            
+            // Update countdown if poll exists
+            {% if current_poll %}
+            const pollEndDate = new Date('{{ current_poll.end_date.strftime("%Y-%m-%d %H:%M:%S") }}');
+            const timeRemaining = pollEndDate - now;
+            
+            if (timeRemaining > 0) {
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+                
+                let countdownText = '';
+                if (days > 0) {
+                    countdownText = `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+                } else if (hours > 0) {
+                    countdownText = `${hours}h ${minutes}m ${seconds}s remaining`;
+                } else if (minutes > 0) {
+                    countdownText = `${minutes}m ${seconds}s remaining`;
+                } else {
+                    countdownText = `${seconds}s remaining`;
+                }
+                
+                document.getElementById('countdown').textContent = countdownText;
+                
+                // Change color when less than 1 hour remaining
+                const countdownElement = document.getElementById('countdown');
+                if (timeRemaining < 60 * 60 * 1000) { // Less than 1 hour
+                    countdownElement.style.color = 'var(--red)';
+                    countdownElement.style.fontWeight = 'bold';
+                } else if (timeRemaining < 24 * 60 * 60 * 1000) { // Less than 1 day
+                    countdownElement.style.color = 'var(--gold)';
+                } else {
+                    countdownElement.style.color = '#94a3b8';
+                }
+            } else {
+                document.getElementById('countdown').textContent = 'Poll has ended';
+                document.getElementById('countdown').style.color = 'var(--red)';
+            }
+            {% endif %}
+        }
+        
+        // Update clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>

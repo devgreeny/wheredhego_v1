@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wheredhego — Retro Sports Trivia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --yale:#0D3B66;   /* navy */
+      --lemon:#FAF0CA;  /* background */
+      --naples:#F4D35E; /* yellow */
+      --sandy:#EE964B;  /* orange box */
+      --tomato:#F95738; /* play btn */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--lemon); color:var(--yale);
+      font-family:'Press Start 2P', monospace; display:flex; flex-direction:column; align-items:center;
+    }
+    /* Header wordmark */
+    header{padding:28px 16px 0; text-align:center}
+    .wordmark{
+      font-size:34px; letter-spacing:2px; color:var(--tomato);
+      text-shadow:
+        3px 3px 0 var(--naples),
+        6px 6px 0 var(--sandy),
+        9px 9px 0 var(--yale);
+    }
+
+    /* Subhead + tagline */
+    .subhead{margin-top:36px; text-align:center}
+    .subhead h2{color:var(--yale); font-size:18px; margin:0 0 14px}
+    .subhead p{color:var(--tomato); font-size:12px; margin:0}
+
+    /* Card grid as centerpiece */
+    .center{width:100%; display:flex; justify-content:center; margin-top:60px}
+    .cards{max-width:1200px; width:100%; display:grid; grid-template-columns:repeat(3,minmax(280px,1fr)); gap:24px; padding:0 20px}
+
+    .card-wrap{border:4px solid var(--yale); border-radius:14px; padding:10px; box-shadow:0 8px 24px rgba(0,0,0,.15)}
+    .card{background:var(--sandy); border:4px solid var(--yale); border-radius:10px; padding:22px; text-align:center}
+    .card h3{font-size:14px; color:var(--yale); margin:0 0 12px; display:flex; align-items:center; justify-content:center; gap:8px}
+    .card p{font-size:11px; color:#083257; margin:0 0 16px; line-height:1.6}
+
+    .btn{display:inline-block; background:var(--tomato); color:#fff; text-decoration:none; padding:10px 16px; border:3px solid var(--yale); border-radius:8px; font-size:11px; box-shadow:0 4px 0 #962b1b;}
+    .btn:active{transform:translateY(1px); box-shadow:0 3px 0 #962b1b}
+
+    /* Footer bar */
+    footer{margin-top:auto; width:100%; background:var(--yale); color:#fff; font-size:10px; text-align:center; padding:10px}
+
+    /* -------- Mobile adjustments ONLY -------- */
+    @media (max-width: 600px) {
+      .wordmark { font-size:20px; }
+      .subhead h2 { font-size:14px; }
+      .subhead p { font-size:10px; }
+      .cards { grid-template-columns: 1fr; gap:16px; }
+      .card { padding:16px; }
+      .btn { font-size:10px; padding:8px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wordmark">WHEREDHEGO</div>
+  </header>
+
+  <section class="subhead">
+    <h2>Retro Sports Trivia, Arcade Style</h2>
+    <p>Choose your game and test your sports knowledge!</p>
+  </section>
+
+  <main class="center">
+    <div class="cards">
+      <div class="card-wrap">
+        <div class="card">
+          <h3>👥  Starting5</h3>
+          <p>Guess the colleges of NBA starting fives. New lineup every day!</p>
+          <a class="btn" href="/starting5">Play Starting5</a>
+        </div>
+      </div>
+
+      <div class="card-wrap">
+        <div class="card">
+          <h3>🏈  Gridiron 11</h3>
+          <p>11 NFL offensive positions, one lineup. Can you name their colleges?</p>
+          <a class="btn" href="/gridiron11">Play Gridiron 11</a>
+        </div>
+      </div>
+
+      <div class="card-wrap">
+        <div class="card">
+          <h3>🗳️  Creator Poll</h3>
+          <p>Vote on your CFB Top 25 every week. Make your voice heard in the ultimate fan poll!</p>
+          <a class="btn" href="/creatorpoll">Vote Now</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Where'd He Go? • Built with arcade spirit
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

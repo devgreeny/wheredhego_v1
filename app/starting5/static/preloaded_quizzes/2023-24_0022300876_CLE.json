@@ -1,0 +1,135 @@
+{
+  "season": "2023-24",
+  "game_id": "0022300876",
+  "team_abbr": "CLE",
+  "opponent_abbr": "NYK",
+  "matchup": "CLE vs NYK",
+  "game_date": "2024-03-03",
+  "players": [
+    {
+      "name": "Isaac Okoro",
+      "school": "Auburn",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "CLE",
+      "avatar": "03",
+      "conference": "Southeastern Conference",
+      "player_id": 1630171,
+      "position": "Forward-Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 17.0,
+        "ast": 4.0,
+        "reb": 5.0,
+        "stl": 2.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.233,
+        "assists_pct": 0.167,
+        "rebounds_pct": 0.167,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Evan Mobley",
+      "school": "USC",
+      "school_type": "College",
+      "spriteIndex": 13,
+      "team_abbrev": "CLE",
+      "avatar": "13",
+      "conference": "Big Ten Conference",
+      "player_id": 1630596,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 13.0,
+        "ast": 6.0,
+        "reb": 13.0,
+        "stl": 0.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.178,
+        "assists_pct": 0.25,
+        "rebounds_pct": 0.433,
+        "defense_pct": 0.111
+      }
+    },
+    {
+      "name": "Jarrett Allen",
+      "school": "Texas",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "CLE",
+      "avatar": "12",
+      "conference": "Southeastern Conference",
+      "player_id": 1628386,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 18.0,
+        "ast": 6.0,
+        "reb": 7.0,
+        "stl": 1.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.247,
+        "assists_pct": 0.25,
+        "rebounds_pct": 0.233,
+        "defense_pct": 0.222
+      }
+    },
+    {
+      "name": "Max Strus",
+      "school": "DePaul",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "CLE",
+      "avatar": "02",
+      "conference": "Big East Conference",
+      "player_id": 1629622,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 6.0,
+        "ast": 3.0,
+        "reb": 1.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.082,
+        "assists_pct": 0.125,
+        "rebounds_pct": 0.033,
+        "defense_pct": 0.111
+      }
+    },
+    {
+      "name": "Darius Garland",
+      "school": "Vanderbilt",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "CLE",
+      "avatar": "01",
+      "conference": "Southeastern Conference",
+      "player_id": 1629636,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 19.0,
+        "ast": 5.0,
+        "reb": 4.0,
+        "stl": 2.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.26,
+        "assists_pct": 0.208,
+        "rebounds_pct": 0.133,
+        "defense_pct": 0.222
+      }
+    }
+  ]
+}

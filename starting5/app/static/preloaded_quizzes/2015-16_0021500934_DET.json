@@ -1,0 +1,135 @@
+{
+  "season": "2015-16",
+  "game_id": "0021500934",
+  "team_abbr": "DET",
+  "opponent_abbr": "POR",
+  "matchup": "DET vs POR",
+  "game_date": "2016-03-06",
+  "players": [
+    {
+      "name": "Tobias Harris",
+      "school": "Tennessee",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "DET",
+      "avatar": "05",
+      "conference": "Southeastern Conference",
+      "player_id": 202699,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 16.0,
+        "ast": 5.0,
+        "reb": 5.0,
+        "stl": 2.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.168,
+        "assists_pct": 0.294,
+        "rebounds_pct": 0.147,
+        "defense_pct": 0.286
+      }
+    },
+    {
+      "name": "Marcus Morris Sr.",
+      "school": "Kansas",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "DET",
+      "avatar": "04",
+      "conference": "Big 12 Conference",
+      "player_id": 202694,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 19.0,
+        "ast": 0.0,
+        "reb": 3.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.2,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.088,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Andre Drummond",
+      "school": "UConn",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "DET",
+      "avatar": "12",
+      "conference": "Big East Conference",
+      "player_id": 203083,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 14.0,
+        "ast": 1.0,
+        "reb": 18.0,
+        "stl": 1.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.147,
+        "assists_pct": 0.059,
+        "rebounds_pct": 0.529,
+        "defense_pct": 0.286
+      }
+    },
+    {
+      "name": "Kentavious Caldwell-Pope",
+      "school": "Georgia",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "DET",
+      "avatar": "08",
+      "conference": "Southeastern Conference",
+      "player_id": 203484,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 16.0,
+        "ast": 2.0,
+        "reb": 7.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.168,
+        "assists_pct": 0.118,
+        "rebounds_pct": 0.206,
+        "defense_pct": 0.143
+      }
+    },
+    {
+      "name": "Reggie Jackson",
+      "school": "Boston College",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "DET",
+      "avatar": "07",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 202704,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 30.0,
+        "ast": 9.0,
+        "reb": 1.0,
+        "stl": 2.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.316,
+        "assists_pct": 0.529,
+        "rebounds_pct": 0.029,
+        "defense_pct": 0.286
+      }
+    }
+  ]
+}

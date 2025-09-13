@@ -1,0 +1,134 @@
+[
+    {
+        "name": "Sam Bradford",
+        "position": "QB",
+        "college": "Oklahoma",
+        "conference": "Southeastern Conference"
+    },
+    {
+        "name": "Ryan Mathews",
+        "position": "RB",
+        "college": "Fresno State",
+        "conference": "Mountain West Conference"
+    },
+    {
+        "name": "Nelson Agholor",
+        "position": "WR",
+        "college": "USC",
+        "conference": "Big Ten Conference"
+    },
+    {
+        "name": "Riley Cooper",
+        "position": "WR",
+        "college": "Florida",
+        "conference": "Southeastern Conference"
+    },
+    {
+        "name": "Jordan Matthews",
+        "position": "WR",
+        "college": "Vanderbilt",
+        "conference": "Southeastern Conference"
+    },
+    {
+        "name": "Brent Celek",
+        "position": "TE",
+        "college": "Cincinnati",
+        "conference": "Big 12 Conference"
+    },
+    {
+        "name": "Jason Peters",
+        "position": "LT",
+        "college": "Arkansas",
+        "conference": "Southeastern Conference"
+    },
+    {
+        "name": "Allen Barbre",
+        "position": "LG",
+        "college": "Missouri Southern",
+        "conference": "nan"
+    },
+    {
+        "name": "Jason Kelce",
+        "position": "C",
+        "college": "Cincinnati",
+        "conference": "Big 12 Conference"
+    },
+    {
+        "name": "Matt Tobin",
+        "position": "RG",
+        "college": "Iowa",
+        "conference": "Big Ten Conference"
+    },
+    {
+        "name": "Lane Johnson",
+        "position": "RT",
+        "college": "Oklahoma",
+        "conference": "Southeastern Conference"
+    },
+    {
+        "name": "Fletcher Cox",
+        "position": "DE",
+        "college": "Mississippi State",
+        "conference": "Southeastern Conference"
+    },
+    {
+        "name": "Cedric Thornton",
+        "position": "DE",
+        "college": "Southern Arkansas",
+        "conference": "nan"
+    },
+    {
+        "name": "Bennie Logan",
+        "position": "NT",
+        "college": "LSU",
+        "conference": "Southeastern Conference"
+    },
+    {
+        "name": "Brandon Graham",
+        "position": "OLB",
+        "college": "Michigan",
+        "conference": "Big Ten Conference"
+    },
+    {
+        "name": "Connor Barwin",
+        "position": "OLB",
+        "college": "Cincinnati",
+        "conference": "Big 12 Conference"
+    },
+    {
+        "name": "Mychal Kendricks",
+        "position": "ILB",
+        "college": "California",
+        "conference": "Atlantic Coast Conference"
+    },
+    {
+        "name": "DeMeco Ryans",
+        "position": "ILB",
+        "college": "Alabama",
+        "conference": "Southeastern Conference"
+    },
+    {
+        "name": "Byron Maxwell",
+        "position": "CB",
+        "college": "Clemson",
+        "conference": "Atlantic Coast Conference"
+    },
+    {
+        "name": "Eric Rowe",
+        "position": "CB",
+        "college": "Utah",
+        "conference": "Big 12 Conference"
+    },
+    {
+        "name": "Malcolm Jenkins",
+        "position": "S",
+        "college": "Ohio State",
+        "conference": "Big Ten Conference"
+    },
+    {
+        "name": "Walter Thurmond",
+        "position": "S",
+        "college": "Oregon",
+        "conference": "Big Ten Conference"
+    }
+]

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Wheredhego</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0D3B66, #1e3a8a);
+            color: #FAF0CA;
+            font-family: 'Press Start 2P', monospace;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .auth-container {
+            background: rgba(13, 59, 102, 0.9);
+            border: 3px solid #F95738;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #F95738;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 18px;
+            text-shadow: 2px 2px 0 #962b1b;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 10px;
+            color: #F4D35E;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #F4D35E;
+            border-radius: 6px;
+            background: #1e3a8a;
+            color: #FAF0CA;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            box-sizing: border-box;
+        }
+        input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+            border-color: #F95738;
+            outline: none;
+            box-shadow: 0 0 10px rgba(249, 87, 56, 0.5);
+        }
+        .btn {
+            background: #F95738;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: all 0.2s;
+        }
+        .btn:hover {
+            background: #EE964B;
+            transform: translateY(-2px);
+        }
+        .auth-links {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #F4D35E;
+        }
+        .auth-links a {
+            color: #F4D35E;
+            text-decoration: none;
+            font-size: 9px;
+            margin: 0 10px;
+        }
+        .auth-links a:hover {
+            color: #F95738;
+        }
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+        .flash-message {
+            background: #dc3545;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 9px;
+            text-align: center;
+        }
+        .flash-message.success {
+            background: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>🎮 Login to Wheredhego</h1>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <div class="auth-links">
+            <a href="{{ url_for('home') }}">← Back Home</a>
+            <span>|</span>
+            <a href="{{ url_for('auth.register') }}">Create Account</a>
+        </div>
+    </div>
+</body>
+</html>

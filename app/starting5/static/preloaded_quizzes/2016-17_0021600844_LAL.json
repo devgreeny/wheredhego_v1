@@ -1,0 +1,135 @@
+{
+  "season": "2016-17",
+  "game_id": "0021600844",
+  "team_abbr": "LAL",
+  "opponent_abbr": "PHX",
+  "matchup": "PHX vs LAL",
+  "game_date": "2017-02-15",
+  "players": [
+    {
+      "name": "Brandon Ingram",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "LAL",
+      "avatar": "03",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1627742,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 3.0,
+        "ast": 0.0,
+        "reb": 2.0,
+        "stl": 1.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.068,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.091,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Julius Randle",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "LAL",
+      "avatar": "04",
+      "conference": "Southeastern Conference",
+      "player_id": 203944,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 13.0,
+        "ast": 3.0,
+        "reb": 10.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.295,
+        "assists_pct": 0.429,
+        "rebounds_pct": 0.455,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "Tarik Black",
+      "school": "Kansas",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "LAL",
+      "avatar": "08",
+      "conference": "Big 12 Conference",
+      "player_id": 204028,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 2.0,
+        "ast": 0.0,
+        "reb": 2.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.045,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.091,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Nick Young",
+      "school": "USC",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "LAL",
+      "avatar": "12",
+      "conference": "Big Ten Conference",
+      "player_id": 201156,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 5.0,
+        "ast": 0.0,
+        "reb": 4.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.114,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.182,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "D'Angelo Russell",
+      "school": "Ohio State",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "LAL",
+      "avatar": "07",
+      "conference": "Big Ten Conference",
+      "player_id": 1626156,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 21.0,
+        "ast": 4.0,
+        "reb": 4.0,
+        "stl": 1.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.477,
+        "assists_pct": 0.571,
+        "rebounds_pct": 0.182,
+        "defense_pct": 0.333
+      }
+    }
+  ]
+}

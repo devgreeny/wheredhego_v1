@@ -1,0 +1,135 @@
+{
+  "season": "2019-20",
+  "game_id": "0021900651",
+  "team_abbr": "IND",
+  "opponent_abbr": "UTA",
+  "matchup": "UTA vs IND",
+  "game_date": "2020-01-20",
+  "players": [
+    {
+      "name": "T.J. Warren",
+      "school": "NC State",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "IND",
+      "avatar": "03",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 203933,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 4.0,
+        "ast": 1.0,
+        "reb": 1.0,
+        "stl": 2.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.095,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.045,
+        "defense_pct": 0.182
+      }
+    },
+    {
+      "name": "Domantas Sabonis",
+      "school": "Gonzaga",
+      "school_type": "College",
+      "spriteIndex": 6,
+      "team_abbrev": "IND",
+      "avatar": "06",
+      "conference": "West Coast Conference",
+      "player_id": 1627734,
+      "position": "Forward-Center",
+      "country": "Lithuania",
+      "game_stats": {
+        "pts": 10.0,
+        "ast": 2.0,
+        "reb": 8.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.238,
+        "assists_pct": 0.222,
+        "rebounds_pct": 0.364,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Myles Turner",
+      "school": "Texas",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "IND",
+      "avatar": "12",
+      "conference": "Southeastern Conference",
+      "player_id": 1626167,
+      "position": "Center-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 12.0,
+        "ast": 0.0,
+        "reb": 5.0,
+        "stl": 6.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.286,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.227,
+        "defense_pct": 0.545
+      }
+    },
+    {
+      "name": "Jeremy Lamb",
+      "school": "UConn",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "IND",
+      "avatar": "01",
+      "conference": "Big East Conference",
+      "player_id": 203087,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11.0,
+        "ast": 1.0,
+        "reb": 4.0,
+        "stl": 2.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.262,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.182,
+        "defense_pct": 0.273
+      }
+    },
+    {
+      "name": "Malcolm Brogdon",
+      "school": "Virginia",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "IND",
+      "avatar": "07",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1627763,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 5.0,
+        "ast": 5.0,
+        "reb": 4.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.119,
+        "assists_pct": 0.556,
+        "rebounds_pct": 0.182,
+        "defense_pct": 0.0
+      }
+    }
+  ]
+}

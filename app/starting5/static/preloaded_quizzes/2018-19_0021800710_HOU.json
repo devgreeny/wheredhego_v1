@@ -1,0 +1,135 @@
+{
+  "season": "2018-19",
+  "game_id": "0021800710",
+  "team_abbr": "HOU",
+  "opponent_abbr": "NYK",
+  "matchup": "NYK vs HOU",
+  "game_date": "2019-01-23",
+  "players": [
+    {
+      "name": "Eric Gordon",
+      "school": "Indiana",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "HOU",
+      "avatar": "07",
+      "conference": "Big Ten Conference",
+      "player_id": 201569,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 20.0,
+        "ast": 0.0,
+        "reb": 4.0,
+        "stl": 2.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.202,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.105,
+        "defense_pct": 0.105
+      }
+    },
+    {
+      "name": "P.J. Tucker",
+      "school": "Texas",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "HOU",
+      "avatar": "04",
+      "conference": "Southeastern Conference",
+      "player_id": 200782,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 3.0,
+        "ast": 0.0,
+        "reb": 9.0,
+        "stl": 2.0,
+        "blk": 2.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.03,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.237,
+        "defense_pct": 0.211
+      }
+    },
+    {
+      "name": "Kenneth Faried",
+      "school": "Morehead State",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "HOU",
+      "avatar": "03",
+      "conference": "Ohio Valley Conference",
+      "player_id": 202702,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11.0,
+        "ast": 1.0,
+        "reb": 8.0,
+        "stl": 3.0,
+        "blk": 3.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.111,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.211,
+        "defense_pct": 0.316
+      }
+    },
+    {
+      "name": "James Harden",
+      "school": "Arizona State",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "HOU",
+      "avatar": "04",
+      "conference": "Big 12 Conference",
+      "player_id": 201935,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 61.0,
+        "ast": 4.0,
+        "reb": 15.0,
+        "stl": 5.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.616,
+        "assists_pct": 0.444,
+        "rebounds_pct": 0.395,
+        "defense_pct": 0.263
+      }
+    },
+    {
+      "name": "Austin Rivers",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "HOU",
+      "avatar": "05",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 203085,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 4.0,
+        "ast": 4.0,
+        "reb": 2.0,
+        "stl": 1.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.04,
+        "assists_pct": 0.444,
+        "rebounds_pct": 0.053,
+        "defense_pct": 0.105
+      }
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+/* ======================= Gridiron 11 — app.css ======================= */
+
+/* ---- Variables ---- */
+:root{
+    --board-width: min(1000px, 50vw);
+  
+    /* Player chip gradient */
+    --badge: radial-gradient(circle at 35% 30%, #2d56ff 0%, #0d2aa0 60%, #081b66 100%);
+  
+    /* Neon frame palette */
+    --neon-blue-1: #1fe0ff;   /* glow */
+    --neon-blue-2: #00b7ff;   /* core */
+    --neon-bg:     #050c14;   /* bezel bg */
+  }
+  
+  /* ---- Base layout ---- */
+  *{ box-sizing:border-box; }
+  html,body{
+    height:100%;
+    margin:0;
+    background:#0e0e0e;
+    display:grid;
+    place-items:center;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  .page{ width: var(--board-width); }
+  
+  /* ================= Neon frame (outside the image) ================= */
+  .frame{ position:relative; width:100%; }
+  
+  .frame.neon{
+    padding:24px;                     /* thickness of frame */
+    background: var(--neon-bg);
+    border-radius:18px;
+    border:0;
+    box-shadow: 0 18px 40px rgba(0,0,0,.65);
+  }
+  .frame.neon::before{
+    content:"";
+    position:absolute; inset:8px;
+    border-radius:14px;
+    z-index:0;
+    pointer-events:none;
+    background:
+      /* TOP rails */
+      linear-gradient(to right, transparent 48px, var(--neon-blue-2), var(--neon-blue-1), var(--neon-blue-2), transparent calc(100% - 48px)) top / 100% 8px no-repeat,
+      linear-gradient(to right, transparent 66px, #ffffff, transparent calc(100% - 66px)) top 12px / 100% 3px no-repeat,
+  
+      /* BOTTOM rails */
+      linear-gradient(to right, transparent 48px, var(--neon-blue-2), var(--neon-blue-1), var(--neon-blue-2), transparent calc(100% - 48px)) bottom / 100% 8px no-repeat,
+      linear-gradient(to right, transparent 66px, #ffffff, transparent calc(100% - 66px)) bottom 12px / 100% 3px no-repeat,
+  
+      /* LEFT rails */
+      linear-gradient(to bottom, transparent 48px, var(--neon-blue-2), var(--neon-blue-1), var(--neon-blue-2), transparent calc(100% - 48px)) left / 8px 100% no-repeat,
+      linear-gradient(to bottom, transparent 66px, #ffffff, transparent calc(100% - 66px)) left 12px / 3px 100% no-repeat,
+  
+      /* RIGHT rails */
+      linear-gradient(to bottom, transparent 48px, var(--neon-blue-2), var(--neon-blue-1), var(--neon-blue-2), transparent calc(100% - 48px)) right / 8px 100% no-repeat,
+      linear-gradient(to bottom, transparent 66px, #ffffff, transparent calc(100% - 66px)) right 12px / 3px 100% no-repeat;
+    box-shadow:
+      0 0 14px 2px rgba(31,224,255,.55),
+      0 0 28px 6px rgba(31,224,255,.35),
+      inset 0 0 18px rgba(0,183,255,.25);
+  }
+  /* No corner diamonds */
+  .frame.neon::after{ content:none; }
+  
+  /* ================= Image board ================= */
+  .board{
+    position:relative;
+    width:100%;
+    z-index:1;                         /* above the frame rails */
+    background: transparent;
+    border:0;
+    border-radius:0;                   /* square corners */
+    box-shadow:none;
+  }
+  .board::before,
+  .board::after{ content:none; }
+  .board img{
+    width:100%; height:auto; display:block; border-radius:0;
+  }
+  
+  /* ================= Formation overlay ================= */
+  .overlay{
+    position:absolute; inset:0; z-index:5; pointer-events:none;
+  }
+  .circle{
+    position:absolute; transform:translate(-50%,-50%);
+    width:clamp(18px, 2.6vw, 34px); height:clamp(18px, 2.6vw, 34px);
+    border-radius:50%;
+    display:grid; place-items:center;
+    font-weight:700; font-size:clamp(9px, 1.1vw, 14px); line-height:1.1;
+    color:#fff; letter-spacing:.5px; text-align:center;
+    background: var(--badge);
+    border:2px solid rgba(255,244,200,.35);
+    box-shadow:0 2px 0 rgba(0,0,0,.35);
+    cursor:pointer; pointer-events:auto;
+  }
+  .circle.active{ outline:3px solid rgba(255,212,0,.35); outline-offset:0; }
+  
+  /* ================= Quiz area - two row layout ================= */
+  .quiz{
+    width:100%; margin:12px auto 0;
+    background:#141414; border:1px solid #2a2a2a; border-radius:18px;
+    padding:16px; color:#e9e9e9;
+    box-shadow: inset 0 0 0 1px rgba(0,183,255,.12);
+  }
+  
+  /* Top row: Position + Name + Input */
+  .quiz-top{
+    display:flex; align-items:center; gap:12px; margin-bottom:12px;
+  }
+  .quiz-top .pos{
+    min-width:86px; text-align:center; font-weight:800; letter-spacing:.5px;
+    font-size:18px; color:#fff; padding:8px 12px; background:#0d2aa0;
+    border-radius:12px; box-shadow:0 2px 0 rgba(0,0,0,.35);
+  }
+  .quiz-top .name{ 
+    font-weight:700; font-size:18px; min-width:200px; white-space:nowrap;
+  }
+  .dropdown-container{
+    position:relative; flex:1; min-width:240px;
+  }
+  .college-input{
+    width:100%; padding:12px 14px; border-radius:12px;
+    border:1px solid #3a3a3a; background:#0f0f0f; color:#fff; font-size:16px;
+    box-sizing:border-box;
+  }
+  .college-input:focus{
+    outline:none; border-color:#0d2aa0; box-shadow:0 0 0 2px rgba(13,42,160,0.2);
+  }
+  .dropdown-list{
+    position:absolute; top:100%; left:0; right:0; z-index:1000;
+    background:#0f0f0f; border:1px solid #3a3a3a; border-top:none;
+    border-radius:0 0 12px 12px; max-height:200px; overflow-y:auto;
+    display:none;
+  }
+  .dropdown-list.show{ display:block; }
+  .dropdown-item{
+    padding:10px 14px; cursor:pointer; border-bottom:1px solid #2a2a2a;
+    color:#fff; font-size:16px;
+  }
+  .dropdown-item:last-child{ border-bottom:none; }
+  .dropdown-item:hover, .dropdown-item.highlighted{
+    background:#1a1a1a; color:#9ecbff;
+  }
+  .dropdown-item.selected{
+    background:#0d2aa0; color:#fff;
+  }
+  .no-results{
+    padding:10px 14px; color:#666; font-style:italic; text-align:center;
+  }
+  
+  /* Bottom row: Navigation + Action buttons */
+  .quiz-bottom{
+    display:flex; align-items:center; justify-content:space-between; gap:18px;
+  }
+  .nav-group{
+    display:flex; align-items:center; gap:12px;
+  }
+  .nav-group .arrow{
+    background:#222; border:1px solid #444; color:#fff;
+    width:44px; height:44px; border-radius:12px; font-size:18px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .nav-group .arrow:hover{ background:#2a2a2a; }
+  .nav-text{
+    color:#e9e9e9; font-weight:800; font-style:italic; line-height:1.1; opacity:.9;
+    text-align:center; white-space:nowrap;
+  }
+  .action-group{
+    display:flex; align-items:center; gap:12px;
+  }
+  .action-group .action{
+    background:#0d2aa0; border:1px solid #0a58ca; color:#fff;
+    padding:12px 16px; border-radius:12px; font-weight:800; font-style:italic; cursor:pointer;
+    box-shadow:0 2px 0 rgba(0,0,0,.35); min-height:44px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .action-group .action:hover{ filter:brightness(1.05); }
+  
+  /* Status area (minimized) */
+  .quiz-status{
+    margin-top:8px; display:flex; gap:12px; align-items:center; opacity:0.7;
+  }
+  .quiz-status .status{ font-weight:700; font-size:14px; }
+  .quiz-status .muted{ color:#a9a9a9; font-weight:500; font-size:14px; }
+  
+  /* ================= Score Modal ================= */
+  .modal{ position:fixed; inset:0; display:none; z-index:999; }
+  .modal.show{ display:block; }
+  .modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.65); backdrop-filter:blur(2px); }
+  .modal__panel{
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:min(720px, 92vw); background:#141414; border:1px solid #283142; border-radius:18px;
+    padding:22px; color:#e9e9e9;
+    box-shadow:0 12px 40px rgba(0,0,0,.6), inset 0 0 0 1px rgba(0,183,255,.12);
+  }
+  .modal__header{ display:flex; align-items:center; gap:16px; margin-bottom:10px; }
+  .modal__title{ font-size:22px; font-weight:800; letter-spacing:.3px; margin:0; }
+  .share-btn{ 
+    background:#1a73e8; border:1px solid #1557b0; color:#fff;
+    padding:8px 12px; border-radius:8px; font-weight:700; cursor:pointer;
+    box-shadow:0 2px 0 rgba(0,0,0,.25); font-size:14px;
+    display:flex; align-items:center; gap:4px;
+  }
+  .share-btn:hover{ filter:brightness(1.1); }
+  .modal__score{ margin-left:auto; background:#0d2aa0; color:#fff; font-weight:800; padding:8px 12px; border-radius:10px; box-shadow:0 2px 0 rgba(0,0,0,.35); }
+  
+    .modal__hint{ color:#9ecbff; font-style:italic; margin:6px 2px 8px; min-height:1.2em; }
+
+  .modal__content{
+    margin:6px 0 14px; padding:0; max-height:45vh; overflow:auto;
+    border:1px solid #242b39; border-radius:12px;
+  }
+  .modal__score-row{
+    display:grid; grid-template-columns:110px 1fr 1fr; gap:10px; padding:10px 12px; align-items:center;
+    border-bottom:1px solid #1e2431; background:linear-gradient(180deg, rgba(255,255,255,.02), transparent);
+  }
+  .modal__score-row:last-child{ border-bottom:none; }
+  .score-pos{ 
+    background:#0d2aa0; color:#fff; font-weight:800; text-align:center; 
+    padding:6px 10px; border-radius:8px; width:100%; 
+    box-shadow:0 2px 0 rgba(0,0,0,.35); 
+  }
+  .score-name{ font-weight:700; }
+  .score-result{ opacity:.95; }
+  .score-result--correct{ color:#9be37f; font-weight:800; }
+  .score-result--incorrect{ color:#ffb74d; font-weight:800; }
+  
+  /* Modal footer - FORCE OVERRIDE EVERYTHING */
+  .modal__panel .modal-footer{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 12px !important;
+    background: rgba(0,255,0,0.1) !important; /* DEBUG: green tint */
+    padding: 8px 0 !important;
+  }
+  
+  .modal__panel .modal-footer .footer-nav-group{
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  
+  .modal__panel .modal-footer .footer-action-group{
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  
+  .modal__panel .footer-nav-btn{
+    background:#222 !important; border:1px solid #444 !important; color:#fff !important;
+    width:44px !important; height:44px !important; border-radius:12px !important; 
+    font-size:18px !important; cursor:pointer !important;
+    box-shadow:0 2px 0 rgba(0,0,0,.35) !important; 
+    display:flex !important; align-items:center !important; justify-content:center !important;
+  }
+  .modal__panel .footer-nav-btn:hover{ background:#2a2a2a !important; }
+  
+  .modal__panel .footer-nav-text{
+    color:#e9e9e9 !important; font-weight:800 !important; font-style:italic !important; 
+    line-height:1.1 !important; opacity:.9 !important;
+    text-align:center !important; white-space:nowrap !important;
+  }
+  
+  .modal__panel .footer-action-btn{ 
+    background:#0d2aa0 !important; color:#fff !important; border:1px solid #0a58ca !important; 
+    font-style:italic !important; padding:12px 16px !important; border-radius:12px !important; 
+    font-weight:800 !important; cursor:pointer !important;
+    box-shadow:0 2px 0 rgba(0,0,0,.35) !important;
+    display:flex !important; align-items:center !important; justify-content:center !important; 
+    min-height:44px !important;
+  }
+  .modal__panel .footer-action-btn:hover{ filter:brightness(1.05) !important; }
+  
+  /* ---- Small screens ---- */
+  @media (max-width: 720px){
+    :root{ --board-width: 95vw; }
+    .frame.neon{ padding:16px; }
+    .frame.neon::before{ inset:6px; }
+    .modal-footer{ gap:8px; }
+  }
+  

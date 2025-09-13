@@ -1,0 +1,135 @@
+{
+  "season": "2021-22",
+  "game_id": "0022100954",
+  "team_abbr": "DAL",
+  "opponent_abbr": "SAC",
+  "matchup": "DAL vs SAC",
+  "game_date": "2022-03-05",
+  "players": [
+    {
+      "name": "Reggie Bullock Jr.",
+      "school": "North Carolina",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "DAL",
+      "avatar": "03",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 203493,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11.0,
+        "ast": 1.0,
+        "reb": 1.0,
+        "stl": 2.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.118,
+        "assists_pct": 0.056,
+        "rebounds_pct": 0.053,
+        "defense_pct": 0.4
+      }
+    },
+    {
+      "name": "Dorian Finney-Smith",
+      "school": "Florida",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "DAL",
+      "avatar": "07",
+      "conference": "Southeastern Conference",
+      "player_id": 1627827,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 17.0,
+        "ast": 2.0,
+        "reb": 6.0,
+        "stl": 2.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.183,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.316,
+        "defense_pct": 0.4
+      }
+    },
+    {
+      "name": "Dwight Powell",
+      "school": "Stanford",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "DAL",
+      "avatar": "01",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 203939,
+      "position": "Forward-Center",
+      "country": "Canada",
+      "game_stats": {
+        "pts": 6.0,
+        "ast": 2.0,
+        "reb": 7.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.065,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.368,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Spencer Dinwiddie",
+      "school": "Colorado",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "DAL",
+      "avatar": "08",
+      "conference": "Big 12 Conference",
+      "player_id": 203915,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 36.0,
+        "ast": 7.0,
+        "reb": 2.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.387,
+        "assists_pct": 0.389,
+        "rebounds_pct": 0.105,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Jalen Brunson",
+      "school": "Villanova",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "DAL",
+      "avatar": "01",
+      "conference": "Big East Conference",
+      "player_id": 1628973,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 23.0,
+        "ast": 6.0,
+        "reb": 3.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.247,
+        "assists_pct": 0.333,
+        "rebounds_pct": 0.158,
+        "defense_pct": 0.2
+      }
+    }
+  ]
+}

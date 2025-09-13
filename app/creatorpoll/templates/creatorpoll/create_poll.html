@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Poll - CFB Creator Poll</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0f172a;
+            --gold: #facc15;
+            --light-gray: #e2e8f0;
+            --green: #22c55e;
+            --red: #ef4444;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: var(--navy);
+            color: var(--light-gray);
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .form-container {
+            background: #1e293b;
+            border: 2px solid var(--gold);
+            border-radius: 0.75rem;
+            padding: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            color: var(--gold);
+            font-size: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            background: #334155;
+            border: 1px solid #475569;
+            border-radius: 0.25rem;
+            padding: 0.75rem;
+            color: var(--light-gray);
+            font-size: 0.4rem;
+            font-family: inherit;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.2);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 4rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-size: 0.5rem;
+            border: none;
+            cursor: pointer;
+            margin: 0 0.5rem;
+            font-family: inherit;
+        }
+        
+        .btn:hover {
+            background: #eab308;
+        }
+        
+        .btn-secondary {
+            background: #475569;
+            color: var(--light-gray);
+        }
+        
+        .btn-secondary:hover {
+            background: #64748b;
+        }
+        
+        .form-actions {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .flash-messages {
+            margin-bottom: 1rem;
+        }
+        
+        .flash {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.5rem;
+        }
+        
+        .flash-success { background: var(--green); color: white; }
+        .flash-error { background: var(--red); color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Create New Poll</h1>
+        </div>
+        
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        
+        <form method="POST" class="form-container">
+            <div class="form-group">
+                <label for="title" class="form-label">Poll Title</label>
+                <input type="text" id="title" name="title" class="form-input" 
+                       value="CFB Creator Poll - Week {{ current_week }}" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="description" class="form-label">Description (Optional)</label>
+                <textarea id="description" name="description" class="form-textarea" 
+                          placeholder="Add any special instructions or context for this week's poll..."></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="season_year" class="form-label">Season Year</label>
+                    <input type="number" id="season_year" name="season_year" class="form-input" 
+                           value="{{ current_season }}" min="2020" max="2030" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="week_number" class="form-label">Week Number</label>
+                    <input type="number" id="week_number" name="week_number" class="form-input" 
+                           value="{{ current_week }}" min="1" max="17" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="days_open" class="form-label">Days Open for Voting</label>
+                <input type="number" id="days_open" name="days_open" class="form-input" 
+                       value="7" min="1" max="14" required>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn">Create Poll</button>
+                <a href="{{ url_for('creatorpoll.home') }}" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+{
+  "season": "2012-13",
+  "game_id": "0021200453",
+  "team_abbr": "CHI",
+  "opponent_abbr": "CHA",
+  "matchup": "CHI vs CHA",
+  "game_date": "2012-12-31",
+  "players": [
+    {
+      "name": "Luol Deng",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "CHI",
+      "avatar": "04",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 2736,
+      "position": "Forward",
+      "country": "United Kingdom",
+      "game_stats": {
+        "pts": 20.0,
+        "ast": 4.0,
+        "reb": 12.0,
+        "stl": 3.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.351,
+        "assists_pct": 0.222,
+        "rebounds_pct": 0.353,
+        "defense_pct": 0.267
+      }
+    },
+    {
+      "name": "Carlos Boozer",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 13,
+      "team_abbrev": "CHI",
+      "avatar": "13",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 2430,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 19.0,
+        "ast": 3.0,
+        "reb": 14.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.333,
+        "assists_pct": 0.167,
+        "rebounds_pct": 0.412,
+        "defense_pct": 0.067
+      }
+    },
+    {
+      "name": "Joakim Noah",
+      "school": "Florida",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "CHI",
+      "avatar": "02",
+      "conference": "Southeastern Conference",
+      "player_id": 201149,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 2.0,
+        "ast": 2.0,
+        "reb": 4.0,
+        "stl": 3.0,
+        "blk": 2.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.035,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.118,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Richard Hamilton",
+      "school": "UConn",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "CHI",
+      "avatar": "08",
+      "conference": "Big East Conference",
+      "player_id": 1888,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11.0,
+        "ast": 2.0,
+        "reb": 1.0,
+        "stl": 2.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.193,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.029,
+        "defense_pct": 0.133
+      }
+    },
+    {
+      "name": "Nate Robinson",
+      "school": "Washington",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "CHI",
+      "avatar": "07",
+      "conference": "Big Ten Conference",
+      "player_id": 101126,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 5.0,
+        "ast": 7.0,
+        "reb": 3.0,
+        "stl": 3.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.088,
+        "assists_pct": 0.389,
+        "rebounds_pct": 0.088,
+        "defense_pct": 0.2
+      }
+    }
+  ]
+}

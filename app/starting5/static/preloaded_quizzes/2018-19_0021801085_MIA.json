@@ -1,0 +1,135 @@
+{
+  "season": "2018-19",
+  "game_id": "0021801085",
+  "team_abbr": "MIA",
+  "opponent_abbr": "MIL",
+  "matchup": "MIL vs MIA",
+  "game_date": "2019-03-22",
+  "players": [
+    {
+      "name": "Derrick Jones Jr.",
+      "school": "UNLV",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "MIA",
+      "avatar": "03",
+      "conference": "Mountain West Conference",
+      "player_id": 1627884,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11.0,
+        "ast": 3.0,
+        "reb": 7.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.2,
+        "assists_pct": 0.25,
+        "rebounds_pct": 0.333,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "Kelly Olynyk",
+      "school": "Gonzaga",
+      "school_type": "College",
+      "spriteIndex": 9,
+      "team_abbrev": "MIA",
+      "avatar": "09",
+      "conference": "West Coast Conference",
+      "player_id": 203482,
+      "position": "Forward-Center",
+      "country": "Canada",
+      "game_stats": {
+        "pts": 13.0,
+        "ast": 0.0,
+        "reb": 3.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.236,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.143,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Bam Adebayo",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "MIA",
+      "avatar": "03",
+      "conference": "Southeastern Conference",
+      "player_id": 1628389,
+      "position": "Center-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 12.0,
+        "ast": 2.0,
+        "reb": 7.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.218,
+        "assists_pct": 0.167,
+        "rebounds_pct": 0.333,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "Dion Waiters",
+      "school": "Syracuse",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "MIA",
+      "avatar": "08",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 203079,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 9.0,
+        "ast": 2.0,
+        "reb": 1.0,
+        "stl": 1.0,
+        "blk": 2.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.164,
+        "assists_pct": 0.167,
+        "rebounds_pct": 0.048,
+        "defense_pct": 0.5
+      }
+    },
+    {
+      "name": "Josh Richardson",
+      "school": "Tennessee",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "MIA",
+      "avatar": "12",
+      "conference": "Southeastern Conference",
+      "player_id": 1626196,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 10.0,
+        "ast": 5.0,
+        "reb": 3.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.182,
+        "assists_pct": 0.417,
+        "rebounds_pct": 0.143,
+        "defense_pct": 0.167
+      }
+    }
+  ]
+}

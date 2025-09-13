@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+
+  <meta charset="UTF-8" />
+  <title>Starting5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}" />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-color: #0f172a !important;
+      padding-top: 1.5rem;
+      font-family: 'Press Start 2P', monospace;
+      color: #facc15;
+    }
+
+    .auth-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #0f172a;
+      padding: 0.8rem 2rem;
+      font-size: 0.7rem;
+      color: #e2e8f0;
+      text-align: right;
+      z-index: 1000;
+      font-family: 'Press Start 2P', monospace;
+    }
+    .auth-bar a {
+      color: #eab308;
+      text-decoration: none;
+      margin-left: 0.7rem;
+      transition: color 0.15s;
+    }
+    .auth-bar a:hover {
+      color: #eab308;
+    }
+    .auth-bar .sep {
+      color: #000000;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="auth-bar">
+    <a href="{{ url_for('main.home') }}">Home</a>
+    <span class="sep">|</span>
+    {% if current_user.is_authenticated %}
+      Hello <strong>{{ current_user.username }}</strong>
+      <span class="sep">|</span>
+      <a href="{{ url_for('auth.logout') }}">Logout</a>
+    {% else %}
+      <a href="{{ url_for('auth.register') }}">Register</a>
+      <span class="sep">|</span>
+      <a href="{{ url_for('auth.login') }}">Login</a>
+    {% endif %}
+  </div>
+  <div class="content">
+    <div class="results-page">
+      <div id="results-cards" class="results-cards">
+        {% for player in data.players %}
+        {% set idx = loop.index0 %}
+        {% set r = results[idx] %}
+        <div class="card result-card animate{% if r.startswith('✅') %} correct-card{% else %} wrong-card{% endif %}" style="--delay: {{ '%.1f'|format(loop.index0 * 0.2) }}s">
+          <img
+            src="{{ url_for('static', filename=player.team_abbrev ~ '/images/' ~ player.team_abbrev ~ '_' ~ player.avatar ~ '.gif') }}"
+            alt="{{ player.name }} headshot"
+            class="avatar"
+          />
+          <h3>
+            {% set parts = player.name.split(' ') %}
+            {% if parts|length > 1 %}
+              {{ parts[0].upper() }}<br />{{ parts[1:]|join(' ')|upper }}
+            {% else %}
+              {{ player.name.upper() }}
+            {% endif %}
+          </h3>
+          <p>{{ player.position }}</p>
+          <div class="stat-row">
+            <span class="stat-label">Pts:</span>
+            <span class="stat-value">{{ player.game_stats.pts|int }}</span>
+            <div class="bar"><div class="bar-fill" style="width: {{ (player.game_contribution_pct.points_pct * 100)|round(1) }}%;"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Ast:</span>
+            <span class="stat-value">{{ player.game_stats.ast|int }}</span>
+            <div class="bar"><div class="bar-fill" style="width: {{ (player.game_contribution_pct.assists_pct * 100)|round(1) }}%;"></div></div>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Reb:</span>
+            <span class="stat-value">{{ player.game_stats.reb|int }}</span>
+            <div class="bar"><div class="bar-fill" style="width: {{ (player.game_contribution_pct.rebounds_pct * 100)|round(1) }}%;"></div></div>
+          </div>
+          <div class="result-info">
+            {% if r.startswith('✅') %}
+              <span class="correct">Correct</span>
+            {% else %}
+              <span class="wrong">Incorrect</span>
+            {% endif %}
+            <span class="answer">{{ correct_answers[idx] }}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% if show_leaderboard %}
+      <div id="results-leaderboard" class="results-leaderboard" style="display:none;">
+        <h3>Today's Leaderboard</h3>
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>User</th>
+              <th>Score</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for row in leaderboard %}
+            <tr>
+              <td>{{ loop.index }}</td>
+              <td>{{ row.username }}</td>
+              <td>{{ row.score }}/{{ row.max_points }}</td>
+              <td>{{ row.time_taken }}s</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        {% if show_share %}
+        <div class="share-row">
+          <button id="share-btn-lb" type="button" class="share-pill">Share with a friend to play the Bonus Quiz</button>
+          <span id="share-confirm-lb" class="share-confirm" style="display:none">Copied!</span>
+        </div>
+        {% endif %}
+        <a href="#" id="back-answers" class="leaderboard-link">Back to answers</a>
+      </div>
+      {% endif %}
+      <h2 class="score-line">You scored {{ score }} / {{ max_points }}</h2>
+      {% if show_share %}
+      <div id="results-share" class="share-row">
+        <button id="share-btn" type="button" class="share-pill">Share with a friend to play the Bonus Quiz</button>
+        <span id="share-confirm" class="share-confirm" style="display:none">Copied to Clipboard, Share!</span>
+      </div>
+      {% endif %}
+      {% if show_leaderboard %}
+      <a href="#" id="view-leaderboard" class="leaderboard-link">view leaderboard</a>
+      {% endif %}
+      <p class="past-quiz-line"><a href="#" id="view-past-quizzes" class="leaderboard-link">View Past Quizzes</a></p>
+      {% include '_archive_modal.html' %}
+    </div>
+  </div>
+  <script>
+    const shareMessage = {{ share_message|tojson }};
+    const isAuthenticated = {{ 'true' if current_user.is_authenticated else 'false' }};
+    const loginUrl = "{{ url_for('auth.login') }}";
+    const quizId = {{ quiz_id|tojson }};
+    const archiveQuizzes = {{ archive_quizzes|tojson }};
+  </script>
+  <script src="{{ url_for('static', filename='results.js') }}"></script>
+</body>
+</html>

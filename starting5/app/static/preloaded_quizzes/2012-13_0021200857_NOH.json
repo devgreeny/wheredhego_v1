@@ -1,0 +1,135 @@
+{
+  "season": "2012-13",
+  "game_id": "0021200857",
+  "team_abbr": "NOH",
+  "opponent_abbr": "OKC",
+  "matchup": "OKC vs NOH",
+  "game_date": "2013-02-27",
+  "players": [
+    {
+      "name": "Al-Farouq Aminu",
+      "school": "Wake Forest",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "NOH",
+      "avatar": "03",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 202329,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 7.0,
+        "ast": 0.0,
+        "reb": 7.0,
+        "stl": 1.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.163,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.538,
+        "defense_pct": 0.286
+      }
+    },
+    {
+      "name": "Ryan Anderson",
+      "school": "California",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "NOH",
+      "avatar": "02",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 201583,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 14.0,
+        "ast": 1.0,
+        "reb": 0.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.326,
+        "assists_pct": 0.083,
+        "rebounds_pct": 0.0,
+        "defense_pct": 0.143
+      }
+    },
+    {
+      "name": "Robin Lopez",
+      "school": "Stanford",
+      "school_type": "College",
+      "spriteIndex": 11,
+      "team_abbrev": "NOH",
+      "avatar": "11",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 201577,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 7.0,
+        "ast": 0.0,
+        "reb": 2.0,
+        "stl": 0.0,
+        "blk": 3.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.163,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.154,
+        "defense_pct": 0.429
+      }
+    },
+    {
+      "name": "Austin Rivers",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "NOH",
+      "avatar": "07",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 203085,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 9.0,
+        "ast": 4.0,
+        "reb": 1.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.209,
+        "assists_pct": 0.333,
+        "rebounds_pct": 0.077,
+        "defense_pct": 0.143
+      }
+    },
+    {
+      "name": "Greivis Vasquez",
+      "school": "Maryland",
+      "school_type": "College",
+      "spriteIndex": 10,
+      "team_abbrev": "NOH",
+      "avatar": "10",
+      "conference": "Big Ten Conference",
+      "player_id": 202349,
+      "position": "Guard",
+      "country": "Venezuela",
+      "game_stats": {
+        "pts": 6.0,
+        "ast": 7.0,
+        "reb": 3.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.14,
+        "assists_pct": 0.583,
+        "rebounds_pct": 0.231,
+        "defense_pct": 0.0
+      }
+    }
+  ]
+}

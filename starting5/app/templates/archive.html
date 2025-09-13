@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Starting5 - Archive</title>
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <style>
+    body {
+      margin: 0;
+      padding-top: 2rem;
+      min-height: 100vh;
+      background: repeating-linear-gradient(45deg, var(--navy-900) 0 6px, var(--navy-800) 6px 12px);
+      font-family: 'Press Start 2P', monospace;
+      color: var(--gold);
+    }
+    .archive-container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 1rem;
+      text-align: center;
+    }
+    .archive-list {
+      list-style: none;
+      padding: 0;
+    }
+    .archive-list li {
+      margin-bottom: 0.6rem;
+    }
+    .archive-list a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-bar">
+    <a href="{{ url_for('main.home') }}">Home</a> |
+    <a href="{{ url_for('auth.logout') }}">Logout</a>
+  </div>
+  <div class="archive-container">
+    <h2>Quiz Archive</h2>
+    <ul class="archive-list">
+      {% for q in quizzes %}
+      <li><a href="{{ url_for('main.play_archived_quiz', quiz_id=q.id) }}">{{ q.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>

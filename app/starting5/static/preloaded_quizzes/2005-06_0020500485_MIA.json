@@ -1,0 +1,135 @@
+{
+  "season": "2005-06",
+  "game_id": "0020500485",
+  "team_abbr": "MIA",
+  "opponent_abbr": "POR",
+  "matchup": "POR vs MIA",
+  "game_date": "2006-01-08",
+  "players": [
+    {
+      "name": "James Posey",
+      "school": "Xavier",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "MIA",
+      "avatar": "08",
+      "conference": "Big East Conference",
+      "player_id": 1899,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 12,
+        "ast": 1,
+        "reb": 9,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.152,
+        "assists_pct": 0.056,
+        "rebounds_pct": 0.346,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Udonis Haslem",
+      "school": "Florida",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "MIA",
+      "avatar": "04",
+      "conference": "Southeastern Conference",
+      "player_id": 2617,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 4,
+        "ast": 0,
+        "reb": 1,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.051,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.038,
+        "defense_pct": 0.143
+      }
+    },
+    {
+      "name": "Shaquille O'Neal",
+      "school": "LSU",
+      "school_type": "College",
+      "spriteIndex": 13,
+      "team_abbrev": "MIA",
+      "avatar": "13",
+      "conference": "Southeastern Conference",
+      "player_id": 406,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 12,
+        "ast": 2,
+        "reb": 7,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.152,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.269,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Dwyane Wade",
+      "school": "Marquette",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "MIA",
+      "avatar": "03",
+      "conference": "Big East Conference",
+      "player_id": 2548,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 31,
+        "ast": 7,
+        "reb": 5,
+        "stl": 6,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.392,
+        "assists_pct": 0.389,
+        "rebounds_pct": 0.192,
+        "defense_pct": 0.857
+      }
+    },
+    {
+      "name": "Jason Williams",
+      "school": "Florida",
+      "school_type": "College",
+      "spriteIndex": 14,
+      "team_abbrev": "MIA",
+      "avatar": "14",
+      "conference": "Southeastern Conference",
+      "player_id": 1715,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 20,
+        "ast": 8,
+        "reb": 4,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.253,
+        "assists_pct": 0.444,
+        "rebounds_pct": 0.154,
+        "defense_pct": 0.0
+      }
+    }
+  ]
+}

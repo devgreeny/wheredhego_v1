@@ -1,0 +1,135 @@
+{
+  "season": "2024-25",
+  "game_id": "0021700359",
+  "team_abbr": "DET",
+  "opponent_abbr": "MIL",
+  "matchup": "MIL vs DET",
+  "game_date": "None",
+  "players": [
+    {
+      "name": "Luguentz Dort",
+      "school": "Arizona State",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "OKC",
+      "avatar": "12",
+      "conference": "Big 12 Conference",
+      "player_id": 1626169,
+      "position": "Forward-Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 2.0,
+        "ast": 5.0,
+        "reb": 7.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.024,
+        "assists_pct": 0.294,
+        "rebounds_pct": 0.184,
+        "defense_pct": 0.2
+      }
+    },
+    {
+      "name": "Tobias Harris",
+      "school": "Tennessee",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "DET",
+      "avatar": "12",
+      "conference": "Southeastern Conference",
+      "player_id": 202699,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 21.0,
+        "ast": 0.0,
+        "reb": 5.0,
+        "stl": 3.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.25,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.132,
+        "defense_pct": 0.6
+      }
+    },
+    {
+      "name": "Andre Drummond",
+      "school": "UConn",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "DET",
+      "avatar": "04",
+      "conference": "Big East Conference",
+      "player_id": 203083,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 27.0,
+        "ast": 6.0,
+        "reb": 20.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.321,
+        "assists_pct": 0.353,
+        "rebounds_pct": 0.526,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Avery Bradley",
+      "school": "Texas",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "DET",
+      "avatar": "07",
+      "conference": "Southeastern Conference",
+      "player_id": 202340,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 20.0,
+        "ast": 2.0,
+        "reb": 1.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.238,
+        "assists_pct": 0.118,
+        "rebounds_pct": 0.026,
+        "defense_pct": 0.2
+      }
+    },
+    {
+      "name": "Reggie Jackson",
+      "school": "Boston College",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "DET",
+      "avatar": "01",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 202704,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 14.0,
+        "ast": 4.0,
+        "reb": 5.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.167,
+        "assists_pct": 0.235,
+        "rebounds_pct": 0.132,
+        "defense_pct": 0.0
+      }
+    }
+  ]
+}
