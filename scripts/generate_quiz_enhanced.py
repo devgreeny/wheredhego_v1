@@ -54,8 +54,8 @@ from io import StringIO
 NBA_SAVE_DIR = "quizzes/starting5/preloaded"
 NFL_SAVE_DIR = "quizzes/gridiron11/preloaded"
 
-# College data path
-COLLEGE_DATA_PATH = Path(__file__).resolve().parent / "starting5" / "app" / "static" / "json" / "cbb25.csv"
+# College data path (updated for new structure)
+COLLEGE_DATA_PATH = Path(__file__).resolve().parent.parent / "app" / "starting5" / "static" / "json" / "cbb25.csv"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # NBA GENERATION (from original generate_quiz.py)
