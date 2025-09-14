@@ -4,7 +4,7 @@
 # Use this in PythonAnywhere's scheduled tasks
 
 # Set up environment
-cd /home/devgreeny/wheredhego
+cd /home/devgreeny/wheredhego_v1
 
 # Activate virtual environment if needed (uncomment if using venv)
 # source venv/bin/activate
