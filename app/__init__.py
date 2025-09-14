@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 import os
 
 def create_app():
@@ -62,6 +62,18 @@ def create_app():
     @app.route("/healthz")
     def healthz():
         return "ok"
+    
+    # Favicon routes - serve favicon files from the favicon directory
+    @app.route('/favicon/<path:filename>')
+    def favicon(filename):
+        favicon_dir = os.path.join(app.root_path, '..', 'favicon')
+        return send_from_directory(favicon_dir, filename)
+    
+    # Traditional favicon.ico route for backward compatibility
+    @app.route('/favicon.ico')
+    def favicon_ico():
+        favicon_dir = os.path.join(app.root_path, '..', 'favicon')
+        return send_from_directory(favicon_dir, 'favicon.ico')
 
     app.logger.info("Wheredhego app with Starting5 game created successfully")
     return app
