@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 import os
+import click
 
 def create_app():
     # Create the main app
@@ -78,6 +79,10 @@ def create_app():
     def favicon_ico():
         favicon_dir = os.path.join(app.root_path, '..', 'favicon')
         return send_from_directory(favicon_dir, 'favicon.ico')
+
+    # Register CLI commands
+    from app.tasks import register_cli_commands
+    register_cli_commands(app)
 
     app.logger.info("Wheredhego app with Starting5 game created successfully")
     return app

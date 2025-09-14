@@ -1,25 +1,35 @@
-# Game Update Script Deployment Guide
+# Game Update Task Deployment Guide
 
 ## 🎯 Overview
 
-The `update_games.py` script automatically updates both **Starting5** (NBA Basketball) and **Gridiron11** (NFL Football) games daily at midnight EST.
+The game update system provides **Flask CLI commands** for updating both **Starting5** (NBA Basketball) and **Gridiron11** (NFL Football) games. This system replaces the previous script-based approach with a more robust Flask-integrated solution.
 
 ## 🚀 Features
 
+- **Flask CLI Integration**: Native Flask commands with proper app context
 - **Dual Game Support**: Updates both Starting5 and Gridiron11 simultaneously
 - **Smart Archiving**: Moves yesterday's quizzes to archive folders
 - **Random Selection**: Picks random quizzes from preloaded pools
 - **Bonus Quiz Management**: Prepares bonus quizzes for Starting5
-- **Comprehensive Logging**: Detailed logs with timestamps
+- **Dry Run Mode**: Preview updates without making changes
+- **Selective Updates**: Update individual games or both
+- **Status Checking**: View current quiz status
+- **Comprehensive Logging**: Detailed logs with timestamps and colors
 - **Error Handling**: Graceful failure handling with detailed error messages
-- **Fallback Support**: Handles different directory structures
+- **PythonAnywhere Compatible**: Designed specifically for PythonAnywhere's task system
 
 ## 📁 Directory Structure
 
 ```
 wheredhego/
+├── app/
+│   └── tasks.py                       # Flask CLI commands
 ├── scripts/
-│   └── update_games.py                # Main update script
+│   ├── update_games.py               # Legacy script (backup)
+│   ├── update_games_cli.sh           # Main PythonAnywhere task script
+│   ├── update_starting5.sh           # Starting5 only
+│   ├── update_gridiron11.sh          # Gridiron11 only
+│   └── check_game_status.sh          # Status check
 ├── quizzes/                           # Organized quiz data
 │   ├── starting5/
 │   │   ├── current/                   # Active Starting5 quiz
@@ -36,7 +46,31 @@ wheredhego/
 
 ## 🔧 PythonAnywhere Deployment
 
-### 1. Upload the Script
+### 1. Available Commands
+
+The new Flask CLI system provides several commands:
+
+```bash
+# Update both games
+flask update-games
+
+# Update individual games
+flask update-starting5
+flask update-gridiron11
+
+# Preview changes (dry run)
+flask update-games --dry-run
+flask update-starting5 --dry-run
+
+# Check current status
+flask game-status
+
+# Update specific games only
+flask update-games --games=starting5
+flask update-games --games=gridiron11
+```
+
+### 2. Setup Flask App Environment
 
 ```bash
 # SSH into PythonAnywhere
@@ -45,42 +79,62 @@ ssh devgreeny@ssh.pythonanywhere.com
 # Navigate to your project
 cd ~/wheredhego
 
-# Upload the script (or copy from GitHub after pushing)
-# The script should be in your project root
+# Set Flask app environment variable
+export FLASK_APP=run:app
+
+# Test the commands
+python3.10 -m flask game-status
+python3.10 -m flask update-games --dry-run
 ```
 
-### 2. Set Up Logging Directory
+### 3. PythonAnywhere Task Configuration
 
+**For the Scheduled Tasks interface, use one of these commands:**
+
+**Option 1: Main update script (recommended)**
 ```bash
-# Create logs directory
-mkdir -p ~/logs
-
-# Test the script
-python scripts/update_games.py
+/bin/bash /home/devgreeny/wheredhego/scripts/update_games_cli.sh
 ```
 
-### 3. Configure Cron Job
-
+**Option 2: Direct Flask command**
 ```bash
-# Edit crontab
-crontab -e
-
-# Add this line for midnight EST updates:
-0 4 * * * cd /home/devgreeny/wheredhego && python3.10 scripts/update_games.py >> /home/devgreeny/logs/game_updates.log 2>&1
-
-# Note: 4 AM UTC = Midnight EDT (Eastern Daylight Time)
-# For EDT (Mar-Nov): 0 4 * * *
-# For EST (Nov-Mar): 0 5 * * *
+python3.10 /home/devgreeny/wheredhego/scripts/update_games_cli.sh
 ```
 
-### 4. Verify Cron Job
+**Option 3: Individual game updates**
+```bash
+# For Starting5 only
+/bin/bash /home/devgreeny/wheredhego/scripts/update_starting5.sh
+
+# For Gridiron11 only  
+/bin/bash /home/devgreeny/wheredhego/scripts/update_gridiron11.sh
+```
+
+### 4. PythonAnywhere Task Settings
+
+- **Frequency**: Daily
+- **Time**: 22:20 (10:20 PM UTC = ~6:20 PM EDT / 5:20 PM EST)
+- **Command**: `/bin/bash /home/devgreeny/wheredhego/scripts/update_games_cli.sh`
+- **Description**: Update Games!
+
+### 5. Manual Testing
 
 ```bash
-# List current cron jobs
-crontab -l
+# Test individual commands
+cd ~/wheredhego
+export FLASK_APP=run:app
 
-# Check if cron service is running
-ps aux | grep cron
+# Check status
+python3.10 -m flask game-status
+
+# Test dry run
+python3.10 -m flask update-games --dry-run
+
+# Test actual update
+python3.10 -m flask update-games
+
+# Test individual game
+python3.10 -m flask update-starting5
 ```
 
 ## 📊 Script Behavior
@@ -97,10 +151,23 @@ ps aux | grep cron
 
 ## 🔍 Monitoring
 
+### Check Flask CLI Status
+```bash
+cd ~/wheredhego
+export FLASK_APP=run:app
+
+# Check current game status
+python3.10 -m flask game-status
+
+# Preview what would be updated
+python3.10 -m flask update-games --dry-run
+```
+
 ### Check Logs
 ```bash
-# View recent logs
+# View recent task logs
 tail -f ~/logs/game_updates.log
+tail -f ~/logs/task_completions.log
 
 # View last 50 lines
 tail -50 ~/logs/game_updates.log
@@ -111,9 +178,18 @@ grep "ERROR\|CRITICAL" ~/logs/game_updates.log
 
 ### Manual Testing
 ```bash
-# Test the script manually
+# Test Flask commands manually
 cd ~/wheredhego
-python scripts/update_games.py
+export FLASK_APP=run:app
+
+# Check status first
+python3.10 -m flask game-status
+
+# Test with dry run
+python3.10 -m flask update-games --dry-run
+
+# Run actual update
+python3.10 -m flask update-games
 
 # Check current quizzes
 ls -la quizzes/starting5/current/
@@ -200,4 +276,37 @@ touch ~/logs/game_updates.log
 0 4 * * * cd /home/devgreeny/wheredhego && python3.10 scripts/update_games.py >> /home/devgreeny/logs/game_updates.log 2>&1
 ```
 
-Your games will now update automatically every night! 🎮
+## 🎯 Quick Setup Summary
+
+### For PythonAnywhere Tasks Interface:
+
+1. **Command to use**: `/bin/bash /home/devgreeny/wheredhego/scripts/update_games_cli.sh`
+2. **Frequency**: Daily  
+3. **Time**: 22:20 UTC (6:20 PM EDT)
+4. **Description**: Update Games!
+
+### Available Flask Commands:
+
+```bash
+# Main commands (with FLASK_APP=run:app)
+python3.10 -m flask update-games           # Update both games
+python3.10 -m flask update-starting5       # Update Starting5 only  
+python3.10 -m flask update-gridiron11      # Update Gridiron11 only
+python3.10 -m flask game-status            # Check current status
+
+# With options
+python3.10 -m flask update-games --dry-run                    # Preview changes
+python3.10 -m flask update-games --games=starting5           # Update specific game
+```
+
+### Benefits of New System:
+
+- ✅ **Flask Integration**: Proper app context and database access
+- ✅ **Dry Run Mode**: Test changes before applying
+- ✅ **Selective Updates**: Update individual games
+- ✅ **Better Logging**: Colored output and structured logging  
+- ✅ **Status Checking**: View current quiz status anytime
+- ✅ **Error Handling**: More robust error handling and recovery
+- ✅ **PythonAnywhere Ready**: Designed specifically for PA's task system
+
+Your games will now update automatically every night with improved reliability! 🎮
