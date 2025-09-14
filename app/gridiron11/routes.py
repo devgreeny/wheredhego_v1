@@ -96,6 +96,11 @@ def get_current_quiz_file() -> str:
 def normalize_pos(p: str) -> str:
     if not p: return ""
     p = p.strip().upper().replace(".", "")
+    
+    # Strip numbers from positions (WR1 -> WR, TE2 -> TE, FB1 -> FB)
+    import re
+    p = re.sub(r'\d+$', '', p)
+    
     synonyms = {
         "HB":"RB","TB":"RB","HALFBACK":"RB","TAILBACK":"RB",
         "OC":"C","CENTER":"C",
