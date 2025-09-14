@@ -6,10 +6,14 @@ def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-wheredhego')
     
-    # Force HTTPS in production
+    # Force HTTPS in production only
     @app.before_request
     def force_https():
-        if not request.is_secure and not app.debug:
+        # Only redirect to HTTPS in production (when not in debug mode and not local)
+        if (not request.is_secure and 
+            not app.debug and 
+            not request.host.startswith('localhost') and 
+            not request.host.startswith('127.0.0.1')):
             if request.headers.get('X-Forwarded-Proto') != 'https':
                 return redirect(request.url.replace('http://', 'https://'), code=301)
     
