@@ -33,6 +33,7 @@ def home():
     <html>
     <head>
         <title>CFB Creator Poll</title>
+        <script defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
         <style>
             body { font-family: Arial, sans-serif; margin: 40px; background: #0f172a; color: #e2e8f0; }
             .header { text-align: center; margin-bottom: 30px; }
@@ -116,6 +117,7 @@ def creator_register():
     <html>
     <head>
         <title>Creator Registration</title>
+        <script defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
         <style>
             body { font-family: Arial, sans-serif; margin: 40px; background: #0f172a; color: #e2e8f0; }
             .form-container { max-width: 500px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 10px; }
@@ -181,6 +183,7 @@ def creator_login():
     <html>
     <head>
         <title>Creator Login</title>
+        <script defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
         <style>
             body { font-family: Arial, sans-serif; margin: 40px; background: #0f172a; color: #e2e8f0; }
             .form-container { max-width: 400px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 10px; }
@@ -259,6 +262,7 @@ def creator_vote():
     <html>
     <head>
         <title>Submit Your Top 25</title>
+        <script defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
         <style>
             body { font-family: Arial, sans-serif; margin: 20px; background: #0f172a; color: #e2e8f0; }
             .form-container { max-width: 800px; margin: 0 auto; }
@@ -337,6 +341,7 @@ def creator_dashboard():
     <html>
     <head>
         <title>Creator Dashboard</title>
+        <script defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
         <style>
             body { font-family: Arial, sans-serif; margin: 40px; background: #0f172a; color: #e2e8f0; }
             .dashboard { max-width: 800px; margin: 0 auto; }
@@ -412,6 +417,7 @@ def results():
     <html>
     <head>
         <title>Poll Results</title>
+        <script defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
         <style>
             body { font-family: Arial, sans-serif; margin: 40px; background: #0f172a; color: #e2e8f0; }
             .results { max-width: 800px; margin: 0 auto; }
