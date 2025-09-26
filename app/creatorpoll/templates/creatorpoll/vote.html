@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote - CFB Creator Poll</title>
+    
+    <!-- Favicon implementation -->
+    <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
+    <style>
+        :root {
+            --navy: #0f172a;
+            --gold: #facc15;
+            --light-gray: #e2e8f0;
+            --green: #22c55e;
+            --red: #ef4444;
+            --blue: #60a5fa;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: var(--navy);
+            color: var(--light-gray);
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .poll-info {
+            background: #1e293b;
+            border: 2px solid var(--gold);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.5rem;
+            text-align: center;
+        }
+        
+        .voting-form {
+            background: #1e293b;
+            border: 2px solid var(--gold);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        
+        .form-header {
+            color: var(--gold);
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .rankings-list {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .rank-item {
+            background: #334155;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: background-color 0.2s;
+        }
+        
+        .rank-item:hover {
+            background: #475569;
+        }
+        
+        .rank-number {
+            background: var(--gold);
+            color: var(--navy);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .team-input {
+            flex: 1;
+            background: #1e293b;
+            border: 2px solid #475569;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            color: var(--light-gray);
+            font-size: 0.5rem;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        .team-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.2);
+        }
+        
+        .team-suggestions {
+            position: absolute;
+            background: #1e293b;
+            border: 2px solid var(--gold);
+            border-radius: 0.5rem;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1000;
+            width: 100%;
+            display: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .suggestion-item {
+            padding: 0.75rem;
+            cursor: pointer;
+            font-size: 0.5rem;
+            border-bottom: 1px solid #334155;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .suggestion-item:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+        
+        .team-logo {
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+        
+        .team-info {
+            flex: 1;
+        }
+        
+        .team-name {
+            font-size: 0.5rem;
+            margin-bottom: 0.1rem;
+        }
+        
+        .team-conference {
+            color: #94a3b8;
+            font-size: 0.4rem;
+        }
+        
+        .selected-team {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.25rem;
+            background: #1e293b;
+            border: 1px solid var(--gold);
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.5rem;
+        }
+        
+        .selected-team-logo {
+            width: 18px;
+            height: 18px;
+            border-radius: 2px;
+        }
+        
+        .team-input:focus + .selected-team {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.2);
+        }
+        
+        .rank-item.has-selection {
+            border: 1px solid var(--gold);
+        }
+        
+        .form-actions {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-size: 0.5rem;
+            border: none;
+            cursor: pointer;
+            margin: 0 0.5rem;
+            font-family: inherit;
+        }
+        
+        .btn:hover {
+            background: #eab308;
+        }
+        
+        .btn-secondary {
+            background: #475569;
+            color: var(--light-gray);
+        }
+        
+        .btn-secondary:hover {
+            background: #64748b;
+        }
+        
+        .flash-messages {
+            margin-bottom: 1rem;
+        }
+        
+        .flash {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.5rem;
+        }
+        
+        .flash-error { background: var(--red); color: white; }
+        
+        .input-wrapper {
+            position: relative;
+            flex: 1;
+        }
+        
+        .validation-message {
+            color: var(--red);
+            font-size: 0.3rem;
+            margin-top: 0.25rem;
+        }
+        
+        .mini-clock {
+            background: #334155;
+            border: 1px solid var(--blue);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 0.4rem;
+        }
+        
+        .mini-clock-time {
+            color: var(--gold);
+            font-size: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .mini-clock-cutoff {
+            color: var(--red);
+            font-size: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗳️ Cast Your Ballot</h1>
+        </div>
+        
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        
+        <!-- Poll Info -->
+        <div class="poll-info">
+            <div style="color: var(--gold); font-size: 0.6rem; margin-bottom: 0.5rem;">{{ poll.title }}</div>
+            <div>{{ poll.season_year }} Season - Week {{ poll.week_number }}</div>
+            {% if poll.description %}<div style="margin-top: 0.5rem;">{{ poll.description }}</div>{% endif %}
+            <div style="margin-top: 0.5rem; color: var(--blue);">
+                Poll closes: {{ poll.end_date.strftime('%B %d, %Y at %I:%M %p') }}
+            </div>
+        </div>
+        
+        <!-- Mini Clock -->
+        <div class="mini-clock">
+            <div class="mini-clock-time" id="mini-time">--:--:-- --</div>
+            <div class="mini-clock-cutoff">Poll closes: {{ poll.end_date.strftime('%A, %B %d at %I:%M %p') }}</div>
+        </div>
+        
+        <!-- Voting Form -->
+        <form method="POST" class="voting-form" id="votingForm">
+            <div class="form-header">
+                🏆 Rank Your Top 25 Teams 🏆<br>
+                <span style="font-size: 0.4rem; color: #94a3b8;">Start typing team names - suggestions will appear</span>
+            </div>
+            
+            <div class="rankings-list">
+                {% for rank in range(1, 26) %}
+                <div class="rank-item">
+                    <div class="rank-number">{{ rank }}</div>
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            name="rank_{{ rank }}" 
+                            class="team-input" 
+                            placeholder="{% if rank <= 5 %}Top {{ rank }}{% elif rank <= 10 %}{{ rank }}{% else %}{{ rank }}{% endif %} team..."
+                            autocomplete="off"
+                            data-rank="{{ rank }}"
+                            {% if existing_ballot and existing_ballot.ballot_data %}
+                                {% for vote in existing_ballot.ballot_data %}
+                                    {% if vote.rank == rank %}
+                                        value="{{ vote.team_name }}"
+                                        data-selected-team="{{ vote.team_name }}"
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        >
+                        <div class="team-suggestions" id="suggestions-{{ rank }}"></div>
+                        <div class="validation-message" id="validation-{{ rank }}"></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn" style="font-size: 0.6rem; padding: 1rem 2rem;">🗳️ Submit My Top 25</button>
+                <a href="{{ url_for('creatorpoll.home') }}" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        // Team search functionality
+        const teamInputs = document.querySelectorAll('.team-input');
+        let teams = [];
+        
+        // Load teams data
+        fetch('/creatorpoll/api/search_teams?q=')
+            .then(response => response.json())
+            .then(data => {
+                // Load all teams for validation
+                fetch('/creatorpoll/api/search_teams?q=a')  // Get more teams
+                    .then(response => response.json())
+                    .then(allTeams => {
+                        teams = allTeams;
+                    });
+            });
+        
+        teamInputs.forEach(input => {
+            const rank = input.dataset.rank;
+            const suggestionsDiv = document.getElementById(`suggestions-${rank}`);
+            
+            input.addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                
+                if (query.length < 2) {
+                    suggestionsDiv.style.display = 'none';
+                    return;
+                }
+                
+                        fetch(`/creatorpoll/api/search_teams?q=${encodeURIComponent(query)}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.length > 0) {
+                                    suggestionsDiv.innerHTML = data.slice(0, 5).map(team => 
+                                        `<div class="suggestion-item" data-team="${team.name}" data-logo="${team.logo_url}" data-id="${team.id}">
+                                            <img src="${team.logo_url}" class="team-logo" alt="${team.name}" onerror="this.style.display='none'">
+                                            <div class="team-info">
+                                                <div class="team-name">${team.name}</div>
+                                                <div class="team-conference">${team.conference}</div>
+                                            </div>
+                                        </div>`
+                                    ).join('');
+                                    suggestionsDiv.style.display = 'block';
+                                } else {
+                                    suggestionsDiv.style.display = 'none';
+                                }
+                            });
+            });
+            
+            // Handle suggestion clicks
+            document.addEventListener('click', function(e) {
+                let suggestionItem = e.target;
+                
+                // Find the suggestion item (might be child element clicked)
+                while (suggestionItem && !suggestionItem.classList.contains('suggestion-item')) {
+                    suggestionItem = suggestionItem.parentElement;
+                }
+                
+                if (suggestionItem && suggestionItem.classList.contains('suggestion-item')) {
+                    const teamName = suggestionItem.dataset.team;
+                    const logoUrl = suggestionItem.dataset.logo;
+                    const teamId = suggestionItem.dataset.id;
+                    
+                    const parentInputWrapper = suggestionItem.closest('.rank-item').querySelector('.input-wrapper');
+                    const parentInput = parentInputWrapper.querySelector('.team-input');
+                    
+                    // Set the team name
+                    parentInput.value = teamName;
+                    
+                    // Remove existing logo if any
+                    const existingLogo = parentInputWrapper.querySelector('.selected-team');
+                    if (existingLogo) {
+                        existingLogo.remove();
+                    }
+                    
+                    // Add team logo display
+                    const logoDiv = document.createElement('div');
+                    logoDiv.className = 'selected-team';
+                    logoDiv.innerHTML = `<img src="${logoUrl}" class="selected-team-logo" alt="${teamName}" onerror="this.style.display='none'"><span style="font-size: 0.4rem; color: var(--light-gray); font-weight: bold;">${teamName}</span>`;
+                    parentInputWrapper.appendChild(logoDiv);
+                    
+                    // Add visual feedback to the rank item
+                    const rankItem = parentInputWrapper.closest('.rank-item');
+                    rankItem.classList.add('has-selection');
+                    
+                    // Hide all suggestions
+                    document.querySelectorAll('.team-suggestions').forEach(div => {
+                        div.style.display = 'none';
+                    });
+                }
+            });
+            
+            // Hide suggestions when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.input-wrapper')) {
+                    document.querySelectorAll('.team-suggestions').forEach(div => {
+                        div.style.display = 'none';
+                    });
+                }
+            });
+        });
+        
+        // Form validation
+        document.getElementById('votingForm').addEventListener('submit', function(e) {
+            let isValid = true;
+            const usedTeams = new Set();
+            
+            teamInputs.forEach(input => {
+                const rank = input.dataset.rank;
+                const value = input.value.trim();
+                const validationDiv = document.getElementById(`validation-${rank}`);
+                
+                validationDiv.textContent = '';
+                
+                if (!value) {
+                    validationDiv.textContent = 'Required';
+                    isValid = false;
+                } else if (usedTeams.has(value.toLowerCase())) {
+                    validationDiv.textContent = 'Team already ranked';
+                    isValid = false;
+                } else {
+                    usedTeams.add(value.toLowerCase());
+                }
+            });
+            
+            if (!isValid) {
+                e.preventDefault();
+            }
+        });
+        
+        // Mini clock for voting page
+        function updateMiniClock() {
+            const now = new Date();
+            const timeOptions = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            const currentTime = now.toLocaleTimeString('en-US', timeOptions);
+            document.getElementById('mini-time').textContent = currentTime;
+        }
+        
+        // Update mini clock immediately and then every second
+        updateMiniClock();
+        setInterval(updateMiniClock, 1000);
+        
+        // Load logos for existing selections
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('.team-input[data-selected-team]');
+            inputs.forEach(input => {
+                const teamName = input.dataset.selectedTeam;
+                if (teamName) {
+                    // Find team data for this selection
+                    fetch(`/creatorpoll/api/search_teams?q=${encodeURIComponent(teamName)}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const exactMatch = data.find(team => team.name === teamName);
+                            if (exactMatch) {
+                                const parentInputWrapper = input.closest('.input-wrapper');
+                                const logoDiv = document.createElement('div');
+                                logoDiv.className = 'selected-team';
+                                logoDiv.innerHTML = `<img src="${exactMatch.logo_url}" class="selected-team-logo" alt="${teamName}" onerror="this.style.display='none'"><span style="font-size: 0.4rem; color: var(--light-gray); font-weight: bold;">${teamName}</span>`;
+                                parentInputWrapper.appendChild(logoDiv);
+                                
+                                const rankItem = parentInputWrapper.closest('.rank-item');
+                                rankItem.classList.add('has-selection');
+                            }
+                        });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

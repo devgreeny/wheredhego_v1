@@ -1,0 +1,46 @@
+{
+  "team": "CIN",
+  "season": 2019,
+  "game_url": "https://www.pro-football-reference.com/boxscores/201910270ram.htm",
+  "generated_at": "20250926_193328",
+  "players": [
+    {
+      "name": "Andy Dalton",
+      "position": "QB1",
+      "college": "TCU",
+      "player_url": "https://www.pro-football-reference.com/players/D/DaltAn00.htm"
+    },
+    {
+      "name": "Joe Mixon",
+      "position": "RB1",
+      "college": "Oklahoma",
+      "player_url": "https://www.pro-football-reference.com/players/M/MixoJo00.htm"
+    },
+    {
+      "name": "Auden Tate",
+      "position": "WR1",
+      "college": "Florida State",
+      "player_url": "https://www.pro-football-reference.com/players/T/TateAu00.htm"
+    },
+    {
+      "name": "Tyler Boyd",
+      "position": "WR2",
+      "college": "Pittsburgh",
+      "player_url": "https://www.pro-football-reference.com/players/B/BoydTy00.htm"
+    },
+    {
+      "name": "C.J. Uzomah",
+      "position": "TE1",
+      "college": "Auburn",
+      "player_url": "https://www.pro-football-reference.com/players/U/UzomC.00.htm"
+    },
+    {
+      "name": "Tyler Eifert",
+      "position": "TE2",
+      "college": "Notre Dame",
+      "player_url": "https://www.pro-football-reference.com/players/E/EifeTy00.htm"
+    }
+  ],
+  "match_rate": "100%",
+  "notes": "All 6 skill players matched to college dataset"
+}

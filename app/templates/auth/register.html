@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — Where'd He Go?</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap" rel="stylesheet">
+  
+  <!-- Favicon implementation -->
+  <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <style>
+    :root {
+      --ink: #0f2e4d;
+      --ink-2: #102a44;
+      --bg: #f1e3c4;
+      --bg-2: #e9d7af;
+      --accent: #e44a3c;
+      --accent-2: #ff7e4d;
+      --cream: #ffe9b3;
+      --card-1: #f29d5b;
+      --card-2: #e78443;
+      --bezel: #071a2f;
+    }
+
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      padding: 20px;
+      color: var(--ink-2);
+      font-family: "VT323", Consolas, "Courier New", monospace;
+      background: 
+        radial-gradient(1200px 480px at 50% -120px, #fff8e6 0, var(--bg) 60%, var(--bg) 100%),
+        repeating-linear-gradient(to bottom, rgba(0,0,0,.03) 0 1px, transparent 1px 3px);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .register-container {
+      background: linear-gradient(180deg, var(--card-1), var(--card-2));
+      border: 6px solid var(--ink);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 12px 0 #153a5e, 0 22px 38px rgba(0,0,0,.35);
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .register-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .register-header h1 {
+      font-family: "Press Start 2P";
+      font-size: 18px;
+      color: var(--ink);
+      margin: 0 0 10px 0;
+      text-shadow: 2px 2px 0 rgba(0,0,0,.2);
+    }
+
+    .register-header p {
+      font-size: 16px;
+      color: var(--ink-2);
+      margin: 0;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: "Press Start 2P";
+      font-size: 10px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 3px solid var(--ink);
+      border-radius: 8px;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "VT323";
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(228, 74, 60, 0.2);
+      background: #fff;
+    }
+
+    .form-group small {
+      display: block;
+      font-size: 12px;
+      color: var(--ink-2);
+      margin-top: 4px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(180deg, #ff6b58, var(--accent));
+      border: 3px solid var(--ink);
+      color: var(--cream);
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-family: "Press Start 2P";
+      font-size: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 0 #9a231c;
+      transition: all 0.2s ease;
+      margin-bottom: 20px;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 0 #9a231c;
+    }
+
+    .submit-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 4px 0 #9a231c;
+    }
+
+    .auth-links {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 2px solid var(--ink-2);
+    }
+
+    .auth-links p {
+      font-size: 14px;
+      color: var(--ink-2);
+      margin: 0 0 10px 0;
+    }
+
+    .auth-links a {
+      color: var(--ink);
+      text-decoration: none;
+      font-family: "Press Start 2P";
+      font-size: 10px;
+    }
+
+    .auth-links a:hover {
+      color: var(--accent);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: var(--ink-2);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-link:hover {
+      color: var(--ink);
+    }
+
+    .flash-messages {
+      margin-bottom: 20px;
+    }
+
+    .flash-message {
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .flash-message.error {
+      background: #ffebee;
+      color: #c62828;
+      border: 2px solid #c62828;
+    }
+
+    .flash-message.success {
+      background: #e8f5e8;
+      color: #2e7d32;
+      border: 2px solid #2e7d32;
+    }
+
+    .flash-message.info {
+      background: #e3f2fd;
+      color: #1565c0;
+      border: 2px solid #1565c0;
+    }
+
+    .benefits {
+      background: rgba(15, 46, 77, 0.1);
+      border: 2px solid var(--ink-2);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    .benefits h3 {
+      font-family: "Press Start 2P";
+      font-size: 10px;
+      color: var(--ink);
+      margin: 0 0 10px 0;
+    }
+
+    .benefits ul {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 14px;
+      color: var(--ink-2);
+    }
+
+    .benefits li {
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      
+      .register-container {
+        padding: 20px;
+      }
+      
+      .register-header h1 {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <div class="register-header">
+      <h1>Join the Game</h1>
+      <p>Create your account to track scores!</p>
+    </div>
+
+    <div class="benefits">
+      <h3>Why Register?</h3>
+      <ul>
+        <li>Track scores across all games</li>
+        <li>View your gaming stats</li>
+        <li>Compare with other players</li>
+        <li>Never lose your progress</li>
+      </ul>
+    </div>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, message in messages %}
+            <div class="flash-message {{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <small>Choose a unique username (3-20 characters)</small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <small>We'll never spam you or share your email</small>
+      </div>
+
+      <!-- Removed display_name field - using username only -->
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <small>At least 6 characters</small>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <small>Re-enter your password</small>
+      </div>
+
+      <button type="submit" class="submit-btn">Create Account</button>
+    </form>
+
+    <div class="auth-links">
+      <p>Already have an account?</p>
+      <a href="{{ url_for('auth.login') }}">Login Here</a>
+    </div>
+
+    <a href="{{ url_for('home') }}" class="back-link">← Back to Home</a>
+  </div>
+</body>
+</html>

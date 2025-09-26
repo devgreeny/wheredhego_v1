@@ -1,0 +1,857 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   NFL Skill Positions - Flashcard Layout
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 1) CSS Variables - NFL Theme */
+:root {
+  --nfl-gold: #fbbd24;
+  --nfl-yellow: #fbbf24;
+  --field-green: #16a34a;
+  --end-zone: #1e40af;
+  --nfl-red: #ef4444;
+  --nfl-orange: #f59e0b;
+  
+  --navy-900: #0f172a;
+  --navy-800: #1e293b;
+  --navy-700: #334155;
+  --grayish: #64748b;
+  --cream: #f5f1e8;
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 2) Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  background-color: var(--cream);
+  color: var(--navy-900);
+  min-height: 100vh;
+  line-height: 1.4;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 3) Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header-title {
+  font-size: 1rem;
+  color: var(--navy-900);
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-matchup {
+  font-size: 0.6rem;
+  color: var(--grayish);
+  margin-bottom: 0.33rem;
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 4) Progress Segments */
+.progress-segments {
+  display: flex;
+  gap: 4px;
+  margin: 0 auto 2rem;
+  max-width: 600px;
+  height: 8px;
+}
+
+.progress-segment {
+  flex: 1;
+  height: 100%;
+  background: var(--navy-700);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.progress-segment.completed {
+  background: var(--field-green);
+}
+
+.progress-segment.current {
+  background: var(--nfl-gold);
+}
+
+.progress-segment.answered {
+  background: linear-gradient(135deg, var(--nfl-gold) 0%, var(--nfl-yellow) 100%);
+  box-shadow: 0 2px 6px rgba(251, 191, 36, 0.3);
+  border: 1px solid var(--nfl-gold);
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 5) Flashcard Container */
+.flashcard-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.flashcard {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  margin-bottom: 2rem;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.flashcard-front {
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+  border: 3px solid var(--navy-700);
+}
+
+.flashcard-back {
+  background: linear-gradient(135deg, var(--field-green) 0%, #059669 100%);
+  border: 3px solid var(--field-green);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 6) Flashcard Front Content */
+.player-art-container {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.player-art {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 3px solid var(--nfl-gold);
+  background: linear-gradient(135deg, var(--navy-800) 0%, var(--navy-700) 100%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.player-info-section {
+  text-align: center;
+  padding: 0 2rem 2rem;
+  border-top: 2px solid var(--navy-700);
+}
+
+.player-name {
+  font-size: 1.1rem;
+  color: var(--nfl-gold);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+
+.player-position {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: var(--navy-900);
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(135deg, var(--nfl-gold) 0%, var(--nfl-yellow) 100%);
+  border: 2px solid var(--nfl-gold);
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+}
+
+.player-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stat {
+  font-size: 0.5rem;
+  color: var(--grayish);
+  background: var(--navy-800);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--navy-700);
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 7) Flashcard Back Content */
+.college-reveal {
+  text-align: center;
+  color: white;
+}
+
+.college-name {
+  font-size: 1.2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.result-indicator {
+  font-size: 0.8rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.result-text {
+  display: block;
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 8) Input Section */
+.input-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.college-input-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.college-select-main {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-family: 'Press Start 2P', monospace;
+  background: white;
+  border: 3px solid var(--navy-700);
+  border-radius: 0.5rem;
+  color: var(--navy-900);
+  appearance: none;
+  cursor: pointer;
+}
+
+.college-select-main:focus {
+  outline: none;
+  border-color: var(--nfl-gold);
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.3);
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 9) Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hint-btn,
+.random-btn,
+.submit-btn {
+  flex: 1;
+  max-width: 120px;
+  padding: 0.8rem 1rem;
+  font-size: 0.6rem;
+  font-family: 'Press Start 2P', monospace;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hint-btn {
+  background: linear-gradient(135deg, var(--nfl-orange) 0%, #d97706 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.hint-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+}
+
+.random-btn {
+  background: linear-gradient(135deg, var(--end-zone) 0%, #1e3a8a 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+}
+
+.random-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30, 64, 175, 0.4);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--field-green) 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(22, 163, 74, 0.4);
+}
+
+.submit-btn:disabled {
+  background: var(--grayish);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 10) Navigation Arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy-800) 0%, var(--navy-700) 100%);
+  color: var(--nfl-gold);
+  font-size: 2rem;
+  font-family: 'Press Start 2P', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.nav-left {
+  left: -80px;
+}
+
+.nav-right {
+  right: -80px;
+}
+
+.nav-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+  background: linear-gradient(135deg, var(--nfl-gold) 0%, var(--nfl-yellow) 100%);
+  color: var(--navy-900);
+}
+
+.nav-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: translateY(-50%) scale(0.9);
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 10.5) Mobile Hint */
+.mobile-hint {
+  display: none;
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--navy-800) 0%, var(--navy-700) 100%);
+  color: var(--nfl-gold);
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.5rem;
+  text-align: center;
+  border: 2px solid var(--nfl-gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Show mobile hint only on mobile devices */
+@media (max-width: 768px) {
+  .mobile-hint {
+    display: block;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 11) Result States */
+.flashcard.correct .flashcard-back {
+  background: linear-gradient(135deg, var(--field-green) 0%, #059669 100%);
+}
+
+.flashcard.wrong .flashcard-back {
+  background: linear-gradient(135deg, var(--nfl-red) 0%, #dc2626 100%);
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 12) Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    padding: 0.5rem;
+  }
+  
+  .header-title {
+    font-size: 0.9rem;
+  }
+  
+  .flashcard {
+    height: 450px;
+  }
+  
+  .player-art {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  
+  /* Mobile navigation - position arrows inside viewport */
+  .nav-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    top: 40%;
+    z-index: 15;
+    /* Add touch feedback */
+    transition: all 0.2s ease;
+  }
+  
+  .nav-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+    background: linear-gradient(135deg, var(--nfl-gold) 0%, var(--nfl-yellow) 100%);
+    color: var(--navy-900);
+  }
+  
+  .nav-left {
+    left: 10px;
+  }
+  
+  .nav-right {
+    right: 10px;
+  }
+  
+  /* Add mobile navigation bar below flashcard */
+  .flashcard-container::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--navy-800) 0%, var(--navy-700) 100%);
+    border-radius: 25px;
+    border: 2px solid var(--nfl-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    color: var(--nfl-gold);
+    pointer-events: none;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 80px;
+  }
+  
+  .hint-btn,
+  .random-btn,
+  .submit-btn {
+    max-width: none;
+    padding: 1.2rem;
+    font-size: 0.7rem;
+    min-height: 50px;
+    /* Add touch feedback */
+    transition: all 0.2s ease;
+  }
+  
+  .hint-btn:active,
+  .random-btn:active,
+  .submit-btn:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  .flashcard {
+    height: 380px;
+  }
+  
+  .player-art {
+    max-width: 120px;
+    max-height: 120px;
+  }
+  
+  /* Smaller mobile navigation */
+  .nav-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    top: 35%;
+  }
+  
+  .nav-left {
+    left: 5px;
+  }
+  
+  .nav-right {
+    right: 5px;
+  }
+  
+  .college-select-main {
+    font-size: 0.7rem;
+    padding: 0.8rem;
+  }
+  
+  .hint-btn,
+  .random-btn,
+  .submit-btn {
+    font-size: 0.6rem;
+    padding: 0.9rem;
+  }
+  
+  .action-buttons {
+    margin-top: 60px;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 13) Modal Styles (keeping existing modal) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1000;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.modal-panel {
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+  border: 3px solid var(--nfl-gold);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1001;
+  color: white;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.modal-title {
+  font-size: 1rem;
+  color: var(--nfl-gold);
+}
+
+.modal-score {
+  background: var(--field-green);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+}
+
+.modal-btn {
+  background: var(--nfl-gold);
+  color: var(--navy-900);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 14) Hint Modal */
+.hint-modal-panel {
+  max-width: 400px;
+  text-align: center;
+}
+
+.hint-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--nfl-gold);
+  padding-bottom: 1rem;
+}
+
+.hint-modal-header h3 {
+  color: var(--nfl-gold);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.hint-close-btn {
+  background: none;
+  border: none;
+  color: var(--nfl-gold);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.hint-close-btn:hover {
+  color: white;
+}
+
+.hint-conference {
+  background: linear-gradient(135deg, var(--field-green) 0%, #059669 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.hint-text {
+  color: var(--grayish);
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* 15) Card-Based Results Styling */
+.results-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.result-card {
+  background: linear-gradient(135deg, var(--navy-800) 0%, var(--navy-700) 100%);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.result-card.correct {
+  border-color: var(--field-green);
+  box-shadow: 0 4px 20px rgba(22, 163, 74, 0.3);
+}
+
+.result-card.wrong {
+  border-color: var(--nfl-red);
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3);
+}
+
+.result-card-header {
+  padding: 0.8rem;
+  text-align: center;
+  position: relative;
+}
+
+.result-card.correct .result-card-header {
+  background: linear-gradient(135deg, var(--field-green) 0%, #059669 100%);
+}
+
+.result-card.wrong .result-card-header {
+  background: linear-gradient(135deg, var(--nfl-red) 0%, #dc2626 100%);
+}
+
+.result-status {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.result-card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.result-player-image {
+  margin-bottom: 1rem;
+}
+
+.result-player-art {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+}
+
+.result-player-info {
+  margin-bottom: 1rem;
+}
+
+.result-player-name {
+  color: var(--nfl-gold);
+  font-size: 0.9rem;
+  margin: 0 0 0.3rem 0;
+  font-weight: bold;
+}
+
+.result-player-position {
+  color: var(--grayish);
+  font-size: 0.6rem;
+  background: var(--navy-600);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+.result-answer-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+/* Correct answer styling */
+.result-correct-answer {
+  text-align: center;
+}
+
+.correct-college {
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.correct-conference {
+  color: var(--field-green);
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+/* Wrong answer styling */
+.result-wrong-answers {
+  text-align: left;
+  font-size: 0.7rem;
+}
+
+.your-wrong-answer, .correct-answer-reveal {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  color: var(--grayish);
+  font-size: 0.6rem;
+  min-width: 60px;
+}
+
+.wrong-answer-text {
+  color: var(--nfl-red);
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+.correct-answer-text {
+  color: var(--field-green);
+  font-weight: bold;
+}
+
+.answer-conference {
+  color: var(--grayish);
+  font-size: 0.6rem;
+}
+
+/* Responsive adjustments for results cards */
+@media (max-width: 768px) {
+  .results-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.8rem;
+  }
+  
+  .result-player-art {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .result-player-name {
+    font-size: 0.8rem;
+  }
+  
+  .result-wrong-answers {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-cards-container {
+    grid-template-columns: 1fr;
+  }
+}

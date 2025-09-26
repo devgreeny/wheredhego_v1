@@ -1,0 +1,121 @@
+.results-page {
+    color: var(--gold);
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 60rem;
+  }
+  
+  .results-cards {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .result-card {
+    background: var(--navy-900);
+    border: 2px solid var(--navy-700);
+    border-radius: 0.75rem;
+    padding: 0.88rem;
+    width: 9.68rem;
+    transform-origin: center bottom;
+    opacity: 0;
+    transform: translateY(80px) rotateX(-20deg) scale(0.85);
+  }
+  
+  .result-card img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .result-card.animate {
+    animation: pack-drop 0.3s ease forwards;
+    animation-delay: var(--delay, 0s);
+  }
+  
+  .result-card.reverse {
+    animation: pack-drop-reverse 0.3s ease forwards;
+    animation-delay: var(--delay, 0s);
+  }
+  
+  .result-card .result-info {
+    opacity: 0;
+    line-height: 1.8;
+    animation: pulse-in 0.4s ease forwards;
+    animation-delay: calc(var(--delay, 0s) + 0.4s);
+    margin-top: 0.6rem;
+  }
+  
+  .correct,
+  .wrong,
+  .answer {
+    display: block;
+    line-height: 1.8;
+    margin-top: 0.6rem;
+  }
+  
+  .score-line {
+    display: block;
+    line-height: 1.8;
+    margin: 1rem 0 1.2rem;
+  }
+  
+.share-row {
+    margin: 1rem auto 1.6rem;
+    text-align: center;
+  }
+  
+  .share-confirm {
+    margin-left: 0.5rem;
+  }
+  
+  .leaderboard-link {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 0.6rem;
+    color: var(--gold);
+    text-decoration: underline;
+  }
+  
+  .results-leaderboard {
+    margin-bottom: 1rem;
+  }
+  
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.7rem;
+  }
+  .leaderboard-table th,
+  .leaderboard-table td {
+    border-bottom: 1px solid var(--navy-700);
+    padding: 0.4rem;
+    text-align: left;
+  }
+  .leaderboard-table th {
+    text-align: left;
+  }
+  
+  @keyframes pack-drop {
+    0% { transform: translateY(80px) rotateX(-20deg) scale(0.85); opacity: 0; }
+    60% { transform: translateY(-10px) rotateX(0) scale(1); opacity: 1; }
+    80% { transform: translateY(5px) scale(1.05); }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  
+  @keyframes pack-drop-reverse {
+    from { transform: translateY(0) scale(1); opacity: 1; }
+    to   { transform: translateY(80px) rotateX(-20deg) scale(0.85); opacity: 0; }
+  }
+  
+  @keyframes pulse-in {
+    0% { opacity: 0; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }

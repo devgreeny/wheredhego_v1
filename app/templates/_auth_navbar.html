@@ -1,0 +1,229 @@
+<!-- Retro Hamburger Menu - Top Right Corner -->
+<div class="retro-menu">
+  <!-- Hamburger Button -->
+  <button class="hamburger-btn" aria-label="Menu">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </button>
+  
+  <!-- Dropdown Menu -->
+  <div class="menu-dropdown">
+    <div class="menu-content">
+      <!-- Navigation -->
+      <div class="menu-section">
+        <div class="menu-title">GAMES</div>
+        <a href="{{ url_for('home') }}" class="menu-item">Home</a>
+        <a href="{{ url_for('starting5.show_quiz') }}" class="menu-item">Starting5</a>
+        <a href="{{ url_for('gridiron11.show_quiz') }}" class="menu-item">Gridiron11</a>
+        <a href="{{ url_for('creatorpoll.home') }}" class="menu-item">Creator Poll</a>
+      </div>
+      
+      <!-- Account -->
+      <div class="menu-section">
+        {% if current_user.is_authenticated %}
+          <div class="menu-title">ACCOUNT</div>
+          <div class="menu-user">{{ current_user.username }}</div>
+          <a href="{{ url_for('auth.scores') }}" class="menu-item">My Scores</a>
+          <a href="{{ url_for('auth.profile') }}" class="menu-item">Profile</a>
+          <a href="{{ url_for('auth.logout') }}" class="menu-item">Logout</a>
+        {% else %}
+          <div class="menu-title">ACCOUNT</div>
+          <a href="{{ url_for('auth.login') }}" class="menu-item">Login</a>
+          <a href="{{ url_for('auth.register') }}" class="menu-item">Register</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Retro Hamburger Menu - Simple & Clean */
+  .retro-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: 'Press Start 2P', monospace;
+  }
+  
+  /* Hamburger Button */
+  .hamburger-btn {
+    background: #0D3B66;
+    border: 2px solid #F95738;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 0 #000;
+  }
+  
+  .hamburger-btn:hover {
+    background: #F95738;
+    border-color: #F4D35E;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 #000;
+  }
+  
+  .hamburger-btn.active {
+    background: #F95738;
+    border-color: #F4D35E;
+  }
+  
+  .line {
+    width: 18px;
+    height: 2px;
+    background: #FAF0CA;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger-btn.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+  
+  .hamburger-btn.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-btn.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+  
+  /* Dropdown Menu */
+  .menu-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 4px;
+    background: #0D3B66;
+    border: 2px solid #F95738;
+    box-shadow: 4px 4px 0 #000;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .retro-menu.active .menu-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .menu-content {
+    padding: 8px 0;
+  }
+  
+  .menu-section {
+    padding: 4px 0;
+  }
+  
+  .menu-section:not(:last-child) {
+    border-bottom: 1px solid #F95738;
+    margin-bottom: 4px;
+    padding-bottom: 8px;
+  }
+  
+  .menu-title {
+    color: #F4D35E;
+    font-size: 8px;
+    padding: 4px 12px;
+    letter-spacing: 1px;
+  }
+  
+  .menu-item {
+    display: block;
+    color: #FAF0CA;
+    text-decoration: none;
+    padding: 6px 12px;
+    font-size: 8px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+  }
+  
+  .menu-item:hover {
+    background: #F95738;
+    color: #FAF0CA;
+    border-left-color: #F4D35E;
+    padding-left: 16px;
+  }
+  
+  .menu-user {
+    color: #F4D35E;
+    font-size: 8px;
+    padding: 4px 12px;
+    background: rgba(244, 211, 94, 0.1);
+    margin: 2px 8px;
+    border: 1px solid rgba(244, 211, 94, 0.3);
+  }
+  
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    .retro-menu {
+      top: 15px;
+      right: 15px;
+    }
+    
+    .hamburger-btn {
+      padding: 6px;
+    }
+    
+    .line {
+      width: 16px;
+    }
+    
+    .menu-dropdown {
+      min-width: 140px;
+    }
+    
+    .menu-title {
+      font-size: 7px;
+    }
+    
+    .menu-item {
+      font-size: 7px;
+      padding: 8px 12px;
+    }
+    
+    .menu-user {
+      font-size: 7px;
+    }
+  }
+</style>
+
+<script>
+  // Retro hamburger menu functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const menu = document.querySelector('.retro-menu');
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const menuDropdown = document.querySelector('.menu-dropdown');
+    
+    if (hamburgerBtn && menu) {
+      hamburgerBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('active');
+        hamburgerBtn.classList.toggle('active');
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menu.contains(e.target)) {
+          menu.classList.remove('active');
+          hamburgerBtn.classList.remove('active');
+        }
+      });
+      
+      // Close menu when clicking on menu items
+      const menuItems = document.querySelectorAll('.menu-item');
+      menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+          menu.classList.remove('active');
+          hamburgerBtn.classList.remove('active');
+        });
+      });
+    }
+  });
+</script>
