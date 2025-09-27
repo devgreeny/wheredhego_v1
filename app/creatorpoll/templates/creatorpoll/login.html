@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Login - CFB Creator Poll</title>
+    
+    <!-- Favicon implementation -->
+    <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
+    <style>
+        :root {
+            --navy: #0f172a;
+            --gold: #facc15;
+            --light-gray: #e2e8f0;
+            --green: #22c55e;
+            --red: #ef4444;
+            --blue: #60a5fa;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: var(--navy);
+            color: var(--light-gray);
+            min-height: 100vh;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            background: #1e293b;
+            border: 3px solid var(--gold);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 0.5rem;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            color: var(--gold);
+            font-size: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            background: #334155;
+            border: 1px solid #475569;
+            border-radius: 0.25rem;
+            padding: 0.75rem;
+            color: var(--light-gray);
+            font-size: 0.5rem;
+            font-family: inherit;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.2);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: 1rem;
+            height: 1rem;
+        }
+        
+        .checkbox-group label {
+            font-size: 0.4rem;
+            color: #94a3b8;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 0.6rem;
+            font-family: inherit;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .btn:hover {
+            background: #eab308;
+            transform: translateY(-1px);
+        }
+        
+        .register-link {
+            text-align: center;
+            font-size: 0.4rem;
+            color: #94a3b8;
+        }
+        
+        .register-link a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+        
+        .register-link a:hover {
+            color: var(--gold);
+        }
+        
+        .back-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .back-link a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.4rem;
+        }
+        
+        .back-link a:hover {
+            color: var(--gold);
+        }
+        
+        .flash-messages {
+            margin-bottom: 1rem;
+        }
+        
+        .flash {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.4rem;
+        }
+        
+        .flash-success { background: var(--green); color: white; }
+        .flash-error { background: var(--red); color: white; }
+        .flash-warning { background: #f59e0b; color: white; }
+        .flash-info { background: var(--blue); color: white; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="header">
+            <h1>🏈 Creator Login</h1>
+            <p>Access the CFB Creator Poll system</p>
+        </div>
+        
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        
+        <form method="POST">
+            <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" name="username" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-input" required>
+            </div>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="remember" name="remember" value="1">
+                <label for="remember">Remember me</label>
+            </div>
+            
+            <button type="submit" class="btn">🔑 Log In</button>
+        </form>
+        
+        <div class="register-link">
+            Don't have an account? <a href="{{ url_for('creatorpoll.register') }}">Register here</a>
+        </div>
+        
+        <div class="back-link">
+            <a href="{{ url_for('creatorpoll.home') }}">← Back to Creator Poll</a>
+        </div>
+    </div>
+</body>
+</html>
