@@ -1,5 +1,5 @@
 from __future__ import annotations
-from flask import Blueprint, render_template, jsonify, url_for, request, send_from_directory
+from flask import Blueprint, render_template, jsonify, url_for, request, send_from_directory, redirect
 from flask_login import current_user
 import json, os, pathlib, typing as t, random, glob, csv
 
@@ -290,6 +290,30 @@ def show_quiz():
                            game_data=payload,
                            colleges=college_data["colleges"],
                            already_played_today=has_played_today_flag)
+
+@bp.route("/results")
+def show_results():
+    """Show Skill Positions results with animated cards"""
+    # Get results from URL parameters
+    results_data = request.args.get('data')
+    if results_data:
+        try:
+            import json
+            import base64
+            # Decode the base64 encoded JSON data
+            decoded_data = base64.b64decode(results_data).decode('utf-8')
+            data = json.loads(decoded_data)
+            
+            return render_template("skill_positions_results.html",
+                                 players=data['players'],
+                                 results=data['results'], 
+                                 score=data['score'],
+                                 total_players=data['total_players'])
+        except Exception as e:
+            print(f"Error decoding results data: {e}")
+    
+    # If no valid data, redirect to quiz
+    return redirect(url_for('gridiron11.show_quiz'))
 
 @bp.route("/legacy")
 def show_legacy_quiz():

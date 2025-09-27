@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skill Positions Results — NFL College Quiz</title>
+  
+  <!-- Favicon implementation -->
+  <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  
+  <!-- Pixel font & main CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('gridiron11.static', filename='css/skill_positions.css') }}">
+  <link rel="stylesheet" href="{{ url_for('gridiron11.static', filename='css/skill_positions_results.css') }}">
+  
+  <script async defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <!-- Include auth navigation bar -->
+  {% include '_auth_navbar.html' %}
+  
+  <div class="content">
+    <div class="results-page">
+      <div class="results-header">
+        <h1>SKILL POSITIONS RESULTS</h1>
+        <h2 class="score-line">You scored {{ score }} / {{ total_players }}</h2>
+      </div>
+
+      <div id="results-cards" class="results-cards">
+        {% for player in players %}
+        {% set idx = loop.index0 %}
+        {% set result = results[idx] %}
+        <div class="card result-card animate{% if result.is_correct %} correct-card{% else %} wrong-card{% endif %}" 
+             style="--delay: {{ '%.1f'|format(loop.index0 * 0.2) }}s">
+          
+          <!-- Player Image -->
+          <div class="player-image-container">
+            <img src="{{ url_for('gridiron11.static', filename='sprites/' + player.team_abbrev + '/images/' + player.team_abbrev.lower() + '_' + player.avatar + '.png') }}"
+                 alt="{{ player.name }}"
+                 class="player-image" />
+          </div>
+          
+          <!-- Player Info -->
+          <div class="player-info">
+            <h3 class="player-name">
+              {% set parts = player.name.split(' ') %}
+              {% if parts|length > 1 %}
+                {{ parts[0].upper() }}<br />{{ parts[1:]|join(' ')|upper }}
+              {% else %}
+                {{ player.name.upper() }}
+              {% endif %}
+            </h3>
+            <p class="player-position">{{ player.position }}</p>
+            <p class="player-team">{{ player.team_abbrev }}</p>
+          </div>
+          
+          <!-- Result Info -->
+          <div class="result-info">
+            {% if result.is_correct %}
+              <span class="correct">✅ Correct!</span>
+            {% else %}
+              <span class="wrong">❌ Incorrect</span>
+            {% endif %}
+            <div class="answer-info">
+              <div class="correct-answer">{{ result.correct_answer }}</div>
+              {% if not result.is_correct and result.user_answer != 'No answer' %}
+                <div class="user-answer">You said: {{ result.user_answer }}</div>
+              {% elif result.user_answer == 'No answer' %}
+                <div class="user-answer">No answer given</div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="results-actions">
+        <a href="{{ url_for('gridiron11.show_quiz') }}" class="action-btn play-again-btn">
+          🏈 Play Tomorrow's Quiz
+        </a>
+        <a href="{{ url_for('home') }}" class="action-btn home-btn">
+          🏠 Back to Home
+        </a>
+        {% if current_user.is_authenticated %}
+        <a href="{{ url_for('auth.scores') }}" class="action-btn scores-btn">
+          📊 View All Scores
+        </a>
+        {% endif %}
+      </div>
+
+      <!-- Share Section -->
+      <div class="share-section">
+        <button id="share-btn" class="share-btn">
+          📤 Share Your Score
+        </button>
+        <span id="share-confirm" class="share-confirm" style="display:none">Copied to clipboard!</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('gridiron11.static', filename='js/skill_positions_results.js') }}"></script>
+</body>
+</html>

@@ -584,28 +584,25 @@ class SkillPositionsGame {
       });
     });
     
-    // Submit score to backend if user is logged in
+    // Submit score to backend
     this.submitScore(correctCount, this.players.length, playerResults);
     
-    // Show results modal (reuse existing modal logic)
-    const modal = document.getElementById('resultsModal');
-    const scoreElement = document.querySelector('.modal-score');
-    const resultsContent = document.getElementById('resultsContent');
+    // Prepare data for results page
+    const resultsData = {
+      players: this.players.map(player => ({
+        name: player.name,
+        position: player.position,
+        team_abbrev: player.team_abbrev,
+        avatar: player.avatar
+      })),
+      results: playerResults,
+      score: correctCount,
+      total_players: this.players.length
+    };
     
-    if (scoreElement) {
-      scoreElement.textContent = `${correctCount} / ${this.players.length}`;
-    }
-    
-    if (resultsContent) {
-      resultsContent.innerHTML = this.generateResultsHTML();
-    }
-    
-    if (modal) {
-      modal.classList.add('show');
-    }
-    
-    // Setup modal close functionality
-    this.setupModalEvents();
+    // Encode data and redirect to results page
+    const encodedData = btoa(JSON.stringify(resultsData));
+    window.location.href = `/gridiron11/results?data=${encodedData}`;
   }
 
   async submitScore(score, total, playerResults) {
