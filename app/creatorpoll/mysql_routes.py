@@ -75,17 +75,18 @@ def load_cfb_teams():
     conferences = {}
     
     try:
-        with open(CFB_CSV, 'r', encoding='utf-8-sig') as f:
+        with open(CFB_CSV, 'r', encoding='utf-8-sig') as f:  # utf-8-sig handles BOM
             reader = csv.DictReader(f)
             for row in reader:
-                team_id = row.get('id', '').strip('"')
-                school = row.get('school', '').strip('"')
-                abbreviation = row.get('abbreviation', '').strip('"')
-                conference = row.get('conference', '').strip('"')
-                division = row.get('division', '').strip('"')
-                alternate_names = row.get('alternate_names', '').strip('"')
+                team_id = row.get('Id', '').strip().strip('"')  # Remove quotes
+                school = row.get('School', '').strip().strip('"')
+                abbreviation = row.get('Abbreviation', '').strip().strip('"')
+                conference = row.get('Conference', '').strip().strip('"')
+                division = row.get('Division', '').strip().strip('"')
+                alternate_names = row.get('AlternateNames', '').strip().strip('"')
                 
-                if team_id and school:
+                if team_id and school and conference:  # Valid team data
+                    # Create logo URL path using custom route
                     logo_url = f"/creatorpoll/logo/{team_id}.png"
                     
                     team_data = {
@@ -97,15 +98,21 @@ def load_cfb_teams():
                         'alternate_names': alternate_names,
                         'logo_url': logo_url,
                         'full_name': school,
-                        'display_name': abbreviation if abbreviation else school
+                        'display_name': f"{school} ({abbreviation})" if abbreviation else school
                     }
                     teams.append(team_data)
                     
-                    if conference:
-                        if conference not in conferences:
-                            conferences[conference] = []
-                        conferences[conference].append(school)
+                    if conference not in conferences:
+                        conferences[conference] = []
+                    conferences[conference].append(team_data)
         
+        # Sort teams alphabetically by school name
+        teams.sort(key=lambda x: x['name'])
+        
+        # Sort conferences
+        for conf_teams in conferences.values():
+            conf_teams.sort(key=lambda x: x['name'])
+            
         print(f"📚 Loaded {len(teams)} CFB teams from {len(conferences)} conferences")
         return teams, conferences
         
