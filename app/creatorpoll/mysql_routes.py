@@ -43,6 +43,10 @@ def get_mysql_models():
             creator_poll = CreatorPoll(MYSQL_CONFIG)
             creator_ballot = CreatorBallot(MYSQL_CONFIG)
             
+            # Test connection first
+            test_conn = creator_poll.db.get_connection()
+            test_conn.close()
+            
             # Create tables if they don't exist
             creator_poll.create_tables()
             creator_ballot.create_tables()
@@ -50,20 +54,26 @@ def get_mysql_models():
             print("✅ MySQL models initialized successfully")
         except Exception as e:
             print(f"❌ Error initializing MySQL models: {e}")
-            # For development/testing, provide fallback
-            from flask import current_app
-            if current_app and current_app.debug:
-                print("🔄 Running in debug mode - MySQL connection may not be available")
-            raise
+            
+            # Check if we're in a local development environment
+            if (not os.environ.get('MYSQL_HOST') or 
+                os.environ.get('USE_LOCAL_SQLITE') or 
+                'localhost' in os.environ.get('MYSQL_HOST', '')):
+                print("🔄 MySQL unavailable - using SQLite fallback for local development")
+                raise Exception("MySQL unavailable - use SQLite-based creator poll system")
+            else:
+                print("🔄 Production MySQL connection failed - retrying...")
+                raise
     
     return creator_poll, creator_ballot
 
+# Skip MySQL initialization for local development
 # Initialize models immediately but with error handling
-try:
-    get_mysql_models()
-except Exception as e:
-    print(f"⚠️ MySQL models not available: {e}")
-    print("🔧 Routes will attempt to initialize on first use")
+# try:
+#     get_mysql_models()
+# except Exception as e:
+#     print(f"⚠️ MySQL models not available: {e}")
+#     print("🔧 Routes will attempt to initialize on first use")
 
 # Path to CFB data
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -166,6 +176,13 @@ def get_poll_start_end_times(week_number: int, season_year: int):
 
 def ensure_current_poll_exists():
     """Ensure that the current week's poll exists"""
+    # Initialize MySQL models first to avoid NoneType error
+    try:
+        creator_poll_model, creator_ballot_model = get_mysql_models()
+    except Exception as e:
+        print(f"❌ Error initializing MySQL models: {e}")
+        return None
+        
     current_week = get_current_week()
     current_season = get_current_season()
     
@@ -173,14 +190,14 @@ def ensure_current_poll_exists():
         return None
     
     # Check if current poll exists
-    current_poll = creator_poll.get_current_poll()
+    current_poll = creator_poll_model.get_current_poll()
     if current_poll and current_poll['week_number'] == current_week and current_poll['season_year'] == current_season:
         return current_poll
     
     # Create new poll for current week
     poll_start, poll_end = get_poll_start_end_times(current_week, current_season)
     
-    poll_id = creator_poll.create_poll(
+    poll_id = creator_poll_model.create_poll(
         week_number=current_week,
         season_year=current_season,
         title=f"CFB Creator Poll - Week {current_week}",
@@ -190,7 +207,7 @@ def ensure_current_poll_exists():
     )
     
     print(f"✅ Auto-created poll for Week {current_week}, {current_season}")
-    return creator_poll.get_poll_by_id(poll_id)
+    return creator_poll_model.get_poll_by_id(poll_id)
 
 @bp.route("/")
 def home():
@@ -200,17 +217,30 @@ def home():
         teams, _ = load_cfb_teams()
     except Exception as e:
         print(f"❌ Error in creator poll home: {e}")
-        return render_template('creatorpoll/error.html', 
-                             error_message="Creator Poll system is temporarily unavailable. Please try again later.",
-                             technical_details=str(e))
+        
+        # Check if this is a development environment with no MySQL
+        if "MySQL unavailable" in str(e):
+            return render_template('creatorpoll/error.html', 
+                                 error_message="Creator Poll MySQL system is not available in development. Please use the SQLite version or configure MySQL.",
+                                 technical_details="Run in production environment or configure MySQL connection.")
+        else:
+            return render_template('creatorpoll/error.html', 
+                                 error_message="Creator Poll system is temporarily unavailable. Please try again later.",
+                                 technical_details=str(e))
     
     current_rankings = []
     total_ballots = 0
     
     if current_poll:
         # Get poll results with movement
-        results = creator_poll.get_poll_results_with_movement(current_poll['id'])
-        total_ballots = creator_ballot.get_poll_ballot_count(current_poll['id'])
+        try:
+            creator_poll_model, creator_ballot_model = get_mysql_models()
+            results = creator_poll_model.get_poll_results_with_movement(current_poll['id'])
+            total_ballots = creator_ballot_model.get_poll_ballot_count(current_poll['id'])
+        except Exception as e:
+            print(f"❌ Error getting poll results: {e}")
+            results = []
+            total_ballots = 0
         
         # Get top 15 with logos
         for result in results[:15]:
@@ -320,13 +350,19 @@ def vote(poll_id):
 @bp.route("/results/<int:poll_id>")
 def results(poll_id):
     """Show poll results with movement tracking"""
-    poll = creator_poll.get_poll_by_id(poll_id)
+    try:
+        creator_poll_model, creator_ballot_model = get_mysql_models()
+    except Exception as e:
+        flash('Creator Poll system is temporarily unavailable.', 'error')
+        return redirect(url_for('creatorpoll.home'))
+        
+    poll = creator_poll_model.get_poll_by_id(poll_id)
     if not poll:
         flash('Poll not found.', 'error')
         return redirect(url_for('creatorpoll.home'))
     
     # Get results with movement
-    enhanced_results = creator_poll.get_poll_results_with_movement(poll_id)
+    enhanced_results = creator_poll_model.get_poll_results_with_movement(poll_id)
     teams, _ = load_cfb_teams()
     
     # Add logos to results
@@ -352,7 +388,7 @@ def results(poll_id):
             'logo_url': logo_url
         })
     
-    total_ballots = creator_ballot.get_poll_ballot_count(poll_id)
+    total_ballots = creator_ballot_model.get_poll_ballot_count(poll_id)
     
     return render_template('creatorpoll/results.html',
                          poll=poll,
@@ -413,8 +449,14 @@ def debug_status():
     poll_results = []
     total_ballots = 0
     if current_poll:
-        poll_results = creator_poll.get_poll_results(current_poll['id'])
-        total_ballots = creator_ballot.get_poll_ballot_count(current_poll['id'])
+        try:
+            creator_poll_model, creator_ballot_model = get_mysql_models()
+            poll_results = creator_poll_model.get_poll_results(current_poll['id'])
+            total_ballots = creator_ballot_model.get_poll_ballot_count(current_poll['id'])
+        except Exception as e:
+            print(f"❌ Error getting debug poll results: {e}")
+            poll_results = []
+            total_ballots = 0
     
     debug_info = {
         'system_status': 'MySQL Creator Poll System Active',
@@ -437,12 +479,12 @@ def debug_status():
 def archive_polls():
     """Admin endpoint to archive completed polls"""
     try:
-        creator_poll, creator_ballot = get_mysql_models()
+        creator_poll_model, creator_ballot_model = get_mysql_models()
         # Archive completed polls
-        current_poll = creator_poll.get_current_poll()
+        current_poll = creator_poll_model.get_current_poll()
         if current_poll:
             # Archive previous polls
-            conn = creator_poll.db.get_connection()
+            conn = creator_poll_model.db.get_connection()
             cursor = conn.cursor(dictionary=True)
             
             cursor.execute("""
@@ -453,7 +495,7 @@ def archive_polls():
             completed_polls = cursor.fetchall()
             
             for poll in completed_polls:
-                creator_poll.archive_poll(poll['id'])
+                creator_poll_model.archive_poll(poll['id'])
                 flash(f'Archived poll ID {poll["id"]}', 'success')
             
             cursor.close()
