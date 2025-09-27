@@ -107,45 +107,47 @@ def profile():
 @login_required
 def scores():
     """Comprehensive scores tracking page for all games"""
-    # Get scores for each game type
+    # Get scores for each game type (creator poll temporarily disabled)
     starting5_scores = current_user.get_game_scores(game_type='starting5', limit=50)
     skill_positions_scores = current_user.get_game_scores(game_type='skill_positions', limit=50)
-    creatorpoll_scores = current_user.get_game_scores(game_type='creatorpoll', limit=50)
+    # creatorpoll_scores = current_user.get_game_scores(game_type='creatorpoll', limit=50)
+    creatorpoll_scores = []  # Temporarily disabled
     
-    # Get poll submissions
+    # Get poll submissions (temporarily disabled)
     poll_submissions = []
     poll_count = 0
     
-    try:
-        # Import poll models based on environment
-        if os.environ.get('USE_LOCAL_SQLITE') or not os.environ.get('MYSQL_HOST'):
-            from app.creatorpoll.models import UserBallot, Poll
-            from app.starting5.models import db
-            
-            # Get user's poll submissions
-            ballots = db.session.query(UserBallot, Poll).join(
-                Poll, UserBallot.poll_id == Poll.id
-            ).filter(UserBallot.user_id == current_user.id).order_by(
-                UserBallot.submitted_at.desc()
-            ).limit(20).all()
-            
-            poll_submissions = []
-            for ballot, poll in ballots:
-                poll_submissions.append({
-                    'week_number': poll.week_number,
-                    'season_year': poll.season_year,
-                    'submitted_at': ballot.submitted_at,
-                    'ballot_data': ballot.ballot_data or []
-                })
-            
-            poll_count = db.session.query(UserBallot).filter_by(user_id=current_user.id).count()
-            
-        else:
-            # MySQL implementation would go here
-            pass
-            
-    except Exception as e:
-        print(f"Error getting poll submissions: {e}")
+    # Creator poll functionality temporarily disabled
+    # try:
+    #     # Import poll models based on environment
+    #     if os.environ.get('USE_LOCAL_SQLITE') or not os.environ.get('MYSQL_HOST'):
+    #         from app.creatorpoll.models import UserBallot, Poll
+    #         from app.starting5.models import db
+    #         
+    #         # Get user's poll submissions
+    #         ballots = db.session.query(UserBallot, Poll).join(
+    #             Poll, UserBallot.poll_id == Poll.id
+    #         ).filter(UserBallot.user_id == current_user.id).order_by(
+    #             UserBallot.submitted_at.desc()
+    #         ).limit(20).all()
+    #         
+    #         poll_submissions = []
+    #         for ballot, poll in ballots:
+    #             poll_submissions.append({
+    #                 'week_number': poll.week_number,
+    #                 'season_year': poll.season_year,
+    #                 'submitted_at': ballot.submitted_at,
+    #                 'ballot_data': ballot.ballot_data or []
+    #             })
+    #         
+    #         poll_count = db.session.query(UserBallot).filter_by(user_id=current_user.id).count()
+    #         
+    #     else:
+    #         # MySQL implementation would go here
+    #         pass
+    #         
+    # except Exception as e:
+    #     print(f"Error getting poll submissions: {e}")
     
     # Calculate overall stats
     all_scores = starting5_scores + skill_positions_scores + creatorpoll_scores
