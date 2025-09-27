@@ -1,6 +1,6 @@
 """
 Unified User Authentication Models for MySQL
-Handles authentication across all games: Starting5, Gridiron11, CreatorPoll
+Handles authentication across all games: Starting5, Skill Positions (gridiron11), CreatorPoll
 """
 
 import mysql.connector

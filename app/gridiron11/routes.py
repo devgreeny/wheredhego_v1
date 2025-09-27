@@ -20,7 +20,7 @@ CFB_DATA_FILE = os.path.join(PROJECT_ROOT, "app", "gridiron11", "CFB", "cbb25.cs
 # Skill positions for the new game (6 players total)
 SKILL_POSITIONS = ["QB", "RB", "WR", "TE"]
 
-# Legacy positions for old Gridiron11 game
+# Legacy positions for old Gridiron11 game (now called Skill Positions)
 LEGACY_FIXED_POSITIONS = ["QB", "RB", "C", "LT", "LG", "RG", "RT"]
 LEGACY_SKILL_POSITIONS = ["WR", "TE", "FB"]
 
@@ -293,7 +293,7 @@ def show_quiz():
 
 @bp.route("/legacy")
 def show_legacy_quiz():
-    """Legacy Gridiron11 quiz page"""
+    """Legacy Skill Positions quiz page (formerly Gridiron11)"""
     payload = get_lineup_payload()
     college_data = load_college_data()
     return render_template("game.html",
@@ -403,7 +403,7 @@ def submit_score():
 
 @bp.route("/api/user_stats")
 def user_stats():
-    """API endpoint to get user's Gridiron11 stats"""
+    """API endpoint to get user's Skill Positions stats"""
     if not current_user.is_authenticated:
         return jsonify({'error': 'Login required'}), 401
     

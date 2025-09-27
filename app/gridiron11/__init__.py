@@ -1,1 +1,1 @@
-# Gridiron11 Blueprint Package
+# Skill Positions (Gridiron11) Blueprint Package

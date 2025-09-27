@@ -6,7 +6,7 @@ Provides CLI commands for updating games that can be used with PythonAnywhere's 
 Commands:
     flask update-games          # Update both games
     flask update-starting5      # Update only Starting5
-    flask update-gridiron11     # Update only Gridiron11
+    flask update-gridiron11     # Update only Skill Positions (gridiron11)
     flask update-games --dry-run # Preview what would be updated
 
 Usage in PythonAnywhere Tasks:
@@ -190,24 +190,24 @@ def update_starting5_game(dry_run: bool = False):
     return chosen_quiz
 
 def update_gridiron11_game(dry_run: bool = False):
-    """Update Gridiron11 NFL game."""
-    log_message("🏈 Starting Gridiron11 update...")
+    """Update Skill Positions NFL game (gridiron11)."""
+    log_message("🏈 Starting Skill Positions update...")
     
     dirs = get_quiz_directories()['gridiron11']
     
     # Check if preloaded directory has quiz files
     if not get_json_files(dirs['preloaded']):
-        log_message("⚠️ No Gridiron11 quiz files found in preloaded directory", "WARNING")
-        log_message("🏈 Gridiron11 update skipped - no quiz files available")
+        log_message("⚠️ No Skill Positions quiz files found in preloaded directory", "WARNING")
+        log_message("🏈 Skill Positions update skipped - no quiz files available")
         return None
     
     # Archive yesterday's quiz
-    archive_quiz_files(dirs['current'], dirs['archive'], "Gridiron11", dry_run)
+    archive_quiz_files(dirs['current'], dirs['archive'], "Skill Positions", dry_run)
     
     # Update current quiz
-    chosen_quiz = update_quiz_files(dirs['preloaded'], dirs['current'], "Gridiron11", dry_run)
+    chosen_quiz = update_quiz_files(dirs['preloaded'], dirs['current'], "Skill Positions", dry_run)
     
-    log_message("🏈 Gridiron11 update completed", "SUCCESS")
+    log_message("🏈 Skill Positions update completed", "SUCCESS")
     return chosen_quiz
 
 
@@ -218,7 +218,7 @@ def update_gridiron11_game(dry_run: bool = False):
               help='Which games to update')
 @with_appcontext
 def update_games_command(dry_run, games):
-    """Update game quizzes (both Starting5 and Gridiron11 by default)."""
+    """Update game quizzes (both Starting5 and Skill Positions by default)."""
     if dry_run:
         log_message("🔍 DRY RUN MODE - No changes will be made")
     
@@ -247,7 +247,7 @@ def update_games_command(dry_run, games):
         status = '✅ ' + gridiron11_quiz if gridiron11_quiz else '❌ Failed or Skipped'
         if dry_run and gridiron11_quiz:
             status = f'🔍 Would update: {gridiron11_quiz}'
-        log_message(f"  🏈 Gridiron11: {status}")
+        log_message(f"  🏈 Skill Positions: {status}")
     
     action = "preview completed" if dry_run else "updates completed"
     log_message(f"🎯 Game {action}!", "SUCCESS")
@@ -269,14 +269,14 @@ def update_starting5_command(dry_run):
 @click.option('--dry-run', is_flag=True, help='Preview what would be updated without making changes')
 @with_appcontext
 def update_gridiron11_command(dry_run):
-    """Update only the Gridiron11 NFL game."""
+    """Update only the Skill Positions NFL game."""
     if dry_run:
         log_message("🔍 DRY RUN MODE - No changes will be made")
     
     quiz = update_gridiron11_game(dry_run)
     action = "preview" if dry_run else "update"
     status = "completed" if quiz else "failed"
-    log_message(f"🏈 Gridiron11 {action} {status}!", "SUCCESS" if quiz else "ERROR")
+    log_message(f"🏈 Skill Positions {action} {status}!", "SUCCESS" if quiz else "ERROR")
 
 @click.command('game-status')
 @with_appcontext
@@ -296,8 +296,8 @@ def game_status_command():
     log_message(f"  Preloaded quizzes: {len(preloaded_s5)} available")
     log_message(f"  Bonus quiz: {bonus_s5[0] if bonus_s5 else 'None'}")
     
-    # Gridiron11 status
-    log_message("🏈 Gridiron11 Status:")
+    # Skill Positions status
+    log_message("🏈 Skill Positions Status:")
     current_g11 = get_json_files(dirs['gridiron11']['current'])
     preloaded_g11 = get_json_files(dirs['gridiron11']['preloaded'])
     
@@ -332,7 +332,7 @@ if __name__ == "__main__":
             
             log_message("📊 Update Summary:")
             log_message(f"  🏀 Starting5: {'✅ ' + starting5_quiz if starting5_quiz else '❌ Failed'}")
-            log_message(f"  🏈 Gridiron11: {'✅ ' + gridiron11_quiz if gridiron11_quiz else '❌ Failed or Skipped'}")
+            log_message(f"  🏈 Skill Positions: {'✅ ' + gridiron11_quiz if gridiron11_quiz else '❌ Failed or Skipped'}")
             
         elif command == 'update-starting5':
             quiz = update_starting5_game(dry_run)
@@ -340,7 +340,7 @@ if __name__ == "__main__":
             
         elif command == 'update-gridiron11':
             quiz = update_gridiron11_game(dry_run)
-            log_message(f"🏈 Gridiron11: {'✅ ' + quiz if quiz else '❌ Failed'}")
+            log_message(f"🏈 Skill Positions: {'✅ ' + quiz if quiz else '❌ Failed'}")
             
         else:
             log_message(f"Unknown command: {command}", "ERROR")
