@@ -526,12 +526,13 @@ class CreatorBallot:
                 except Exception as alter_error:
                     print(f"Warning: Could not add user_id column: {alter_error}")
             
-            # Individual creator votes table - using unified user table
+            # Individual creator votes table - migrate from creator_id to user_id
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS creator_votes (
                     id INT AUTO_INCREMENT PRIMARY KEY,
                     poll_id INT NOT NULL,
-                    user_id INT NOT NULL,
+                    creator_id INT NULL,
+                    user_id INT NULL,
                     team_name VARCHAR(100) NOT NULL,
                     team_conference VARCHAR(50),
                     team_id VARCHAR(50),
@@ -540,6 +541,7 @@ class CreatorBallot:
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     FOREIGN KEY (poll_id) REFERENCES creator_polls(id) ON DELETE CASCADE,
                     INDEX idx_poll_team (poll_id, team_name),
+                    INDEX idx_poll_creator (poll_id, creator_id),
                     INDEX idx_poll_user (poll_id, user_id)
                 )
             """)
@@ -556,7 +558,7 @@ class CreatorBallot:
                 try:
                     cursor.execute("""
                         ALTER TABLE creator_votes 
-                        ADD COLUMN user_id INT NOT NULL DEFAULT 0 AFTER poll_id,
+                        ADD COLUMN user_id INT NULL AFTER creator_id,
                         ADD INDEX idx_poll_user (poll_id, user_id)
                     """)
                     print("✅ Added user_id column to creator_votes table")
