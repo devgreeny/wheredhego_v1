@@ -63,8 +63,8 @@
     @keyframes scan{ from{ background-position-y:0 } to{ background-position-y:320px } }
     .glare{ position:absolute; inset:0; background: linear-gradient(105deg, rgba(255,255,255,.06), transparent 30% 70%, rgba(0,0,0,.15)); mix-blend-mode: screen; pointer-events:none }
 
-    .grid{ display:grid; gap: 26px; grid-template-columns: repeat(3, 1fr); }
-    @media (max-width: 960px){ .grid{ grid-template-columns: 1fr; } }
+    .grid{ display:grid; gap: 26px; grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto; }
+    @media (max-width: 960px){ .grid{ grid-template-columns: 1fr; max-width: 400px; } }
 
     .card{
       background: linear-gradient(180deg, var(--card-1), var(--card-2));
