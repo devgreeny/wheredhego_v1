@@ -46,25 +46,41 @@ class SkillPositionsGame {
     }
   }
 
-  setupCollegeSelect() {
+  setupCollegeSelect(filterByConference = null) {
     const select = document.getElementById('collegeSelectMain');
     if (!select) return;
     
     // Clear existing options except the first one
     select.innerHTML = '<option value="">Select a college...</option>';
     
+    // Filter colleges by conference if specified
+    let collegesToShow = this.colleges;
+    if (filterByConference) {
+      collegesToShow = this.colleges.filter(college => {
+        const collegeConference = college.conference || this.getCollegeConference(college.name || college);
+        return collegeConference && collegeConference.toLowerCase() === filterByConference.toLowerCase();
+      });
+    }
+    
     // Add college options
-    this.colleges.forEach(college => {
+    collegesToShow.forEach(college => {
       const option = document.createElement('option');
       option.value = college.name || college;
       option.textContent = college.name || college;
       select.appendChild(option);
     });
     
-    // Initialize Select2 if available
+    // Destroy existing Select2 instance if it exists
     if (typeof $ !== 'undefined' && $.fn.select2) {
+      if ($(select).hasClass('select2-hidden-accessible')) {
+        $(select).select2('destroy');
+      }
+      
+      // Initialize Select2
       $(select).select2({
-        placeholder: 'Select a college...',
+        placeholder: filterByConference ? 
+          `Select a college from ${filterByConference}...` : 
+          'Select a college...',
         allowClear: true,
         width: '100%'
       });
@@ -179,6 +195,9 @@ class SkillPositionsGame {
     
     // Reset card state
     this.resetCard();
+    
+    // Reset college dropdown to show all colleges (remove any conference filter)
+    this.setupCollegeSelect();
     
     // Load previous answer if exists
     const previousAnswer = this.userAnswers[player.name];
@@ -415,6 +434,9 @@ class SkillPositionsGame {
     const conference = this.getCollegeConference(college);
     
     this.showHintModal(college, conference);
+    
+    // Filter the dropdown to only show colleges from this conference
+    this.setupCollegeSelect(conference);
   }
 
   getCollegeConference(collegeName) {
@@ -460,6 +482,12 @@ class SkillPositionsGame {
             <div class="hint-text">
               This player attended a school in the <strong>${conference}</strong>
             </div>
+            <div class="hint-filter-info">
+              🎯 The dropdown has been filtered to only show <strong>${conference}</strong> schools!
+            </div>
+            <div class="hint-actions">
+              <button class="show-all-colleges-btn" id="showAllCollegesBtn">Show All Colleges</button>
+            </div>
           </div>
         </div>
       `;
@@ -474,11 +502,21 @@ class SkillPositionsGame {
           hintModal.classList.remove('show');
         });
       });
+      
+      // Add show all colleges button listener
+      const showAllBtn = hintModal.querySelector('#showAllCollegesBtn');
+      if (showAllBtn) {
+        showAllBtn.addEventListener('click', () => {
+          this.setupCollegeSelect(); // Reset to show all colleges
+          hintModal.classList.remove('show');
+        });
+      }
     }
     
     // Update content and show
     const conferenceSpan = hintModal.querySelector('#hintConference');
     const hintText = hintModal.querySelector('.hint-text');
+    const filterInfo = hintModal.querySelector('.hint-filter-info');
     
     if (conferenceSpan) {
       conferenceSpan.textContent = conference;
@@ -486,6 +524,10 @@ class SkillPositionsGame {
     
     if (hintText) {
       hintText.innerHTML = `This player attended a school in the <strong>${conference}</strong>`;
+    }
+    
+    if (filterInfo) {
+      filterInfo.innerHTML = `🎯 The dropdown has been filtered to only show <strong>${conference}</strong> schools!`;
     }
     
     hintModal.classList.add('show');

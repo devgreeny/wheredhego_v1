@@ -855,3 +855,38 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Hint Modal Enhancements for Conference Filtering */
+.hint-filter-info {
+  background: rgba(22, 163, 74, 0.1);
+  border: 1px solid var(--field-green);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  font-size: 0.6rem;
+  color: var(--field-green);
+  text-align: center;
+}
+
+.hint-actions {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.show-all-colleges-btn {
+  background: var(--nfl-orange);
+  border: 2px solid var(--nfl-gold);
+  color: var(--navy-900);
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-all-colleges-btn:hover {
+  background: var(--nfl-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
