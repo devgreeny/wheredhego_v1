@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Poll - System Error</title>
+    
+    <!-- Favicon implementation -->
+    <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0f172a;
+            --gold: #facc15;
+            --light-gray: #e2e8f0;
+            --red: #ef4444;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: var(--navy);
+            color: var(--light-gray);
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .error-container {
+            max-width: 600px;
+            text-align: center;
+            background: #1e293b;
+            border: 3px solid var(--red);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        
+        .error-icon {
+            font-size: 3rem;
+            color: var(--red);
+            margin-bottom: 1rem;
+        }
+        
+        .error-title {
+            color: var(--red);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .error-message {
+            font-size: 0.6rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: var(--light-gray);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-size: 0.5rem;
+            margin: 0.5rem;
+            transition: all 0.2s;
+        }
+        
+        .btn:hover {
+            background: #eab308;
+            transform: translateY(-1px);
+        }
+        
+        .technical-details {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #334155;
+            border-radius: 0.5rem;
+            font-size: 0.4rem;
+            color: #94a3b8;
+            text-align: left;
+            overflow-wrap: break-word;
+        }
+        
+        .technical-details summary {
+            cursor: pointer;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">⚠️</div>
+        <h1 class="error-title">System Error</h1>
+        <p class="error-message">{{ error_message }}</p>
+        
+        <div>
+            <a href="{{ url_for('creatorpoll.home') }}" class="btn">🔄 Try Again</a>
+            <a href="{{ url_for('home') }}" class="btn">🏠 Back to Home</a>
+        </div>
+        
+        {% if technical_details %}
+        <details class="technical-details">
+            <summary>Technical Details</summary>
+            <pre>{{ technical_details }}</pre>
+        </details>
+        {% endif %}
+    </div>
+</body>
+</html>

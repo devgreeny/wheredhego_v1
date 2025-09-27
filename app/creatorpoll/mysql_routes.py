@@ -29,18 +29,43 @@ def get_mysql_config():
 
 MYSQL_CONFIG = get_mysql_config()
 
-# Initialize MySQL models
-creator_user = CreatorUser(MYSQL_CONFIG)
-creator_poll = CreatorPoll(MYSQL_CONFIG)
-creator_ballot = CreatorBallot(MYSQL_CONFIG)
+# Initialize MySQL models (lazy loading)
+creator_user = None
+creator_poll = None
+creator_ballot = None
 
-# Create tables on import
+def get_mysql_models():
+    """Get MySQL models with lazy initialization"""
+    global creator_user, creator_poll, creator_ballot
+    
+    if creator_user is None:
+        try:
+            creator_user = CreatorUser(MYSQL_CONFIG)
+            creator_poll = CreatorPoll(MYSQL_CONFIG)
+            creator_ballot = CreatorBallot(MYSQL_CONFIG)
+            
+            # Create tables if they don't exist
+            creator_poll.create_tables()
+            creator_ballot.create_tables()
+            creator_user.create_tables()
+            
+            print("✅ MySQL models initialized successfully")
+        except Exception as e:
+            print(f"❌ Error initializing MySQL models: {e}")
+            # For development/testing, provide fallback
+            from flask import current_app
+            if current_app and current_app.debug:
+                print("🔄 Running in debug mode - MySQL connection may not be available")
+            raise
+    
+    return creator_user, creator_poll, creator_ballot
+
+# Initialize models immediately but with error handling
 try:
-    creator_poll.create_tables()
-    creator_ballot.create_tables()
-    creator_user.create_tables()
+    get_mysql_models()
 except Exception as e:
-    print(f"Warning: Could not create MySQL tables: {e}")
+    print(f"⚠️ MySQL models not available: {e}")
+    print("🔧 Routes will attempt to initialize on first use")
 
 # Path to CFB data
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -203,8 +228,14 @@ def ensure_current_poll_exists():
 @bp.route("/")
 def home():
     """Home page showing current poll or results"""
-    current_poll = ensure_current_poll_exists()
-    teams, _ = load_cfb_teams()
+    try:
+        current_poll = ensure_current_poll_exists()
+        teams, _ = load_cfb_teams()
+    except Exception as e:
+        print(f"❌ Error in creator poll home: {e}")
+        return render_template('creatorpoll/error.html', 
+                             error_message="Creator Poll system is temporarily unavailable. Please try again later.",
+                             technical_details=str(e))
     
     current_rankings = []
     total_ballots = 0
