@@ -38,7 +38,7 @@
           
           <!-- Player Image -->
           <div class="player-image-container">
-            <img src="{{ url_for('gridiron11.static', filename='sprites/' + player.team_abbrev + '/images/' + player.team_abbrev.lower() + '_' + player.avatar + '.png') }}"
+            <img src="{{ url_for('gridiron11.serve_sprites', team=player.team_abbrev, filename='images/' + player.team_abbrev.lower() + '_' + player.avatar + '.png') }}"
                  alt="{{ player.name }}"
                  class="player-image" />
           </div>
@@ -79,9 +79,6 @@
 
       <!-- Action Buttons -->
       <div class="results-actions">
-        <a href="{{ url_for('gridiron11.show_quiz') }}" class="action-btn play-again-btn">
-          🏈 Play Tomorrow's Quiz
-        </a>
         <a href="{{ url_for('home') }}" class="action-btn home-btn">
           🏠 Back to Home
         </a>
