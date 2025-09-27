@@ -438,27 +438,27 @@ class CreatorBallot:
             conn = self.db.get_connection()
             cursor = conn.cursor()
             
-            # Creator ballots table
+            # Creator ballots table - using unified user table
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS creator_ballots (
                     id INT AUTO_INCREMENT PRIMARY KEY,
                     poll_id INT NOT NULL,
-                    creator_id INT NOT NULL,
+                    user_id INT NOT NULL,
                     ballot_data JSON NOT NULL,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-                    UNIQUE KEY unique_poll_creator (poll_id, creator_id),
+                    UNIQUE KEY unique_poll_user (poll_id, user_id),
                     FOREIGN KEY (poll_id) REFERENCES creator_polls(id) ON DELETE CASCADE,
-                    FOREIGN KEY (creator_id) REFERENCES user_creator(id) ON DELETE CASCADE
+                    INDEX idx_poll_user (poll_id, user_id)
                 )
             """)
             
-            # Individual creator votes table
+            # Individual creator votes table - using unified user table
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS creator_votes (
                     id INT AUTO_INCREMENT PRIMARY KEY,
                     poll_id INT NOT NULL,
-                    creator_id INT NOT NULL,
+                    user_id INT NOT NULL,
                     team_name VARCHAR(100) NOT NULL,
                     team_conference VARCHAR(50),
                     team_id VARCHAR(50),
@@ -466,9 +466,8 @@ class CreatorBallot:
                     reasoning TEXT,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     FOREIGN KEY (poll_id) REFERENCES creator_polls(id) ON DELETE CASCADE,
-                    FOREIGN KEY (creator_id) REFERENCES user_creator(id) ON DELETE CASCADE,
                     INDEX idx_poll_team (poll_id, team_name),
-                    INDEX idx_poll_creator (poll_id, creator_id)
+                    INDEX idx_poll_user (poll_id, user_id)
                 )
             """)
             
@@ -481,32 +480,32 @@ class CreatorBallot:
             print(f"❌ Error creating creator ballot tables: {e}")
             raise
     
-    def submit_ballot(self, poll_id: int, creator_id: int, ballot_data: List[Dict]) -> bool:
-        """Submit or update a creator's ballot"""
+    def submit_ballot(self, poll_id: int, user_id: int, ballot_data: List[Dict]) -> bool:
+        """Submit or update a user's ballot"""
         conn = self.db.get_connection()
         cursor = conn.cursor()
         
         try:
             # Insert/update ballot
             cursor.execute("""
-                INSERT INTO creator_ballots (poll_id, creator_id, ballot_data)
+                INSERT INTO creator_ballots (poll_id, user_id, ballot_data)
                 VALUES (%s, %s, %s)
                 ON DUPLICATE KEY UPDATE
                 ballot_data = VALUES(ballot_data), updated_at = NOW()
-            """, (poll_id, creator_id, json.dumps(ballot_data)))
+            """, (poll_id, user_id, json.dumps(ballot_data)))
             
             # Delete existing votes
             cursor.execute("""
-                DELETE FROM creator_votes WHERE poll_id = %s AND creator_id = %s
-            """, (poll_id, creator_id))
+                DELETE FROM creator_votes WHERE poll_id = %s AND user_id = %s
+            """, (poll_id, user_id))
             
             # Insert individual votes
             for vote in ballot_data:
                 cursor.execute("""
                     INSERT INTO creator_votes 
-                    (poll_id, creator_id, team_name, team_conference, team_id, rank_position, reasoning)
+                    (poll_id, user_id, team_name, team_conference, team_id, rank_position, reasoning)
                     VALUES (%s, %s, %s, %s, %s, %s, %s)
-                """, (poll_id, creator_id, vote['team_name'], vote.get('team_conference', ''), 
+                """, (poll_id, user_id, vote['team_name'], vote.get('team_conference', ''), 
                      vote.get('team_id', ''), vote['rank'], vote.get('reasoning', '')))
             
             conn.commit()
@@ -520,15 +519,15 @@ class CreatorBallot:
             conn.close()
             raise e
     
-    def get_creator_ballot(self, poll_id: int, creator_id: int) -> Optional[List[Dict]]:
-        """Get creator's ballot for a poll"""
+    def get_creator_ballot(self, poll_id: int, user_id: int) -> Optional[List[Dict]]:
+        """Get user's ballot for a poll"""
         conn = self.db.get_connection()
         cursor = conn.cursor(dictionary=True)
         
         cursor.execute("""
             SELECT ballot_data FROM creator_ballots 
-            WHERE poll_id = %s AND creator_id = %s
-        """, (poll_id, creator_id))
+            WHERE poll_id = %s AND user_id = %s
+        """, (poll_id, user_id))
         
         result = cursor.fetchone()
         cursor.close()

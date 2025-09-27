@@ -8,7 +8,8 @@ import csv
 import json
 from datetime import datetime, timedelta
 from flask import Blueprint, render_template, request, jsonify, session, redirect, url_for, flash, send_file
-from .mysql_models import CreatorUser, CreatorPoll, CreatorBallot
+from flask_login import login_required, current_user
+from .mysql_models import CreatorPoll, CreatorBallot
 from functools import wraps
 
 bp = Blueprint('creatorpoll', __name__, 
@@ -29,25 +30,22 @@ def get_mysql_config():
 
 MYSQL_CONFIG = get_mysql_config()
 
-# Initialize MySQL models (lazy loading)
-creator_user = None
+# Initialize MySQL models (lazy loading) - removed creator_user
 creator_poll = None
 creator_ballot = None
 
 def get_mysql_models():
     """Get MySQL models with lazy initialization"""
-    global creator_user, creator_poll, creator_ballot
+    global creator_poll, creator_ballot
     
-    if creator_user is None:
+    if creator_poll is None:
         try:
-            creator_user = CreatorUser(MYSQL_CONFIG)
             creator_poll = CreatorPoll(MYSQL_CONFIG)
             creator_ballot = CreatorBallot(MYSQL_CONFIG)
             
             # Create tables if they don't exist
             creator_poll.create_tables()
             creator_ballot.create_tables()
-            creator_user.create_tables()
             
             print("✅ MySQL models initialized successfully")
         except Exception as e:
@@ -58,7 +56,7 @@ def get_mysql_models():
                 print("🔄 Running in debug mode - MySQL connection may not be available")
             raise
     
-    return creator_user, creator_poll, creator_ballot
+    return creator_poll, creator_ballot
 
 # Initialize models immediately but with error handling
 try:
@@ -118,45 +116,7 @@ def load_cfb_teams():
         print(f"❌ Error loading CFB teams: {e}")
         return [], {}
 
-def login_required(f):
-    """Decorator to require creator login"""
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        session_id = session.get('creator_session_id')
-        if not session_id:
-            flash('Please log in to access this page.', 'error')
-            return redirect(url_for('creatorpoll.login'))
-        
-        session_data = creator_user.validate_session(session_id)
-        if not session_data['valid']:
-            session.clear()
-            flash('Your session has expired. Please log in again.', 'error')
-            return redirect(url_for('creatorpoll.login'))
-        
-        # Add creator info to request
-        request.creator = session_data
-        return f(*args, **kwargs)
-    
-    return decorated_function
-
-def admin_required(f):
-    """Decorator to require admin privileges"""
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        session_id = session.get('creator_session_id')
-        if not session_id:
-            flash('Admin access required.', 'error')
-            return redirect(url_for('creatorpoll.login'))
-        
-        session_data = creator_user.validate_session(session_id)
-        if not session_data['valid'] or not session_data['is_admin']:
-            flash('Admin access required.', 'error')
-            return redirect(url_for('creatorpoll.login'))
-        
-        request.creator = session_data
-        return f(*args, **kwargs)
-    
-    return decorated_function
+# Using Flask-Login's login_required decorator instead of custom auth system
 
 def get_season_start_datetime():
     """Get the season start date (Wednesday, August 27th, 2025 at 3:00 PM)"""
@@ -259,14 +219,9 @@ def home():
                 'logo_url': logo_url
             })
     
-    # Check if creator is logged in
-    creator_logged_in = False
-    creator_display_name = ""
-    if session.get('creator_session_id'):
-        session_data = creator_user.validate_session(session.get('creator_session_id'))
-        if session_data['valid']:
-            creator_logged_in = True
-            creator_display_name = session_data['display_name']
+    # Check if user is logged in (using unified auth)
+    creator_logged_in = current_user.is_authenticated
+    creator_display_name = current_user.username if creator_logged_in else ""
     
     return render_template('creatorpoll/home.html',
                          current_poll=current_poll,
@@ -275,64 +230,34 @@ def home():
                          creator_logged_in=creator_logged_in,
                          creator_display_name=creator_display_name)
 
-@bp.route("/login", methods=['GET', 'POST'])
+@bp.route("/login")
 def login():
-    """Creator login page"""
-    if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
-        
-        auth_result = creator_user.authenticate_creator(username, password)
-        
-        if auth_result:
-            session['creator_session_id'] = auth_result['session_id']
-            session['creator_username'] = auth_result['username']
-            session['creator_display_name'] = auth_result['display_name']
-            session['creator_id'] = auth_result['creator_id']
-            
-            flash(f'Welcome back, {auth_result["display_name"]}!', 'success')
-            return redirect(url_for('creatorpoll.home'))
-        else:
-            flash('Invalid username or password.', 'error')
-    
-    return render_template('creatorpoll/login.html')
+    """Redirect to unified auth login"""
+    return redirect(url_for('auth.login', next=url_for('creatorpoll.home')))
 
-@bp.route("/register", methods=['GET', 'POST'])
+@bp.route("/register")
 def register():
-    """Creator registration page"""
-    if request.method == 'POST':
-        username = request.form.get('username')
-        email = request.form.get('email')
-        password = request.form.get('password')
-        display_name = request.form.get('display_name')
-        bio = request.form.get('bio', '')
-        twitter_handle = request.form.get('twitter_handle', '')
-        
-        if not all([username, email, password, display_name]):
-            flash('Please fill in all required fields.', 'error')
-        elif len(password) < 8:
-            flash('Password must be at least 8 characters.', 'error')
-        else:
-            success = creator_user.create_creator(username, email, password, display_name, bio, twitter_handle)
-            if success:
-                flash('Registration successful! Please log in.', 'success')
-                return redirect(url_for('creatorpoll.login'))
-            else:
-                flash('Registration failed. Username or email may already exist.', 'error')
-    
-    return render_template('creatorpoll/register.html')
+    """Redirect to unified auth registration"""
+    return redirect(url_for('auth.register', next=url_for('creatorpoll.home')))
 
 @bp.route("/vote/<int:poll_id>", methods=['GET', 'POST'])
 @login_required
 def vote(poll_id):
     """Creator voting page"""
+    try:
+        creator_poll, creator_ballot = get_mysql_models()
+    except Exception as e:
+        return render_template('creatorpoll/error.html', 
+                             error_message="Creator Poll system is temporarily unavailable.",
+                             technical_details=str(e))
+    
     poll = creator_poll.get_poll_by_id(poll_id)
     if not poll:
         flash('Poll not found.', 'error')
         return redirect(url_for('creatorpoll.home'))
     
     teams, conferences = load_cfb_teams()
-    creator_id = request.creator['creator_id']
+    user_id = current_user.id  # Use unified auth user ID
     
     # Poll locking removed - always allow submissions
     # Check if poll is open
@@ -367,7 +292,7 @@ def vote(poll_id):
             flash('Please rank all 25 teams before submitting.', 'error')
         else:
             try:
-                success = creator_ballot.submit_ballot(poll_id, creator_id, ballot_data)
+                success = creator_ballot.submit_ballot(poll_id, user_id, ballot_data)
                 if success:
                     flash('Your ballot has been submitted successfully!', 'success')
                     return redirect(url_for('creatorpoll.results', poll_id=poll_id))
@@ -377,7 +302,7 @@ def vote(poll_id):
                 flash(f'Error submitting ballot: {str(e)}', 'error')
     
     # Load existing ballot
-    existing_ballot = creator_ballot.get_creator_ballot(poll_id, creator_id)
+    existing_ballot = creator_ballot.get_creator_ballot(poll_id, user_id)
     
     return render_template('creatorpoll/vote.html',
                          poll=poll,
@@ -430,10 +355,8 @@ def results(poll_id):
 
 @bp.route("/logout")
 def logout():
-    """Creator logout"""
-    session.clear()
-    flash('You have been logged out.', 'info')
-    return redirect(url_for('creatorpoll.home'))
+    """Redirect to unified auth logout"""
+    return redirect(url_for('auth.logout'))
 
 @bp.route("/api/search_teams")
 def search_teams():
