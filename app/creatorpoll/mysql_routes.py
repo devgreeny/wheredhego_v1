@@ -426,10 +426,11 @@ def debug_status():
     return jsonify(debug_info)
 
 @bp.route("/admin/archive_polls")
-@admin_required
+@login_required
 def archive_polls():
     """Admin endpoint to archive completed polls"""
     try:
+        creator_poll, creator_ballot = get_mysql_models()
         # Archive completed polls
         current_poll = creator_poll.get_current_poll()
         if current_poll:
