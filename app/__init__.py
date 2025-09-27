@@ -65,13 +65,9 @@ def create_app():
     from app.gridiron11.routes import bp as gridiron11_bp
     app.register_blueprint(gridiron11_bp, url_prefix='/gridiron11')
     
-    # Register the creatorpoll blueprint - use SQLite for local dev, MySQL for production
-    if os.environ.get('USE_LOCAL_SQLITE') or not os.environ.get('MYSQL_HOST'):
-        from app.creatorpoll.routes import bp as creatorpoll_bp
-        print("🔧 Using SQLite CreatorPoll routes for local development")
-    else:
-        from app.creatorpoll.mysql_routes import bp as creatorpoll_bp
-        print("🔧 Using MySQL CreatorPoll routes for production")
+    # Register the creatorpoll blueprint - force MySQL routes since database is MySQL
+    from app.creatorpoll.mysql_routes import bp as creatorpoll_bp
+    print("🔧 Using MySQL CreatorPoll routes for production database")
     app.register_blueprint(creatorpoll_bp, url_prefix='/creatorpoll')
     
     # Register the auth blueprint for unified authentication

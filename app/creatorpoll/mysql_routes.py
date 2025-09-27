@@ -441,6 +441,36 @@ def serve_logo(filename):
     except FileNotFoundError:
         return "Logo not found", 404
 
+@bp.route("/debug")
+def debug_status():
+    """Debug route to check system status"""
+    current_week = get_current_week()
+    current_season = get_current_season()
+    current_poll = ensure_current_poll_exists()
+    
+    # Get poll results if poll exists
+    poll_results = []
+    total_ballots = 0
+    if current_poll:
+        poll_results = creator_poll.get_poll_results(current_poll['id'])
+        total_ballots = creator_ballot.get_poll_ballot_count(current_poll['id'])
+    
+    debug_info = {
+        'system_status': 'MySQL Creator Poll System Active',
+        'current_week': current_week,
+        'current_season': current_season,
+        'current_poll': current_poll,
+        'total_ballots': total_ballots,
+        'poll_results': poll_results,
+        'database_config': {
+            'host': MYSQL_CONFIG['host'],
+            'database': MYSQL_CONFIG['database'],
+            'user': MYSQL_CONFIG['user']
+        }
+    }
+    
+    return jsonify(debug_info)
+
 @bp.route("/admin/archive_polls")
 @admin_required
 def archive_polls():
