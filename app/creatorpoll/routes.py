@@ -126,45 +126,81 @@ def get_poll_start_end_times(week_number, season_year):
     return poll_start, poll_end
 
 def cleanup_old_polls():
-    """Deactivate polls that are no longer current"""
-    current_week = get_current_week()
-    current_season = get_current_season()
+    """Deactivate polls that are no longer current - DISABLED FOR AGGREGATE VOTING"""
+    # Disable automatic poll cleanup to allow multiple users to vote on the same poll
+    # Even if they access it at different times/weeks
+    pass
     
-    # Deactivate all polls except the current one
-    from app.starting5.models import db
-    old_polls = Poll.query.filter(
-        Poll.is_active == True,
-        ~((Poll.season_year == current_season) & (Poll.week_number == current_week))
-    ).all()
-    
-    for poll in old_polls:
-        poll.is_active = False
-        print(f"🔒 Deactivated old poll: {poll.title}")
-    
-    if old_polls:
-        db.session.commit()
+    # ORIGINAL CODE COMMENTED OUT TO ALLOW AGGREGATE VOTING:
+    # current_week = get_current_week()
+    # current_season = get_current_season()
+    # 
+    # # Deactivate all polls except the current one
+    # from app.starting5.models import db
+    # old_polls = Poll.query.filter(
+    #     Poll.is_active == True,
+    #     ~((Poll.season_year == current_season) & (Poll.week_number == current_week))
+    # ).all()
+    # 
+    # for poll in old_polls:
+    #     poll.is_active = False
+    #     print(f"🔒 Deactivated old poll: {poll.title}")
+    # 
+    # if old_polls:
+    #     db.session.commit()
 
 def ensure_current_poll_exists():
     """Ensure that the current week's poll exists, create if needed"""
     current_week = get_current_week()
     current_season = get_current_season()
     
-    # Clean up old polls first
+    # Clean up old polls first (now disabled for aggregate voting)
     cleanup_old_polls()
     
     # Don't create polls for week 0 (pre-season)
     if current_week <= 0:
         return None
     
-    # Check if current poll exists
+    # MODIFIED: First check for ANY active poll from the current season that has votes
+    # This allows users to continue voting on the same poll even if accessed later
+    from app.creatorpoll.models import UserBallot
+    from app.starting5.models import db
+    
+    # Find active polls with votes first
+    active_polls_with_votes = db.session.query(Poll).join(UserBallot).filter(
+        Poll.season_year == current_season,
+        Poll.is_active == True
+    ).order_by(Poll.week_number.desc()).first()
+    
+    if active_polls_with_votes:
+        print(f"📊 Using existing poll with votes: Week {active_polls_with_votes.week_number}")
+        return active_polls_with_votes
+    
+    # If no polls with votes, use any active poll
     existing_poll = Poll.query.filter_by(
         season_year=current_season,
-        week_number=current_week,
         is_active=True
-    ).first()
+    ).order_by(Poll.week_number.desc()).first()
     
     if existing_poll:
+        print(f"📊 Using existing active poll: Week {existing_poll.week_number}")
         return existing_poll
+    
+    # If no active poll exists, create one for the current week
+    print(f"📊 Creating new poll for Week {current_week}")
+    
+    # Check if current week poll exists but is inactive, then reactivate it
+    inactive_poll = Poll.query.filter_by(
+        season_year=current_season,
+        week_number=current_week,
+        is_active=False
+    ).first()
+    
+    if inactive_poll:
+        inactive_poll.is_active = True
+        db.session.commit()
+        print(f"📊 Reactivated poll for Week {current_week}")
+        return inactive_poll
     
     # Create new poll for current week
     poll_start, poll_end = get_poll_start_end_times(current_week, current_season)
