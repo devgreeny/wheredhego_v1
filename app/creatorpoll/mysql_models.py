@@ -289,18 +289,72 @@ class CreatorPoll:
         conn = self.db.get_connection()
         cursor = conn.cursor(dictionary=True)
         
-        cursor.execute("""
-            SELECT 
-                team_name,
-                COUNT(*) as vote_count,
-                AVG(rank_position) as avg_rank
-            FROM creator_votes 
-            WHERE poll_id = %s 
-            GROUP BY team_name 
-            ORDER BY avg_rank ASC
-        """, (poll_id,))
+        try:
+            # Check if user_id column exists
+            cursor.execute("""
+                SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS 
+                WHERE TABLE_SCHEMA = DATABASE() 
+                AND TABLE_NAME = 'creator_votes' 
+                AND COLUMN_NAME = 'user_id'
+            """)
+            
+            has_user_id_column = cursor.fetchone()[0] > 0
+            
+            if has_user_id_column:
+                cursor.execute("""
+                    SELECT 
+                        team_name,
+                        COUNT(*) as vote_count,
+                        AVG(rank_position) as avg_rank
+                    FROM creator_votes 
+                    WHERE poll_id = %s 
+                    GROUP BY team_name 
+                    ORDER BY avg_rank ASC
+                """, (poll_id,))
+                
+                results = cursor.fetchall()
+            else:
+                # Fallback: If no creator_votes with user_id, try to get results from ballots
+                print("Warning: creator_votes table missing user_id column, using ballot data")
+                cursor.execute("""
+                    SELECT poll_id FROM creator_ballots WHERE poll_id = %s LIMIT 1
+                """, (poll_id,))
+                
+                if cursor.fetchone():
+                    # Parse ballot data to get results
+                    cursor.execute("""
+                        SELECT ballot_data FROM creator_ballots WHERE poll_id = %s
+                    """, (poll_id,))
+                    
+                    ballots = cursor.fetchall()
+                    team_votes = {}
+                    
+                    for ballot_row in ballots:
+                        ballot_data = json.loads(ballot_row['ballot_data'])
+                        for vote in ballot_data:
+                            team_name = vote['team_name']
+                            rank = vote['rank']
+                            
+                            if team_name not in team_votes:
+                                team_votes[team_name] = []
+                            team_votes[team_name].append(rank)
+                    
+                    results = []
+                    for team_name, ranks in team_votes.items():
+                        results.append({
+                            'team_name': team_name,
+                            'vote_count': len(ranks),
+                            'avg_rank': sum(ranks) / len(ranks)
+                        })
+                    
+                    results.sort(key=lambda x: x['avg_rank'])
+                else:
+                    results = []
+                    
+        except Exception as e:
+            print(f"Error getting poll results: {e}")
+            results = []
         
-        results = cursor.fetchall()
         cursor.close()
         conn.close()
         return results
@@ -438,20 +492,39 @@ class CreatorBallot:
             conn = self.db.get_connection()
             cursor = conn.cursor()
             
-            # Creator ballots table - using unified user table
+            # Creator ballots table - with user_id support
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS creator_ballots (
                     id INT AUTO_INCREMENT PRIMARY KEY,
                     poll_id INT NOT NULL,
-                    user_id INT NOT NULL,
+                    creator_id INT NULL,
+                    user_id INT NULL,
                     ballot_data JSON NOT NULL,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-                    UNIQUE KEY unique_poll_user (poll_id, user_id),
                     FOREIGN KEY (poll_id) REFERENCES creator_polls(id) ON DELETE CASCADE,
+                    INDEX idx_poll_creator (poll_id, creator_id),
                     INDEX idx_poll_user (poll_id, user_id)
                 )
             """)
+            
+            # Check if user_id column exists, add if missing
+            cursor.execute("""
+                SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS 
+                WHERE TABLE_SCHEMA = DATABASE() 
+                AND TABLE_NAME = 'creator_ballots' 
+                AND COLUMN_NAME = 'user_id'
+            """)
+            
+            if cursor.fetchone()[0] == 0:
+                try:
+                    cursor.execute("""
+                        ALTER TABLE creator_ballots 
+                        ADD COLUMN user_id INT NULL AFTER creator_id,
+                        ADD INDEX idx_poll_user (poll_id, user_id)
+                    """)
+                except Exception as alter_error:
+                    print(f"Warning: Could not add user_id column: {alter_error}")
             
             # Individual creator votes table - using unified user table
             cursor.execute("""
@@ -470,6 +543,25 @@ class CreatorBallot:
                     INDEX idx_poll_user (poll_id, user_id)
                 )
             """)
+            
+            # Check if user_id column exists in creator_votes, add if missing
+            cursor.execute("""
+                SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS 
+                WHERE TABLE_SCHEMA = DATABASE() 
+                AND TABLE_NAME = 'creator_votes' 
+                AND COLUMN_NAME = 'user_id'
+            """)
+            
+            if cursor.fetchone()[0] == 0:
+                try:
+                    cursor.execute("""
+                        ALTER TABLE creator_votes 
+                        ADD COLUMN user_id INT NOT NULL DEFAULT 0 AFTER poll_id,
+                        ADD INDEX idx_poll_user (poll_id, user_id)
+                    """)
+                    print("✅ Added user_id column to creator_votes table")
+                except Exception as alter_error:
+                    print(f"Warning: Could not add user_id column to creator_votes: {alter_error}")
             
             conn.commit()
             cursor.close()
@@ -494,19 +586,32 @@ class CreatorBallot:
                 ballot_data = VALUES(ballot_data), updated_at = NOW()
             """, (poll_id, user_id, json.dumps(ballot_data)))
             
-            # Delete existing votes
+            # Check if user_id column exists before trying to delete/insert
             cursor.execute("""
-                DELETE FROM creator_votes WHERE poll_id = %s AND user_id = %s
-            """, (poll_id, user_id))
+                SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS 
+                WHERE TABLE_SCHEMA = DATABASE() 
+                AND TABLE_NAME = 'creator_votes' 
+                AND COLUMN_NAME = 'user_id'
+            """)
             
-            # Insert individual votes
-            for vote in ballot_data:
+            has_user_id_column = cursor.fetchone()[0] > 0
+            
+            if has_user_id_column:
+                # Delete existing votes
                 cursor.execute("""
-                    INSERT INTO creator_votes 
-                    (poll_id, user_id, team_name, team_conference, team_id, rank_position, reasoning)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s)
-                """, (poll_id, user_id, vote['team_name'], vote.get('team_conference', ''), 
-                     vote.get('team_id', ''), vote['rank'], vote.get('reasoning', '')))
+                    DELETE FROM creator_votes WHERE poll_id = %s AND user_id = %s
+                """, (poll_id, user_id))
+                
+                # Insert individual votes
+                for vote in ballot_data:
+                    cursor.execute("""
+                        INSERT INTO creator_votes 
+                        (poll_id, user_id, team_name, team_conference, team_id, rank_position, reasoning)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s)
+                    """, (poll_id, user_id, vote['team_name'], vote.get('team_conference', ''), 
+                         vote.get('team_id', ''), vote['rank'], vote.get('reasoning', '')))
+            else:
+                print("Warning: creator_votes table does not have user_id column, skipping individual vote records")
             
             conn.commit()
             cursor.close()
