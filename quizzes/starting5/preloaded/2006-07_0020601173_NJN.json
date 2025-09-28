@@ -1,0 +1,135 @@
+{
+  "season": "2006-07",
+  "game_id": "0020601173",
+  "team_abbr": "NJN",
+  "opponent_abbr": "CLE",
+  "matchup": "CLE vs NJN",
+  "game_date": "2007-04-12",
+  "players": [
+    {
+      "name": "Richard Jefferson",
+      "school": "Arizona",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "NJN",
+      "avatar": "04",
+      "conference": "Big 12 Conference",
+      "player_id": 2210,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 5.0,
+        "ast": 1.0,
+        "reb": 2.0,
+        "stl": 2.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.1,
+        "assists_pct": 0.077,
+        "rebounds_pct": 0.091,
+        "defense_pct": 0.4
+      }
+    },
+    {
+      "name": "Mikki Moore",
+      "school": "Nebraska",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "NJN",
+      "avatar": "03",
+      "conference": "Big Ten Conference",
+      "player_id": 1630,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11.0,
+        "ast": 0.0,
+        "reb": 5.0,
+        "stl": 2.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.22,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.227,
+        "defense_pct": 0.4
+      }
+    },
+    {
+      "name": "Jason Collins",
+      "school": "Stanford",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "NJN",
+      "avatar": "07",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 2215,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 0.0,
+        "ast": 0.0,
+        "reb": 1.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.0,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.045,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Vince Carter",
+      "school": "North Carolina",
+      "school_type": "College",
+      "spriteIndex": 13,
+      "team_abbrev": "NJN",
+      "avatar": "13",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1713,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 26.0,
+        "ast": 4.0,
+        "reb": 3.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.52,
+        "assists_pct": 0.308,
+        "rebounds_pct": 0.136,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Jason Kidd",
+      "school": "California",
+      "school_type": "College",
+      "spriteIndex": 14,
+      "team_abbrev": "NJN",
+      "avatar": "14",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 467,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 8.0,
+        "ast": 8.0,
+        "reb": 11.0,
+        "stl": 1.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.16,
+        "assists_pct": 0.615,
+        "rebounds_pct": 0.5,
+        "defense_pct": 0.2
+      }
+    }
+  ]
+}
