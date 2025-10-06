@@ -332,6 +332,15 @@ def show_legacy_quiz():
 def serve_sprites(team, filename):
     """Serve team sprite images"""
     sprites_dir = os.path.join(PROJECT_ROOT, "app", "gridiron11", "Sprites", team.upper())
+    full_path = os.path.join(sprites_dir, filename)
+    print(f"🎨 Sprite request: team={team}, filename={filename}")
+    print(f"🎨 Full path: {full_path}")
+    print(f"🎨 File exists: {os.path.exists(full_path)}")
+    
+    if not os.path.exists(full_path):
+        print(f"❌ Sprite file not found: {full_path}")
+        print(f"❌ Directory contents: {os.listdir(sprites_dir) if os.path.exists(sprites_dir) else 'Directory not found'}")
+    
     return send_from_directory(sprites_dir, filename)
 
 @bp.route("/api/lineup")

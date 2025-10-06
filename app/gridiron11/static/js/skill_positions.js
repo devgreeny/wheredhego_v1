@@ -180,8 +180,19 @@ class SkillPositionsGame {
     
     if (playerArt && player.team_abbrev && player.avatar) {
       const spritePath = `/gridiron11/sprites/${player.team_abbrev}/images/${player.team_abbrev.toLowerCase()}_${player.avatar}.png`;
+      console.log(`🎨 Loading sprite for ${player.name}: ${spritePath}`);
       playerArt.src = spritePath;
       playerArt.alt = player.name;
+      
+      // Add error handling for sprite loading
+      playerArt.onerror = function() {
+        console.error(`❌ Failed to load sprite: ${spritePath}`);
+        console.log(`Team: ${player.team_abbrev}, Avatar: ${player.avatar}`);
+      };
+      
+      playerArt.onload = function() {
+        console.log(`✅ Successfully loaded sprite: ${spritePath}`);
+      };
     }
     
     if (playerStats) {
@@ -693,6 +704,7 @@ class SkillPositionsGame {
       const conference = this.getCollegeConference(player.college);
       
       const spritePath = `/gridiron11/sprites/${player.team_abbrev}/images/${player.team_abbrev.toLowerCase()}_${player.avatar}.png`;
+      console.log(`🎨 Results sprite for ${player.name}: ${spritePath}`);
       
       html += `
         <div class="result-card ${isCorrect ? 'correct' : 'wrong'}">
@@ -704,7 +716,9 @@ class SkillPositionsGame {
           
           <div class="result-card-body">
             <div class="result-player-image">
-              <img src="${spritePath}" alt="${player.name}" class="result-player-art">
+              <img src="${spritePath}" alt="${player.name}" class="result-player-art" 
+                   onerror="console.error('❌ Failed to load results sprite:', '${spritePath}')"
+                   onload="console.log('✅ Loaded results sprite:', '${spritePath}')">
             </div>
             
             <div class="result-player-info">
