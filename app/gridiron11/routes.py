@@ -224,8 +224,8 @@ def get_skill_positions_payload() -> dict:
             # Extract base position (QB1 -> QB, WR2 -> WR, etc.)
             base_position = ''.join([c for c in position if c.isalpha()])
             if base_position in SKILL_POSITIONS:
-                # Assign avatar/sprite based on player index (1-10)
-                avatar_num = str(i + 1).zfill(2)  # 01, 02, 03, etc.
+                # Use the existing avatar from the JSON data
+                avatar_num = player.get("avatar", str(i + 1).zfill(2))
                 
                 skill_players.append({
                     "name": player["name"],
