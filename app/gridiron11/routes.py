@@ -212,6 +212,13 @@ def get_skill_positions_payload() -> dict:
         skill_players = []
         team_abbrev = data.get("team", "").upper()
         
+        # Map non-standard team abbreviations to standard ones
+        team_mapping = {
+            "HTX": "HOU",  # Houston Texans
+            "OTI": "TEN",  # Tennessee Titans
+        }
+        team_abbrev = team_mapping.get(team_abbrev, team_abbrev)
+        
         for i, player in enumerate(data.get("players", [])):
             position = player.get("position", "")
             # Extract base position (QB1 -> QB, WR2 -> WR, etc.)
