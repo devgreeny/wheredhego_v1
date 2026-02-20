@@ -1,0 +1,135 @@
+{
+  "season": "2020-21",
+  "game_id": "0022000393",
+  "team_abbr": "GSW",
+  "opponent_abbr": "ORL",
+  "matchup": "GSW vs ORL",
+  "game_date": "2021-02-11",
+  "players": [
+    {
+      "name": "Andrew Wiggins",
+      "school": "Kansas",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "GSW",
+      "avatar": "03",
+      "conference": "Big 12 Conference",
+      "player_id": 203952,
+      "position": "Forward",
+      "country": "Canada",
+      "game_stats": {
+        "pts": 21.0,
+        "ast": 3.0,
+        "reb": 7.0,
+        "stl": 0.0,
+        "blk": 3.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.221,
+        "assists_pct": 0.12,
+        "rebounds_pct": 0.194,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Juan Toscano-Anderson",
+      "school": "Marquette",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "GSW",
+      "avatar": "05",
+      "conference": "Big East Conference",
+      "player_id": 1629308,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 9.0,
+        "ast": 2.0,
+        "reb": 5.0,
+        "stl": 1.0,
+        "blk": 1.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.095,
+        "assists_pct": 0.08,
+        "rebounds_pct": 0.139,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "Draymond Green",
+      "school": "Michigan State",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "GSW",
+      "avatar": "12",
+      "conference": "Big Ten Conference",
+      "player_id": 203110,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 8.0,
+        "ast": 11.0,
+        "reb": 6.0,
+        "stl": 1.0,
+        "blk": 2.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.084,
+        "assists_pct": 0.44,
+        "rebounds_pct": 0.167,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Kelly Oubre Jr.",
+      "school": "Kansas",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "GSW",
+      "avatar": "07",
+      "conference": "Big 12 Conference",
+      "player_id": 1626162,
+      "position": "Forward-Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 17.0,
+        "ast": 4.0,
+        "reb": 10.0,
+        "stl": 0.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.179,
+        "assists_pct": 0.16,
+        "rebounds_pct": 0.278,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Stephen Curry",
+      "school": "Davidson",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "GSW",
+      "avatar": "01",
+      "conference": "Atlantic 10 Conference",
+      "player_id": 201939,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 40.0,
+        "ast": 5.0,
+        "reb": 8.0,
+        "stl": 4.0,
+        "blk": 0.0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.421,
+        "assists_pct": 0.2,
+        "rebounds_pct": 0.222,
+        "defense_pct": 0.333
+      }
+    }
+  ]
+}

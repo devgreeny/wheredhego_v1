@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Profile — Where'd He Go?</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap" rel="stylesheet">
+  
+  <!-- Favicon implementation -->
+  <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <style>
+    :root {
+      --ink: #0f2e4d;
+      --ink-2: #102a44;
+      --bg: #f1e3c4;
+      --bg-2: #e9d7af;
+      --accent: #e44a3c;
+      --accent-2: #ff7e4d;
+      --cream: #ffe9b3;
+      --card-1: #f29d5b;
+      --card-2: #e78443;
+      --bezel: #071a2f;
+    }
+
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      padding: 20px;
+      color: var(--ink-2);
+      font-family: "VT323", Consolas, "Courier New", monospace;
+      background: 
+        radial-gradient(1200px 480px at 50% -120px, #fff8e6 0, var(--bg) 60%, var(--bg) 100%),
+        repeating-linear-gradient(to bottom, rgba(0,0,0,.03) 0 1px, transparent 1px 3px);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      border: 4px solid var(--ink);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 8px 8px 0 var(--ink-2);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .title {
+      font-family: "Press Start 2P", monospace;
+      font-size: 24px;
+      color: var(--accent);
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 0 var(--ink);
+    }
+
+    .welcome-text {
+      font-size: 18px;
+      color: var(--ink-2);
+      margin-bottom: 30px;
+      line-height: 1.4;
+    }
+
+    .user-info {
+      background: linear-gradient(135deg, var(--card-1), var(--card-2));
+      border: 3px solid var(--ink);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .username {
+      font-family: "Press Start 2P", monospace;
+      font-size: 16px;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .user-stats {
+      font-size: 14px;
+      color: var(--ink-2);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      text-decoration: none;
+      border: 3px solid var(--ink);
+      border-radius: 8px;
+      font-family: "Press Start 2P", monospace;
+      font-size: 12px;
+      box-shadow: 3px 3px 0 var(--ink);
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .nav-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .nav-link:active {
+      transform: translateY(0);
+      box-shadow: 2px 2px 0 var(--ink);
+    }
+
+    .back-link {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .back-link a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 20px;
+        margin: 20px;
+      }
+      
+      .title {
+        font-size: 18px;
+      }
+      
+      .nav-link {
+        font-size: 10px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Player Profile</h1>
+    
+    {% if current_user.is_authenticated %}
+    <p class="welcome-text">Welcome back, player!</p>
+    
+    <div class="user-info">
+      <div class="username">{{ current_user.username }}</div>
+      <div class="user-stats">
+        Ready to play some games?
+      </div>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="nav-links">
+      <a href="{{ url_for('home') }}" class="nav-link">← Back to Home</a>
+      <a href="{{ url_for('starting5.show_quiz') }}" class="nav-link">Play Starting5</a>
+      <a href="{{ url_for('gridiron11.show_quiz') }}" class="nav-link">Play Skill Positions</a>
+      <a href="{{ url_for('auth.scores') }}" class="nav-link">View Game History</a>
+      <a href="{{ url_for('auth.logout') }}" class="nav-link">Logout</a>
+    </div>
+    
+    {% else %}
+    <p class="welcome-text">Sign in to track your scores!</p>
+    
+    <div class="nav-links">
+      <a href="{{ url_for('auth.login') }}" class="nav-link">Login</a>
+      <a href="{{ url_for('auth.register') }}" class="nav-link">Register</a>
+    </div>
+    
+    <div class="back-link">
+      <a href="{{ url_for('home') }}">← Back to Home</a>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>

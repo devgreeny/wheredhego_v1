@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skill Positions — NFL College Quiz</title>
+  
+  <!-- Favicon implementation -->
+  <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  
+  <link rel="stylesheet" href="{{ url_for('gridiron11.static', filename='css/retro_theme.css', v=13) }}">
+  <!-- Google Fonts for retro theme -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap" rel="stylesheet">
+  <script async defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
+  <!-- Removed old back-nav styles - using auth navbar instead -->
+</head>
+<body>
+  <!-- Include auth navigation bar -->
+  {% include '_auth_navbar.html' %}
+  
+  <div class="page">
+    <!-- CRT Frame matching landing page -->
+    <div class="crt-frame">
+      <div class="crt-inner">
+        <!-- Board = image + overlayed formation chips -->
+        <div class="board" id="board">
+          <img src="{{ url_for('gridiron11.static', filename='img/field.png') }}" alt="The Gridiron field" id="fieldImg">
+          <div class="overlay" id="formation">
+            <!-- Formation positions will be dynamically generated -->
+          </div>
+        </div>
+        
+        <!-- CRT scan lines and glare effects -->
+        <div class="scan" aria-hidden="true"></div>
+        <div class="glare" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- Quiz area - redesigned to match mockup -->
+    <div class="quiz" role="region" aria-label="Formation school quiz">
+      <!-- Top row: Position, Player Name, Searchable Dropdown -->
+      <div class="quiz-top">
+        <div class="pos" id="posLabel">—</div>
+        <div class="name" id="playerName">—</div>
+        <div class="dropdown-container">
+          <input id="guessInput" type="text" class="college-input" placeholder="Type or select a college..." autocomplete="off" />
+          <div id="dropdownList" class="dropdown-list"></div>
+        </div>
+      </div>
+      
+      <!-- Bottom row: Navigation, Buttons -->
+      <div class="quiz-bottom">
+        <div class="nav-group">
+          <button class="arrow" id="prev" aria-label="Previous position">◀</button>
+          <div class="nav-text"><em>Previous/Next<br>Player</em></div>
+          <button class="arrow" id="next" aria-label="Next position">▶</button>
+        </div>
+        
+        <div class="action-group">
+          <button class="action" id="hintBtn" type="button"><em>Hint</em></button>
+          <button class="action" id="submitBtn" type="button"><em>Submit Guesses</em></button>
+        </div>
+      </div>
+      
+      <!-- Status/Feedback (hidden in mockup but keeping for functionality) -->
+      <div class="quiz-status">
+        <div class="status"><span id="indexLabel">1</span>/<span id="totalLabel">—</span></div>
+        <div class="status muted" id="feedback"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Score Modal ===== -->
+  <div id="scoreModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__backdrop" id="scoreBackdrop"></div>
+    <div class="modal__panel" role="document">
+      <div class="modal__header">
+        <h2 class="modal__title">Your Results</h2>
+        <button class="share-btn" id="shareBtn" type="button">📤 Share</button>
+        <div class="modal__score" id="scorePill">0 / 0</div>
+      </div>
+
+      <div class="modal__hint" id="modalHint"></div>
+
+      <div class="modal__content" id="scoreList"><!-- score items injected --></div>
+
+      <!-- Footer redesigned to match mockup exactly -->
+      <div class="modal-footer">
+        <div class="footer-nav-group">
+          <button type="button" class="footer-nav-btn" id="mPrev" aria-label="Previous">◀</button>
+          <div class="footer-nav-text"><em>Previous/Next<br>Player</em></div>
+          <button type="button" class="footer-nav-btn" id="mNext" aria-label="Next">▶</button>
+        </div>
+        
+        <div class="footer-action-group">
+          <button type="button" class="footer-action-btn" id="mHint"><em>Hint</em></button>
+          <button type="button" class="footer-action-btn" id="mRescore"><em>Submit Guesses</em></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ====== Server-injected data ====== */
+    const LINEUP_BY_POS = {{ lineup_by_pos|tojson }};
+    const ORDER         = {{ order|tojson }};
+    const ANSWERS       = {{ answers|tojson }};
+    const QUIZ_FILE     = {{ quiz_file|tojson }};
+    const COLLEGES      = {{ colleges|tojson }};
+    const CONFERENCES   = {{ conferences|tojson }};
+    
+    console.log(`🏈 Loaded quiz: ${QUIZ_FILE}`);
+    console.log(`📚 Loaded ${COLLEGES.length} colleges`);
+    console.log(`⚡ Formation: ${ORDER.length} players -`, ORDER);
+
+    /* ====== Helpers ====== */
+    const $ = s => document.querySelector(s);
+    const posLabel=$("#posLabel"), playerName=$("#playerName"), guessInput=$("#guessInput"),
+          indexLabel=$("#indexLabel"), totalLabel=$("#totalLabel"), feedback=$("#feedback"),
+          prevBtn=$("#prev"), nextBtn=$("#next"), hintBtn=$("#hintBtn"), submitBtn=$("#submitBtn");
+
+    totalLabel.textContent = ORDER.length;
+
+    function initials(name){
+      if(!name) return "";
+      const a = name.trim().split(/\s+/);
+      return (a[0]?.[0]||"") + (a.length>1 ? a[a.length-1][0] : "");
+    }
+    function keyFor(pos){ return 'guess_'+pos; }
+    function loadGuess(pos){ guessInput.value = localStorage.getItem(keyFor(pos)) || ''; }
+    function saveGuess(pos,val){ localStorage.setItem(keyFor(pos),(val||'').trim()); }
+    
+    /* ====== Searchable Dropdown Management ====== */
+    const dropdownList = document.getElementById('dropdownList');
+    let currentColleges = COLLEGES; // Current list to search from
+    let highlightedIndex = -1;
+    
+    function showDropdown() {
+      dropdownList.classList.add('show');
+    }
+    
+    function hideDropdown() {
+      dropdownList.classList.remove('show');
+      highlightedIndex = -1;
+    }
+    
+    function populateDropdown(colleges, searchTerm = '') {
+      dropdownList.innerHTML = '';
+      
+      if (colleges.length === 0) {
+        const noResults = document.createElement('div');
+        noResults.className = 'no-results';
+        noResults.textContent = 'No colleges found';
+        dropdownList.appendChild(noResults);
+        return;
+      }
+      
+      colleges.slice(0, 50).forEach((college, index) => { // Limit to 50 for performance
+        const item = document.createElement('div');
+        item.className = 'dropdown-item';
+        item.textContent = college;
+        item.addEventListener('click', () => selectCollege(college));
+        dropdownList.appendChild(item);
+      });
+      
+      if (colleges.length > 50) {
+        const moreResults = document.createElement('div');
+        moreResults.className = 'no-results';
+        moreResults.textContent = `... and ${colleges.length - 50} more (keep typing to narrow down)`;
+        dropdownList.appendChild(moreResults);
+      }
+    }
+    
+    function filterColleges(searchTerm) {
+      if (!searchTerm.trim()) {
+        return currentColleges;
+      }
+      
+      const term = searchTerm.toLowerCase();
+      return currentColleges.filter(college => 
+        college.toLowerCase().includes(term)
+      );
+    }
+    
+    function selectCollege(college) {
+      guessInput.value = college;
+      hideDropdown();
+      saveGuess(ORDER[idx], college);
+    }
+    
+    function filterByConference(conference) {
+      if (!conference || !CONFERENCES[conference]) {
+        currentColleges = COLLEGES; // Reset to all colleges
+      } else {
+        currentColleges = CONFERENCES[conference];
+        console.log(`🔍 Filtered to ${currentColleges.length} teams in ${conference}`);
+      }
+      
+      // Re-filter with current search term
+      const searchTerm = guessInput.value;
+      const filtered = filterColleges(searchTerm);
+      populateDropdown(filtered, searchTerm);
+      if (searchTerm || filtered.length > 0) {
+        showDropdown();
+      }
+    }
+    
+    // Input event handlers
+    guessInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value;
+      const filtered = filterColleges(searchTerm);
+      populateDropdown(filtered, searchTerm);
+      
+      if (searchTerm.trim() && filtered.length > 0) {
+        showDropdown();
+      } else if (!searchTerm.trim()) {
+        hideDropdown();
+      }
+      
+      highlightedIndex = -1;
+      saveGuess(ORDER[idx], searchTerm);
+    });
+    
+    guessInput.addEventListener('focus', () => {
+      if (guessInput.value.trim()) {
+        const filtered = filterColleges(guessInput.value);
+        populateDropdown(filtered, guessInput.value);
+        showDropdown();
+      }
+    });
+    
+    guessInput.addEventListener('blur', (e) => {
+      // Delay hiding to allow clicks on dropdown items
+      setTimeout(() => {
+        if (!dropdownList.contains(document.activeElement)) {
+          hideDropdown();
+        }
+      }, 150);
+    });
+    
+    // Keyboard navigation
+    guessInput.addEventListener('keydown', (e) => {
+      const items = dropdownList.querySelectorAll('.dropdown-item');
+      
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (!dropdownList.classList.contains('show') && guessInput.value.trim()) {
+          const filtered = filterColleges(guessInput.value);
+          populateDropdown(filtered, guessInput.value);
+          showDropdown();
+        }
+        highlightedIndex = Math.min(highlightedIndex + 1, items.length - 1);
+        updateHighlight();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        highlightedIndex = Math.max(highlightedIndex - 1, -1);
+        updateHighlight();
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (highlightedIndex >= 0 && items[highlightedIndex]) {
+          selectCollege(items[highlightedIndex].textContent);
+        } else {
+          // Move to next player on Enter if no selection
+          select(idx + 1);
+        }
+      } else if (e.key === 'Escape') {
+        hideDropdown();
+      }
+    });
+    
+    function updateHighlight() {
+      const items = dropdownList.querySelectorAll('.dropdown-item');
+      items.forEach((item, index) => {
+        item.classList.toggle('highlighted', index === highlightedIndex);
+      });
+    }
+
+    /* ====== Dynamic Formation Creation ====== */
+    function createFormation() {
+      const formation = document.getElementById('formation');
+      formation.innerHTML = '';
+      
+      // Position templates with coordinates
+      const positionCoords = {
+        // Core offensive line
+        'LT': {left: '61%', top: '38%'},
+        'LG': {left: '63%', top: '44%'},
+        'C':  {left: '65%', top: '50%'},
+        'RG': {left: '63%', top: '56%'},
+        'RT': {left: '61%', top: '62%'},
+        
+        // Backfield
+        'QB': {left: '60%', top: '50%'},
+        'RB': {left: '45%', top: '50%'},
+        'FB': {left: '54%', top: '50%'},
+        
+        // Skill positions - dynamic based on formation
+        'WR1': {left: '63%', top: '20%'},  // Wide left
+        'WR2': {left: '60%', top: '78%'},  // Wide right  
+        'WR3': {left: '68%', top: '15%'},  // Slot left
+        'WR4': {left: '55%', top: '83%'},  // Slot right
+        
+        'TE1': {left: '63%', top: '70%'},  // Right side
+        'TE2': {left: '63%', top: '30%'},  // Left side
+        'TE3': {left: '67%', top: '50%'},  // Inline
+        
+        'FB1': {left: '54%', top: '50%'},  // Standard FB
+        'FB2': {left: '52%', top: '45%'},  // FB2 if needed
+      };
+      
+      // Create position circles for each player in the order
+      ORDER.forEach(pos => {
+        const coords = positionCoords[pos];
+        if (!coords) {
+          console.warn(`⚠️  No coordinates defined for position: ${pos}`);
+          return;
+        }
+        
+        const circle = document.createElement('div');
+        circle.className = 'circle';
+        circle.id = `pos-${pos}`;
+        circle.style.left = coords.left;
+        circle.style.top = coords.top;
+        circle.textContent = pos;
+        
+        formation.appendChild(circle);
+      });
+      
+      console.log(`✅ Created formation with ${ORDER.length} positions`);
+    }
+    
+    // Create the formation immediately
+    createFormation();
+
+    /* ====== Paint circles and hook clicks ====== */
+    const circles = ORDER.map(p => document.getElementById('pos-'+p)).filter(Boolean);
+    ORDER.forEach(pos=>{
+      const el=document.getElementById('pos-'+pos), pl=LINEUP_BY_POS[pos];
+      if(!el) return;
+      el.textContent = pos; // Always show position tag
+      if(pl){ el.title=`${pl.name} (${pos}) — ${pl.college||"Unknown"}`; }
+      else{ el.title=`${pos} — No player assigned`; }
+      el.addEventListener('click',()=>select(ORDER.indexOf(pos)));
+    });
+
+    let idx = 0;
+    function select(i){
+      idx = (i + ORDER.length) % ORDER.length;
+      const pos = ORDER[idx], el=document.getElementById('pos-'+pos), pl=LINEUP_BY_POS[pos]||{};
+      posLabel.textContent = pos;
+      playerName.textContent = pl.name ? `– ${pl.name}` : "– (No player)";
+      indexLabel.textContent = (idx+1);
+      circles.forEach(c=>c.classList.remove('active')); if(el) el.classList.add('active');
+      loadGuess(pos);
+      feedback.textContent='';
+      
+      // Reset to all colleges when changing players
+      currentColleges = COLLEGES;
+      hideDropdown();
+      
+      guessInput.focus({preventScroll:true});
+    }
+
+    /* Auto-save is now handled in the dropdown input listener */
+
+    prevBtn.addEventListener('click',()=>select(idx-1));
+    nextBtn.addEventListener('click',()=>select(idx+1));
+
+    window.addEventListener('keydown',e=>{
+      // Only handle global nav if dropdown is not showing and input not focused
+      if (!dropdownList.classList.contains('show') && document.activeElement !== guessInput) {
+        if(e.key==='ArrowLeft'){ e.preventDefault(); select(idx-1); }
+        if(e.key==='ArrowRight'){ e.preventDefault(); select(idx+1); }
+      }
+    });
+
+    /* ====== Hint: show conference only ====== */
+    function makeHintText(){
+      const pos=ORDER[idx], pl=LINEUP_BY_POS[pos]||{};
+      if(!pl || !pl.college) return 'No data';
+      return `Conference: ${pl.conference||'—'}`;
+    }
+    hintBtn.addEventListener('click', ()=>{
+      const hintText = makeHintText();
+      feedback.textContent = hintText;
+      feedback.style.color = '#9ecbff';
+      
+      // Extract conference from hint and filter dropdown
+      const pos = ORDER[idx], pl = LINEUP_BY_POS[pos] || {};
+      if (pl && pl.conference) {
+        filterByConference(pl.conference);
+      }
+    });
+
+    /* ====== Score modal ====== */
+    const scoreModal   = $('#scoreModal');
+    const scoreList    = $('#scoreList');
+    const scorePill    = $('#scorePill');
+    const scoreBackdrop= $('#scoreBackdrop');
+    const modalHint    = $('#modalHint');
+    const shareBtn     = $('#shareBtn');
+
+    const mPrev  = $('#mPrev');
+    const mNext  = $('#mNext');
+    const mHint  = $('#mHint');
+    const mRescore = $('#mRescore');
+
+    function norm(s){ return (s||'').toLowerCase().replace(/\s+/g,' ').trim(); }
+    function guessFor(pos){ return localStorage.getItem('guess_'+pos) || ''; }
+
+    function buildScore(){
+      let correct = 0;
+      scoreList.innerHTML = '';
+      ORDER.forEach(pos=>{
+        const pl = LINEUP_BY_POS[pos] || {name:'—'};
+        const truth = (ANSWERS[pos]||'');
+        const guess = guessFor(pos);
+        const ok = truth && norm(guess) === norm(truth);
+        if(ok) correct++;
+
+        const item = document.createElement('div');
+        item.className = 'modal__score-row';
+        
+        item.innerHTML = `
+          <div class="score-pos">${pos}</div>
+          <div class="score-name">${pl.name}</div>
+          <div class="score-result ${ok ? 'score-result--correct' : 'score-result--incorrect'}">
+            ${ok ? '✔ ' + truth : '✖ ' + (guess || 'No answer') + (truth ? ' → ' + truth : '')}
+          </div>
+        `;
+        scoreList.appendChild(item);
+      });
+      scorePill.textContent = `${correct} / ${ORDER.length}`;
+      modalHint.textContent = ''; // clear any previous hint
+    }
+    function openScore(){ buildScore(); scoreModal.classList.add('show'); scoreModal.setAttribute('aria-hidden','false'); }
+    function closeScore(){ scoreModal.classList.remove('show'); scoreModal.setAttribute('aria-hidden','true'); }
+
+    submitBtn.addEventListener('click', openScore);
+    scoreBackdrop.addEventListener('click', closeScore);
+    window.addEventListener('keydown', e => { if(e.key === 'Escape' && scoreModal.classList.contains('show')) closeScore(); });
+
+    // Share functionality - Wordle style
+    function generateShareText(){
+      let correct = 0;
+      let total = ORDER.length;
+      ORDER.forEach(pos=>{
+        const truth = (ANSWERS[pos]||'');
+        const guess = guessFor(pos);
+        const ok = truth && norm(guess) === norm(truth);
+        if(ok) correct++;
+      });
+      
+      const scoreText = `Gridiron 11 ${correct}/${total}`;
+      const squares = ORDER.map(pos=>{
+        const truth = (ANSWERS[pos]||'');
+        const guess = guessFor(pos);
+        const ok = truth && norm(guess) === norm(truth);
+        return ok ? '🟩' : '🟥';
+      }).join('');
+      
+      return `${scoreText}\n\n${squares}\n\nPlay at: ${window.location.origin}`;
+    }
+    
+    shareBtn.addEventListener('click', async ()=> {
+      const shareText = generateShareText();
+      
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: 'Gridiron 11',
+            text: shareText
+          });
+        } catch (err) {
+          console.log('Share cancelled');
+        }
+      } else {
+        // Fallback: copy to clipboard
+        try {
+          await navigator.clipboard.writeText(shareText);
+          shareBtn.textContent = '✓ Copied!';
+          setTimeout(() => { shareBtn.innerHTML = '📤 Share'; }, 2000);
+        } catch (err) {
+          console.log('Copy failed');
+        }
+      }
+    });
+
+    // Modal footer interactions — match your layout
+    mPrev.addEventListener('click', ()=> { select(idx-1); buildScore(); });
+    mNext.addEventListener('click', ()=> { select(idx+1); buildScore(); });
+    mHint.addEventListener('click', ()=> { 
+      modalHint.textContent = makeHintText(); 
+      modalHint.style.color = '#9ecbff'; 
+      
+      // Also filter the main dropdown if modal hint is used
+      const pos = ORDER[idx], pl = LINEUP_BY_POS[pos] || {};
+      if (pl && pl.conference) {
+        filterByConference(pl.conference);
+      }
+    });
+    mRescore.addEventListener('click', buildScore);
+
+    /* Coord probe: click to log left/top % for fine positioning */
+    document.getElementById('formation').addEventListener('click', (e) => {
+      const r = e.currentTarget.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width  * 100).toFixed(2);
+      const y = ((e.clientY - r.top)  / r.height * 100).toFixed(2);
+      console.log(`left:${x}%; top:${y}%;`);
+    });
+
+    /* Boot */
+    select(0);
+  </script>
+</body>
+</html>

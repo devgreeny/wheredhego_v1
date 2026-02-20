@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skill Positions — NFL College Quiz</title>
+  
+  <!-- Favicon implementation -->
+  <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  
+  <!-- Pixel font & main CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('gridiron11.static', filename='css/skill_positions.css') }}">
+  
+  <!-- Select2 for college dropdowns -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  
+  <script async defer data-domain="wheredhego.com" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <!-- Include auth navigation bar -->
+  {% include '_auth_navbar.html' %}
+  
+  <div class="content">
+    <!-- Header -->
+    <div class="header-container">
+      <div class="header-title">WHERE DID THESE PLAYERS PLAY BEFORE THE NFL?</div>
+    </div>
+
+    <!-- Progress segments at top -->
+    <div class="progress-segments" id="progressSegments">
+      <!-- Progress segments will be inserted here by JavaScript -->
+    </div>
+
+    <!-- Single Flashcard -->
+    <div class="flashcard-container">
+      <div class="flashcard" id="flashcard">
+        <div class="flashcard-inner">
+          <!-- Front of card (player info) -->
+          <div class="flashcard-front">
+            <div class="player-art-container">
+              <img src="" alt="" class="player-art" id="playerArt" />
+            </div>
+            <div class="player-info-section">
+              <h3 class="player-name" id="playerName">Loading...</h3>
+              <div class="player-position" id="playerPosition">QB</div>
+              <div class="player-stats" id="playerStats">
+                <span class="stat">REC: 0</span>
+                <span class="stat">YDS: 0</span>
+                <span class="stat">TDS: 0</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Back of card (college reveal) -->
+          <div class="flashcard-back">
+            <div class="college-reveal">
+              <div class="college-name" id="collegeName">College Name</div>
+              <div class="result-indicator" id="resultIndicator">
+                <span class="result-text" id="resultText">Correct!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Input section below card -->
+      <div class="input-section">
+        <div class="college-input-wrapper">
+          <select class="college-select-main" id="collegeSelectMain">
+            <option>Select a college...</option>
+          </select>
+        </div>
+        <div class="action-buttons">
+          <button class="hint-btn" id="hintBtn">Hint</button>
+          <button class="random-btn" id="randomBtn">Random</button>
+          <button class="submit-btn" id="submitBtn">Submit</button>
+        </div>
+      </div>
+      
+      <!-- Navigation arrows -->
+      <button class="nav-arrow nav-left" id="navLeft">‹</button>
+      <button class="nav-arrow nav-right" id="navRight">›</button>
+      
+      <!-- Mobile swipe hint -->
+      <div class="mobile-hint" id="mobileHint">
+        Swipe left/right or tap arrows to navigate
+      </div>
+    </div>
+  </div>
+
+  <!-- Results Modal -->
+  <div id="resultsModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel" role="document">
+      <div class="modal-header">
+        <h2 class="modal-title">Your Results</h2>
+        <button class="share-btn" id="shareBtn" type="button">📤 Share</button>
+        <div class="modal-score" id="scorePill">0 / 6</div>
+      </div>
+
+      <div class="modal-content" id="resultsContent">
+        <!-- Results will be populated here -->
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="modal-btn" id="playAgainBtn">Play Again</button>
+        <button type="button" class="modal-btn" id="closeBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Real NFL quiz data from Flask
+    window.gameData = {{ game_data | tojson }};
+    window.colleges = {{ colleges | tojson }};
+    window.alreadyPlayedToday = {{ 'true' if already_played_today else 'false' }};
+    
+    // Check if already played today
+    if (window.alreadyPlayedToday) {
+      document.addEventListener('DOMContentLoaded', function() {
+        // Disable game interface
+        const collegeSelect = document.getElementById('collegeSelectMain');
+        const submitBtn = document.getElementById('submitBtn');
+        const hintBtn = document.getElementById('hintBtn');
+        const randomBtn = document.getElementById('randomBtn');
+        
+        if (collegeSelect) collegeSelect.disabled = true;
+        if (submitBtn) submitBtn.disabled = true;
+        if (hintBtn) hintBtn.disabled = true;
+        if (randomBtn) randomBtn.disabled = true;
+        
+        // Show message
+        const gameContainer = document.querySelector('.game-container');
+        if (gameContainer) {
+          const message = document.createElement('div');
+          message.style.cssText = `
+            background: #ffeaa7;
+            border: 2px solid #fdcb6e;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 8px;
+            text-align: center;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 12px;
+            color: #d63031;
+            max-width: 500px;
+          `;
+          message.innerHTML = '🏈 You already played today\'s Skill Positions quiz!<br>Come back tomorrow for a new challenge! 🏈';
+          gameContainer.parentNode.insertBefore(message, gameContainer);
+        }
+      });
+    }
+  </script>
+  <script src="{{ url_for('gridiron11.static', filename='js/skill_positions.js') }}"></script>
+</body>
+</html>
