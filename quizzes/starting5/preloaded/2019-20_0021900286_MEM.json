@@ -1,0 +1,135 @@
+{
+  "season": "2019-20",
+  "game_id": "0021900286",
+  "team_abbr": "MEM",
+  "opponent_abbr": "MIN",
+  "matchup": "MIN vs MEM",
+  "game_date": "2019-12-01",
+  "players": [
+    {
+      "name": "Jae Crowder",
+      "school": "Marquette",
+      "school_type": "College",
+      "spriteIndex": 9,
+      "team_abbrev": "MEM",
+      "avatar": "09",
+      "conference": "Big East Conference",
+      "player_id": 203109,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 12,
+        "ast": 3,
+        "reb": 10,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.194,
+        "assists_pct": 0.2,
+        "rebounds_pct": 0.526,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Brandon Clarke",
+      "school": "Gonzaga",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "MEM",
+      "avatar": "07",
+      "conference": "West Coast Conference",
+      "player_id": 1629634,
+      "position": "Forward",
+      "country": "Canada",
+      "game_stats": {
+        "pts": 0,
+        "ast": 1,
+        "reb": 1,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.0,
+        "assists_pct": 0.067,
+        "rebounds_pct": 0.053,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Jaren Jackson Jr.",
+      "school": "Michigan State",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "MEM",
+      "avatar": "07",
+      "conference": "Big Ten Conference",
+      "player_id": 1628991,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 12,
+        "ast": 1,
+        "reb": 2,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.194,
+        "assists_pct": 0.067,
+        "rebounds_pct": 0.105,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Dillon Brooks",
+      "school": "Oregon",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "MEM",
+      "avatar": "02",
+      "conference": "Big Ten Conference",
+      "player_id": 1628415,
+      "position": "Guard-Forward",
+      "country": "Canada",
+      "game_stats": {
+        "pts": 26,
+        "ast": 3,
+        "reb": 2,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.419,
+        "assists_pct": 0.2,
+        "rebounds_pct": 0.105,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Tyus Jones",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 10,
+      "team_abbrev": "MEM",
+      "avatar": "10",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1626145,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 12,
+        "ast": 7,
+        "reb": 4,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.194,
+        "assists_pct": 0.467,
+        "rebounds_pct": 0.211,
+        "defense_pct": 0.667
+      }
+    }
+  ]
+}

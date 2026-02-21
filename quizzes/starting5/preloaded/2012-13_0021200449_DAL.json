@@ -1,0 +1,135 @@
+{
+  "season": "2012-13",
+  "game_id": "0021200449",
+  "team_abbr": "DAL",
+  "opponent_abbr": "SAS",
+  "matchup": "DAL vs SAS",
+  "game_date": "2012-12-30",
+  "players": [
+    {
+      "name": "Vince Carter",
+      "school": "North Carolina",
+      "school_type": "College",
+      "spriteIndex": 11,
+      "team_abbrev": "DAL",
+      "avatar": "11",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1713,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 13,
+        "ast": 1,
+        "reb": 4,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.241,
+        "assists_pct": 0.067,
+        "rebounds_pct": 0.154,
+        "defense_pct": 0.125
+      }
+    },
+    {
+      "name": "Shawn Marion",
+      "school": "UNLV",
+      "school_type": "College",
+      "spriteIndex": 13,
+      "team_abbrev": "DAL",
+      "avatar": "13",
+      "conference": "Mountain West Conference",
+      "player_id": 1890,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 2,
+        "ast": 2,
+        "reb": 7,
+        "stl": 1,
+        "blk": 3
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.037,
+        "assists_pct": 0.133,
+        "rebounds_pct": 0.269,
+        "defense_pct": 0.5
+      }
+    },
+    {
+      "name": "Chris Kaman",
+      "school": "Central Michigan",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "DAL",
+      "avatar": "04",
+      "conference": "Mid-American Conference",
+      "player_id": 2549,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 13,
+        "ast": 2,
+        "reb": 9,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.241,
+        "assists_pct": 0.133,
+        "rebounds_pct": 0.346,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "O.J. Mayo",
+      "school": "USC",
+      "school_type": "College",
+      "spriteIndex": 11,
+      "team_abbrev": "DAL",
+      "avatar": "11",
+      "conference": "Big Ten Conference",
+      "player_id": 201564,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 8,
+        "ast": 2,
+        "reb": 1,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.148,
+        "assists_pct": 0.133,
+        "rebounds_pct": 0.038,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Darren Collison",
+      "school": "UCLA",
+      "school_type": "College",
+      "spriteIndex": 6,
+      "team_abbrev": "DAL",
+      "avatar": "06",
+      "conference": "Big Ten Conference",
+      "player_id": 201954,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 18,
+        "ast": 8,
+        "reb": 5,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.333,
+        "assists_pct": 0.533,
+        "rebounds_pct": 0.192,
+        "defense_pct": 0.125
+      }
+    }
+  ]
+}

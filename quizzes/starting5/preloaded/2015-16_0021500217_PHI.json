@@ -1,0 +1,135 @@
+{
+  "season": "2015-16",
+  "game_id": "0021500217",
+  "team_abbr": "PHI",
+  "opponent_abbr": "BOS",
+  "matchup": "BOS vs PHI",
+  "game_date": "2015-11-25",
+  "players": [
+    {
+      "name": "Robert Covington",
+      "school": "Tennessee State",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "PHI",
+      "avatar": "02",
+      "conference": "Ohio Valley Conference",
+      "player_id": 203496,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11,
+        "ast": 0,
+        "reb": 14,
+        "stl": 6,
+        "blk": 2
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.216,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.359,
+        "defense_pct": 0.444
+      }
+    },
+    {
+      "name": "Nerlens Noel",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "PHI",
+      "avatar": "04",
+      "conference": "Southeastern Conference",
+      "player_id": 203457,
+      "position": "Center-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 3,
+        "ast": 2,
+        "reb": 8,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.059,
+        "assists_pct": 0.333,
+        "rebounds_pct": 0.205,
+        "defense_pct": 0.056
+      }
+    },
+    {
+      "name": "Jahlil Okafor",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 11,
+      "team_abbrev": "PHI",
+      "avatar": "11",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1626143,
+      "position": "Center-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 19,
+        "ast": 1,
+        "reb": 9,
+        "stl": 0,
+        "blk": 4
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.373,
+        "assists_pct": 0.167,
+        "rebounds_pct": 0.231,
+        "defense_pct": 0.222
+      }
+    },
+    {
+      "name": "Isaiah Canaan",
+      "school": "Murray State",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "PHI",
+      "avatar": "02",
+      "conference": "Missouri Valley Conference",
+      "player_id": 203477,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 12,
+        "ast": 2,
+        "reb": 5,
+        "stl": 1,
+        "blk": 2
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.235,
+        "assists_pct": 0.333,
+        "rebounds_pct": 0.128,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "T.J. McConnell",
+      "school": "Arizona",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "PHI",
+      "avatar": "02",
+      "conference": "Big 12 Conference",
+      "player_id": 204456,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 6,
+        "ast": 1,
+        "reb": 3,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.118,
+        "assists_pct": 0.167,
+        "rebounds_pct": 0.077,
+        "defense_pct": 0.111
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "season": "2019-20",
+  "game_id": "0021900617",
+  "team_abbr": "GSW",
+  "opponent_abbr": "DEN",
+  "matchup": "GSW vs DEN",
+  "game_date": "2020-01-16",
+  "players": [
+    {
+      "name": "Glenn Robinson III",
+      "school": "Michigan",
+      "school_type": "College",
+      "spriteIndex": 10,
+      "team_abbrev": "GSW",
+      "avatar": "10",
+      "conference": "Big Ten Conference",
+      "player_id": 203922,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 17,
+        "ast": 3,
+        "reb": 6,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.233,
+        "assists_pct": 0.107,
+        "rebounds_pct": 0.214,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "Draymond Green",
+      "school": "Michigan State",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "GSW",
+      "avatar": "01",
+      "conference": "Big Ten Conference",
+      "player_id": 203110,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 6,
+        "ast": 8,
+        "reb": 8,
+        "stl": 1,
+        "blk": 2
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.082,
+        "assists_pct": 0.286,
+        "rebounds_pct": 0.286,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Willie Cauley-Stein",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "GSW",
+      "avatar": "02",
+      "conference": "Southeastern Conference",
+      "player_id": 1626161,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 10,
+        "ast": 2,
+        "reb": 6,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.137,
+        "assists_pct": 0.071,
+        "rebounds_pct": 0.214,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "Damion Lee",
+      "school": "Drexel",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "GSW",
+      "avatar": "02",
+      "conference": "Coastal Athletic Association",
+      "player_id": 1627814,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 21,
+        "ast": 6,
+        "reb": 5,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.288,
+        "assists_pct": 0.214,
+        "rebounds_pct": 0.179,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "D'Angelo Russell",
+      "school": "Ohio State",
+      "school_type": "College",
+      "spriteIndex": 9,
+      "team_abbrev": "GSW",
+      "avatar": "09",
+      "conference": "Big Ten Conference",
+      "player_id": 1626156,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 19,
+        "ast": 9,
+        "reb": 3,
+        "stl": 3,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.26,
+        "assists_pct": 0.321,
+        "rebounds_pct": 0.107,
+        "defense_pct": 0.25
+      }
+    }
+  ]
+}

@@ -105,7 +105,7 @@ which avatar number (01-{len(avatar_options):02d}) would be the best match?
 Reply with ONLY the two-digit number (e.g., "07"). Nothing else."""
 
         message = client.messages.create(
-            model="claude-3-haiku-20240307",
+            model="claude-sonnet-4-20250514",
             max_tokens=10,
             messages=[{"role": "user", "content": prompt}]
         )

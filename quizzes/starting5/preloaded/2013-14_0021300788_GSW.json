@@ -1,0 +1,135 @@
+{
+  "season": "2013-14",
+  "game_id": "0021300788",
+  "team_abbr": "GSW",
+  "opponent_abbr": "MIA",
+  "matchup": "GSW vs MIA",
+  "game_date": "2014-02-12",
+  "players": [
+    {
+      "name": "Andre Iguodala",
+      "school": "Arizona",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "GSW",
+      "avatar": "02",
+      "conference": "Big 12 Conference",
+      "player_id": 2738,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 9,
+        "ast": 5,
+        "reb": 6,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.107,
+        "assists_pct": 0.294,
+        "rebounds_pct": 0.182,
+        "defense_pct": 0.154
+      }
+    },
+    {
+      "name": "Draymond Green",
+      "school": "Michigan State",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "GSW",
+      "avatar": "01",
+      "conference": "Big Ten Conference",
+      "player_id": 203110,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 8,
+        "ast": 2,
+        "reb": 8,
+        "stl": 2,
+        "blk": 3
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.095,
+        "assists_pct": 0.118,
+        "rebounds_pct": 0.242,
+        "defense_pct": 0.385
+      }
+    },
+    {
+      "name": "David Lee",
+      "school": "Florida",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "GSW",
+      "avatar": "03",
+      "conference": "Southeastern Conference",
+      "player_id": 101135,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 21,
+        "ast": 2,
+        "reb": 11,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.25,
+        "assists_pct": 0.118,
+        "rebounds_pct": 0.333,
+        "defense_pct": 0.154
+      }
+    },
+    {
+      "name": "Klay Thompson",
+      "school": "Washington State",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "GSW",
+      "avatar": "02",
+      "conference": "Pac-12 Conference",
+      "player_id": 202691,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 17,
+        "ast": 1,
+        "reb": 3,
+        "stl": 2,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.202,
+        "assists_pct": 0.059,
+        "rebounds_pct": 0.091,
+        "defense_pct": 0.231
+      }
+    },
+    {
+      "name": "Stephen Curry",
+      "school": "Davidson",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "GSW",
+      "avatar": "03",
+      "conference": "Atlantic 10 Conference",
+      "player_id": 201939,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 29,
+        "ast": 7,
+        "reb": 5,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.345,
+        "assists_pct": 0.412,
+        "rebounds_pct": 0.152,
+        "defense_pct": 0.077
+      }
+    }
+  ]
+}

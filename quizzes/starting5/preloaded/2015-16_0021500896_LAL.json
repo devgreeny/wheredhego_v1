@@ -1,0 +1,135 @@
+{
+  "season": "2015-16",
+  "game_id": "0021500896",
+  "team_abbr": "LAL",
+  "opponent_abbr": "BKN",
+  "matchup": "LAL vs BKN",
+  "game_date": "2016-03-01",
+  "players": [
+    {
+      "name": "Anthony Brown",
+      "school": "Stanford",
+      "school_type": "College",
+      "spriteIndex": 9,
+      "team_abbrev": "LAL",
+      "avatar": "09",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1626148,
+      "position": "Forward-Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 2,
+        "ast": 2,
+        "reb": 3,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.024,
+        "assists_pct": 0.133,
+        "rebounds_pct": 0.088,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Julius Randle",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "LAL",
+      "avatar": "07",
+      "conference": "Southeastern Conference",
+      "player_id": 203944,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 14,
+        "ast": 1,
+        "reb": 13,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.165,
+        "assists_pct": 0.067,
+        "rebounds_pct": 0.382,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Roy Hibbert",
+      "school": "Georgetown",
+      "school_type": "College",
+      "spriteIndex": 14,
+      "team_abbrev": "LAL",
+      "avatar": "14",
+      "conference": "Big East Conference",
+      "player_id": 201579,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 14,
+        "ast": 2,
+        "reb": 5,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.165,
+        "assists_pct": 0.133,
+        "rebounds_pct": 0.147,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Jordan Clarkson",
+      "school": "Missouri",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "LAL",
+      "avatar": "12",
+      "conference": "Southeastern Conference",
+      "player_id": 203903,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 16,
+        "ast": 7,
+        "reb": 7,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.188,
+        "assists_pct": 0.467,
+        "rebounds_pct": 0.206,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "D'Angelo Russell",
+      "school": "Ohio State",
+      "school_type": "College",
+      "spriteIndex": 9,
+      "team_abbrev": "LAL",
+      "avatar": "09",
+      "conference": "Big Ten Conference",
+      "player_id": 1626156,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 39,
+        "ast": 3,
+        "reb": 6,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.459,
+        "assists_pct": 0.2,
+        "rebounds_pct": 0.176,
+        "defense_pct": 0.333
+      }
+    }
+  ]
+}

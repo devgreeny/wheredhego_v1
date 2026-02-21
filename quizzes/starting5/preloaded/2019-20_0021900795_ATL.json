@@ -1,0 +1,135 @@
+{
+  "season": "2019-20",
+  "game_id": "0021900795",
+  "team_abbr": "ATL",
+  "opponent_abbr": "ORL",
+  "matchup": "ORL vs ATL",
+  "game_date": "2020-02-10",
+  "players": [
+    {
+      "name": "De'Andre Hunter",
+      "school": "Virginia",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "ATL",
+      "avatar": "02",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1629631,
+      "position": "Forward-Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 10,
+        "ast": 1,
+        "reb": 3,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.13,
+        "assists_pct": 0.05,
+        "rebounds_pct": 0.188,
+        "defense_pct": 0.4
+      }
+    },
+    {
+      "name": "John Collins",
+      "school": "Wake Forest",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "ATL",
+      "avatar": "02",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1628381,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 22,
+        "ast": 2,
+        "reb": 8,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.286,
+        "assists_pct": 0.1,
+        "rebounds_pct": 0.5,
+        "defense_pct": 0.2
+      }
+    },
+    {
+      "name": "Damian Jones",
+      "school": "Vanderbilt",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "ATL",
+      "avatar": "07",
+      "conference": "Southeastern Conference",
+      "player_id": 1627745,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 4,
+        "ast": 1,
+        "reb": 2,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.052,
+        "assists_pct": 0.05,
+        "rebounds_pct": 0.125,
+        "defense_pct": 0.4
+      }
+    },
+    {
+      "name": "Kevin Huerter",
+      "school": "Maryland",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "ATL",
+      "avatar": "12",
+      "conference": "Big Ten Conference",
+      "player_id": 1628989,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 12,
+        "ast": 7,
+        "reb": 2,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.156,
+        "assists_pct": 0.35,
+        "rebounds_pct": 0.125,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Trae Young",
+      "school": "Oklahoma",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "ATL",
+      "avatar": "03",
+      "conference": "Southeastern Conference",
+      "player_id": 1629027,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 29,
+        "ast": 9,
+        "reb": 1,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.377,
+        "assists_pct": 0.45,
+        "rebounds_pct": 0.062,
+        "defense_pct": 0.0
+      }
+    }
+  ]
+}

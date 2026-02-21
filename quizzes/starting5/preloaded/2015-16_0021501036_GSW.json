@@ -1,0 +1,135 @@
+{
+  "season": "2015-16",
+  "game_id": "0021501036",
+  "team_abbr": "GSW",
+  "opponent_abbr": "SAS",
+  "matchup": "SAS vs GSW",
+  "game_date": "2016-03-19",
+  "players": [
+    {
+      "name": "Brandon Rush",
+      "school": "Kansas",
+      "school_type": "College",
+      "spriteIndex": 11,
+      "team_abbrev": "GSW",
+      "avatar": "11",
+      "conference": "Big 12 Conference",
+      "player_id": 201575,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 10,
+        "ast": 0,
+        "reb": 3,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.172,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.12,
+        "defense_pct": 0.111
+      }
+    },
+    {
+      "name": "Harrison Barnes",
+      "school": "North Carolina",
+      "school_type": "College",
+      "spriteIndex": 6,
+      "team_abbrev": "GSW",
+      "avatar": "06",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 203084,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 8,
+        "ast": 3,
+        "reb": 2,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.138,
+        "assists_pct": 0.167,
+        "rebounds_pct": 0.08,
+        "defense_pct": 0.222
+      }
+    },
+    {
+      "name": "Draymond Green",
+      "school": "Michigan State",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "GSW",
+      "avatar": "04",
+      "conference": "Big Ten Conference",
+      "player_id": 203110,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11,
+        "ast": 8,
+        "reb": 9,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.19,
+        "assists_pct": 0.444,
+        "rebounds_pct": 0.36,
+        "defense_pct": 0.222
+      }
+    },
+    {
+      "name": "Klay Thompson",
+      "school": "Washington State",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "GSW",
+      "avatar": "08",
+      "conference": "Pac-12 Conference",
+      "player_id": 202691,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 15,
+        "ast": 1,
+        "reb": 5,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.259,
+        "assists_pct": 0.056,
+        "rebounds_pct": 0.2,
+        "defense_pct": 0.222
+      }
+    },
+    {
+      "name": "Stephen Curry",
+      "school": "Davidson",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "GSW",
+      "avatar": "03",
+      "conference": "Atlantic 10 Conference",
+      "player_id": 201939,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 14,
+        "ast": 6,
+        "reb": 6,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.241,
+        "assists_pct": 0.333,
+        "rebounds_pct": 0.24,
+        "defense_pct": 0.222
+      }
+    }
+  ]
+}

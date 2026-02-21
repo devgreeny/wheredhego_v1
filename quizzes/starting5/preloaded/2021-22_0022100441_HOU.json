@@ -1,0 +1,135 @@
+{
+  "season": "2021-22",
+  "game_id": "0022100441",
+  "team_abbr": "HOU",
+  "opponent_abbr": "DET",
+  "matchup": "DET vs HOU",
+  "game_date": "2021-12-18",
+  "players": [
+    {
+      "name": "Jae'Sean Tate",
+      "school": "Ohio State",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "HOU",
+      "avatar": "07",
+      "conference": "Big Ten Conference",
+      "player_id": 1630256,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11,
+        "ast": 4,
+        "reb": 5,
+        "stl": 3,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.145,
+        "assists_pct": 0.211,
+        "rebounds_pct": 0.217,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Josh Christopher",
+      "school": "Arizona State",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "HOU",
+      "avatar": "07",
+      "conference": "Big 12 Conference",
+      "player_id": 1630528,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 10,
+        "ast": 7,
+        "reb": 4,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.132,
+        "assists_pct": 0.368,
+        "rebounds_pct": 0.174,
+        "defense_pct": 0.083
+      }
+    },
+    {
+      "name": "Christian Wood",
+      "school": "UNLV",
+      "school_type": "College",
+      "spriteIndex": 9,
+      "team_abbrev": "HOU",
+      "avatar": "09",
+      "conference": "Mountain West Conference",
+      "player_id": 1626174,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 21,
+        "ast": 1,
+        "reb": 8,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.276,
+        "assists_pct": 0.053,
+        "rebounds_pct": 0.348,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "Garrison Mathews",
+      "school": "Lipscomb",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "HOU",
+      "avatar": "03",
+      "conference": "Atlantic Sun Conference",
+      "player_id": 1629726,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 16,
+        "ast": 2,
+        "reb": 5,
+        "stl": 3,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.211,
+        "assists_pct": 0.105,
+        "rebounds_pct": 0.217,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Eric Gordon",
+      "school": "Indiana",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "HOU",
+      "avatar": "02",
+      "conference": "Big Ten Conference",
+      "player_id": 201569,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 18,
+        "ast": 5,
+        "reb": 1,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.237,
+        "assists_pct": 0.263,
+        "rebounds_pct": 0.043,
+        "defense_pct": 0.167
+      }
+    }
+  ]
+}

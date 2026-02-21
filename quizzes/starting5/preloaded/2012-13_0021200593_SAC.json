@@ -1,0 +1,135 @@
+{
+  "season": "2012-13",
+  "game_id": "0021200593",
+  "team_abbr": "SAC",
+  "opponent_abbr": "CHA",
+  "matchup": "CHA vs SAC",
+  "game_date": "2013-01-19",
+  "players": [
+    {
+      "name": "John Salmons",
+      "school": "Miami (Florida)",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "SAC",
+      "avatar": "05",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 2422,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 4,
+        "ast": 1,
+        "reb": 2,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.063,
+        "assists_pct": 0.056,
+        "rebounds_pct": 0.083,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Jason Thompson",
+      "school": "Rider",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "SAC",
+      "avatar": "02",
+      "conference": "Metro Atlantic Athletic Conference",
+      "player_id": 201574,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11,
+        "ast": 2,
+        "reb": 4,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.175,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.167,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "DeMarcus Cousins",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 13,
+      "team_abbrev": "SAC",
+      "avatar": "13",
+      "conference": "Southeastern Conference",
+      "player_id": 202326,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 17,
+        "ast": 4,
+        "reb": 10,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.27,
+        "assists_pct": 0.222,
+        "rebounds_pct": 0.417,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "Tyreke Evans",
+      "school": "Memphis",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "SAC",
+      "avatar": "08",
+      "conference": "American Athletic Conference",
+      "player_id": 201936,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 16,
+        "ast": 4,
+        "reb": 3,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.254,
+        "assists_pct": 0.222,
+        "rebounds_pct": 0.125,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Isaiah Thomas",
+      "school": "Washington",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "SAC",
+      "avatar": "01",
+      "conference": "Big Ten Conference",
+      "player_id": 202738,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 15,
+        "ast": 7,
+        "reb": 5,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.238,
+        "assists_pct": 0.389,
+        "rebounds_pct": 0.208,
+        "defense_pct": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "season": "2022-23",
+  "game_id": "0022201110",
+  "team_abbr": "PHI",
+  "opponent_abbr": "PHX",
+  "matchup": "PHX vs PHI",
+  "game_date": "2023-03-25",
+  "players": [
+    {
+      "name": "Tobias Harris",
+      "school": "Tennessee",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "PHI",
+      "avatar": "02",
+      "conference": "Southeastern Conference",
+      "player_id": 202699,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 13,
+        "ast": 3,
+        "reb": 2,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.148,
+        "assists_pct": 0.231,
+        "rebounds_pct": 0.08,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "P.J. Tucker",
+      "school": "Texas",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "PHI",
+      "avatar": "04",
+      "conference": "Southeastern Conference",
+      "player_id": 200782,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 5,
+        "ast": 0,
+        "reb": 4,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.057,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.16,
+        "defense_pct": 0.2
+      }
+    },
+    {
+      "name": "Joel Embiid",
+      "school": "Kansas",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "PHI",
+      "avatar": "01",
+      "conference": "Big 12 Conference",
+      "player_id": 203954,
+      "position": "Center-Forward",
+      "country": "Cameroon",
+      "game_stats": {
+        "pts": 28,
+        "ast": 4,
+        "reb": 10,
+        "stl": 0,
+        "blk": 2
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.318,
+        "assists_pct": 0.308,
+        "rebounds_pct": 0.4,
+        "defense_pct": 0.4
+      }
+    },
+    {
+      "name": "De'Anthony Melton",
+      "school": "USC",
+      "school_type": "College",
+      "spriteIndex": 10,
+      "team_abbrev": "PHI",
+      "avatar": "10",
+      "conference": "Big Ten Conference",
+      "player_id": 1629001,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 5,
+        "ast": 3,
+        "reb": 2,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.057,
+        "assists_pct": 0.231,
+        "rebounds_pct": 0.08,
+        "defense_pct": 0.2
+      }
+    },
+    {
+      "name": "Tyrese Maxey",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "PHI",
+      "avatar": "07",
+      "conference": "Southeastern Conference",
+      "player_id": 1630178,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 37,
+        "ast": 3,
+        "reb": 7,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.42,
+        "assists_pct": 0.231,
+        "rebounds_pct": 0.28,
+        "defense_pct": 0.2
+      }
+    }
+  ]
+}
