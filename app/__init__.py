@@ -61,9 +61,9 @@ def create_app():
     from app.starting5.routes import bp as starting5_bp
     app.register_blueprint(starting5_bp, url_prefix='/starting5')
     
-    # Register the gridiron11 blueprint
-    from app.gridiron11.routes import bp as gridiron11_bp
-    app.register_blueprint(gridiron11_bp, url_prefix='/gridiron11')
+    # NFL game archived - focusing on Starting5 only
+    # from app.gridiron11.routes import bp as gridiron11_bp
+    # app.register_blueprint(gridiron11_bp, url_prefix='/gridiron11')
     
     # Creator poll temporarily disabled - focus on games only
     # from app.creatorpoll.mysql_routes import bp as creatorpoll_bp

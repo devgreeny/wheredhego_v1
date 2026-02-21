@@ -1,0 +1,135 @@
+{
+  "season": "2019-20",
+  "game_id": "0021900305",
+  "team_abbr": "POR",
+  "opponent_abbr": "LAC",
+  "matchup": "LAC vs POR",
+  "game_date": "2019-12-03",
+  "players": [
+    {
+      "name": "Rodney Hood",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "POR",
+      "avatar": "01",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 203918,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 4,
+        "ast": 0,
+        "reb": 3,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.06,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.111,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Carmelo Anthony",
+      "school": "Syracuse",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "POR",
+      "avatar": "05",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 2546,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 9,
+        "ast": 1,
+        "reb": 6,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.134,
+        "assists_pct": 0.091,
+        "rebounds_pct": 0.222,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Hassan Whiteside",
+      "school": "Marshall",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "POR",
+      "avatar": "12",
+      "conference": "Sun Belt Conference",
+      "player_id": 202355,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 18,
+        "ast": 0,
+        "reb": 13,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.269,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.481,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "CJ McCollum",
+      "school": "Lehigh",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "POR",
+      "avatar": "03",
+      "conference": "Patriot League",
+      "player_id": 203468,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 20,
+        "ast": 3,
+        "reb": 3,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.299,
+        "assists_pct": 0.273,
+        "rebounds_pct": 0.111,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Damian Lillard",
+      "school": "Weber State",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "POR",
+      "avatar": "08",
+      "conference": "Big Sky Conference",
+      "player_id": 203081,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 16,
+        "ast": 7,
+        "reb": 2,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.239,
+        "assists_pct": 0.636,
+        "rebounds_pct": 0.074,
+        "defense_pct": 0.25
+      }
+    }
+  ]
+}

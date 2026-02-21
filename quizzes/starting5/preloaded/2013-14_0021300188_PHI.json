@@ -1,0 +1,135 @@
+{
+  "season": "2013-14",
+  "game_id": "0021300188",
+  "team_abbr": "PHI",
+  "opponent_abbr": "IND",
+  "matchup": "IND vs PHI",
+  "game_date": "2013-11-23",
+  "players": [
+    {
+      "name": "James Anderson",
+      "school": "Oklahoma State",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "PHI",
+      "avatar": "01",
+      "conference": "Big 12 Conference",
+      "player_id": 202341,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 13,
+        "ast": 1,
+        "reb": 5,
+        "stl": 3,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.169,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.122,
+        "defense_pct": 0.222
+      }
+    },
+    {
+      "name": "Daniel Orton",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 11,
+      "team_abbrev": "PHI",
+      "avatar": "11",
+      "conference": "Southeastern Conference",
+      "player_id": 202350,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 10,
+        "ast": 1,
+        "reb": 10,
+        "stl": 0,
+        "blk": 2
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.13,
+        "assists_pct": 0.111,
+        "rebounds_pct": 0.244,
+        "defense_pct": 0.111
+      }
+    },
+    {
+      "name": "Lavoy Allen",
+      "school": "Temple",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "PHI",
+      "avatar": "03",
+      "conference": "American Athletic Conference",
+      "player_id": 202730,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 4,
+        "ast": 2,
+        "reb": 9,
+        "stl": 1,
+        "blk": 2
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.052,
+        "assists_pct": 0.222,
+        "rebounds_pct": 0.22,
+        "defense_pct": 0.167
+      }
+    },
+    {
+      "name": "Evan Turner",
+      "school": "Ohio State",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "PHI",
+      "avatar": "05",
+      "conference": "Big Ten Conference",
+      "player_id": 202323,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 21,
+        "ast": 2,
+        "reb": 11,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.273,
+        "assists_pct": 0.222,
+        "rebounds_pct": 0.268,
+        "defense_pct": 0.056
+      }
+    },
+    {
+      "name": "Michael Carter-Williams",
+      "school": "Syracuse",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "PHI",
+      "avatar": "04",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 203487,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 29,
+        "ast": 3,
+        "reb": 6,
+        "stl": 7,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.377,
+        "assists_pct": 0.333,
+        "rebounds_pct": 0.146,
+        "defense_pct": 0.444
+      }
+    }
+  ]
+}

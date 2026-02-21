@@ -1,0 +1,135 @@
+{
+  "season": "2013-14",
+  "game_id": "0021300366",
+  "team_abbr": "MEM",
+  "opponent_abbr": "LAL",
+  "matchup": "MEM vs LAL",
+  "game_date": "2013-12-17",
+  "players": [
+    {
+      "name": "Tayshaun Prince",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "MEM",
+      "avatar": "01",
+      "conference": "Southeastern Conference",
+      "player_id": 2419,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 0,
+        "ast": 0,
+        "reb": 1,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.0,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.031,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Zach Randolph",
+      "school": "Michigan State",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "MEM",
+      "avatar": "05",
+      "conference": "Big Ten Conference",
+      "player_id": 2216,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 18,
+        "ast": 5,
+        "reb": 16,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.367,
+        "assists_pct": 0.417,
+        "rebounds_pct": 0.5,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Kosta Koufos",
+      "school": "Ohio State",
+      "school_type": "College",
+      "spriteIndex": 6,
+      "team_abbrev": "MEM",
+      "avatar": "06",
+      "conference": "Big Ten Conference",
+      "player_id": 201585,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 2,
+        "ast": 0,
+        "reb": 6,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.041,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.188,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Tony Allen",
+      "school": "Oklahoma State",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "MEM",
+      "avatar": "03",
+      "conference": "Big 12 Conference",
+      "player_id": 2754,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 16,
+        "ast": 5,
+        "reb": 7,
+        "stl": 2,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.327,
+        "assists_pct": 0.417,
+        "rebounds_pct": 0.219,
+        "defense_pct": 0.5
+      }
+    },
+    {
+      "name": "Jerryd Bayless",
+      "school": "Arizona",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "MEM",
+      "avatar": "04",
+      "conference": "Big 12 Conference",
+      "player_id": 201573,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 13,
+        "ast": 2,
+        "reb": 2,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.265,
+        "assists_pct": 0.167,
+        "rebounds_pct": 0.062,
+        "defense_pct": 0.167
+      }
+    }
+  ]
+}

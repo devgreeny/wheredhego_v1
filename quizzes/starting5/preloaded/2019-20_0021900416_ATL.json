@@ -1,84 +1,84 @@
 {
   "season": "2019-20",
-  "game_id": "0021900795",
+  "game_id": "0021900416",
   "team_abbr": "ATL",
-  "opponent_abbr": "ORL",
-  "matchup": "ORL vs ATL",
-  "game_date": "2020-02-10",
+  "opponent_abbr": "UTH",
+  "matchup": "ATL vs UTH",
+  "game_date": "2019-12-19",
   "players": [
     {
-      "name": "De'Andre Hunter",
-      "school": "Virginia",
+      "name": "Cam Reddish",
+      "school": "Duke",
       "school_type": "College",
       "spriteIndex": 12,
       "team_abbrev": "ATL",
       "avatar": "12",
       "conference": "Atlantic Coast Conference",
+      "player_id": 1629629,
+      "position": "Forward-Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 14,
+        "ast": 1,
+        "reb": 4,
+        "stl": 3,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.2,
+        "assists_pct": 0.083,
+        "rebounds_pct": 0.19,
+        "defense_pct": 0.6
+      }
+    },
+    {
+      "name": "De'Andre Hunter",
+      "school": "Virginia",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "ATL",
+      "avatar": "08",
+      "conference": "Atlantic Coast Conference",
       "player_id": 1629631,
       "position": "Forward-Guard",
       "country": "USA",
       "game_stats": {
-        "pts": 10,
-        "ast": 1,
-        "reb": 3,
-        "stl": 1,
-        "blk": 1
-      },
-      "game_contribution_pct": {
-        "points_pct": 0.13,
-        "assists_pct": 0.05,
-        "rebounds_pct": 0.188,
-        "defense_pct": 0.4
-      }
-    },
-    {
-      "name": "John Collins",
-      "school": "Wake Forest",
-      "school_type": "College",
-      "spriteIndex": 5,
-      "team_abbrev": "ATL",
-      "avatar": "05",
-      "conference": "Atlantic Coast Conference",
-      "player_id": 1628381,
-      "position": "Forward-Center",
-      "country": "USA",
-      "game_stats": {
-        "pts": 22,
-        "ast": 2,
-        "reb": 8,
+        "pts": 5,
+        "ast": 0,
+        "reb": 2,
         "stl": 0,
-        "blk": 1
+        "blk": 0
       },
       "game_contribution_pct": {
-        "points_pct": 0.286,
-        "assists_pct": 0.1,
-        "rebounds_pct": 0.5,
-        "defense_pct": 0.2
+        "points_pct": 0.071,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.095,
+        "defense_pct": 0.0
       }
     },
     {
-      "name": "Damian Jones",
-      "school": "Vanderbilt",
+      "name": "Bruno Fernando",
+      "school": "Maryland",
       "school_type": "College",
       "spriteIndex": 1,
       "team_abbrev": "ATL",
       "avatar": "01",
-      "conference": "Southeastern Conference",
-      "player_id": 1627745,
-      "position": "Center",
-      "country": "USA",
+      "conference": "Big Ten Conference",
+      "player_id": 1628981,
+      "position": "Forward-Center",
+      "country": "Angola",
       "game_stats": {
         "pts": 4,
         "ast": 1,
-        "reb": 2,
-        "stl": 2,
+        "reb": 6,
+        "stl": 0,
         "blk": 0
       },
       "game_contribution_pct": {
-        "points_pct": 0.052,
-        "assists_pct": 0.05,
-        "rebounds_pct": 0.125,
-        "defense_pct": 0.4
+        "points_pct": 0.057,
+        "assists_pct": 0.083,
+        "rebounds_pct": 0.286,
+        "defense_pct": 0.0
       }
     },
     {
@@ -93,42 +93,42 @@
       "position": "Guard-Forward",
       "country": "USA",
       "game_stats": {
-        "pts": 12,
-        "ast": 7,
-        "reb": 2,
-        "stl": 0,
+        "pts": 17,
+        "ast": 2,
+        "reb": 4,
+        "stl": 1,
         "blk": 0
       },
       "game_contribution_pct": {
-        "points_pct": 0.156,
-        "assists_pct": 0.35,
-        "rebounds_pct": 0.125,
-        "defense_pct": 0.0
+        "points_pct": 0.243,
+        "assists_pct": 0.167,
+        "rebounds_pct": 0.19,
+        "defense_pct": 0.2
       }
     },
     {
       "name": "Trae Young",
       "school": "Oklahoma",
       "school_type": "College",
-      "spriteIndex": 8,
+      "spriteIndex": 5,
       "team_abbrev": "ATL",
-      "avatar": "08",
+      "avatar": "05",
       "conference": "Southeastern Conference",
       "player_id": 1629027,
       "position": "Guard",
       "country": "USA",
       "game_stats": {
-        "pts": 29,
-        "ast": 9,
-        "reb": 1,
-        "stl": 0,
+        "pts": 30,
+        "ast": 8,
+        "reb": 5,
+        "stl": 1,
         "blk": 0
       },
       "game_contribution_pct": {
-        "points_pct": 0.377,
-        "assists_pct": 0.45,
-        "rebounds_pct": 0.062,
-        "defense_pct": 0.0
+        "points_pct": 0.429,
+        "assists_pct": 0.667,
+        "rebounds_pct": 0.238,
+        "defense_pct": 0.2
       }
     }
   ]

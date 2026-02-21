@@ -1,0 +1,135 @@
+{
+  "season": "2018-19",
+  "game_id": "0021800916",
+  "team_abbr": "CHI",
+  "opponent_abbr": "MEM",
+  "matchup": "MEM vs CHI",
+  "game_date": "2019-02-27",
+  "players": [
+    {
+      "name": "Otto Porter Jr.",
+      "school": "Georgetown",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "CHI",
+      "avatar": "01",
+      "conference": "Big East Conference",
+      "player_id": 203490,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 20,
+        "ast": 3,
+        "reb": 6,
+        "stl": 3,
+        "blk": 3
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.235,
+        "assists_pct": 0.231,
+        "rebounds_pct": 0.214,
+        "defense_pct": 0.375
+      }
+    },
+    {
+      "name": "Lauri Markkanen",
+      "school": "Arizona",
+      "school_type": "College",
+      "spriteIndex": 9,
+      "team_abbrev": "CHI",
+      "avatar": "09",
+      "conference": "Big 12 Conference",
+      "player_id": 1628374,
+      "position": "Forward-Center",
+      "country": "Finland",
+      "game_stats": {
+        "pts": 22,
+        "ast": 1,
+        "reb": 10,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.259,
+        "assists_pct": 0.077,
+        "rebounds_pct": 0.357,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Robin Lopez",
+      "school": "Stanford",
+      "school_type": "College",
+      "spriteIndex": 2,
+      "team_abbrev": "CHI",
+      "avatar": "02",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 201577,
+      "position": "Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 4,
+        "ast": 1,
+        "reb": 3,
+        "stl": 0,
+        "blk": 5
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.047,
+        "assists_pct": 0.077,
+        "rebounds_pct": 0.107,
+        "defense_pct": 0.312
+      }
+    },
+    {
+      "name": "Zach LaVine",
+      "school": "UCLA",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "CHI",
+      "avatar": "05",
+      "conference": "Big Ten Conference",
+      "player_id": 203897,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 30,
+        "ast": 4,
+        "reb": 5,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.353,
+        "assists_pct": 0.308,
+        "rebounds_pct": 0.179,
+        "defense_pct": 0.125
+      }
+    },
+    {
+      "name": "Kris Dunn",
+      "school": "Providence",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "CHI",
+      "avatar": "07",
+      "conference": "Big East Conference",
+      "player_id": 1627739,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 9,
+        "ast": 4,
+        "reb": 4,
+        "stl": 3,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.106,
+        "assists_pct": 0.308,
+        "rebounds_pct": 0.143,
+        "defense_pct": 0.188
+      }
+    }
+  ]
+}

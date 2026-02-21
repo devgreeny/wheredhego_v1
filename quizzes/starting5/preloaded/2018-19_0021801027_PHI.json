@@ -1,0 +1,135 @@
+{
+  "season": "2018-19",
+  "game_id": "0021801027",
+  "team_abbr": "PHI",
+  "opponent_abbr": "SAC",
+  "matchup": "PHI vs SAC",
+  "game_date": "2019-03-15",
+  "players": [
+    {
+      "name": "Jimmy Butler III",
+      "school": "Marquette",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "PHI",
+      "avatar": "01",
+      "conference": "Big East Conference",
+      "player_id": 202710,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 22,
+        "ast": 7,
+        "reb": 6,
+        "stl": 2,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.222,
+        "assists_pct": 0.304,
+        "rebounds_pct": 0.182,
+        "defense_pct": 0.273
+      }
+    },
+    {
+      "name": "Tobias Harris",
+      "school": "Tennessee",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "PHI",
+      "avatar": "05",
+      "conference": "Southeastern Conference",
+      "player_id": 202699,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 19,
+        "ast": 4,
+        "reb": 7,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.192,
+        "assists_pct": 0.174,
+        "rebounds_pct": 0.212,
+        "defense_pct": 0.182
+      }
+    },
+    {
+      "name": "Joel Embiid",
+      "school": "Kansas",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "PHI",
+      "avatar": "03",
+      "conference": "Big 12 Conference",
+      "player_id": 203954,
+      "position": "Center-Forward",
+      "country": "Cameroon",
+      "game_stats": {
+        "pts": 21,
+        "ast": 3,
+        "reb": 17,
+        "stl": 1,
+        "blk": 4
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.212,
+        "assists_pct": 0.13,
+        "rebounds_pct": 0.515,
+        "defense_pct": 0.455
+      }
+    },
+    {
+      "name": "JJ Redick",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 6,
+      "team_abbrev": "PHI",
+      "avatar": "06",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 200755,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 19,
+        "ast": 4,
+        "reb": 1,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.192,
+        "assists_pct": 0.174,
+        "rebounds_pct": 0.03,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Ben Simmons",
+      "school": "LSU",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "PHI",
+      "avatar": "08",
+      "conference": "Southeastern Conference",
+      "player_id": 1627732,
+      "position": "Guard-Forward",
+      "country": "Australia",
+      "game_stats": {
+        "pts": 18,
+        "ast": 5,
+        "reb": 2,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.182,
+        "assists_pct": 0.217,
+        "rebounds_pct": 0.061,
+        "defense_pct": 0.091
+      }
+    }
+  ]
+}

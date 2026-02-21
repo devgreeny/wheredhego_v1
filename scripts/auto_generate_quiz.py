@@ -70,37 +70,418 @@ NFL_AVATAR_DESCRIPTIONS = {
 }
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# AI AVATAR SELECTION
+# TEAM ABBREVIATION MAPPINGS
+# Maps NBA API abbreviations to your avatar directory names
+# Handles relocated teams, renamed teams, and alternate abbreviations
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def get_ai_avatar_selection(player_name: str, team: str, is_nba: bool = True) -> str:
+TEAM_ABBREV_MAP = {
+    # ═══════════════════════════════════════════════════════════════════════════
+    # NBA TEAM ABBREVIATIONS
+    # ═══════════════════════════════════════════════════════════════════════════
+    
+    # New Orleans variations → NOH (your directory)
+    "NOP": "NOH",   # New Orleans Pelicans (2013-present)
+    "NOK": "NOH",   # New Orleans/Oklahoma City Hornets (2005-07 Katrina)
+    
+    # Phoenix variations → PHO (your directory)
+    "PHX": "PHO",   # Common alternate
+    
+    # Utah variations → UTH (your directory)
+    "UTA": "UTH",   # Common alternate
+    
+    # Brooklyn/New Jersey → BKN (your directory)
+    "NJN": "BKN",   # New Jersey Nets (pre-2012)
+    "BRK": "BKN",   # Alternate
+    
+    # Charlotte variations → CHA (your directory)
+    "CHH": "CHA",   # Charlotte Hornets (original, 1988-2002)
+    "CHO": "CHA",   # Alternate
+    
+    # Relocated teams with no current equivalent
+    "SEA": "OKC",   # Seattle SuperSonics → OKC (pre-2008)
+    "VAN": "MEM",   # Vancouver Grizzlies → Memphis (pre-2001)
+    
+    # Washington variations
+    "WSB": "WAS",   # Washington Bullets (pre-1997)
+    "WSH": "WAS",   # Alternate
+    
+    # Other common alternates
+    "GS": "GSW",    # Golden State
+    "SA": "SAS",    # San Antonio
+    "NY": "NYK",    # New York
+    "UTAH": "UTH",  # Full name variant
+    
+    # ═══════════════════════════════════════════════════════════════════════════
+    # NFL TEAM ABBREVIATIONS (Pro Football Reference → Your directory)
+    # ═══════════════════════════════════════════════════════════════════════════
+    
+    # Green Bay
+    "GB": "GNB",
+    "GBP": "GNB",
+    
+    # Kansas City
+    "KC": "KAN",
+    "KCC": "KAN",
+    
+    # LA Rams
+    "LA": "LAR",
+    "RAM": "LAR",
+    "STL": "LAR",   # St. Louis Rams (pre-2016)
+    
+    # Las Vegas/Oakland Raiders
+    "LV": "LVR",
+    "OAK": "LVR",   # Oakland Raiders (pre-2020)
+    
+    # New Orleans Saints
+    "NO": "NOR",
+    
+    # New England
+    "NE": "NWE",
+    "NEP": "NWE",
+    
+    # San Francisco
+    "SF": "SFO",
+    
+    # Tampa Bay
+    "TB": "TAM",
+    "TBB": "TAM",
+    
+    # San Diego → LA Chargers
+    "SD": "LAC",
+    "SDC": "LAC",
+}
+
+
+def normalize_team_abbrev(abbrev: str) -> str:
+    """Convert NBA API team abbreviation to your avatar directory name."""
+    return TEAM_ABBREV_MAP.get(abbrev.upper(), abbrev.upper())
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PRIORITY PLAYER AVATAR MAPPINGS
+# These players get their designated avatar guaranteed (avatars designed after them)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+PRIORITY_PLAYER_AVATARS = {
+    # Avatar 01 - Steph Curry
+    "stephen curry": "01",
+    "steph curry": "01",
+    
+    # Avatar 02 - Hugo Gonzalez
+    "hugo gonzalez": "02",
+    
+    # Avatar 03 - Kawhi Leonard
+    "kawhi leonard": "03",
+    
+    # Avatar 04 - James Harden / PJ Tucker
+    "james harden": "04",
+    "pj tucker": "04",
+    "p.j. tucker": "04",
+    
+    # Avatar 05 - Jayson Tatum
+    "jayson tatum": "05",
+    
+    # Avatar 06 - Brian Scalabrine
+    "brian scalabrine": "06",
+    "scalabrine": "06",
+    
+    # Avatar 07 - Russell Westbrook
+    "russell westbrook": "07",
+    "russ westbrook": "07",
+    
+    # Avatar 08 - Jason Terry
+    "jason terry": "08",
+    
+    # Avatar 09 - Kelly Olynyk
+    "kelly olynyk": "09",
+    
+    # Avatar 10 - Alex Caruso
+    "alex caruso": "10",
+    
+    # Avatar 11 - Luka Doncic
+    "luka doncic": "11",
+    
+    # Avatar 12 - Wendell Carter Jr.
+    "wendell carter jr.": "12",
+    "wendell carter": "12",
+    
+    # Avatar 13 - Chris Paul
+    "chris paul": "13",
+    
+    # Avatar 14 - Nikola Jokic
+    "nikola jokic": "14",
+    "jokic": "14",
+}
+
+
+def get_priority_avatar(player_name: str) -> str | None:
+    """Check if a player has a priority avatar assignment."""
+    name_lower = player_name.lower().strip()
+    return PRIORITY_PLAYER_AVATARS.get(name_lower)
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# AI AVATAR SELECTION WITH VISION
+# ═══════════════════════════════════════════════════════════════════════════════
+
+def get_nba_headshot_url(player_id: int) -> str:
+    """Get NBA player headshot URL."""
+    return f"https://cdn.nba.com/headshots/nba/latest/1040x760/{player_id}.png"
+
+
+def get_nfl_headshot_url(player_profile_url: str) -> str | None:
+    """Extract NFL player headshot URL from their Pro Football Reference profile page."""
+    try:
+        from urllib.request import Request, urlopen
+        from bs4 import BeautifulSoup
+        
+        req = Request(player_profile_url, headers={"User-Agent": "Mozilla/5.0"})
+        html = urlopen(req, timeout=10).read().decode("utf-8")
+        soup = BeautifulSoup(html, "lxml")
+        
+        # Find the player headshot in the media-item div
+        media_item = soup.select_one("#meta .media-item img")
+        if media_item and media_item.get("src"):
+            return media_item["src"]
+        
+        # Fallback: look for any image in the meta section
+        meta_img = soup.select_one("#meta img")
+        if meta_img and meta_img.get("src"):
+            return meta_img["src"]
+            
+    except Exception as e:
+        print(f"⚠️ Could not get headshot URL: {e}")
+    
+    return None
+
+
+def load_avatar_images_as_base64(team_abbr: str, is_nba: bool = True) -> dict:
+    """Load avatar images and convert to base64 for vision API."""
+    import base64
+    
+    avatars = {}
+    
+    if is_nba:
+        avatar_dir = PROJECT_ROOT / "app" / "starting5" / "static" / team_abbr / "images"
+        for i in range(1, 15):  # Avatars 01-14
+            avatar_num = f"{i:02d}"
+            avatar_path = avatar_dir / f"{team_abbr}_{avatar_num}.gif"
+            if avatar_path.exists():
+                with open(avatar_path, "rb") as f:
+                    avatars[avatar_num] = base64.standard_b64encode(f.read()).decode("utf-8")
+    else:
+        avatar_dir = PROJECT_ROOT / "app" / "gridiron11" / "Sprites" / team_abbr / "images"
+        for i in range(1, 11):  # Avatars 01-10
+            avatar_num = f"{i:02d}"
+            avatar_path = avatar_dir / f"{team_abbr.lower()}_{avatar_num}.png"
+            if avatar_path.exists():
+                with open(avatar_path, "rb") as f:
+                    avatars[avatar_num] = base64.standard_b64encode(f.read()).decode("utf-8")
+    
+    return avatars
+
+
+def get_ai_avatar_selection_with_vision(player_name: str, team_abbr: str, is_nba: bool = True, 
+                                        player_id: int = None, headshot_url: str = None,
+                                        used_avatars: set = None) -> str:
     """
-    Use Claude AI to select the most appropriate avatar for a player.
-    Falls back to random selection if AI is unavailable.
+    Use Claude Vision to compare player headshot with avatar options.
+    Avoids reusing avatars unless necessary.
+    
+    Args:
+        player_name: Player's name
+        team_abbr: Team abbreviation (normalized)
+        is_nba: True for NBA, False for NFL
+        player_id: NBA player ID (for NBA headshots)
+        headshot_url: Direct URL to player headshot (for NFL)
+        used_avatars: Set of already-used avatar numbers
     """
+    if used_avatars is None:
+        used_avatars = set()
     try:
         import anthropic
+        import base64
+        import urllib.request
         
         api_key = os.environ.get("ANTHROPIC_API_KEY")
         if not api_key:
             print(f"⚠️ No ANTHROPIC_API_KEY, using random avatar for {player_name}")
-            return random.choice(list(NBA_AVATAR_DESCRIPTIONS.keys() if is_nba else NFL_AVATAR_DESCRIPTIONS.keys()))
+            max_avatar = 14 if is_nba else 10
+            return f"{random.randint(1, max_avatar):02d}"
         
         client = anthropic.Anthropic(api_key=api_key)
         
-        avatar_options = NBA_AVATAR_DESCRIPTIONS if is_nba else NFL_AVATAR_DESCRIPTIONS
-        options_text = "\n".join([f"  {k}: {v}" for k, v in avatar_options.items()])
+        # Load avatar images
+        all_avatars = load_avatar_images_as_base64(team_abbr, is_nba)
+        if not all_avatars:
+            print(f"⚠️ No avatars found for {team_abbr}, using random")
+            max_avatar = 14 if is_nba else 10
+            return f"{random.randint(1, max_avatar):02d}"
         
-        prompt = f"""You are helping select an 8-bit pixel art avatar for an {'NBA' if is_nba else 'NFL'} player in a sports trivia game.
+        # Filter out already-used avatars (unless we've used them all)
+        available_avatars = {k: v for k, v in all_avatars.items() if k not in used_avatars}
+        if not available_avatars:
+            # All avatars used, allow reuse
+            print(f"ℹ️ All avatars used, allowing reuse for {player_name}")
+            available_avatars = all_avatars
+        
+        avatars = available_avatars
+        
+        # Get player headshot URL
+        if is_nba and player_id:
+            fetch_url = get_nba_headshot_url(player_id)
+            media_type = "image/png"
+        elif headshot_url:
+            fetch_url = headshot_url
+            # Determine media type from URL
+            media_type = "image/jpeg" if headshot_url.lower().endswith(".jpg") else "image/png"
+        else:
+            print(f"⚠️ No headshot source for {player_name}, using random")
+            return random.choice(list(avatars.keys()))
+        
+        # Fetch player headshot
+        try:
+            req = urllib.request.Request(fetch_url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=10) as response:
+                player_image_data = base64.standard_b64encode(response.read()).decode("utf-8")
+        except Exception as e:
+            print(f"⚠️ Could not fetch headshot for {player_name}: {e}, using random")
+            return random.choice(list(avatars.keys()))
+        
+        league = "NBA" if is_nba else "NFL"
+        avatar_media_type = "image/gif" if is_nba else "image/png"
+        
+        # Build message with images
+        content = [
+            {
+                "type": "text",
+                "text": f"I need you to match this {league} player ({player_name}) to the best pixel art avatar based on their appearance (skin tone, facial hair, hair style, etc.).\n\nHere is the player's photo:"
+            },
+            {
+                "type": "image",
+                "source": {
+                    "type": "base64",
+                    "media_type": media_type,
+                    "data": player_image_data
+                }
+            },
+            {
+                "type": "text",
+                "text": "Here are the available avatar options:"
+            }
+        ]
+        
+        # Add avatar images
+        for avatar_num, avatar_data in sorted(avatars.items()):
+            content.append({
+                "type": "text",
+                "text": f"Avatar #{avatar_num}:"
+            })
+            content.append({
+                "type": "image",
+                "source": {
+                    "type": "base64",
+                    "media_type": avatar_media_type,
+                    "data": avatar_data
+                }
+            })
+        
+        # Build available avatar list for prompt
+        available_nums = sorted(avatars.keys())
+        available_list = ", ".join(available_nums)
+        
+        content.append({
+            "type": "text",
+            "text": f"Which avatar best matches {player_name}'s appearance? Consider skin tone, hair style, and facial hair.\n\nAVAILABLE OPTIONS: {available_list}\n\nIMPORTANT: Respond with ONLY a two-digit number from the available options. No explanation, no words, just the number."
+        })
+        
+        message = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=5,
+            messages=[{"role": "user", "content": content}]
+        )
+        
+        response = message.content[0].text.strip()
+        
+        # Try to extract any number from the response
+        match = re.search(r'(\d{1,2})', response)
+        if match:
+            num = match.group(1).zfill(2)
+            if num in avatars:
+                print(f"👁️ Vision AI matched {player_name} → Avatar {num}")
+                return num
+        
+        # Check if response is directly a valid avatar
+        if response in avatars:
+            print(f"👁️ Vision AI matched {player_name} → Avatar {response}")
+            return response
+        
+        print(f"⚠️ Could not parse vision response '{response[:50]}...', using random for {player_name}")
+        
+    except Exception as e:
+        print(f"⚠️ Vision AI error for {player_name}: {e}, using random")
+    
+    # Fallback to random
+    max_avatar = 14 if is_nba else 10
+    return f"{random.randint(1, max_avatar):02d}"
+
+
+def get_ai_avatar_selection(player_name: str, team: str, is_nba: bool = True, player_id: int = None, 
+                            headshot_url: str = None, used_avatars: set = None) -> str:
+    """
+    Use Claude AI to select the most appropriate avatar for a player.
+    If player_id or headshot_url is provided, uses vision API for better matching.
+    Falls back to random selection if AI is unavailable.
+    Tracks used_avatars to avoid duplicates when possible.
+    """
+    if used_avatars is None:
+        used_avatars = set()
+    
+    # Use vision-based selection if we have image source
+    if player_id or headshot_url:
+        return get_ai_avatar_selection_with_vision(
+            player_name, team, is_nba, 
+            player_id=player_id, 
+            headshot_url=headshot_url,
+            used_avatars=used_avatars
+        )
+    
+    # Fallback to text-based selection
+    try:
+        import anthropic
+        
+        max_avatar = 14 if is_nba else 10
+        all_options = [f"{i:02d}" for i in range(1, max_avatar + 1)]
+        
+        # Filter out used avatars
+        available_options = [opt for opt in all_options if opt not in used_avatars]
+        if not available_options:
+            print(f"ℹ️ All avatars used, allowing reuse for {player_name}")
+            available_options = all_options
+        
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            print(f"⚠️ No ANTHROPIC_API_KEY, using random avatar for {player_name}")
+            return random.choice(available_options)
+        
+        client = anthropic.Anthropic(api_key=api_key)
+        
+        available_list = ", ".join(available_options)
+        
+        prompt = f"""You are helping select an 8-bit pixel art avatar for an {'NBA' if is_nba else 'NFL'} player.
 
 Player: {player_name}
 Team: {team}
 
-Available avatar options (number: description):
-{options_text}
-
 Based on your knowledge of what {player_name} looks like (skin tone, facial hair, hair style), 
-which avatar number (01-{len(avatar_options):02d}) would be the best match?
+pick from these AVAILABLE options: {available_list}
+
+General guide:
+- 01-04: Darker skin tones with various hair/beard styles
+- 05-08: Medium skin tones
+- 09-12: Various styles
+- 13-14: Light skin tones
 
 Reply with ONLY the two-digit number (e.g., "07"). Nothing else."""
 
@@ -112,29 +493,25 @@ Reply with ONLY the two-digit number (e.g., "07"). Nothing else."""
         
         response = message.content[0].text.strip()
         
-        # Validate response
-        if response in avatar_options:
-            print(f"🤖 AI selected avatar {response} for {player_name}")
-            return response
-        
-        # Try to extract a number
+        # Validate response is from available options
         match = re.search(r'(\d{1,2})', response)
         if match:
-            num = match.group(1).zfill(2)
-            if num in avatar_options:
-                print(f"🤖 AI selected avatar {num} for {player_name}")
-                return num
+            result = f"{int(match.group(1)):02d}"
+            if result in available_options:
+                print(f"🤖 AI selected avatar {result} for {player_name}")
+                return result
         
         print(f"⚠️ Invalid AI response '{response}', using random for {player_name}")
+        return random.choice(available_options)
         
-    except ImportError:
-        print(f"⚠️ anthropic package not installed, using random avatar for {player_name}")
     except Exception as e:
         print(f"⚠️ AI error for {player_name}: {e}, using random")
     
-    # Fallback to random
-    avatars = list(NBA_AVATAR_DESCRIPTIONS.keys() if is_nba else NFL_AVATAR_DESCRIPTIONS.keys())
-    return random.choice(avatars)
+    # Fallback to random from available options
+    max_avatar = 14 if is_nba else 10
+    all_opts = [f"{i:02d}" for i in range(1, max_avatar + 1)]
+    available = [o for o in all_opts if o not in used_avatars] or all_opts
+    return random.choice(available)
 
 
 def get_skin_tone_based_avatar(player_name: str, is_nba: bool = True) -> str:
@@ -271,8 +648,12 @@ def generate_nba_quiz(count: int = 1) -> int:
                     summary = boxscoresummaryv2.BoxScoreSummaryV2(game_id=game_id)
                     header = summary.get_data_frames()[0].iloc[0]
                     home_id, away_id = header["HOME_TEAM_ID"], header["VISITOR_TEAM_ID"]
-                    home_abbr = df[df["TEAM_ID"] == home_id]["TEAM_ABBREVIATION"].iloc[0]
-                    away_abbr = df[df["TEAM_ID"] == away_id]["TEAM_ABBREVIATION"].iloc[0]
+                    home_abbr_raw = df[df["TEAM_ID"] == home_id]["TEAM_ABBREVIATION"].iloc[0]
+                    away_abbr_raw = df[df["TEAM_ID"] == away_id]["TEAM_ABBREVIATION"].iloc[0]
+                    
+                    # Normalize team abbreviations to match avatar directories
+                    home_abbr = normalize_team_abbrev(home_abbr_raw)
+                    away_abbr = normalize_team_abbrev(away_abbr_raw)
                     
                     game_date = header.get("GAME_DATE_EST") or header.get("GAME_DATE")
                     try:
@@ -286,7 +667,8 @@ def generate_nba_quiz(count: int = 1) -> int:
                         if len(team_starters) < 5:
                             continue
                         
-                        team_abbr = team_starters["TEAM_ABBREVIATION"].iloc[0]
+                        team_abbr_raw = team_starters["TEAM_ABBREVIATION"].iloc[0]
+                        team_abbr = normalize_team_abbrev(team_abbr_raw)
                         opp_abbr = away_abbr if team_id == home_id else home_abbr
                         
                         t_pts = team_starters["PTS"].sum()
@@ -350,12 +732,30 @@ def generate_nba_quiz(count: int = 1) -> int:
                             "players": []
                         }
                         
+                        used_avatars = set()  # Track used avatars to avoid duplicates
+                        player_avatars = {}   # Store avatar assignments
+                        
+                        # PHASE 1: Assign priority players their guaranteed avatars first
+                        for pr in player_rows:
+                            name = pr["name"]
+                            priority_avatar = get_priority_avatar(name)
+                            if priority_avatar and priority_avatar not in used_avatars:
+                                player_avatars[name] = priority_avatar
+                                used_avatars.add(priority_avatar)
+                                print(f"⭐ Priority match: {name} → Avatar {priority_avatar}")
+                        
+                        # PHASE 2: AI selection for remaining players
                         for pr in player_rows:
                             row = pr["row"]
                             name = pr["name"]
                             
-                            # AI avatar selection
-                            avatar = get_ai_avatar_selection(name, team_abbr, is_nba=True)
+                            # Check if already assigned in priority phase
+                            if name in player_avatars:
+                                avatar = player_avatars[name]
+                            else:
+                                # AI avatar selection with vision (avoids duplicates)
+                                avatar = get_ai_avatar_selection(name, team_abbr, is_nba=True, player_id=pr["player_id"], used_avatars=used_avatars)
+                                used_avatars.add(avatar)  # Mark as used
                             
                             pts = row["PTS"]
                             ast = row["AST"]
@@ -397,8 +797,11 @@ def generate_nba_quiz(count: int = 1) -> int:
                         with out_path.open("w", encoding="utf-8") as f:
                             json.dump(quiz, f, indent=2, ensure_ascii=False)
                         
-                        print(f"✅ Saved NBA quiz: {fname}")
                         generated += 1
+                        progress = f"[{generated}/{count}]"
+                        bar_filled = int((generated / count) * 20)
+                        bar = "█" * bar_filled + "░" * (20 - bar_filled)
+                        print(f"✅ {progress} {bar} Saved: {fname}")
                         
                         if generated >= count:
                             return generated
@@ -428,6 +831,16 @@ NFL_TEAMS = [
 
 SKILL_POSITIONS = ["QB", "RB", "WR", "TE"]
 BASE_URL = "https://www.pro-football-reference.com"
+
+# Realistic browser headers to avoid bot detection
+BROWSER_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+}
 
 
 def load_nfl_college_data() -> dict:
@@ -534,8 +947,9 @@ def generate_nfl_quiz(count: int = 1) -> int:
         try:
             # Get team games
             url = f"{BASE_URL}/teams/{team}/{season}.htm"
-            req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            html = urlopen(req).read().decode("utf-8")
+            req = Request(url, headers=BROWSER_HEADERS)
+            time.sleep(random.uniform(1, 2))  # Be respectful
+            html = urlopen(req, timeout=15).read().decode("utf-8")
             soup = BeautifulSoup(html, "lxml")
             
             boxscore_links = soup.select("table#games a[href*='/boxscores/']")
@@ -549,8 +963,8 @@ def generate_nfl_quiz(count: int = 1) -> int:
                 time.sleep(random.uniform(2, 4))
                 
                 try:
-                    req = Request(boxscore_url, headers={"User-Agent": "Mozilla/5.0"})
-                    html = urlopen(req).read().decode("utf-8")
+                    req = Request(boxscore_url, headers=BROWSER_HEADERS)
+                    html = urlopen(req, timeout=15).read().decode("utf-8")
                     soup = BeautifulSoup(html, "lxml")
                     
                     # Determine home/visitor
@@ -601,19 +1015,22 @@ def generate_nfl_quiz(count: int = 1) -> int:
                     # Get college info for all players
                     quiz_players = []
                     all_valid = True
+                    used_avatars = set()  # Track used avatars to avoid duplicates
                     
                     for i, player in enumerate(players[:6]):
                         time.sleep(random.uniform(2, 4))
                         
                         try:
-                            req = Request(player["url"], headers={"User-Agent": "Mozilla/5.0"})
-                            html = urlopen(req).read().decode("utf-8")
+                            req = Request(player["url"], headers=BROWSER_HEADERS)
+                            html = urlopen(req, timeout=15).read().decode("utf-8")
                             soup = BeautifulSoup(html, "lxml")
                             
                             meta = soup.find(id="meta")
                             college = "Unknown"
+                            headshot_url = None
                             
                             if meta:
+                                # Get college
                                 label = meta.find("strong", string=lambda s: s and s.strip().startswith("College"))
                                 if label:
                                     for node in label.next_siblings:
@@ -623,6 +1040,11 @@ def generate_nfl_quiz(count: int = 1) -> int:
                                             href = node.get("href", "")
                                             if href.startswith("/schools/") and "high_schools" not in href:
                                                 college = node.get_text(strip=True)
+                                
+                                # Get headshot image
+                                media_item = meta.select_one(".media-item img")
+                                if media_item and media_item.get("src"):
+                                    headshot_url = media_item["src"]
                             
                             if college == "Unknown":
                                 all_valid = False
@@ -636,19 +1058,24 @@ def generate_nfl_quiz(count: int = 1) -> int:
                                 all_valid = False
                                 break
                             
-                            # AI avatar selection
-                            avatar = get_ai_avatar_selection(player["name"], team.upper(), is_nba=False)
+                            # AI avatar selection with vision
+                            team_normalized = normalize_team_abbrev(team.upper())
+                            avatar = get_ai_avatar_selection(
+                                player["name"], team_normalized, is_nba=False,
+                                headshot_url=headshot_url, used_avatars=used_avatars
+                            )
+                            used_avatars.add(avatar)  # Mark as used
                             
                             quiz_players.append({
                                 "name": player["name"],
                                 "position": f"{player['position']}{i+1}",
                                 "college": matched_college,
                                 "player_url": player["url"],
-                                "team_abbrev": team.upper(),
+                                "team_abbrev": team_normalized,
                                 "avatar": avatar
                             })
                             
-                            print(f"✅ {player['name']}: {matched_college}")
+                            print(f"✅ {player['name']}: {matched_college} (Avatar {avatar})")
                             
                         except Exception as e:
                             print(f"⚠️ Error getting college for {player['name']}: {e}")
@@ -660,8 +1087,9 @@ def generate_nfl_quiz(count: int = 1) -> int:
                     
                     # Save quiz
                     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                    team_normalized = normalize_team_abbrev(team.upper())
                     quiz_data = {
-                        "team": team.upper(),
+                        "team": team_normalized,
                         "season": season,
                         "game_url": boxscore_url,
                         "generated_at": timestamp,

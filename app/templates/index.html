@@ -63,8 +63,7 @@
     @keyframes scan{ from{ background-position-y:0 } to{ background-position-y:320px } }
     .glare{ position:absolute; inset:0; background: linear-gradient(105deg, rgba(255,255,255,.06), transparent 30% 70%, rgba(0,0,0,.15)); mix-blend-mode: screen; pointer-events:none }
 
-    .grid{ display:grid; gap: 26px; grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto; }
-    @media (max-width: 960px){ .grid{ grid-template-columns: 1fr; max-width: 400px; } }
+    .grid{ display:grid; gap: 26px; grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
 
     .card{
       background: linear-gradient(180deg, var(--card-1), var(--card-2));
@@ -147,23 +146,8 @@
           <article class="card">
             <h3>Starting5</h3>
             <p>Guess the colleges of NBA starting fives. New lineup every day at midnight!</p>
-            <a class="cta" href="/starting5">Play Starting5</a>
+            <a class="cta" href="/starting5">Play Now</a>
           </article>
-
-          <article class="card">
-            <h3>Skill Positions</h3>
-            <p>11 NFL offensive positions, can you name their colleges? New lineup every day at midnight!</p>
-            <a class="cta" href="/gridiron11">Play Skill Positions</a>
-          </article>
-
-          <!-- Creator poll temporarily removed -->
-          <!--
-          <article class="card">
-            <h3>Creator Poll</h3>
-            <p>Vote on your CFB Top 25 every week, because the current polls suck. New poll every week!</p>
-            <a class="cta" href="/creatorpoll">Vote Now</a>
-          </article>
-          -->
         </section>
         <div class="scan" aria-hidden="true"></div>
         <div class="glare" aria-hidden="true"></div>

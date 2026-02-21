@@ -1,0 +1,135 @@
+{
+  "season": "2013-14",
+  "game_id": "0021301000",
+  "team_abbr": "UTH",
+  "opponent_abbr": "HOU",
+  "matchup": "HOU vs UTH",
+  "game_date": "2014-03-17",
+  "players": [
+    {
+      "name": "Richard Jefferson",
+      "school": "Arizona",
+      "school_type": "College",
+      "spriteIndex": 13,
+      "team_abbrev": "UTH",
+      "avatar": "13",
+      "conference": "Big 12 Conference",
+      "player_id": 2210,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 8,
+        "ast": 1,
+        "reb": 2,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.163,
+        "assists_pct": 0.077,
+        "rebounds_pct": 0.133,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Marvin Williams",
+      "school": "North Carolina",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "UTH",
+      "avatar": "01",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 101107,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 5,
+        "ast": 3,
+        "reb": 2,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.102,
+        "assists_pct": 0.231,
+        "rebounds_pct": 0.133,
+        "defense_pct": 0.143
+      }
+    },
+    {
+      "name": "Derrick Favors",
+      "school": "Georgia Tech",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "UTH",
+      "avatar": "05",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 202324,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 15,
+        "ast": 1,
+        "reb": 4,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.306,
+        "assists_pct": 0.077,
+        "rebounds_pct": 0.267,
+        "defense_pct": 0.286
+      }
+    },
+    {
+      "name": "Gordon Hayward",
+      "school": "Butler",
+      "school_type": "College",
+      "spriteIndex": 6,
+      "team_abbrev": "UTH",
+      "avatar": "06",
+      "conference": "Big East Conference",
+      "player_id": 202330,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 11,
+        "ast": 3,
+        "reb": 4,
+        "stl": 3,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.224,
+        "assists_pct": 0.231,
+        "rebounds_pct": 0.267,
+        "defense_pct": 0.429
+      }
+    },
+    {
+      "name": "Trey Burke",
+      "school": "Michigan",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "UTH",
+      "avatar": "03",
+      "conference": "Big Ten Conference",
+      "player_id": 203504,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 10,
+        "ast": 5,
+        "reb": 3,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.204,
+        "assists_pct": 0.385,
+        "rebounds_pct": 0.2,
+        "defense_pct": 0.143
+      }
+    }
+  ]
+}

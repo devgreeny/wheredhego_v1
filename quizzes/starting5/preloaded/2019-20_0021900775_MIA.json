@@ -1,0 +1,135 @@
+{
+  "season": "2019-20",
+  "game_id": "0021900775",
+  "team_abbr": "MIA",
+  "opponent_abbr": "SAC",
+  "matchup": "SAC vs MIA",
+  "game_date": "2020-02-07",
+  "players": [
+    {
+      "name": "Derrick Jones Jr.",
+      "school": "UNLV",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "MIA",
+      "avatar": "01",
+      "conference": "Mountain West Conference",
+      "player_id": 1627884,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 9,
+        "ast": 0,
+        "reb": 6,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.127,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.2,
+        "defense_pct": 0.2
+      }
+    },
+    {
+      "name": "Bam Adebayo",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "MIA",
+      "avatar": "05",
+      "conference": "Southeastern Conference",
+      "player_id": 1628389,
+      "position": "Center-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 26,
+        "ast": 3,
+        "reb": 7,
+        "stl": 0,
+        "blk": 2
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.366,
+        "assists_pct": 0.214,
+        "rebounds_pct": 0.233,
+        "defense_pct": 0.4
+      }
+    },
+    {
+      "name": "Kelly Olynyk",
+      "school": "Gonzaga",
+      "school_type": "College",
+      "spriteIndex": 9,
+      "team_abbrev": "MIA",
+      "avatar": "09",
+      "conference": "West Coast Conference",
+      "player_id": 203482,
+      "position": "Forward-Center",
+      "country": "Canada",
+      "game_stats": {
+        "pts": 2,
+        "ast": 2,
+        "reb": 6,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.028,
+        "assists_pct": 0.143,
+        "rebounds_pct": 0.2,
+        "defense_pct": 0.2
+      }
+    },
+    {
+      "name": "Duncan Robinson",
+      "school": "Michigan",
+      "school_type": "College",
+      "spriteIndex": 11,
+      "team_abbrev": "MIA",
+      "avatar": "11",
+      "conference": "Big Ten Conference",
+      "player_id": 1629130,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 18,
+        "ast": 6,
+        "reb": 5,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.254,
+        "assists_pct": 0.429,
+        "rebounds_pct": 0.167,
+        "defense_pct": 0.2
+      }
+    },
+    {
+      "name": "Kendrick Nunn",
+      "school": "Oakland",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "MIA",
+      "avatar": "03",
+      "conference": "Horizon League",
+      "player_id": 1629134,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 16,
+        "ast": 3,
+        "reb": 6,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.225,
+        "assists_pct": 0.214,
+        "rebounds_pct": 0.2,
+        "defense_pct": 0.0
+      }
+    }
+  ]
+}

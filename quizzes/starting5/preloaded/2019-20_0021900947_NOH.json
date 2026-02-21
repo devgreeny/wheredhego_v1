@@ -1,0 +1,135 @@
+{
+  "season": "2019-20",
+  "game_id": "0021900947",
+  "team_abbr": "NOH",
+  "opponent_abbr": "MIN",
+  "matchup": "MIN vs NOH",
+  "game_date": "2020-03-08",
+  "players": [
+    {
+      "name": "Brandon Ingram",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "NOH",
+      "avatar": "01",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1627742,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 15,
+        "ast": 7,
+        "reb": 12,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.147,
+        "assists_pct": 0.292,
+        "rebounds_pct": 0.286,
+        "defense_pct": 0.125
+      }
+    },
+    {
+      "name": "Zion Williamson",
+      "school": "Duke",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "NOH",
+      "avatar": "03",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1629627,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 23,
+        "ast": 1,
+        "reb": 7,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.225,
+        "assists_pct": 0.042,
+        "rebounds_pct": 0.167,
+        "defense_pct": 0.125
+      }
+    },
+    {
+      "name": "Derrick Favors",
+      "school": "Georgia Tech",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "NOH",
+      "avatar": "05",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 202324,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 9,
+        "ast": 0,
+        "reb": 9,
+        "stl": 0,
+        "blk": 2
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.088,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.214,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Jrue Holiday",
+      "school": "UCLA",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "NOH",
+      "avatar": "07",
+      "conference": "Big Ten Conference",
+      "player_id": 201950,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 37,
+        "ast": 8,
+        "reb": 9,
+        "stl": 1,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.363,
+        "assists_pct": 0.333,
+        "rebounds_pct": 0.214,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Lonzo Ball",
+      "school": "UCLA",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "NOH",
+      "avatar": "12",
+      "conference": "Big Ten Conference",
+      "player_id": 1628366,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 18,
+        "ast": 8,
+        "reb": 5,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.176,
+        "assists_pct": 0.333,
+        "rebounds_pct": 0.119,
+        "defense_pct": 0.25
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "season": "2019-20",
+  "game_id": "0021900185",
+  "team_abbr": "WAS",
+  "opponent_abbr": "ORL",
+  "matchup": "ORL vs WAS",
+  "game_date": "2019-11-17",
+  "players": [
+    {
+      "name": "Troy Brown Jr.",
+      "school": "Oregon",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "WAS",
+      "avatar": "01",
+      "conference": "Big Ten Conference",
+      "player_id": 1628972,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 2,
+        "ast": 2,
+        "reb": 7,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.029,
+        "assists_pct": 0.095,
+        "rebounds_pct": 0.304,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Rui Hachimura",
+      "school": "Gonzaga",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "WAS",
+      "avatar": "03",
+      "conference": "West Coast Conference",
+      "player_id": 1629060,
+      "position": "Forward",
+      "country": "Japan",
+      "game_stats": {
+        "pts": 6,
+        "ast": 2,
+        "reb": 4,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.087,
+        "assists_pct": 0.095,
+        "rebounds_pct": 0.174,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Thomas Bryant",
+      "school": "Indiana",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "WAS",
+      "avatar": "05",
+      "conference": "Big Ten Conference",
+      "player_id": 1628418,
+      "position": "Center-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 14,
+        "ast": 4,
+        "reb": 6,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.203,
+        "assists_pct": 0.19,
+        "rebounds_pct": 0.261,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Bradley Beal",
+      "school": "Florida",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "WAS",
+      "avatar": "08",
+      "conference": "Southeastern Conference",
+      "player_id": 203078,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 34,
+        "ast": 8,
+        "reb": 6,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.493,
+        "assists_pct": 0.381,
+        "rebounds_pct": 0.261,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "Isaiah Thomas",
+      "school": "Washington",
+      "school_type": "College",
+      "spriteIndex": 7,
+      "team_abbrev": "WAS",
+      "avatar": "07",
+      "conference": "Big Ten Conference",
+      "player_id": 202738,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 13,
+        "ast": 5,
+        "reb": 0,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.188,
+        "assists_pct": 0.238,
+        "rebounds_pct": 0.0,
+        "defense_pct": 0.5
+      }
+    }
+  ]
+}

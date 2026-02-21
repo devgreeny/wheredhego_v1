@@ -1,0 +1,135 @@
+{
+  "season": "2013-14",
+  "game_id": "0021300358",
+  "team_abbr": "BOS",
+  "opponent_abbr": "MIN",
+  "matchup": "BOS vs MIN",
+  "game_date": "2013-12-16",
+  "players": [
+    {
+      "name": "Jeff Green",
+      "school": "Georgetown",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "BOS",
+      "avatar": "01",
+      "conference": "Big East Conference",
+      "player_id": 201145,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 8,
+        "ast": 2,
+        "reb": 5,
+        "stl": 0,
+        "blk": 2
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.121,
+        "assists_pct": 0.154,
+        "rebounds_pct": 0.179,
+        "defense_pct": 0.667
+      }
+    },
+    {
+      "name": "Brandon Bass",
+      "school": "LSU",
+      "school_type": "College",
+      "spriteIndex": 12,
+      "team_abbrev": "BOS",
+      "avatar": "12",
+      "conference": "Southeastern Conference",
+      "player_id": 101138,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 0,
+        "ast": 0,
+        "reb": 3,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.0,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.107,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Jared Sullinger",
+      "school": "Ohio State",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "BOS",
+      "avatar": "05",
+      "conference": "Big Ten Conference",
+      "player_id": 203096,
+      "position": "Center-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 24,
+        "ast": 5,
+        "reb": 11,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.364,
+        "assists_pct": 0.385,
+        "rebounds_pct": 0.393,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Avery Bradley",
+      "school": "Texas",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "BOS",
+      "avatar": "08",
+      "conference": "Southeastern Conference",
+      "player_id": 202340,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 19,
+        "ast": 2,
+        "reb": 5,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.288,
+        "assists_pct": 0.154,
+        "rebounds_pct": 0.179,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Jordan Crawford",
+      "school": "Xavier",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "BOS",
+      "avatar": "03",
+      "conference": "Big East Conference",
+      "player_id": 202348,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 15,
+        "ast": 4,
+        "reb": 4,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.227,
+        "assists_pct": 0.308,
+        "rebounds_pct": 0.143,
+        "defense_pct": 0.0
+      }
+    }
+  ]
+}

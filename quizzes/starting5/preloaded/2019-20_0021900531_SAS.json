@@ -1,0 +1,135 @@
+{
+  "season": "2019-20",
+  "game_id": "0021900531",
+  "team_abbr": "SAS",
+  "opponent_abbr": "MIL",
+  "matchup": "MIL vs SAS",
+  "game_date": "2020-01-04",
+  "players": [
+    {
+      "name": "DeMar DeRozan",
+      "school": "USC",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "SAS",
+      "avatar": "05",
+      "conference": "Big Ten Conference",
+      "player_id": 201942,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 26,
+        "ast": 5,
+        "reb": 4,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.388,
+        "assists_pct": 0.5,
+        "rebounds_pct": 0.121,
+        "defense_pct": 0.25
+      }
+    },
+    {
+      "name": "LaMarcus Aldridge",
+      "school": "Texas",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "SAS",
+      "avatar": "01",
+      "conference": "Southeastern Conference",
+      "player_id": 200746,
+      "position": "Center-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 16,
+        "ast": 2,
+        "reb": 10,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.239,
+        "assists_pct": 0.2,
+        "rebounds_pct": 0.303,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Trey Lyles",
+      "school": "Kentucky",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "SAS",
+      "avatar": "08",
+      "conference": "Southeastern Conference",
+      "player_id": 1626168,
+      "position": "Forward",
+      "country": "Canada",
+      "game_stats": {
+        "pts": 8,
+        "ast": 0,
+        "reb": 14,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.119,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.424,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Lonnie Walker IV",
+      "school": "Miami (Florida)",
+      "school_type": "College",
+      "spriteIndex": 3,
+      "team_abbrev": "SAS",
+      "avatar": "03",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 1629022,
+      "position": "Guard-Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 8,
+        "ast": 1,
+        "reb": 1,
+        "stl": 2,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.119,
+        "assists_pct": 0.1,
+        "rebounds_pct": 0.03,
+        "defense_pct": 0.5
+      }
+    },
+    {
+      "name": "Derrick White",
+      "school": "Colorado",
+      "school_type": "College",
+      "spriteIndex": 4,
+      "team_abbrev": "SAS",
+      "avatar": "04",
+      "conference": "Big 12 Conference",
+      "player_id": 1628401,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 9,
+        "ast": 2,
+        "reb": 4,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.134,
+        "assists_pct": 0.2,
+        "rebounds_pct": 0.121,
+        "defense_pct": 0.25
+      }
+    }
+  ]
+}

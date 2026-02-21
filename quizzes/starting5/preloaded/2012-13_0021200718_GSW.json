@@ -1,0 +1,135 @@
+{
+  "season": "2012-13",
+  "game_id": "0021200718",
+  "team_abbr": "GSW",
+  "opponent_abbr": "HOU",
+  "matchup": "HOU vs GSW",
+  "game_date": "2013-02-05",
+  "players": [
+    {
+      "name": "Harrison Barnes",
+      "school": "North Carolina",
+      "school_type": "College",
+      "spriteIndex": 5,
+      "team_abbrev": "GSW",
+      "avatar": "05",
+      "conference": "Atlantic Coast Conference",
+      "player_id": 203084,
+      "position": "Forward",
+      "country": "USA",
+      "game_stats": {
+        "pts": 7,
+        "ast": 0,
+        "reb": 1,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.146,
+        "assists_pct": 0.0,
+        "rebounds_pct": 0.045,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "David Lee",
+      "school": "Florida",
+      "school_type": "College",
+      "spriteIndex": 6,
+      "team_abbrev": "GSW",
+      "avatar": "06",
+      "conference": "Southeastern Conference",
+      "player_id": 101135,
+      "position": "Forward-Center",
+      "country": "USA",
+      "game_stats": {
+        "pts": 18,
+        "ast": 2,
+        "reb": 7,
+        "stl": 0,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.375,
+        "assists_pct": 0.133,
+        "rebounds_pct": 0.318,
+        "defense_pct": 0.0
+      }
+    },
+    {
+      "name": "Andrew Bogut",
+      "school": "Utah",
+      "school_type": "College",
+      "spriteIndex": 9,
+      "team_abbrev": "GSW",
+      "avatar": "09",
+      "conference": "Big 12 Conference",
+      "player_id": 101106,
+      "position": "Center",
+      "country": "Australia",
+      "game_stats": {
+        "pts": 10,
+        "ast": 3,
+        "reb": 9,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.208,
+        "assists_pct": 0.2,
+        "rebounds_pct": 0.409,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Klay Thompson",
+      "school": "Washington State",
+      "school_type": "College",
+      "spriteIndex": 8,
+      "team_abbrev": "GSW",
+      "avatar": "08",
+      "conference": "Pac-12 Conference",
+      "player_id": 202691,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 6,
+        "ast": 1,
+        "reb": 1,
+        "stl": 1,
+        "blk": 0
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.125,
+        "assists_pct": 0.067,
+        "rebounds_pct": 0.045,
+        "defense_pct": 0.333
+      }
+    },
+    {
+      "name": "Stephen Curry",
+      "school": "Davidson",
+      "school_type": "College",
+      "spriteIndex": 1,
+      "team_abbrev": "GSW",
+      "avatar": "01",
+      "conference": "Atlantic 10 Conference",
+      "player_id": 201939,
+      "position": "Guard",
+      "country": "USA",
+      "game_stats": {
+        "pts": 7,
+        "ast": 9,
+        "reb": 4,
+        "stl": 0,
+        "blk": 1
+      },
+      "game_contribution_pct": {
+        "points_pct": 0.146,
+        "assists_pct": 0.6,
+        "rebounds_pct": 0.182,
+        "defense_pct": 0.333
+      }
+    }
+  ]
+}
