@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Japan",
+    "country_code": "JAP"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "Turkiye",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 12,
+      "name": "Seigo Narazaki",
+      "player_id": "27521",
+      "club": {
+        "name": "Nagoya Grampus",
+        "club_id": "1066",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1066.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Tsuneyasu Miyamoto",
+      "player_id": "27517",
+      "club": {
+        "name": "Gamba Osaka",
+        "club_id": "596",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/596.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Naoki Matsuda",
+      "player_id": "27515",
+      "club": {
+        "name": "Yokohama F. Marinos",
+        "club_id": "3828",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3828.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Koji Nakata",
+      "player_id": "27519",
+      "club": {
+        "name": "Kashima Antlers",
+        "club_id": "2241",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2241.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Junichi Inamoto",
+      "player_id": "3568",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 58.27272727272727,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Kazuyuki Toda",
+      "player_id": "4057",
+      "club": {
+        "name": "Shimizu S-Pulse",
+        "club_id": "1062",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1062.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Tomokazu Myojin",
+      "player_id": "79420",
+      "club": {
+        "name": "Kashiwa Reysol",
+        "club_id": "6632",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6632.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Shinji Ono",
+      "player_id": "4379",
+      "club": {
+        "name": "Feyenoord Rotterdam",
+        "club_id": "234",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/234.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Alex",
+      "player_id": "27523",
+      "club": {
+        "name": "Shimizu S-Pulse",
+        "club_id": "1062",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1062.png"
+      },
+      "position": {
+        "x": 56.87272727272727,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Hidetoshi Nakata",
+      "player_id": "5875",
+      "club": {
+        "name": "AC Parma",
+        "club_id": "130",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/130.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Akinori Nishizawa",
+      "player_id": "3337",
+      "club": {
+        "name": "Cerezo Osaka",
+        "club_id": "1022",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1022.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 17.1
+      }
+    }
+  ]
+}

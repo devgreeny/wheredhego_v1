@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Belgium",
+    "country_code": "BEL"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "Japan",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Geert De Vlieger",
+      "player_id": "3959",
+      "club": {
+        "name": "Willem II Tilburg",
+        "club_id": "403",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/403.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Eric Van Meir",
+      "player_id": "15635",
+      "club": {
+        "name": "Standard Li\u00e8ge",
+        "club_id": "3057",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3057.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Daniel Van Buyten",
+      "player_id": "4740",
+      "club": {
+        "name": "Olympique Marseille",
+        "club_id": "244",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/244.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Peter Van der Heyden",
+      "player_id": "9671",
+      "club": {
+        "name": "Club Brugge KV",
+        "club_id": "2282",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2282.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Jacky Peeters",
+      "player_id": "153",
+      "club": {
+        "name": "KAA Gent",
+        "club_id": "157",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/157.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Timmy Simons",
+      "player_id": "3441",
+      "club": {
+        "name": "Club Brugge KV",
+        "club_id": "2282",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2282.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Yves Vanderhaeghe",
+      "player_id": "9610",
+      "club": {
+        "name": "RSC Anderlecht",
+        "club_id": "58",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/58.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Bart Goor",
+      "player_id": "915",
+      "club": {
+        "name": "Hertha BSC",
+        "club_id": "44",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/44.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Johan Walem",
+      "player_id": "6153",
+      "club": {
+        "name": "Standard Li\u00e8ge",
+        "club_id": "3057",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3057.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Marc Wilmots",
+      "player_id": "286",
+      "club": {
+        "name": "FC Schalke 04",
+        "club_id": "33",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/33.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Gert Verheyen",
+      "player_id": "9672",
+      "club": {
+        "name": "Club Brugge KV",
+        "club_id": "2282",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2282.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

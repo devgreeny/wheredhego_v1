@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Iran",
+    "country_code": "IRA"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Mexico",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Ebrahim Mirzapour",
+      "player_id": "24645",
+      "club": {
+        "name": "Foolad FC",
+        "club_id": "6076",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6076.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Yahya Golmohammadi",
+      "player_id": "24642",
+      "club": {
+        "name": "Saba Battery FC",
+        "club_id": "7202",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7202.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Rahman Rezaei",
+      "player_id": "5218",
+      "club": {
+        "name": "FC Messina Peloro",
+        "club_id": "1104",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1104.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Mohammad Nosrati",
+      "player_id": "24620",
+      "club": {
+        "name": "PAS Tehran",
+        "club_id": "26312",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/26312.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Hossein Kaebi",
+      "player_id": "24643",
+      "club": {
+        "name": "Foolad FC",
+        "club_id": "6076",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6076.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Javad Nekounam",
+      "player_id": "24619",
+      "club": {
+        "name": "Sharjah FC",
+        "club_id": "13613",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13613.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Andranik Teymourian",
+      "player_id": "39938",
+      "club": {
+        "name": "FC Aboomoslem",
+        "club_id": "7390",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7390.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Ali Karimi",
+      "player_id": "15412",
+      "club": {
+        "name": "Bayern Munich",
+        "club_id": "27",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/27.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Mehdi Mahdavikia",
+      "player_id": "317",
+      "club": {
+        "name": "Hamburger SV",
+        "club_id": "41",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/41.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Vahid Hashemian",
+      "player_id": "305",
+      "club": {
+        "name": "Hannover 96",
+        "club_id": "42",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/42.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Ali Daei",
+      "player_id": "335",
+      "club": {
+        "name": "Saba Battery FC",
+        "club_id": "7202",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7202.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

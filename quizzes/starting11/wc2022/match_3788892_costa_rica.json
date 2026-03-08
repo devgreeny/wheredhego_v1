@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Costa Rica",
+    "country_code": "COS"
+  },
+  "match": {
+    "tournament": "World Cup 2022",
+    "stage": "Match",
+    "opponent": "Germany",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Keylor Navas",
+      "player_id": "79422",
+      "club": {
+        "name": "Paris Saint-Germain",
+        "club_id": "583",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Juan Pablo Vargas",
+      "player_id": "271907",
+      "club": {
+        "name": "Millonarios FC",
+        "club_id": "2350",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2350.png"
+      },
+      "position": {
+        "x": 61.55,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "\u00d3scar Duarte",
+      "player_id": "175323",
+      "club": {
+        "name": "Al-Wehda FC",
+        "club_id": "17209",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/17209.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Kendall Waston",
+      "player_id": "195540",
+      "club": {
+        "name": "Deportivo Saprissa",
+        "club_id": "4720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4720.png"
+      },
+      "position": {
+        "x": 38.45,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Bryan Oviedo",
+      "player_id": "124983",
+      "club": {
+        "name": "Real Salt Lake City",
+        "club_id": "6643",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6643.png"
+      },
+      "position": {
+        "x": 26.9,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Keysher Fuller",
+      "player_id": "525122",
+      "club": {
+        "name": "CS Herediano",
+        "club_id": "2677",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2677.png"
+      },
+      "position": {
+        "x": 73.1,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Yeltsin Tejeda",
+      "player_id": "194218",
+      "club": {
+        "name": "CS Herediano",
+        "club_id": "2677",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2677.png"
+      },
+      "position": {
+        "x": 58.4,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Celso Borges",
+      "player_id": "81532",
+      "club": {
+        "name": "LD Alajuelense",
+        "club_id": "6478",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6478.png"
+      },
+      "position": {
+        "x": 41.6,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Brandon Aguilera",
+      "player_id": "631996",
+      "club": {
+        "name": "AD Guanacasteca",
+        "club_id": "25769",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/25769.png"
+      },
+      "position": {
+        "x": 30.4,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Joel Campbell",
+      "player_id": "131248",
+      "club": {
+        "name": "Club Le\u00f3n FC",
+        "club_id": "4941",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4941.png"
+      },
+      "position": {
+        "x": 69.6,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Johan Venegas",
+      "player_id": "195424",
+      "club": {
+        "name": "LD Alajuelense",
+        "club_id": "6478",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6478.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 17.1
+      }
+    }
+  ]
+}

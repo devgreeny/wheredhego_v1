@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Spain",
+    "country_code": "SPA"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Bulgaria",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Andoni Zubizarreta",
+      "player_id": "8117",
+      "club": {
+        "name": "Valencia CF",
+        "club_id": "1049",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1049.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Rafael Alkorta",
+      "player_id": "101566",
+      "club": {
+        "name": "Athletic Bilbao",
+        "club_id": "621",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/621.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Miguel \u00c1ngel Nadal",
+      "player_id": "7676",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Sergi Barjuan",
+      "player_id": "8063",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Juan Carlos Aguilera",
+      "player_id": "7370",
+      "club": {
+        "name": "Atl\u00e9tico de Madrid",
+        "club_id": "13",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Fernando Hierro",
+      "player_id": "7513",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Guillermo Amor",
+      "player_id": "104046",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Luis Enrique",
+      "player_id": "7601",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Joseba Etxeberria",
+      "player_id": "7640",
+      "club": {
+        "name": "Athletic Bilbao",
+        "club_id": "621",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/621.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Alfonso",
+      "player_id": "7933",
+      "club": {
+        "name": "Real Betis Balompi\u00e9",
+        "club_id": "150",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/150.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Fernando Morientes",
+      "player_id": "7531",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Italy",
+    "country_code": "ITA"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "France",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Gianluigi Buffon",
+      "player_id": "5023",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 49.80909090909091,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Marco Materazzi",
+      "player_id": "5778",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 41.40909090909091,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Fabio Cannavaro",
+      "player_id": "5775",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 58.55909090909091,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Fabio Grosso",
+      "player_id": "6091",
+      "club": {
+        "name": "US Palermo",
+        "club_id": "458",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/458.png"
+      },
+      "position": {
+        "x": 27.059090909090905,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Gianluca Zambrotta",
+      "player_id": "5757",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 72.9090909090909,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Andrea Pirlo",
+      "player_id": "5817",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 58.20909090909091,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Gennaro Gattuso",
+      "player_id": "5813",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 42.80909090909091,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Mauro Camoranesi",
+      "player_id": "5762",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 67.3090909090909,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Simone Perrotta",
+      "player_id": "5922",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 32.30909090909091,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Francesco Totti",
+      "player_id": "5958",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 49.80909090909091,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Luca Toni",
+      "player_id": "5980",
+      "club": {
+        "name": "ACF Fiorentina",
+        "club_id": "430",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/430.png"
+      },
+      "position": {
+        "x": 49.80909090909091,
+        "y": 17.1
+      }
+    }
+  ]
+}

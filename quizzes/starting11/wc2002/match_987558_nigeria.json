@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Nigeria",
+    "country_code": "NIG"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "England",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 22,
+      "name": "Vincent Enyeama",
+      "player_id": "37760",
+      "club": {
+        "name": "Enyimba Aba",
+        "club_id": "645",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/645.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Isaac Okoronkwo",
+      "player_id": "6176",
+      "club": {
+        "name": "Shakhtar Donetsk",
+        "club_id": "660",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/660.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Efe Sodje",
+      "player_id": "41545",
+      "club": {
+        "name": "Crewe Alexandra",
+        "club_id": "1042",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1042.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Ifeanyi Udeze",
+      "player_id": "3654",
+      "club": {
+        "name": "PAOK Thessaloniki",
+        "club_id": "1091",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1091.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Joseph Yobo",
+      "player_id": "3270",
+      "club": {
+        "name": "CD Tenerife",
+        "club_id": "648",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/648.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Justice Christopher",
+      "player_id": "16556",
+      "club": {
+        "name": "Royal Antwerp FC",
+        "club_id": "1096",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1096.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Jay-Jay Okocha",
+      "player_id": "3708",
+      "club": {
+        "name": "Paris Saint-Germain",
+        "club_id": "583",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+      },
+      "position": {
+        "x": 63.93636363636363,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Femi Opabunmi",
+      "player_id": "3891",
+      "club": {
+        "name": "Shooting Stars Sports Club",
+        "club_id": "5739",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5739.png"
+      },
+      "position": {
+        "x": 35.93636363636364,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "James Obiorah",
+      "player_id": "2823",
+      "club": {
+        "name": "Lokomotiv Moskau",
+        "club_id": "932",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/932.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Benedict Akwuegbu",
+      "player_id": "5007",
+      "club": {
+        "name": "Tianjin Runyulong",
+        "club_id": "2479",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2479.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Julius Aghahowa",
+      "player_id": "14925",
+      "club": {
+        "name": "Shakhtar Donetsk",
+        "club_id": "660",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/660.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

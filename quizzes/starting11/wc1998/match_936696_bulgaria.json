@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Bulgaria",
+    "country_code": "BUL"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Spain",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Zdravko Zdravkov",
+      "player_id": "3000",
+      "club": {
+        "name": "Istanbulspor",
+        "club_id": "924",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/924.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Trifon Ivanov",
+      "player_id": "91918",
+      "club": {
+        "name": "CSKA Sofia",
+        "club_id": "208",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/208.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Gosho Ginchev",
+      "player_id": "106899",
+      "club": {
+        "name": "Antalyaspor",
+        "club_id": "589",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/589.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Radostin Kishishev",
+      "player_id": "3001",
+      "club": {
+        "name": "Bursaspor",
+        "club_id": "20",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/20.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Anatoli Nankov",
+      "player_id": "133902",
+      "club": {
+        "name": "Lokomotiv Sofia",
+        "club_id": "730",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/730.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Krasimir Balakov",
+      "player_id": "584",
+      "club": {
+        "name": "VfB Stuttgart",
+        "club_id": "79",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/79.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Daniel Borimirov",
+      "player_id": "547",
+      "club": {
+        "name": "TSV 1860 Munich",
+        "club_id": "72",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/72.png"
+      },
+      "position": {
+        "x": 69.6,
+        "y": 37.4
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Ivaylo Yordanov",
+      "player_id": "102332",
+      "club": {
+        "name": "Sporting CP",
+        "club_id": "336",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/336.png"
+      },
+      "position": {
+        "x": 30.4,
+        "y": 37.4
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Georgi Bachev",
+      "player_id": "133891",
+      "club": {
+        "name": "Slavia Sofia",
+        "club_id": "675",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/675.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Emil Kostadinov",
+      "player_id": "17167",
+      "club": {
+        "name": "CSKA Sofia",
+        "club_id": "208",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/208.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Hristo Stoichkov",
+      "player_id": "7938",
+      "club": {
+        "name": "Al-Nassr FC",
+        "club_id": "18544",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18544.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 17.1
+      }
+    }
+  ]
+}

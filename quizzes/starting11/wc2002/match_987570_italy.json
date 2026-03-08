@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Italy",
+    "country_code": "ITA"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "South Korea",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Gianluigi Buffon",
+      "player_id": "5023",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Mark Iuliano",
+      "player_id": "5750",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Paolo Maldini",
+      "player_id": "5803",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Francesco Coco",
+      "player_id": "3508",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Christian Panucci",
+      "player_id": "5940",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Cristiano Zanetti",
+      "player_id": "5783",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Gianluca Zambrotta",
+      "player_id": "5757",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Damiano Tommasi",
+      "player_id": "5951",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Francesco Totti",
+      "player_id": "5958",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 30.4
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Alessandro Del Piero",
+      "player_id": "4289",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Christian Vieri",
+      "player_id": "5797",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    }
+  ]
+}

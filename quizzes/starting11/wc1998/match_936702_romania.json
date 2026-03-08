@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Romania",
+    "country_code": "ROM"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Tunisia",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 12,
+      "name": "Bogdan Stelea",
+      "player_id": "32185",
+      "club": {
+        "name": "UD Salamanca",
+        "club_id": "1087",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1087.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Anton Dobo\u0219",
+      "player_id": "103214",
+      "club": {
+        "name": "AEK Athens",
+        "club_id": "2441",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2441.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Liviu Ciobotariu",
+      "player_id": "103212",
+      "club": {
+        "name": "FC National Bukarest",
+        "club_id": "2754",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2754.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Cristian Dulca",
+      "player_id": "103215",
+      "club": {
+        "name": "Rapid Bucharest ",
+        "club_id": "455",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/455.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Constantin G\u00e2lc\u0103",
+      "player_id": "7835",
+      "club": {
+        "name": "RCD Espanyol Barcelona",
+        "club_id": "714",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/714.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Dan Petrescu",
+      "player_id": "102023",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 69.6,
+        "y": 32.5
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Dorinel Munteanu",
+      "player_id": "666",
+      "club": {
+        "name": "1.FC K\u00f6ln",
+        "club_id": "3",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3.png"
+      },
+      "position": {
+        "x": 30.4,
+        "y": 32.5
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Gheorghe Hagi",
+      "player_id": "7939",
+      "club": {
+        "name": "Galatasaray",
+        "club_id": "141",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/141.png"
+      },
+      "position": {
+        "x": 59.8,
+        "y": 35.3
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Lucian Marinescu",
+      "player_id": "13881",
+      "club": {
+        "name": "Rapid Bucharest ",
+        "club_id": "455",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/455.png"
+      },
+      "position": {
+        "x": 40.2,
+        "y": 35.3
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Ilie Dumitrescu",
+      "player_id": "102020",
+      "club": {
+        "name": "CF Atlante",
+        "club_id": "6709",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6709.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Marius L\u0103c\u0103tu\u015f",
+      "player_id": "103220",
+      "club": {
+        "name": "Steaua Bucharest",
+        "club_id": "301",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/301.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

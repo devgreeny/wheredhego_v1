@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Russia",
+    "country_code": "RUS"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "Japan",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Ruslan Nigmatullin",
+      "player_id": "9652",
+      "club": {
+        "name": "Hellas Verona",
+        "club_id": "276",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/276.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Yuriy Nikiforov",
+      "player_id": "4492",
+      "club": {
+        "name": "PSV Eindhoven",
+        "club_id": "383",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/383.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Viktor Onopko",
+      "player_id": "15298",
+      "club": {
+        "name": "Real Oviedo",
+        "club_id": "2497",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2497.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Yuriy Kovtun",
+      "player_id": "15100",
+      "club": {
+        "name": "Spartak Moscow",
+        "club_id": "232",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/232.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Andrey Solomatin",
+      "player_id": "15374",
+      "club": {
+        "name": "CSKA Moscow",
+        "club_id": "2410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2410.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Aleksey Smertin",
+      "player_id": "5379",
+      "club": {
+        "name": "FC Girondins Bordeaux",
+        "club_id": "40",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/40.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Egor Titov",
+      "player_id": "15082",
+      "club": {
+        "name": "Spartak Moscow",
+        "club_id": "232",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/232.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Marat Izmailov",
+      "player_id": "9645",
+      "club": {
+        "name": "Lokomotiv Moskau",
+        "club_id": "932",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/932.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Valeriy Karpin",
+      "player_id": "7472",
+      "club": {
+        "name": "Celta de Vigo",
+        "club_id": "940",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/940.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Igor Semshov",
+      "player_id": "15112",
+      "club": {
+        "name": "Torpedo Moskau",
+        "club_id": "1186",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1186.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Ruslan Pimenov",
+      "player_id": "9657",
+      "club": {
+        "name": "Lokomotiv Moskau",
+        "club_id": "932",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/932.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "France",
+    "country_code": "FRA"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Denmark",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 16,
+      "name": "Fabien Barthez",
+      "player_id": "3289",
+      "club": {
+        "name": "AS Monaco",
+        "club_id": "162",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/162.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Marcel Desailly",
+      "player_id": "3154",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Frank Leboeuf",
+      "player_id": "5314",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Vincent Candela",
+      "player_id": "5939",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Christian Karembeu",
+      "player_id": "9209",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Emmanuel Petit",
+      "player_id": "3166",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Patrick Vieira",
+      "player_id": "3183",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Robert Pir\u00e8s",
+      "player_id": "3185",
+      "club": {
+        "name": "FC Metz",
+        "club_id": "347",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/347.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Bernard Diom\u00e8de",
+      "player_id": "3920",
+      "club": {
+        "name": "AJ Auxerre",
+        "club_id": "290",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/290.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Youri Djorkaeff",
+      "player_id": "4",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "David Trezeguet",
+      "player_id": "4146",
+      "club": {
+        "name": "AS Monaco",
+        "club_id": "162",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/162.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

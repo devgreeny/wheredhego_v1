@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Brazil",
+    "country_code": "BRA"
+  },
+  "match": {
+    "tournament": "World Cup 2022",
+    "stage": "Quarter-Final",
+    "date": "2022-12-09",
+    "opponent": "Croatia"
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Alisson",
+      "player_id": "105470",
+      "club": {
+        "name": "Liverpool FC",
+        "club_id": "31",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/31.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Thiago Silva",
+      "player_id": "29241",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Marquinhos",
+      "player_id": "181767",
+      "club": {
+        "name": "Paris Saint-Germain",
+        "club_id": "583",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Danilo",
+      "player_id": "145707",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "\u00c9der Milit\u00e3o",
+      "player_id": "401530",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Casemiro",
+      "player_id": "16306",
+      "club": {
+        "name": "Manchester United",
+        "club_id": "985",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/985.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Lucas Paquet\u00e1",
+      "player_id": "444523",
+      "club": {
+        "name": "West Ham United",
+        "club_id": "379",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/379.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Vinicius Junior",
+      "player_id": "371998",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Raphinha",
+      "player_id": "411295",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Neymar",
+      "player_id": "68290",
+      "club": {
+        "name": "Paris Saint-Germain",
+        "club_id": "583",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Richarlison",
+      "player_id": "378710",
+      "club": {
+        "name": "Tottenham Hotspur",
+        "club_id": "148",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/148.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

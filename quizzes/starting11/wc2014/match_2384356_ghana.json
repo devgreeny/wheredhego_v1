@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Ghana",
+    "country_code": "GHA"
+  },
+  "match": {
+    "tournament": "World Cup 2014",
+    "stage": "Match",
+    "opponent": "Germany",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 16,
+      "name": "Fatawu Dauda",
+      "player_id": "64348",
+      "club": {
+        "name": "Orlando Pirates",
+        "club_id": "2557",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2557.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Jonathan Mensah",
+      "player_id": "110622",
+      "club": {
+        "name": "FC \u00c9vian Thonon Gaillard",
+        "club_id": "14171",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/14171.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "John Boye",
+      "player_id": "85585",
+      "club": {
+        "name": "Stade Rennais FC",
+        "club_id": "273",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/273.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Kwadwo Asamoah",
+      "player_id": "63531",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Harrison Afful",
+      "player_id": "65830",
+      "club": {
+        "name": "Esperance Tunis",
+        "club_id": "3342",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3342.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Mohammed Rabiu",
+      "player_id": "67721",
+      "club": {
+        "name": "Kuban Krasnodar (-2018)",
+        "club_id": "2439",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2439.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Sulley Muntari",
+      "player_id": "17129",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Kevin-Prince Boateng",
+      "player_id": "16922",
+      "club": {
+        "name": "FC Schalke 04",
+        "club_id": "33",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/33.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Andr\u00e9 Ayew",
+      "player_id": "45403",
+      "club": {
+        "name": "Olympique Marseille",
+        "club_id": "244",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/244.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Christian Atsu",
+      "player_id": "186997",
+      "club": {
+        "name": "Vitesse Arnhem",
+        "club_id": "499",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/499.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Asamoah Gyan",
+      "player_id": "26802",
+      "club": {
+        "name": "Al-Ain FC",
+        "club_id": "2150",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2150.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

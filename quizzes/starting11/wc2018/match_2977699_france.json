@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "France",
+    "country_code": "FRA"
+  },
+  "match": {
+    "tournament": "World Cup 2018",
+    "stage": "Match",
+    "opponent": "Denmark",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 16,
+      "name": "Steve Mandanda",
+      "player_id": "23951",
+      "club": {
+        "name": "Olympique Marseille",
+        "club_id": "244",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/244.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Presnel Kimpembe",
+      "player_id": "282041",
+      "club": {
+        "name": "Paris Saint-Germain",
+        "club_id": "583",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Rapha\u00ebl Varane",
+      "player_id": "164770",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Lucas Hern\u00e1ndez",
+      "player_id": "281963",
+      "club": {
+        "name": "Atl\u00e9tico de Madrid",
+        "club_id": "13",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Djibril Sidib\u00e9",
+      "player_id": "161869",
+      "club": {
+        "name": "AS Monaco",
+        "club_id": "162",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/162.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "N'Golo Kant\u00e9",
+      "player_id": "225083",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Steven Nzonzi",
+      "player_id": "73734",
+      "club": {
+        "name": "Sevilla FC",
+        "club_id": "368",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Thomas Lemar",
+      "player_id": "205562",
+      "club": {
+        "name": "AS Monaco",
+        "club_id": "162",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/162.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Ousmane Demb\u00e9l\u00e9",
+      "player_id": "288230",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Antoine Griezmann",
+      "player_id": "125781",
+      "club": {
+        "name": "Atl\u00e9tico de Madrid",
+        "club_id": "13",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Olivier Giroud",
+      "player_id": "82442",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

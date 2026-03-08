@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Croatia",
+    "country_code": "CRO"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Netherlands",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Drazen Ladic",
+      "player_id": "103809",
+      "club": {
+        "name": "NK Croatia Zagreb",
+        "club_id": "419",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/419.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Igor Stimac",
+      "player_id": "103812",
+      "club": {
+        "name": "Derby County",
+        "club_id": "22",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/22.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Slaven Bilic",
+      "player_id": "41137",
+      "club": {
+        "name": "Everton FC",
+        "club_id": "29",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/29.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Zvonimir Soldo",
+      "player_id": "610",
+      "club": {
+        "name": "VfB Stuttgart",
+        "club_id": "79",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/79.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Krunoslav Jurcic",
+      "player_id": "133839",
+      "club": {
+        "name": "NK Croatia Zagreb",
+        "club_id": "419",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/419.png"
+      },
+      "position": {
+        "x": 39.5,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Aljosa Asanovic",
+      "player_id": "103806",
+      "club": {
+        "name": "Panathinaikos FC",
+        "club_id": "265",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/265.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 40.2
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Robert Prosinecki",
+      "player_id": "8013",
+      "club": {
+        "name": "NK Croatia Zagreb",
+        "club_id": "419",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/419.png"
+      },
+      "position": {
+        "x": 60.5,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Mario Stanic",
+      "player_id": "3164",
+      "club": {
+        "name": "AC Parma",
+        "club_id": "130",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/130.png"
+      },
+      "position": {
+        "x": 71.0,
+        "y": 33.9
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Robert Jarni",
+      "player_id": "29556",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 29.0,
+        "y": 33.9
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Zvonimir Boban",
+      "player_id": "89545",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Davor Suker",
+      "player_id": "1407",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

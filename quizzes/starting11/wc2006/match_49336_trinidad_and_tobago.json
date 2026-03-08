@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Trinidad and Tobago",
+    "country_code": "TRI"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Paraguay",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 21,
+      "name": "Kelvin Jack",
+      "player_id": "21378",
+      "club": {
+        "name": "Dundee FC",
+        "club_id": "511",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/511.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Brent Sancho",
+      "player_id": "12849",
+      "club": {
+        "name": "Gillingham FC",
+        "club_id": "2814",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2814.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Dennis Lawrence",
+      "player_id": "35844",
+      "club": {
+        "name": "Wrexham AFC",
+        "club_id": "1112",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1112.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Avery John",
+      "player_id": "35843",
+      "club": {
+        "name": "New England Revolution",
+        "club_id": "626",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/626.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Carlos Edwards",
+      "player_id": "33489",
+      "club": {
+        "name": "Luton Town",
+        "club_id": "1031",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1031.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Aurtis Whitley",
+      "player_id": "35848",
+      "club": {
+        "name": "San Juan Jabloteh",
+        "club_id": "5581",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5581.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Dwight Yorke",
+      "player_id": "3223",
+      "club": {
+        "name": "Sydney FC",
+        "club_id": "8054",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8054.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Chris Birchall",
+      "player_id": "35840",
+      "club": {
+        "name": "Port Vale FC",
+        "club_id": "1211",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1211.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Densill Theobald",
+      "player_id": "37126",
+      "club": {
+        "name": "Falkirk FC",
+        "club_id": "1191",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1191.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Cornell Glen",
+      "player_id": "35841",
+      "club": {
+        "name": "Los Angeles Galaxy",
+        "club_id": "1061",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1061.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Stern John",
+      "player_id": "3793",
+      "club": {
+        "name": "Coventry City",
+        "club_id": "990",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/990.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Algeria",
+    "country_code": "ALG"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "Slovenia",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 16,
+      "name": "Fawzi Chaouchi",
+      "player_id": "124267",
+      "club": {
+        "name": "ES S\u00e9tif",
+        "club_id": "18272",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18272.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Anthar Yahia",
+      "player_id": "5586",
+      "club": {
+        "name": "VfL Bochum",
+        "club_id": "80",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/80.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Madjid Bougherra",
+      "player_id": "38074",
+      "club": {
+        "name": "Rangers FC",
+        "club_id": "124",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/124.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Rafik Halliche",
+      "player_id": "67815",
+      "club": {
+        "name": "CD Nacional",
+        "club_id": "982",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/982.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Mehdi Lacen",
+      "player_id": "35539",
+      "club": {
+        "name": "Racing Santander",
+        "club_id": "630",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/630.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Hassan Yebda",
+      "player_id": "12351",
+      "club": {
+        "name": "Portsmouth FC",
+        "club_id": "1020",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1020.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Foued Kadir",
+      "player_id": "57403",
+      "club": {
+        "name": "Valenciennes FC",
+        "club_id": "1423",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1423.png"
+      },
+      "position": {
+        "x": 69.6,
+        "y": 37.4
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Nadir Belhadj",
+      "player_id": "23892",
+      "club": {
+        "name": "Portsmouth FC",
+        "club_id": "1020",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1020.png"
+      },
+      "position": {
+        "x": 30.4,
+        "y": 37.4
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Karim Ziani",
+      "player_id": "25976",
+      "club": {
+        "name": "VfL Wolfsburg",
+        "club_id": "82",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/82.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Karim Matmour",
+      "player_id": "19385",
+      "club": {
+        "name": "Borussia M\u00f6nchengladbach",
+        "club_id": "18",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Rafik Djebbour",
+      "player_id": "20903",
+      "club": {
+        "name": "AEK Athens",
+        "club_id": "2441",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2441.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 17.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Saudi Arabia",
+    "country_code": "SAU"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Spain",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 21,
+      "name": "Mabrouk Zaid",
+      "player_id": "31668",
+      "club": {
+        "name": "Al-Ittihad Club",
+        "club_id": "8023",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8023.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Hamad Al-Montashari",
+      "player_id": "31662",
+      "club": {
+        "name": "Al-Ittihad Club",
+        "club_id": "8023",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8023.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Redha Tukar",
+      "player_id": "31667",
+      "club": {
+        "name": "Al-Ittihad Club",
+        "club_id": "8023",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8023.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Abdulaziz Al-Khathran",
+      "player_id": "26589",
+      "club": {
+        "name": "Al-Hilal SFC",
+        "club_id": "1114",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1114.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Ahmad Al-Dokhi",
+      "player_id": "31665",
+      "club": {
+        "name": "Al-Ittihad Club",
+        "club_id": "8023",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8023.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Saud Kariri",
+      "player_id": "31673",
+      "club": {
+        "name": "Al-Ittihad Club",
+        "club_id": "8023",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8023.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Khaled Aziz",
+      "player_id": "31669",
+      "club": {
+        "name": "Al-Hilal SFC",
+        "club_id": "1114",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1114.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Mohammed Noor",
+      "player_id": "25688",
+      "club": {
+        "name": "Al-Ittihad Club",
+        "club_id": "8023",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8023.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Hussein Abdulghani",
+      "player_id": "78825",
+      "club": {
+        "name": "Al-Ahli SFC",
+        "club_id": "18487",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18487.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Saad Al-Harthi",
+      "player_id": "31674",
+      "club": {
+        "name": "Al-Ittihad Club",
+        "club_id": "8023",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8023.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Sami Al-Jaber",
+      "player_id": "31384",
+      "club": {
+        "name": "Al-Hilal SFC",
+        "club_id": "1114",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1114.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

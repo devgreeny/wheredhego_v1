@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Iceland",
+    "country_code": "ICE"
+  },
+  "match": {
+    "tournament": "World Cup 2018",
+    "stage": "Match",
+    "opponent": "Croatia",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Hannes Th\u00f3r Halld\u00f3rsson",
+      "player_id": "103440",
+      "club": {
+        "name": "Randers FC",
+        "club_id": "5724",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5724.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Sverrir Ingi Ingason",
+      "player_id": "137648",
+      "club": {
+        "name": "FC Rostov",
+        "club_id": "1083",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1083.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Ragnar Sigurdsson",
+      "player_id": "46478",
+      "club": {
+        "name": "FC Rostov",
+        "club_id": "1083",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1083.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "H\u00f6rdur Magn\u00fasson",
+      "player_id": "130353",
+      "club": {
+        "name": "Bristol City",
+        "club_id": "698",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/698.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Birkir M\u00e1r Saevarsson",
+      "player_id": "51188",
+      "club": {
+        "name": "Valur Reykjav\u00edk",
+        "club_id": "1033",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1033.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Emil Hallfredsson",
+      "player_id": "22673",
+      "club": {
+        "name": "Udinese Calcio",
+        "club_id": "410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/410.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Aron Gunnarsson",
+      "player_id": "63821",
+      "club": {
+        "name": "Cardiff City",
+        "club_id": "603",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/603.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Birkir Bjarnason",
+      "player_id": "34453",
+      "club": {
+        "name": "Aston Villa",
+        "club_id": "405",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/405.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Gylfi Sigurdsson",
+      "player_id": "90466",
+      "club": {
+        "name": "Everton FC",
+        "club_id": "29",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/29.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "J\u00f3hann Berg Gudmundsson",
+      "player_id": "89231",
+      "club": {
+        "name": "Burnley FC",
+        "club_id": "1132",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1132.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Alfred Finnbogason",
+      "player_id": "90024",
+      "club": {
+        "name": "FC Augsburg",
+        "club_id": "167",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/167.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

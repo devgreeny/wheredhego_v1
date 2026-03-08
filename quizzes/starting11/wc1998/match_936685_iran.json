@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Iran",
+    "country_code": "IRA"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "United States",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Ahmadreza Abedzadeh",
+      "player_id": "102986",
+      "club": {
+        "name": "Piroozi FC",
+        "club_id": "6079",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6079.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Mohammad Khakpour",
+      "player_id": "103002",
+      "club": {
+        "name": "Bahman Karaj",
+        "club_id": "87191",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/87191.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Nader Mohammadkhani",
+      "player_id": "103007",
+      "club": {
+        "name": "Polyacryl Esfahan FC",
+        "club_id": "34892",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/34892.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Mehdi Pashazadeh",
+      "player_id": "5279",
+      "club": {
+        "name": "Esteghlal FC",
+        "club_id": "1076",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1076.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Karim Bagheri",
+      "player_id": "14829",
+      "club": {
+        "name": "Arminia Bielefeld",
+        "club_id": "10",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/10.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Hamid Estili",
+      "player_id": "103005",
+      "club": {
+        "name": "Bahman Karaj",
+        "club_id": "87191",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/87191.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Javad Zarincheh",
+      "player_id": "103019",
+      "club": {
+        "name": "Esteghlal FC",
+        "club_id": "1076",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1076.png"
+      },
+      "position": {
+        "x": 69.6,
+        "y": 37.4
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Mehrdad Minavand",
+      "player_id": "103015",
+      "club": {
+        "name": "Piroozi FC",
+        "club_id": "6079",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6079.png"
+      },
+      "position": {
+        "x": 30.4,
+        "y": 37.4
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Khodadad Azizi",
+      "player_id": "14880",
+      "club": {
+        "name": "1.FC K\u00f6ln",
+        "club_id": "3",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Mehdi Mahdavikia",
+      "player_id": "317",
+      "club": {
+        "name": "Piroozi FC",
+        "club_id": "6079",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6079.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Ali Daei",
+      "player_id": "335",
+      "club": {
+        "name": "Arminia Bielefeld",
+        "club_id": "10",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/10.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 17.1
+      }
+    }
+  ]
+}

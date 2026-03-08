@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Poland",
+    "country_code": "POL"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "United States",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 12,
+      "name": "Radoslaw Majdan",
+      "player_id": "7320",
+      "club": {
+        "name": "G\u00f6ztepe",
+        "club_id": "1467",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1467.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Jacek Zielinski",
+      "player_id": "15237",
+      "club": {
+        "name": "Legia Warszawa",
+        "club_id": "255",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/255.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Arkadiusz Glowacki",
+      "player_id": "14896",
+      "club": {
+        "name": "Wisla Krak\u00f3w",
+        "club_id": "422",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/422.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Marek Ko\u017ami\u0144ski",
+      "player_id": "18072",
+      "club": {
+        "name": "Ancona Calcio",
+        "club_id": "1388",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1388.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Tomasz Klos",
+      "player_id": "705",
+      "club": {
+        "name": "1.FC Kaiserslautern",
+        "club_id": "2",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Maciej Murawski",
+      "player_id": "1592",
+      "club": {
+        "name": "Legia Warszawa",
+        "club_id": "255",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/255.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Cezary Kucharski",
+      "player_id": "17226",
+      "club": {
+        "name": "Legia Warszawa",
+        "club_id": "255",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/255.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Jacek Krzynowek",
+      "player_id": "765",
+      "club": {
+        "name": "1.FC Nuremberg",
+        "club_id": "4",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Maciej Zurawski",
+      "player_id": "14922",
+      "club": {
+        "name": "Wisla Krak\u00f3w",
+        "club_id": "422",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/422.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Pawel Kryszalowicz",
+      "player_id": "731",
+      "club": {
+        "name": "Eintracht Frankfurt",
+        "club_id": "24",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/24.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Emmanuel Olisadebe",
+      "player_id": "4149",
+      "club": {
+        "name": "Panathinaikos FC",
+        "club_id": "265",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/265.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

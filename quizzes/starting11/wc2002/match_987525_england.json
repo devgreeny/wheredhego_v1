@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "England",
+    "country_code": "ENG"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "Sweden",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "David Seaman",
+      "player_id": "3141",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Rio Ferdinand",
+      "player_id": "3235",
+      "club": {
+        "name": "Leeds United",
+        "club_id": "399",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/399.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Sol Campbell",
+      "player_id": "3198",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Ashley Cole",
+      "player_id": "3182",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Danny Mills",
+      "player_id": "3743",
+      "club": {
+        "name": "Leeds United",
+        "club_id": "399",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/399.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Owen Hargreaves",
+      "player_id": "201",
+      "club": {
+        "name": "Bayern Munich",
+        "club_id": "27",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/27.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Paul Scholes",
+      "player_id": "3397",
+      "club": {
+        "name": "Manchester United",
+        "club_id": "985",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/985.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "David Beckham",
+      "player_id": "3139",
+      "club": {
+        "name": "Manchester United",
+        "club_id": "985",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/985.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Darius Vassell",
+      "player_id": "3236",
+      "club": {
+        "name": "Aston Villa",
+        "club_id": "405",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/405.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Michael Owen",
+      "player_id": "1397",
+      "club": {
+        "name": "Liverpool FC",
+        "club_id": "31",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/31.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Emile Heskey",
+      "player_id": "3142",
+      "club": {
+        "name": "Liverpool FC",
+        "club_id": "31",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/31.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

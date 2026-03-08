@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Argentina",
+    "country_code": "ARG"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "Greece",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 22,
+      "name": "Sergio Romero",
+      "player_id": "30690",
+      "club": {
+        "name": "AZ Alkmaar",
+        "club_id": "1090",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1090.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Mart\u00edn Demichelis",
+      "player_id": "2963",
+      "club": {
+        "name": "Bayern Munich",
+        "club_id": "27",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/27.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Nicol\u00e1s Burdisso",
+      "player_id": "3417",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Clemente Rodr\u00edguez",
+      "player_id": "20681",
+      "club": {
+        "name": "Club Estudiantes de La Plata",
+        "club_id": "288",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/288.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Nicol\u00e1s Otamendi",
+      "player_id": "54781",
+      "club": {
+        "name": "CA V\u00e9lez Sarsfield",
+        "club_id": "1029",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1029.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Mario Bolatti",
+      "player_id": "52343",
+      "club": {
+        "name": "ACF Fiorentina",
+        "club_id": "430",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/430.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Juan Sebasti\u00e1n Ver\u00f3n",
+      "player_id": "3143",
+      "club": {
+        "name": "Club Estudiantes de La Plata",
+        "club_id": "288",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/288.png"
+      },
+      "position": {
+        "x": 63.93636363636363,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Lionel Messi",
+      "player_id": "28003",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Maxi Rodr\u00edguez",
+      "player_id": "7895",
+      "club": {
+        "name": "Liverpool FC",
+        "club_id": "31",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/31.png"
+      },
+      "position": {
+        "x": 35.93636363636364,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Sergio Ag\u00fcero",
+      "player_id": "26399",
+      "club": {
+        "name": "Atl\u00e9tico de Madrid",
+        "club_id": "13",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Diego Milito",
+      "player_id": "22202",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

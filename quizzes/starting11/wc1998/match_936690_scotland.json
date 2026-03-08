@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Scotland",
+    "country_code": "SCO"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Morocco",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Jim Leighton",
+      "player_id": "91920",
+      "club": {
+        "name": "Aberdeen FC",
+        "club_id": "370",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/370.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Colin Hendry",
+      "player_id": "103642",
+      "club": {
+        "name": "Blackburn Rovers",
+        "club_id": "164",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/164.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "David Weir",
+      "player_id": "3312",
+      "club": {
+        "name": "Heart of Midlothian FC",
+        "club_id": "43",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/43.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Tom Boyd",
+      "player_id": "101132",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 22,
+      "name": "Christian Dailly",
+      "player_id": "3799",
+      "club": {
+        "name": "Derby County",
+        "club_id": "22",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/22.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 40.2
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Paul Lambert",
+      "player_id": "3982",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 39.5,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Craig Burley",
+      "player_id": "11319",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 60.5,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Jackie McNamara",
+      "player_id": "3479",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 71.0,
+        "y": 33.9
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "John Collins",
+      "player_id": "3663",
+      "club": {
+        "name": "AS Monaco",
+        "club_id": "162",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/162.png"
+      },
+      "position": {
+        "x": 29.0,
+        "y": 33.9
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Kevin Gallacher",
+      "player_id": "101134",
+      "club": {
+        "name": "Blackburn Rovers",
+        "club_id": "164",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/164.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Gordon Durie",
+      "player_id": "101129",
+      "club": {
+        "name": "Rangers FC",
+        "club_id": "124",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/124.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

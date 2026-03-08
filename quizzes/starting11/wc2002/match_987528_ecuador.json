@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Ecuador",
+    "country_code": "ECU"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "Italy",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Jos\u00e9 Francisco Cevallos",
+      "player_id": "10108",
+      "club": {
+        "name": "Barcelona SC Guayaquil",
+        "club_id": "3523",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3523.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Iv\u00e1n Hurtado",
+      "player_id": "15639",
+      "club": {
+        "name": "Barcelona SC Guayaquil",
+        "club_id": "3523",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3523.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Ra\u00fal Guerr\u00f3n",
+      "player_id": "37374",
+      "club": {
+        "name": "Deportivo Quito",
+        "club_id": "944",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/944.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Augusto Poroso",
+      "player_id": "323463",
+      "club": {
+        "name": "CS Emelec",
+        "club_id": "4561",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4561.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Ulises de la Cruz",
+      "player_id": "3842",
+      "club": {
+        "name": "Hibernian FC",
+        "club_id": "903",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/903.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Edwin Tenorio",
+      "player_id": "37383",
+      "club": {
+        "name": "Barcelona SC Guayaquil",
+        "club_id": "3523",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3523.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Alfonso Obreg\u00f3n",
+      "player_id": "73633",
+      "club": {
+        "name": "LDU Quito",
+        "club_id": "9855",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9855.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "\u00c1lex Aguinaga",
+      "player_id": "80438",
+      "club": {
+        "name": "Club Necaxa",
+        "club_id": "1146",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1146.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Cl\u00e9ber Chal\u00e1",
+      "player_id": "80023",
+      "club": {
+        "name": "Southampton FC",
+        "club_id": "180",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/180.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "\u00c9dison M\u00e9ndez",
+      "player_id": "2816",
+      "club": {
+        "name": "Deportivo Quito",
+        "club_id": "944",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/944.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Agust\u00edn Delgado",
+      "player_id": "3849",
+      "club": {
+        "name": "Southampton FC",
+        "club_id": "180",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/180.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

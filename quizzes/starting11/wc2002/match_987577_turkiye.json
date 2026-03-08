@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Turkiye",
+    "country_code": "TUR"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "South Korea",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "R\u00fc\u015ft\u00fc Re\u00e7ber",
+      "player_id": "4077",
+      "club": {
+        "name": "Fenerbahce",
+        "club_id": "36",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/36.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "B\u00fclent Korkmaz",
+      "player_id": "3380",
+      "club": {
+        "name": "Galatasaray",
+        "club_id": "141",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/141.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Alpay \u00d6zalan",
+      "player_id": "3504",
+      "club": {
+        "name": "Aston Villa",
+        "club_id": "405",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/405.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Erg\u00fcn Penbe",
+      "player_id": "8052",
+      "club": {
+        "name": "Galatasaray",
+        "club_id": "141",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/141.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Fatih Akyel",
+      "player_id": "6857",
+      "club": {
+        "name": "Fenerbahce",
+        "club_id": "36",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/36.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Tugay Kerimo\u011flu",
+      "player_id": "3703",
+      "club": {
+        "name": "Blackburn Rovers",
+        "club_id": "164",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/164.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 22,
+      "name": "\u00dcmit Davala",
+      "player_id": "3381",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Emre Bel\u00f6zo\u011flu",
+      "player_id": "5782",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Y\u0131ld\u0131ray Ba\u015ft\u00fcrk",
+      "player_id": "618",
+      "club": {
+        "name": "Bayer 04 Leverkusen",
+        "club_id": "15",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Hakan \u015e\u00fck\u00fcr",
+      "player_id": "3363",
+      "club": {
+        "name": "AC Parma",
+        "club_id": "130",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/130.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "\u0130lhan Mans\u0131z",
+      "player_id": "6875",
+      "club": {
+        "name": "Besiktas JK",
+        "club_id": "114",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/114.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    }
+  ]
+}

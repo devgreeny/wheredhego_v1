@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Honduras",
+    "country_code": "HON"
+  },
+  "match": {
+    "tournament": "World Cup 2014",
+    "stage": "Match",
+    "opponent": "Switzerland",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 18,
+      "name": "Noel Valladares",
+      "player_id": "62278",
+      "club": {
+        "name": "CD Olimpia",
+        "club_id": "2720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2720.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "V\u00edctor Bern\u00e1rdez",
+      "player_id": "35349",
+      "club": {
+        "name": "San Jose Earthquakes",
+        "club_id": "218",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/218.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Maynor Figueroa",
+      "player_id": "62240",
+      "club": {
+        "name": "Hull City",
+        "club_id": "3008",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3008.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Juan Carlos Garc\u00eda",
+      "player_id": "111331",
+      "club": {
+        "name": "Wigan Athletic",
+        "club_id": "1071",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1071.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Brayan Beckeles",
+      "player_id": "171043",
+      "club": {
+        "name": "CD Olimpia",
+        "club_id": "2720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2720.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Wilson Palacios",
+      "player_id": "58361",
+      "club": {
+        "name": "Stoke City",
+        "club_id": "512",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/512.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Jorge Claros",
+      "player_id": "62231",
+      "club": {
+        "name": "CD Motagua Tegucigalpa",
+        "club_id": "9708",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9708.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Boniek Garc\u00eda",
+      "player_id": "62241",
+      "club": {
+        "name": "Houston Dynamo",
+        "club_id": "9168",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9168.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "R\u00f3ger Espinoza",
+      "player_id": "71096",
+      "club": {
+        "name": "Wigan Athletic",
+        "club_id": "1071",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1071.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Carlo Costly",
+      "player_id": "46845",
+      "club": {
+        "name": "Real CD Espa\u00f1a",
+        "club_id": "13293",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13293.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Jerry Bengtson",
+      "player_id": "148586",
+      "club": {
+        "name": "New England Revolution",
+        "club_id": "626",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/626.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

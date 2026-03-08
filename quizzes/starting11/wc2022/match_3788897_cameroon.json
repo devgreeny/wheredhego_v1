@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Cameroon",
+    "country_code": "CAM"
+  },
+  "match": {
+    "tournament": "World Cup 2022",
+    "stage": "Match",
+    "opponent": "Brazil",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 16,
+      "name": "Devis Epassy",
+      "player_id": "170471",
+      "club": {
+        "name": "Abha Club",
+        "club_id": "40039",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/40039.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 24,
+      "name": "Enzo Ebosse",
+      "player_id": "342877",
+      "club": {
+        "name": "Udinese Calcio",
+        "club_id": "410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/410.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Christopher Wooh",
+      "player_id": "572326",
+      "club": {
+        "name": "Stade Rennais FC",
+        "club_id": "273",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/273.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 25,
+      "name": "Nouhou",
+      "player_id": "436332",
+      "club": {
+        "name": "Seattle Sounders FC",
+        "club_id": "9636",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9636.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Collins Fai",
+      "player_id": "250638",
+      "club": {
+        "name": "Al-Tai FC",
+        "club_id": "40079",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/40079.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Frank Anguissa",
+      "player_id": "354361",
+      "club": {
+        "name": "SSC Napoli",
+        "club_id": "6195",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6195.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Pierre Kunde",
+      "player_id": "339829",
+      "club": {
+        "name": "Olympiacos Piraeus",
+        "club_id": "683",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/683.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Nicolas Moumi Ngamaleu",
+      "player_id": "266768",
+      "club": {
+        "name": "Dynamo Moscow",
+        "club_id": "121",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/121.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Bryan Mbeumo",
+      "player_id": "413039",
+      "club": {
+        "name": "Brentford FC",
+        "club_id": "1148",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1148.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Eric-Maxim Choupo-Moting",
+      "player_id": "45660",
+      "club": {
+        "name": "Bayern Munich",
+        "club_id": "27",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/27.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Vincent Aboubakar",
+      "player_id": "147487",
+      "club": {
+        "name": "Al-Nassr FC",
+        "club_id": "18544",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18544.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

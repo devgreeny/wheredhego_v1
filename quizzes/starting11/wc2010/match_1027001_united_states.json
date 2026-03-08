@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "United States",
+    "country_code": "UNI"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "Ghana",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Tim Howard",
+      "player_id": "4267",
+      "club": {
+        "name": "Everton FC",
+        "club_id": "29",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/29.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Carlos Bocanegra",
+      "player_id": "15829",
+      "club": {
+        "name": "Stade Rennais FC",
+        "club_id": "273",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/273.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Jay DeMerit",
+      "player_id": "15926",
+      "club": {
+        "name": "Watford FC",
+        "club_id": "1010",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1010.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Jonathan Bornstein",
+      "player_id": "39454",
+      "club": {
+        "name": "CD Chivas USA",
+        "club_id": "6642",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6642.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Steven Cherundolo",
+      "player_id": "1335",
+      "club": {
+        "name": "Hannover 96",
+        "club_id": "42",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/42.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Ricardo Clark",
+      "player_id": "39840",
+      "club": {
+        "name": "Eintracht Frankfurt",
+        "club_id": "24",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/24.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Michael Bradley",
+      "player_id": "30593",
+      "club": {
+        "name": "Borussia M\u00f6nchengladbach",
+        "club_id": "18",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Clint Dempsey",
+      "player_id": "27577",
+      "club": {
+        "name": "Fulham FC",
+        "club_id": "931",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/931.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Landon Donovan",
+      "player_id": "68",
+      "club": {
+        "name": "Los Angeles Galaxy",
+        "club_id": "1061",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1061.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Jozy Altidore",
+      "player_id": "39378",
+      "club": {
+        "name": "Hull City",
+        "club_id": "3008",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3008.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Robbie Findley",
+      "player_id": "27167",
+      "club": {
+        "name": "Real Salt Lake City",
+        "club_id": "6643",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6643.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Panama",
+    "country_code": "PAN"
+  },
+  "match": {
+    "tournament": "World Cup 2018",
+    "stage": "Match",
+    "opponent": "England",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Jaime Penedo",
+      "player_id": "43851",
+      "club": {
+        "name": "FC Dinamo 1948",
+        "club_id": "312",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/312.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Fidel Escobar",
+      "player_id": "345716",
+      "club": {
+        "name": "Red Bull New York",
+        "club_id": "623",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/623.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Rom\u00e1n Torres",
+      "player_id": "74182",
+      "club": {
+        "name": "Seattle Sounders FC",
+        "club_id": "9636",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9636.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "\u00c9ric Davis",
+      "player_id": "121791",
+      "club": {
+        "name": "DAC Dunajska Streda",
+        "club_id": "4529",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4529.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Amir Murillo",
+      "player_id": "354482",
+      "club": {
+        "name": "Red Bull New York",
+        "club_id": "623",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/623.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "An\u00edbal Godoy",
+      "player_id": "161671",
+      "club": {
+        "name": "San Jose Earthquakes",
+        "club_id": "218",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/218.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Gabriel G\u00f3mez",
+      "player_id": "52028",
+      "club": {
+        "name": "Atl\u00e9tico Bucaramanga",
+        "club_id": "6495",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6495.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Armando Cooper",
+      "player_id": "122016",
+      "club": {
+        "name": "Club Universidad de Chile",
+        "club_id": "1037",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1037.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Jos\u00e9 Luis Rodr\u00edguez",
+      "player_id": "425028",
+      "club": {
+        "name": "KAA Gent U21",
+        "club_id": "43562",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/43562.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Yoel B\u00e1rcenas",
+      "player_id": "283473",
+      "club": {
+        "name": "Cafetaleros de Tapachula",
+        "club_id": "49298",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/49298.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Blas P\u00e9rez",
+      "player_id": "58109",
+      "club": {
+        "name": "CSD Municipal",
+        "club_id": "13047",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13047.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

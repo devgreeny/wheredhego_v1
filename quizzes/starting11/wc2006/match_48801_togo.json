@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Togo",
+    "country_code": "TOG"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "South Korea",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 16,
+      "name": "Kossi Agassa",
+      "player_id": "12028",
+      "club": {
+        "name": "FC Metz",
+        "club_id": "347",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/347.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Dar\u00e9 Nibomb\u00e9",
+      "player_id": "12967",
+      "club": {
+        "name": "RAEC Mons (-2015)",
+        "club_id": "1411",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1411.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Jean-Paul Abalo",
+      "player_id": "40008",
+      "club": {
+        "name": "APOEL Nicosia",
+        "club_id": "2784",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2784.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Ludovic Ass\u00e9moassa",
+      "player_id": "23887",
+      "club": {
+        "name": "Ciudad de Murcia",
+        "club_id": "4053",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4053.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Massamasso Tchangai",
+      "player_id": "40016",
+      "club": {
+        "name": "Benevento Calcio",
+        "club_id": "4171",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4171.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Alaixys Romao",
+      "player_id": "40014",
+      "club": {
+        "name": "CS Louhans-Cuiseaux 71",
+        "club_id": "619",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/619.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Yao Junior S\u00e8naya",
+      "player_id": "19280",
+      "club": {
+        "name": "SC YF Juventus Z\u00fcrich",
+        "club_id": "2395",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2395.png"
+      },
+      "position": {
+        "x": 63.93636363636363,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Moustapha Salifou",
+      "player_id": "1778",
+      "club": {
+        "name": "Stade Brestois 29",
+        "club_id": "3911",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3911.png"
+      },
+      "position": {
+        "x": 35.93636363636364,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Cheriffe Maman-Tour\u00e9",
+      "player_id": "13369",
+      "club": {
+        "name": "FC Metz",
+        "club_id": "347",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/347.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Emmanuel Adebayor",
+      "player_id": "8883",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Mohamed Kader",
+      "player_id": "4823",
+      "club": {
+        "name": "EA Guingamp",
+        "club_id": "855",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/855.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    }
+  ]
+}

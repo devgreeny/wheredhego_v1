@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Argentina",
+    "country_code": "ARG"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Mexico",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Roberto Abbondanzieri",
+      "player_id": "19937",
+      "club": {
+        "name": "CA Boca Juniors",
+        "club_id": "189",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/189.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Gabriel Heinze",
+      "player_id": "5555",
+      "club": {
+        "name": "Manchester United",
+        "club_id": "985",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/985.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Roberto Ayala",
+      "player_id": "7565",
+      "club": {
+        "name": "Valencia CF",
+        "club_id": "1049",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1049.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Juan Pablo Sor\u00edn",
+      "player_id": "7925",
+      "club": {
+        "name": "Villarreal CF",
+        "club_id": "1050",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1050.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Lionel Scaloni",
+      "player_id": "7499",
+      "club": {
+        "name": "West Ham United",
+        "club_id": "379",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/379.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Javier Mascherano",
+      "player_id": "19981",
+      "club": {
+        "name": "Sport Club Corinthians Paulista",
+        "club_id": "199",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/199.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Maxi Rodr\u00edguez",
+      "player_id": "7895",
+      "club": {
+        "name": "Atl\u00e9tico de Madrid",
+        "club_id": "13",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13.png"
+      },
+      "position": {
+        "x": 63.93636363636363,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Esteban Cambiasso",
+      "player_id": "7520",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 35.93636363636364,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Juan Rom\u00e1n Riquelme",
+      "player_id": "3854",
+      "club": {
+        "name": "Villarreal CF",
+        "club_id": "1050",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1050.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Javier Saviola",
+      "player_id": "7611",
+      "club": {
+        "name": "Sevilla FC",
+        "club_id": "368",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Hern\u00e1n Crespo",
+      "player_id": "3410",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

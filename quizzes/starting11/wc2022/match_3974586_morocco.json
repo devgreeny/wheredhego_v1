@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Morocco",
+    "country_code": "MOR"
+  },
+  "match": {
+    "tournament": "World Cup 2022",
+    "stage": "Match",
+    "opponent": "France",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Yassine Bounou",
+      "player_id": "207834",
+      "club": {
+        "name": "Sevilla FC",
+        "club_id": "368",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Romain Sa\u00efss",
+      "player_id": "204198",
+      "club": {
+        "name": "Besiktas JK",
+        "club_id": "114",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/114.png"
+      },
+      "position": {
+        "x": 38.45,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Jawad El Yamiq",
+      "player_id": "235412",
+      "club": {
+        "name": "Real Valladolid CF",
+        "club_id": "366",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/366.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Achraf Dari",
+      "player_id": "566823",
+      "club": {
+        "name": "Stade Brestois 29",
+        "club_id": "3911",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3911.png"
+      },
+      "position": {
+        "x": 61.55,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Noussair Mazraoui",
+      "player_id": "340456",
+      "club": {
+        "name": "Bayern Munich",
+        "club_id": "27",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/27.png"
+      },
+      "position": {
+        "x": 26.9,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Achraf Hakimi",
+      "player_id": "398073",
+      "club": {
+        "name": "Paris Saint-Germain",
+        "club_id": "583",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+      },
+      "position": {
+        "x": 73.1,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Sofyan Amrabat",
+      "player_id": "287579",
+      "club": {
+        "name": "ACF Fiorentina",
+        "club_id": "430",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/430.png"
+      },
+      "position": {
+        "x": 41.6,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Azzedine Ounahi",
+      "player_id": "593482",
+      "club": {
+        "name": "Angers SCO",
+        "club_id": "1420",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1420.png"
+      },
+      "position": {
+        "x": 58.4,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Sofiane Boufal",
+      "player_id": "232271",
+      "club": {
+        "name": "Angers SCO",
+        "club_id": "1420",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1420.png"
+      },
+      "position": {
+        "x": 30.4,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Hakim Ziyech",
+      "player_id": "217111",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 69.6,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Youssef En-Nesyri",
+      "player_id": "433049",
+      "club": {
+        "name": "Sevilla FC",
+        "club_id": "368",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 17.1
+      }
+    }
+  ]
+}

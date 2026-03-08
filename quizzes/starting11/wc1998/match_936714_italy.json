@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Italy",
+    "country_code": "ITA"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "France",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 12,
+      "name": "Gianluca Pagliuca",
+      "player_id": "5985",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Giuseppe Bergomi",
+      "player_id": "107860",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Fabio Cannavaro",
+      "player_id": "5775",
+      "club": {
+        "name": "AC Parma",
+        "club_id": "130",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/130.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Alessandro Costacurta",
+      "player_id": "10055",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Gianluca Pessotto",
+      "player_id": "5751",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 60.5,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Dino Baggio",
+      "player_id": "5843",
+      "club": {
+        "name": "AC Parma",
+        "club_id": "130",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/130.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 40.2
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Luigi Di Biagio",
+      "player_id": "7927",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 39.5,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Francesco Moriero",
+      "player_id": "108638",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 71.0,
+        "y": 33.9
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Paolo Maldini",
+      "player_id": "5803",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 29.0,
+        "y": 33.9
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Alessandro Del Piero",
+      "player_id": "4289",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Christian Vieri",
+      "player_id": "5797",
+      "club": {
+        "name": "Atl\u00e9tico de Madrid",
+        "club_id": "13",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

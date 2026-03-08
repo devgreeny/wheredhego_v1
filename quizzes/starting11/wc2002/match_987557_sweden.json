@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Sweden",
+    "country_code": "SWE"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "Argentina",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Magnus Hedman",
+      "player_id": "3438",
+      "club": {
+        "name": "Coventry City",
+        "club_id": "990",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/990.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Olof Mellberg",
+      "player_id": "3098",
+      "club": {
+        "name": "Aston Villa",
+        "club_id": "405",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/405.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Andreas Jakobsson",
+      "player_id": "254",
+      "club": {
+        "name": "FC Hansa Rostock",
+        "club_id": "30",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/30.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Johan Mj\u00e4llby",
+      "player_id": "3097",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Teddy Lucic",
+      "player_id": "3734",
+      "club": {
+        "name": "AIK",
+        "club_id": "272",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/272.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Tobias Linderoth",
+      "player_id": "3586",
+      "club": {
+        "name": "Everton FC",
+        "club_id": "29",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/29.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Niclas Alexandersson",
+      "player_id": "3265",
+      "club": {
+        "name": "Everton FC",
+        "club_id": "29",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/29.png"
+      },
+      "position": {
+        "x": 63.93636363636363,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Magnus Svensson",
+      "player_id": "15352",
+      "club": {
+        "name": "Br\u00f6ndby IF",
+        "club_id": "206",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/206.png"
+      },
+      "position": {
+        "x": 35.93636363636364,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Anders Svensson",
+      "player_id": "3688",
+      "club": {
+        "name": "Southampton FC",
+        "club_id": "180",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/180.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Marcus Allb\u00e4ck",
+      "player_id": "3267",
+      "club": {
+        "name": "SC Heerenveen",
+        "club_id": "306",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/306.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Henrik Larsson",
+      "player_id": "3514",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "United States",
+    "country_code": "UNI"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Germany",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 5,
+      "name": "Thomas Dooley",
+      "player_id": "84552",
+      "club": {
+        "name": "Columbus Crew",
+        "club_id": "813",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/813.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Eddie Pope",
+      "player_id": "24845",
+      "club": {
+        "name": "D.C. United",
+        "club_id": "2440",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2440.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "David R\u00e9gis",
+      "player_id": "81292",
+      "club": {
+        "name": "Karlsruher SC",
+        "club_id": "48",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/48.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Brian Maisonneuve",
+      "player_id": "26840",
+      "club": {
+        "name": "Columbus Crew",
+        "club_id": "813",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/813.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Earnie Stewart",
+      "player_id": "4463",
+      "club": {
+        "name": "NAC Breda",
+        "club_id": "132",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/132.png"
+      },
+      "position": {
+        "x": 58.27272727272727,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Mike Burns",
+      "player_id": "102010",
+      "club": {
+        "name": "New England Revolution",
+        "club_id": "626",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/626.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Cobi Jones",
+      "player_id": "3486",
+      "club": {
+        "name": "Los Angeles Galaxy",
+        "club_id": "1061",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1061.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Chad Deering",
+      "player_id": "27728",
+      "club": {
+        "name": "VfL Wolfsburg",
+        "club_id": "82",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/82.png"
+      },
+      "position": {
+        "x": 56.87272727272727,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Claudio Reyna",
+      "player_id": "3475",
+      "club": {
+        "name": "VfL Wolfsburg",
+        "club_id": "82",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/82.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Eric Wynalda",
+      "player_id": "17877",
+      "club": {
+        "name": "San Jose Clash",
+        "club_id": "218",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/218.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 17.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Oliver Kahn",
+      "player_id": "206",
+      "club": {
+        "name": "Bayern Munich",
+        "club_id": "27",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/27.png"
+      },
+      "position": {
+        "x": 56.87272727272727,
+        "y": 50.0
+      }
+    }
+  ]
+}

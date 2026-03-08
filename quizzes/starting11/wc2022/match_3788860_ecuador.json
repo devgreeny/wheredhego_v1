@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Ecuador",
+    "country_code": "ECU"
+  },
+  "match": {
+    "tournament": "World Cup 2022",
+    "stage": "Match",
+    "opponent": "Netherlands",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Hern\u00e1n Gal\u00edndez",
+      "player_id": "77127",
+      "club": {
+        "name": "SD Aucas",
+        "club_id": "6362",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6362.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Piero Hincapi\u00e9",
+      "player_id": "659813",
+      "club": {
+        "name": "Bayer 04 Leverkusen",
+        "club_id": "15",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "F\u00e9lix Torres",
+      "player_id": "468174",
+      "club": {
+        "name": "Santos Laguna",
+        "club_id": "1403",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1403.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 25,
+      "name": "Jackson Porozo",
+      "player_id": "491616",
+      "club": {
+        "name": "ESTAC Troyes",
+        "club_id": "1095",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1095.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Jhegson M\u00e9ndez",
+      "player_id": "330682",
+      "club": {
+        "name": "Los Angeles FC",
+        "club_id": "51828",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/51828.png"
+      },
+      "position": {
+        "x": 58.27272727272727,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Mois\u00e9s Caicedo",
+      "player_id": "687626",
+      "club": {
+        "name": "Brighton & Hove Albion",
+        "club_id": "1237",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1237.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Angelo Preciado",
+      "player_id": "450241",
+      "club": {
+        "name": "KRC Genk",
+        "club_id": "1184",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1184.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Pervis Estupi\u00f1\u00e1n",
+      "player_id": "349599",
+      "club": {
+        "name": "Brighton & Hove Albion",
+        "club_id": "1237",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1237.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Gonzalo Plata",
+      "player_id": "592735",
+      "club": {
+        "name": "Real Valladolid CF",
+        "club_id": "366",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/366.png"
+      },
+      "position": {
+        "x": 56.87272727272727,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Enner Valencia",
+      "player_id": "139503",
+      "club": {
+        "name": "Fenerbahce",
+        "club_id": "36",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/36.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Michael Estrada",
+      "player_id": "265481",
+      "club": {
+        "name": "CD Cruz Azul",
+        "club_id": "3711",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3711.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 17.1
+      }
+    }
+  ]
+}

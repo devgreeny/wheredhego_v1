@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Egypt",
+    "country_code": "EGY"
+  },
+  "match": {
+    "tournament": "World Cup 2018",
+    "stage": "Match",
+    "opponent": "Russia",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 23,
+      "name": "Mohamed El Shenawy",
+      "player_id": "134573",
+      "club": {
+        "name": "Al Ahly FC",
+        "club_id": "7",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Ali Gabr",
+      "player_id": "122980",
+      "club": {
+        "name": "West Bromwich Albion",
+        "club_id": "984",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/984.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Ahmed Hegazy",
+      "player_id": "111524",
+      "club": {
+        "name": "West Bromwich Albion",
+        "club_id": "984",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/984.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Mohamed Abdelshafi",
+      "player_id": "75280",
+      "club": {
+        "name": "Al-Fateh SC",
+        "club_id": "27221",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/27221.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Ahmed Fathi",
+      "player_id": "38168",
+      "club": {
+        "name": "Al Ahly FC",
+        "club_id": "7",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Tarek Hamed",
+      "player_id": "149530",
+      "club": {
+        "name": "Zamalek SC",
+        "club_id": "664",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/664.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Mohamed Elneny",
+      "player_id": "160438",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Abdallah El Said",
+      "player_id": "66362",
+      "club": {
+        "name": "Kuopion Palloseura",
+        "club_id": "6251",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6251.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Trezeguet",
+      "player_id": "234189",
+      "club": {
+        "name": "Kasimpasa",
+        "club_id": "10484",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/10484.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Mohamed Salah",
+      "player_id": "148455",
+      "club": {
+        "name": "Liverpool FC",
+        "club_id": "31",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/31.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Marwan Mohsen",
+      "player_id": "149532",
+      "club": {
+        "name": "Al Ahly FC",
+        "club_id": "7",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

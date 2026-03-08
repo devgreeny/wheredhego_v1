@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Cameroon",
+    "country_code": "CAM"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Chile",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Jacques Songo'o",
+      "player_id": "102615",
+      "club": {
+        "name": "Deportivo de La Coru\u00f1a",
+        "club_id": "897",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/897.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Rigobert Song",
+      "player_id": "1419",
+      "club": {
+        "name": "FC Metz",
+        "club_id": "347",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/347.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Michel Pens\u00e9e",
+      "player_id": "156918",
+      "club": {
+        "name": "Cheonan Ilhwa Chunma",
+        "club_id": "3610",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3610.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Marcel Mahouv\u00e9",
+      "player_id": "35260",
+      "club": {
+        "name": "Montpellier HSC",
+        "club_id": "969",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/969.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Salomon Olemb\u00e9",
+      "player_id": "5326",
+      "club": {
+        "name": "FC Nantes",
+        "club_id": "995",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/995.png"
+      },
+      "position": {
+        "x": 58.27272727272727,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Joseph Cyrille Ndo",
+      "player_id": "24595",
+      "club": {
+        "name": "Coton Sport FC de Garoua",
+        "club_id": "4675",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4675.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Pierre Wom\u00e9",
+      "player_id": "3329",
+      "club": {
+        "name": "AS Lucchese Libertas",
+        "club_id": "1253",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1253.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Fran\u00e7ois Omam-Biyik",
+      "player_id": "102614",
+      "club": {
+        "name": "UC Sampdoria",
+        "club_id": "1038",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1038.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Joseph-D\u00e9sir\u00e9 Job",
+      "player_id": "3650",
+      "club": {
+        "name": "Olympique Lyon",
+        "club_id": "1041",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1041.png"
+      },
+      "position": {
+        "x": 56.87272727272727,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Patrick Mboma",
+      "player_id": "26415",
+      "club": {
+        "name": "Gamba Osaka",
+        "club_id": "596",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/596.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 17.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Marcelo Ram\u00edrez",
+      "player_id": "133855",
+      "club": {
+        "name": "CSD Colo-Colo",
+        "club_id": "2433",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2433.png"
+      },
+      "position": {
+        "x": 56.87272727272727,
+        "y": 50.0
+      }
+    }
+  ]
+}

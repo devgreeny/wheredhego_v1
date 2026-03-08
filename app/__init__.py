@@ -42,6 +42,9 @@ def create_app():
     from app.starting5.models import db
     db.init_app(app)
     
+    # Import starting11 models to register them
+    from app.starting11 import models as starting11_models
+    
     # Initialize login manager for unified auth
     login_manager = LoginManager()
     login_manager.init_app(app)
@@ -60,6 +63,10 @@ def create_app():
     # Register the starting5 blueprint
     from app.starting5.routes import bp as starting5_bp
     app.register_blueprint(starting5_bp, url_prefix='/starting5')
+    
+    # Register the starting11 blueprint (soccer)
+    from app.starting11.routes import bp as starting11_bp
+    app.register_blueprint(starting11_bp, url_prefix='/starting11')
     
     # NFL game archived - focusing on Starting5 only
     # from app.gridiron11.routes import bp as gridiron11_bp

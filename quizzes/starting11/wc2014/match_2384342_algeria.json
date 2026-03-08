@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Algeria",
+    "country_code": "ALG"
+  },
+  "match": {
+    "tournament": "World Cup 2014",
+    "stage": "Match",
+    "opponent": "Belgium",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 23,
+      "name": "Ra\u00efs M'Bolhi",
+      "player_id": "33465",
+      "club": {
+        "name": "CSKA Sofia",
+        "club_id": "208",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/208.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Madjid Bougherra",
+      "player_id": "38074",
+      "club": {
+        "name": "Lekhwiya SC",
+        "club_id": "26091",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/26091.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Rafik Halliche",
+      "player_id": "67815",
+      "club": {
+        "name": "Acad\u00e9mica Coimbra",
+        "club_id": "2990",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2990.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Faouzi Ghoulam",
+      "player_id": "126656",
+      "club": {
+        "name": "SSC Napoli",
+        "club_id": "6195",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6195.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 22,
+      "name": "Mehdi Mostefa",
+      "player_id": "80191",
+      "club": {
+        "name": "AC Ajaccio",
+        "club_id": "1147",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1147.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Carl Medjani",
+      "player_id": "8060",
+      "club": {
+        "name": "Valenciennes FC",
+        "club_id": "1423",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1423.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Nabil Bentaleb",
+      "player_id": "245537",
+      "club": {
+        "name": "Tottenham Hotspur",
+        "club_id": "148",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/148.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Saphir Ta\u00efder",
+      "player_id": "144779",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Riyad Mahrez",
+      "player_id": "171424",
+      "club": {
+        "name": "Leicester City",
+        "club_id": "1003",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1003.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Sofiane Feghouli",
+      "player_id": "57162",
+      "club": {
+        "name": "Valencia CF",
+        "club_id": "1049",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1049.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "El Arbi Hillel Soudani",
+      "player_id": "174842",
+      "club": {
+        "name": "GNK Dinamo Zagreb",
+        "club_id": "419",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/419.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

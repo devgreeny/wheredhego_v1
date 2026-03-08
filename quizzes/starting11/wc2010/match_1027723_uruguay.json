@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Uruguay",
+    "country_code": "URU"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "Ghana",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Fernando Muslera",
+      "player_id": "58088",
+      "club": {
+        "name": "SS Lazio",
+        "club_id": "398",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/398.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Diego Lugano",
+      "player_id": "13829",
+      "club": {
+        "name": "Fenerbahce",
+        "club_id": "36",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/36.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Mauricio Victorino",
+      "player_id": "44935",
+      "club": {
+        "name": "Club Universidad de Chile",
+        "club_id": "1037",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1037.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Jorge Fucile",
+      "player_id": "44057",
+      "club": {
+        "name": "FC Porto",
+        "club_id": "720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/720.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Maxi Pereira",
+      "player_id": "57834",
+      "club": {
+        "name": "SL Benfica",
+        "club_id": "294",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/294.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Diego P\u00e9rez",
+      "player_id": "20378",
+      "club": {
+        "name": "AS Monaco",
+        "club_id": "162",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/162.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Egidio Ar\u00e9valo R\u00edos",
+      "player_id": "54818",
+      "club": {
+        "name": "CA Pe\u00f1arol",
+        "club_id": "861",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/861.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "\u00c1lvaro Fern\u00e1ndez",
+      "player_id": "76213",
+      "club": {
+        "name": "Seattle Sounders FC",
+        "club_id": "9636",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9636.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Edinson Cavani",
+      "player_id": "48280",
+      "club": {
+        "name": "US Palermo",
+        "club_id": "458",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/458.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Diego Forl\u00e1n",
+      "player_id": "3408",
+      "club": {
+        "name": "Atl\u00e9tico de Madrid",
+        "club_id": "13",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Luis Su\u00e1rez",
+      "player_id": "44352",
+      "club": {
+        "name": "Ajax Amsterdam",
+        "club_id": "610",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/610.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

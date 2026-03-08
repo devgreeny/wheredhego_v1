@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Sweden",
+    "country_code": "SWE"
+  },
+  "match": {
+    "tournament": "World Cup 2018",
+    "stage": "Match",
+    "opponent": "Switzerland",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Robin Olsen",
+      "player_id": "75458",
+      "club": {
+        "name": "FC Copenhagen",
+        "club_id": "190",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/190.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Victor Lindel\u00f6f",
+      "player_id": "184573",
+      "club": {
+        "name": "Manchester United",
+        "club_id": "985",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/985.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Andreas Granqvist",
+      "player_id": "29213",
+      "club": {
+        "name": "Helsingborgs IF",
+        "club_id": "699",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/699.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Ludwig Augustinsson",
+      "player_id": "170646",
+      "club": {
+        "name": "SV Werder Bremen",
+        "club_id": "86",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/86.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Mikael Lustig",
+      "player_id": "36025",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Gustav Svensson",
+      "player_id": "41362",
+      "club": {
+        "name": "Seattle Sounders FC",
+        "club_id": "9636",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9636.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Albin Ekdal",
+      "player_id": "49275",
+      "club": {
+        "name": "Hamburger SV",
+        "club_id": "41",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/41.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Emil Forsberg",
+      "player_id": "111078",
+      "club": {
+        "name": "RB Leipzig",
+        "club_id": "23826",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/23826.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Viktor Claesson",
+      "player_id": "116598",
+      "club": {
+        "name": "FC Krasnodar",
+        "club_id": "16704",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/16704.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Marcus Berg",
+      "player_id": "30418",
+      "club": {
+        "name": "Al-Ain FC",
+        "club_id": "2150",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2150.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Ola Toivonen",
+      "player_id": "36500",
+      "club": {
+        "name": "FC Toulouse",
+        "club_id": "415",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/415.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    }
+  ]
+}

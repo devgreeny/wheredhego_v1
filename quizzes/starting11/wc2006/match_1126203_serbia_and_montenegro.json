@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Serbia and Montenegro",
+    "country_code": "SER"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Netherlands",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Dragoslav Jevric",
+      "player_id": "4414",
+      "club": {
+        "name": "Ankaraspor",
+        "club_id": "2944",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2944.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Ivica Dragutinovic",
+      "player_id": "13453",
+      "club": {
+        "name": "Sevilla FC",
+        "club_id": "368",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Mladen Krstajic",
+      "player_id": "540",
+      "club": {
+        "name": "FC Schalke 04",
+        "club_id": "33",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/33.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Goran Gavrancic",
+      "player_id": "9791",
+      "club": {
+        "name": "Dynamo Kyiv",
+        "club_id": "338",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/338.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Nenad Djordjevic",
+      "player_id": "10297",
+      "club": {
+        "name": "FK Partizan Belgrade",
+        "club_id": "669",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/669.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Igor Duljaj",
+      "player_id": "10288",
+      "club": {
+        "name": "Shakhtar Donetsk",
+        "club_id": "660",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/660.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Dejan Stankovic",
+      "player_id": "3428",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Albert Nadj",
+      "player_id": "10301",
+      "club": {
+        "name": "FK Partizan Belgrade",
+        "club_id": "669",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/669.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Predrag Djordjevic",
+      "player_id": "9683",
+      "club": {
+        "name": "Olympiacos Piraeus",
+        "club_id": "683",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/683.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Savo Milosevic",
+      "player_id": "7896",
+      "club": {
+        "name": "CA Osasuna",
+        "club_id": "331",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/331.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Mateja Ke\u017eman",
+      "player_id": "4358",
+      "club": {
+        "name": "Atl\u00e9tico de Madrid",
+        "club_id": "13",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

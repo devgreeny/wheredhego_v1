@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "South Africa",
+    "country_code": "SOU"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "France",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Moeneeb Josephs",
+      "player_id": "37726",
+      "club": {
+        "name": "Orlando Pirates",
+        "club_id": "2557",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2557.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Aaron Mokoena",
+      "player_id": "4756",
+      "club": {
+        "name": "Portsmouth FC",
+        "club_id": "1020",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1020.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Bongani Khumalo",
+      "player_id": "82215",
+      "club": {
+        "name": "SuperSport United",
+        "club_id": "2891",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2891.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Tsepo Masilela",
+      "player_id": "63287",
+      "club": {
+        "name": "Maccabi Haifa",
+        "club_id": "1064",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1064.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Anele Ngcongca",
+      "player_id": "63846",
+      "club": {
+        "name": "KRC Genk",
+        "club_id": "1184",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1184.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Thanduyise Khuboni",
+      "player_id": "112726",
+      "club": {
+        "name": "Lamontville Golden Arrows",
+        "club_id": "7011",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7011.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "MacBeth Sibaya",
+      "player_id": "15873",
+      "club": {
+        "name": "Rubin Kazan",
+        "club_id": "2698",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2698.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Steven Pienaar",
+      "player_id": "4321",
+      "club": {
+        "name": "Everton FC",
+        "club_id": "29",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/29.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Siphiwe Tshabalala",
+      "player_id": "37735",
+      "club": {
+        "name": "Kaizer Chiefs",
+        "club_id": "568",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/568.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Bernard Parker",
+      "player_id": "90199",
+      "club": {
+        "name": "FC Twente Enschede",
+        "club_id": "317",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/317.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Katlego Mphela",
+      "player_id": "18917",
+      "club": {
+        "name": "Mamelodi Sundowns FC",
+        "club_id": "6356",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6356.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

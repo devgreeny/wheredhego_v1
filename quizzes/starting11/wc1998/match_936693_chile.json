@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Chile",
+    "country_code": "CHI"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Cameroon",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Nelson Tapia",
+      "player_id": "20066",
+      "club": {
+        "name": "CD Universidad Cat\u00f3lica",
+        "club_id": "3277",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3277.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Ronald Fuentes",
+      "player_id": "133850",
+      "club": {
+        "name": "Club Universidad de Chile",
+        "club_id": "1037",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1037.png"
+      },
+      "position": {
+        "x": 61.55,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Javier Margas",
+      "player_id": "133852",
+      "club": {
+        "name": "CD Universidad Cat\u00f3lica",
+        "club_id": "3277",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3277.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Pedro Reyes",
+      "player_id": "133857",
+      "club": {
+        "name": "CSD Colo-Colo",
+        "club_id": "2433",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2433.png"
+      },
+      "position": {
+        "x": 38.45,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Francisco Rojas",
+      "player_id": "3065",
+      "club": {
+        "name": "CSD Colo-Colo",
+        "club_id": "2433",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2433.png"
+      },
+      "position": {
+        "x": 26.9,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Mois\u00e9s Villarroel",
+      "player_id": "53069",
+      "club": {
+        "name": "Santiago Wanderers",
+        "club_id": "2723",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2723.png"
+      },
+      "position": {
+        "x": 73.1,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Nelson Parraguez",
+      "player_id": "133854",
+      "club": {
+        "name": "CD Universidad Cat\u00f3lica",
+        "club_id": "3277",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3277.png"
+      },
+      "position": {
+        "x": 39.5,
+        "y": 41.6
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Clarence Acu\u00f1a",
+      "player_id": "3262",
+      "club": {
+        "name": "Club Universidad de Chile",
+        "club_id": "1037",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1037.png"
+      },
+      "position": {
+        "x": 60.5,
+        "y": 41.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Jos\u00e9 Luis Sierra",
+      "player_id": "80491",
+      "club": {
+        "name": "CSD Colo-Colo",
+        "club_id": "2433",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2433.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Marcelo Salas",
+      "player_id": "3415",
+      "club": {
+        "name": "CA River Plate",
+        "club_id": "209",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/209.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Iv\u00e1n Zamorano",
+      "player_id": "129083",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

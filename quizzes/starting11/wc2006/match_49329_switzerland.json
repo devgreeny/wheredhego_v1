@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Switzerland",
+    "country_code": "SWI"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Togo",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Pascal Zuberb\u00fchler",
+      "player_id": "95",
+      "club": {
+        "name": "FC Basel 1893",
+        "club_id": "26",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/26.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Patrick M\u00fcller",
+      "player_id": "5347",
+      "club": {
+        "name": "Olympique Lyon",
+        "club_id": "1041",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1041.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Philippe Senderos",
+      "player_id": "4277",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Ludovic Magnin",
+      "player_id": "1427",
+      "club": {
+        "name": "VfB Stuttgart",
+        "club_id": "79",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/79.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Philipp Degen",
+      "player_id": "2895",
+      "club": {
+        "name": "Borussia Dortmund",
+        "club_id": "16",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/16.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Johann Vogel",
+      "player_id": "4352",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Ricardo Cabanas",
+      "player_id": "2870",
+      "club": {
+        "name": "1.FC K\u00f6ln",
+        "club_id": "3",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Raphael Wicky",
+      "player_id": "58",
+      "club": {
+        "name": "Hamburger SV",
+        "club_id": "41",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/41.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Tranquillo Barnetta",
+      "player_id": "6645",
+      "club": {
+        "name": "Bayer 04 Leverkusen",
+        "club_id": "15",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Daniel Gygax",
+      "player_id": "4951",
+      "club": {
+        "name": "LOSC Lille",
+        "club_id": "1082",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1082.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Alex Frei",
+      "player_id": "4977",
+      "club": {
+        "name": "Stade Rennais FC",
+        "club_id": "273",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/273.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

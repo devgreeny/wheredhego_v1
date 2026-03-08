@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Colombia",
+    "country_code": "COL"
+  },
+  "match": {
+    "tournament": "World Cup 2014",
+    "stage": "Match",
+    "opponent": "Japan",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "David Ospina",
+      "player_id": "73396",
+      "club": {
+        "name": "OGC Nice",
+        "club_id": "417",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/417.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Carlos Vald\u00e9s",
+      "player_id": "73789",
+      "club": {
+        "name": "CA San Lorenzo de Almagro",
+        "club_id": "1775",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1775.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "\u00c9der Balanta",
+      "player_id": "265127",
+      "club": {
+        "name": "CA River Plate",
+        "club_id": "209",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/209.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Pablo Armero",
+      "player_id": "73786",
+      "club": {
+        "name": "West Ham United",
+        "club_id": "379",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/379.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Santiago Arias",
+      "player_id": "120443",
+      "club": {
+        "name": "PSV Eindhoven",
+        "club_id": "383",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/383.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Alexander Mej\u00eda",
+      "player_id": "77172",
+      "club": {
+        "name": "Atl\u00e9tico Nacional",
+        "club_id": "8172",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8172.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Fredy Guar\u00edn",
+      "player_id": "39090",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Juan Cuadrado",
+      "player_id": "91970",
+      "club": {
+        "name": "ACF Fiorentina",
+        "club_id": "430",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/430.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Juan Fernando Quintero",
+      "player_id": "122582",
+      "club": {
+        "name": "FC Porto",
+        "club_id": "720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/720.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Jackson Mart\u00ednez",
+      "player_id": "74418",
+      "club": {
+        "name": "FC Porto",
+        "club_id": "720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/720.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Adri\u00e1n Ramos",
+      "player_id": "73782",
+      "club": {
+        "name": "Hertha BSC",
+        "club_id": "44",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/44.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

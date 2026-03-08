@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Iran",
+    "country_code": "IRA"
+  },
+  "match": {
+    "tournament": "World Cup 2018",
+    "stage": "Match",
+    "opponent": "Morocco",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Alireza Beiranvand",
+      "player_id": "229081",
+      "club": {
+        "name": "Persepolis FC",
+        "club_id": "6079",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6079.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Morteza Pouraliganji",
+      "player_id": "132563",
+      "club": {
+        "name": "Al-Sadd SC",
+        "club_id": "656",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/656.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Roozbeh Cheshmi",
+      "player_id": "273879",
+      "club": {
+        "name": "Esteghlal FC",
+        "club_id": "1076",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1076.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Ehsan Hajsafi",
+      "player_id": "77547",
+      "club": {
+        "name": "Olympiacos Piraeus",
+        "club_id": "683",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/683.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Ramin Rezaeian",
+      "player_id": "188312",
+      "club": {
+        "name": "KV Oostende (-2024)",
+        "club_id": "2861",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2861.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Omid Ebrahimi",
+      "player_id": "180218",
+      "club": {
+        "name": "Esteghlal FC",
+        "club_id": "1076",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1076.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Masoud Shojaei",
+      "player_id": "26574",
+      "club": {
+        "name": "AEK Athens",
+        "club_id": "2441",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2441.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Vahid Amiri",
+      "player_id": "279215",
+      "club": {
+        "name": "Persepolis FC",
+        "club_id": "6079",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6079.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Karim Ansarifard",
+      "player_id": "133838",
+      "club": {
+        "name": "Olympiacos Piraeus",
+        "club_id": "683",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/683.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Alireza Jahanbakhsh",
+      "player_id": "213268",
+      "club": {
+        "name": "AZ Alkmaar",
+        "club_id": "1090",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1090.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Sardar Azmoun",
+      "player_id": "180337",
+      "club": {
+        "name": "Rubin Kazan",
+        "club_id": "2698",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2698.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

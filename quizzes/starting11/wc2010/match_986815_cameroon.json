@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Cameroon",
+    "country_code": "CAM"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "Netherlands",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 16,
+      "name": "Souleymanou Hamidou",
+      "player_id": "7196",
+      "club": {
+        "name": "Kayserispor",
+        "club_id": "3205",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3205.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Nicolas N'Koulou",
+      "player_id": "60577",
+      "club": {
+        "name": "AS Monaco",
+        "club_id": "162",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/162.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "St\u00e9phane Mbia",
+      "player_id": "27470",
+      "club": {
+        "name": "Olympique Marseille",
+        "club_id": "244",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/244.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Beno\u00eet Assou-Ekotto",
+      "player_id": "18310",
+      "club": {
+        "name": "Tottenham Hotspur",
+        "club_id": "148",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/148.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Njitap Geremi",
+      "player_id": "3374",
+      "club": {
+        "name": "MKE Ankarag\u00fcc\u00fc",
+        "club_id": "868",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/868.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Aur\u00e9lien Chedjou",
+      "player_id": "45624",
+      "club": {
+        "name": "LOSC Lille",
+        "club_id": "1082",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1082.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Jean Makoun",
+      "player_id": "5648",
+      "club": {
+        "name": "Olympique Lyon",
+        "club_id": "1041",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1041.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Landry N'Guemo",
+      "player_id": "34372",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Ga\u00ebtan Bong",
+      "player_id": "36291",
+      "club": {
+        "name": "Valenciennes FC",
+        "club_id": "1423",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1423.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Samuel Eto'o",
+      "player_id": "4257",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Eric-Maxim Choupo-Moting",
+      "player_id": "45660",
+      "club": {
+        "name": "1.FC Nuremberg",
+        "club_id": "4",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

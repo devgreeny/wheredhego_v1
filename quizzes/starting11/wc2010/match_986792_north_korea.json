@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "North Korea",
+    "country_code": "NOR"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "Brazil",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Myong-guk Ri",
+      "player_id": "68569",
+      "club": {
+        "name": "Pyongyang SC",
+        "club_id": "20714",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/20714.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Jun-il Ri",
+      "player_id": "68567",
+      "club": {
+        "name": "Sobaeksu SC",
+        "club_id": "28412",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/28412.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Kwang-chon Ri",
+      "player_id": "68568",
+      "club": {
+        "name": "4.25 SC",
+        "club_id": "15370",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15370.png"
+      },
+      "position": {
+        "x": 38.45,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Chol-jin Pak",
+      "player_id": "68564",
+      "club": {
+        "name": "Amnokgang SC",
+        "club_id": "15369",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15369.png"
+      },
+      "position": {
+        "x": 61.55,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Yun-nam Ji",
+      "player_id": "68554",
+      "club": {
+        "name": "4.25 SC",
+        "club_id": "15370",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15370.png"
+      },
+      "position": {
+        "x": 26.9,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Jong-hyok Cha",
+      "player_id": "68546",
+      "club": {
+        "name": "Amnokgang SC",
+        "club_id": "15369",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15369.png"
+      },
+      "position": {
+        "x": 73.1,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Yeong-hak Ahn",
+      "player_id": "68382",
+      "club": {
+        "name": "Omiya Ardija",
+        "club_id": "7452",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7452.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "In-guk Mun",
+      "player_id": "68561",
+      "club": {
+        "name": "4.25 SC",
+        "club_id": "15370",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15370.png"
+      },
+      "position": {
+        "x": 60.5,
+        "y": 41.6
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Nam-chol Pak",
+      "player_id": "68565",
+      "club": {
+        "name": "4.25 SC",
+        "club_id": "15370",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15370.png"
+      },
+      "position": {
+        "x": 39.5,
+        "y": 41.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Yong-jo Hong",
+      "player_id": "68553",
+      "club": {
+        "name": "FC Rostov",
+        "club_id": "1083",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1083.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Chong Tese",
+      "player_id": "68574",
+      "club": {
+        "name": "Kawasaki Frontale",
+        "club_id": "9598",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9598.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

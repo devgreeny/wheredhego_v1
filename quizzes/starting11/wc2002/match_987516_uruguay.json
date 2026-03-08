@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Uruguay",
+    "country_code": "URU"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "Denmark",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Fabi\u00e1n Carini",
+      "player_id": "13444",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Paolo Montero",
+      "player_id": "5747",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Gonzalo Sorondo",
+      "player_id": "13488",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Dar\u00edo Rodr\u00edguez",
+      "player_id": "2699",
+      "club": {
+        "name": "CA Pe\u00f1arol",
+        "club_id": "861",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/861.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Gustavo M\u00e9ndez",
+      "player_id": "130289",
+      "club": {
+        "name": "Club Nacional",
+        "club_id": "866",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/866.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Gianni Guigou",
+      "player_id": "5954",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Pablo Garc\u00eda",
+      "player_id": "7737",
+      "club": {
+        "name": "AC Venezia 1907",
+        "club_id": "607",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/607.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "\u00c1lvaro Recoba",
+      "player_id": "5796",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 30.4
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Sebasti\u00e1n Abreu",
+      "player_id": "53817",
+      "club": {
+        "name": "CD Cruz Azul",
+        "club_id": "3711",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3711.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Gustavo Varela",
+      "player_id": "2704",
+      "club": {
+        "name": "Club Nacional",
+        "club_id": "866",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/866.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Dar\u00edo Silva",
+      "player_id": "7792",
+      "club": {
+        "name": "M\u00e1laga CF",
+        "club_id": "1084",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1084.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

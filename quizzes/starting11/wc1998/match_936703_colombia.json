@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Colombia",
+    "country_code": "COL"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "England",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 22,
+      "name": "Faryd Mondrag\u00f3n",
+      "player_id": "6100",
+      "club": {
+        "name": "CA Independiente",
+        "club_id": "1234",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1234.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "\u00c9ver Palacios",
+      "player_id": "76646",
+      "club": {
+        "name": "Deportivo Cali",
+        "club_id": "9961",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9961.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Jorge Berm\u00fadez",
+      "player_id": "17481",
+      "club": {
+        "name": "CA Boca Juniors",
+        "club_id": "189",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/189.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Luis Moreno",
+      "player_id": "103228",
+      "club": {
+        "name": "Deportes Tolima",
+        "club_id": "10503",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/10503.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Wilmer Cabrera",
+      "player_id": "103226",
+      "club": {
+        "name": "CA Independiente",
+        "club_id": "1234",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1234.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Mauricio Serna",
+      "player_id": "102181",
+      "club": {
+        "name": "CA Boca Juniors",
+        "club_id": "189",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/189.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "H\u00e1rold Lozano",
+      "player_id": "7681",
+      "club": {
+        "name": "Real Valladolid CF",
+        "club_id": "366",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/366.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Freddy Rinc\u00f3n",
+      "player_id": "102163",
+      "club": {
+        "name": "Sport Club Corinthians Paulista",
+        "club_id": "199",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/199.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Carlos Valderrama",
+      "player_id": "88998",
+      "club": {
+        "name": "Miami Fusion (- 2002)",
+        "club_id": "1145",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1145.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 30.4
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Anthony de \u00c1vila",
+      "player_id": "102184",
+      "club": {
+        "name": "Barcelona SC Guayaquil",
+        "club_id": "3523",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3523.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "L\u00e9ider Preciado",
+      "player_id": "74107",
+      "club": {
+        "name": "Independiente Santa Fe",
+        "club_id": "11648",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11648.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

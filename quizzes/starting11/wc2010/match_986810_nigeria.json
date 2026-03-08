@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Nigeria",
+    "country_code": "NIG"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "South Korea",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Vincent Enyeama",
+      "player_id": "37760",
+      "club": {
+        "name": "Hapoel Tel Aviv",
+        "club_id": "1017",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1017.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Joseph Yobo",
+      "player_id": "3270",
+      "club": {
+        "name": "Everton FC",
+        "club_id": "29",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/29.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Danny Shittu",
+      "player_id": "13736",
+      "club": {
+        "name": "Bolton Wanderers",
+        "club_id": "355",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/355.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Rabiu Afolabi",
+      "player_id": "4829",
+      "club": {
+        "name": "Red Bull Salzburg",
+        "club_id": "409",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/409.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Chidi Odiah",
+      "player_id": "15906",
+      "club": {
+        "name": "CSKA Moscow",
+        "club_id": "2410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2410.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Ayila Yussuf",
+      "player_id": "25780",
+      "club": {
+        "name": "Dynamo Kyiv",
+        "club_id": "338",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/338.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Dickson Etuhu",
+      "player_id": "14011",
+      "club": {
+        "name": "Fulham FC",
+        "club_id": "931",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/931.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Kalu Uche",
+      "player_id": "6585",
+      "club": {
+        "name": "UD Almer\u00eda",
+        "club_id": "3302",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3302.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Chinedu Obasi",
+      "player_id": "41663",
+      "club": {
+        "name": "TSG 1899 Hoffenheim",
+        "club_id": "533",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/533.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Yakubu Aiyegbeni",
+      "player_id": "8559",
+      "club": {
+        "name": "Everton FC",
+        "club_id": "29",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/29.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Nwankwo Kanu",
+      "player_id": "3133",
+      "club": {
+        "name": "Portsmouth FC",
+        "club_id": "1020",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1020.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    }
+  ]
+}

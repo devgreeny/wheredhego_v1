@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "South Korea",
+    "country_code": "SOU"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Netherlands",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Byung-ji Kim",
+      "player_id": "90717",
+      "club": {
+        "name": "Ulsan Hyundai",
+        "club_id": "3535",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3535.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Myung-bo Hong",
+      "player_id": "101574",
+      "club": {
+        "name": "Bellmare Hiratsuka",
+        "club_id": "8457",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8457.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Young-il Choi",
+      "player_id": "647310",
+      "club": {
+        "name": "Pusan Daewoo Royals",
+        "club_id": "2582",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2582.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Min-sung Lee",
+      "player_id": "27404",
+      "club": {
+        "name": "Pusan Daewoo Royals",
+        "club_id": "2582",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2582.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Do-keun Kim",
+      "player_id": "102821",
+      "club": {
+        "name": "Chunnam Dragons",
+        "club_id": "6503",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6503.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Sung-yong Choi",
+      "player_id": "102815",
+      "club": {
+        "name": "Sangmu FC",
+        "club_id": "6505",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6505.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Sang-chul Yoo",
+      "player_id": "102818",
+      "club": {
+        "name": "Ulsan Hyundai",
+        "club_id": "3535",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3535.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Sang-yoon Lee",
+      "player_id": "102878",
+      "club": {
+        "name": "Cheonan Ilhwa Chunma",
+        "club_id": "3610",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3610.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Jung-won Seo",
+      "player_id": "29470",
+      "club": {
+        "name": "RC Strasbourg Alsace",
+        "club_id": "667",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/667.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Do-hoon Kim",
+      "player_id": "102832",
+      "club": {
+        "name": "Vissel Kobe",
+        "club_id": "3958",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3958.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Yong-soo Choi",
+      "player_id": "102843",
+      "club": {
+        "name": "Sangmu FC",
+        "club_id": "6505",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6505.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Saudi Arabia",
+    "country_code": "SAU"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "Republic of Ireland",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Mohammad Al-Deayea",
+      "player_id": "39364",
+      "club": {
+        "name": "Al-Hilal SFC",
+        "club_id": "1114",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1114.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Fouzi Al-Shehri",
+      "player_id": "31403",
+      "club": {
+        "name": "Al-Ahli SFC",
+        "club_id": "18487",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18487.png"
+      },
+      "position": {
+        "x": 61.55,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Abdullah Sulaiman Zubromawi",
+      "player_id": "101778",
+      "club": {
+        "name": "Al-Hilal SFC",
+        "club_id": "1114",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1114.png"
+      },
+      "position": {
+        "x": 38.45,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Redha Tukar",
+      "player_id": "31667",
+      "club": {
+        "name": "Al-Shabab FC",
+        "club_id": "9840",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9840.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Hussein Abdulghani",
+      "player_id": "78825",
+      "club": {
+        "name": "Al-Ahli SFC",
+        "club_id": "18487",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18487.png"
+      },
+      "position": {
+        "x": 26.9,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Mohammed Sheliah",
+      "player_id": "103475",
+      "club": {
+        "name": "Al-Ahli SFC",
+        "club_id": "18487",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18487.png"
+      },
+      "position": {
+        "x": 73.1,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Khamis Al-Owairan",
+      "player_id": "103472",
+      "club": {
+        "name": "Al-Ittihad Club",
+        "club_id": "8023",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8023.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Ibrahim Suwayed",
+      "player_id": "103477",
+      "club": {
+        "name": "Al-Ahli SFC",
+        "club_id": "18487",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18487.png"
+      },
+      "position": {
+        "x": 64.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Abdulaziz Al-Khathran",
+      "player_id": "26589",
+      "club": {
+        "name": "Al-Shabab FC",
+        "club_id": "9840",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9840.png"
+      },
+      "position": {
+        "x": 36.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Nawaf Al-Temyat",
+      "player_id": "31678",
+      "club": {
+        "name": "Al-Hilal SFC",
+        "club_id": "1114",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1114.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Al-Hasan Al-Yami",
+      "player_id": "40898",
+      "club": {
+        "name": "Al-Ittihad Club",
+        "club_id": "8023",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8023.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 17.1
+      }
+    }
+  ]
+}

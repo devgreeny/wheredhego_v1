@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Paraguay",
+    "country_code": "PAR"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Spain",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Jos\u00e9 Luis Chilavert",
+      "player_id": "5604",
+      "club": {
+        "name": "CA V\u00e9lez Sarsfield",
+        "club_id": "1029",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1029.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Carlos Gamarra",
+      "player_id": "5779",
+      "club": {
+        "name": "Sport Club Corinthians Paulista",
+        "club_id": "199",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/199.png"
+      },
+      "position": {
+        "x": 61.55,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Celso Ayala",
+      "player_id": "22938",
+      "club": {
+        "name": "CA River Plate",
+        "club_id": "209",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/209.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Pedro Sarabia",
+      "player_id": "73645",
+      "club": {
+        "name": "CA River Plate",
+        "club_id": "209",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/209.png"
+      },
+      "position": {
+        "x": 38.45,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Denis Caniza",
+      "player_id": "38786",
+      "club": {
+        "name": "Olimpia Asunci\u00f3n",
+        "club_id": "629",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/629.png"
+      },
+      "position": {
+        "x": 26.9,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Francisco Arce",
+      "player_id": "130283",
+      "club": {
+        "name": "Gr\u00eamio Foot-Ball Porto Alegrense",
+        "club_id": "210",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/210.png"
+      },
+      "position": {
+        "x": 73.1,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Julio Enciso",
+      "player_id": "134010",
+      "club": {
+        "name": "Sport Club Internacional",
+        "club_id": "6600",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6600.png"
+      },
+      "position": {
+        "x": 39.5,
+        "y": 41.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Roberto Acu\u00f1a",
+      "player_id": "7495",
+      "club": {
+        "name": "Real Zaragoza",
+        "club_id": "142",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/142.png"
+      },
+      "position": {
+        "x": 60.5,
+        "y": 41.6
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Jorge Luis Campos",
+      "player_id": "130285",
+      "club": {
+        "name": "Beijing Guoan",
+        "club_id": "3176",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3176.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Ar\u00edstides Rojas",
+      "player_id": "134014",
+      "club": {
+        "name": "CA Uni\u00f3n (Santa Fe)",
+        "club_id": "7097",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7097.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Miguel \u00c1ngel Ben\u00edtez",
+      "player_id": "27449",
+      "club": {
+        "name": "Club Nacional Asunci\u00f3n",
+        "club_id": "7098",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7098.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Mexico",
+    "country_code": "MEX"
+  },
+  "match": {
+    "tournament": "World Cup 2018",
+    "stage": "Match",
+    "opponent": "Germany",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 13,
+      "name": "Guillermo Ochoa",
+      "player_id": "29559",
+      "club": {
+        "name": "Standard Li\u00e8ge",
+        "club_id": "3057",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3057.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "H\u00e9ctor Moreno",
+      "player_id": "51046",
+      "club": {
+        "name": "Real Sociedad",
+        "club_id": "681",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/681.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Hugo Ayala",
+      "player_id": "52965",
+      "club": {
+        "name": "Tigres UANL",
+        "club_id": "7055",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7055.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Jes\u00fas Gallardo",
+      "player_id": "344854",
+      "club": {
+        "name": "UNAM Pumas",
+        "club_id": "7633",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7633.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Carlos Salcedo",
+      "player_id": "256866",
+      "club": {
+        "name": "Eintracht Frankfurt",
+        "club_id": "24",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/24.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Andr\u00e9s Guardado",
+      "player_id": "20506",
+      "club": {
+        "name": "Real Betis Balompi\u00e9",
+        "club_id": "150",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/150.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "H\u00e9ctor Herrera",
+      "player_id": "122043",
+      "club": {
+        "name": "FC Porto",
+        "club_id": "720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/720.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Miguel Lay\u00fan",
+      "player_id": "58576",
+      "club": {
+        "name": "Sevilla FC",
+        "club_id": "368",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 22,
+      "name": "Hirving Lozano",
+      "player_id": "316889",
+      "club": {
+        "name": "PSV Eindhoven",
+        "club_id": "383",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/383.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Carlos Vela",
+      "player_id": "35773",
+      "club": {
+        "name": "Los Angeles FC",
+        "club_id": "51828",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/51828.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Chicharito",
+      "player_id": "50935",
+      "club": {
+        "name": "West Ham United",
+        "club_id": "379",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/379.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

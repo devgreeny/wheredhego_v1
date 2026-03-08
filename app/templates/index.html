@@ -63,20 +63,319 @@
     @keyframes scan{ from{ background-position-y:0 } to{ background-position-y:320px } }
     .glare{ position:absolute; inset:0; background: linear-gradient(105deg, rgba(255,255,255,.06), transparent 30% 70%, rgba(0,0,0,.15)); mix-blend-mode: screen; pointer-events:none }
 
-    .grid{ display:grid; gap: 26px; grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
-
-    .card{
-      background: linear-gradient(180deg, var(--card-1), var(--card-2));
-      border: 6px solid #0f2e4d; border-radius: 16px; padding: 18px 18px 22px; color:#0c2a44;
-      box-shadow: 0 12px 0 #153a5e, 0 22px 38px rgba(0,0,0,.35);
-      transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
-      display: flex; flex-direction: column; min-height: 200px;
+    /* N64 Cartridge Grid */
+    .grid{ 
+      display: grid; 
+      gap: 32px; 
+      grid-template-columns: repeat(2, 1fr); 
+      max-width: 520px; 
+      margin: 0 auto;
+      padding: 10px;
     }
-    .card:hover{ transform: translateY(-6px); box-shadow: 0 14px 0 #102f51, 0 34px 40px rgba(0,0,0,.45); filter: saturate(1.04) }
-    .card h3{ font-family: "Press Start 2P"; font-size: clamp(16px, 2.2vw, 20px); margin: 4px 0 10px; color:#09233b; }
-    .card p{ margin:0 0 14px; font-size: clamp(14px, 1.4vw, 16px); line-height:1.25; flex-grow: 1; }
+    @media (max-width: 580px) { 
+      .grid { 
+        grid-template-columns: 1fr; 
+        max-width: 220px;
+        gap: 24px;
+      }
+      /* On mobile, cartridges go straight down - use !important to override */
+      .cartridge.inserting.from-left,
+      .cartridge.inserting.from-right,
+      .cartridge.inserting.from-center {
+        animation: insertMobile 0.8s ease-in-out forwards !important;
+      }
+      .cartridge.shift-left,
+      .cartridge.shift-right {
+        animation: shiftMobile 0.5s ease-out forwards !important;
+      }
+      @keyframes insertMobile {
+        0% { transform: translateX(0) translateY(0); }
+        30% { transform: translateX(0) translateY(15px); }
+        40% { transform: translateX(0) translateY(8px); }
+        50% { transform: translateX(0) translateY(20px); }
+        100% { transform: translateX(0) translateY(100%); }
+      }
+      @keyframes shiftMobile {
+        0% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(-30px); opacity: 0.3; }
+      }
+    }
 
-    .cta{ display:inline-block; font-family:"Press Start 2P"; font-size: 12px; line-height: 1; padding: 12px 16px 10px; color: var(--cream); text-decoration:none; background: linear-gradient(180deg, #ff6b58, var(--accent)); border: 4px solid #0f2e4d; border-radius: 12px; box-shadow: 0 6px 0 #9a231c; }
+    /* Cartridge wrapper for positioning */
+    .cartridge-wrapper {
+      position: relative;
+    }
+
+    /* Game Boy Color Cartridge */
+    .cartridge {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 0.9;
+      cursor: pointer;
+      transition: transform 0.15s ease, filter 0.15s ease;
+      text-decoration: none;
+      display: block;
+    }
+    .cartridge:hover {
+      transform: translateY(-6px) rotate(-1deg);
+      filter: brightness(1.08);
+    }
+    .cartridge:hover .cartridge-body {
+      box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.15),
+        inset -1px -1px 2px rgba(0,0,0,0.3),
+        0 16px 35px rgba(0,0,0,0.5);
+    }
+
+    /* Cartridge insertion animation - uses CSS custom properties for direction */
+    .cartridge.inserting {
+      position: relative;
+      z-index: 40;
+      pointer-events: none;
+    }
+    .cartridge.inserting.from-left {
+      animation: insertFromLeft 0.9s ease-in-out forwards;
+    }
+    .cartridge.inserting.from-right {
+      animation: insertFromRight 0.9s ease-in-out forwards;
+    }
+    .cartridge.inserting.from-center {
+      animation: insertFromCenter 0.7s ease-in-out forwards;
+    }
+    
+    @keyframes insertFromLeft {
+      0% { transform: translateX(0) translateY(0); }
+      35% { transform: translateX(calc(50% + 16px)) translateY(15px); }
+      45% { transform: translateX(calc(50% + 16px)) translateY(8px); }
+      55% { transform: translateX(calc(50% + 16px)) translateY(20px); }
+      100% { transform: translateX(calc(50% + 16px)) translateY(95%); }
+    }
+    @keyframes insertFromRight {
+      0% { transform: translateX(0) translateY(0); }
+      35% { transform: translateX(calc(-50% - 16px)) translateY(15px); }
+      45% { transform: translateX(calc(-50% - 16px)) translateY(8px); }
+      55% { transform: translateX(calc(-50% - 16px)) translateY(20px); }
+      100% { transform: translateX(calc(-50% - 16px)) translateY(95%); }
+    }
+    @keyframes insertFromCenter {
+      0% { transform: translateX(0) translateY(0); }
+      30% { transform: translateX(0) translateY(15px); }
+      40% { transform: translateX(0) translateY(8px); }
+      50% { transform: translateX(0) translateY(20px); }
+      100% { transform: translateX(0) translateY(95%); }
+    }
+    
+    /* Other cartridge shifts out of the way */
+    .cartridge.shift-left {
+      animation: shiftLeft 0.5s ease-out forwards;
+    }
+    .cartridge.shift-right {
+      animation: shiftRight 0.5s ease-out forwards;
+    }
+    @keyframes shiftLeft {
+      0% { transform: translateX(0) rotate(0); opacity: 1; }
+      100% { transform: translateX(-40px) rotate(-8deg); opacity: 0.3; }
+    }
+    @keyframes shiftRight {
+      0% { transform: translateX(0) rotate(0); opacity: 1; }
+      100% { transform: translateX(40px) rotate(8deg); opacity: 0.3; }
+    }
+    
+    /* Central console slot at bottom of grid */
+    .console-slot-center {
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 240px;
+      height: 40px;
+      background: linear-gradient(180deg, #0d0d0f 0%, #050506 100%);
+      border-radius: 6px 6px 10px 10px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      box-shadow: 
+        inset 0 8px 20px rgba(0,0,0,0.95),
+        inset 3px 0 6px rgba(0,0,0,0.4),
+        inset -3px 0 6px rgba(0,0,0,0.4),
+        0 4px 8px rgba(0,0,0,0.4);
+      z-index: 60;
+      overflow: hidden;
+    }
+    /* Slot opening at top */
+    .console-slot-center::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 10%;
+      right: 10%;
+      height: 8px;
+      background: repeating-linear-gradient(
+        90deg,
+        #252525 0px,
+        #252525 3px,
+        #1a1a1a 3px,
+        #1a1a1a 6px
+      );
+      border-radius: 2px;
+    }
+    .console-slot-center::after {
+      display: none;
+    }
+    .console-slot-center.show {
+      opacity: 1;
+    }
+    
+    /* Grid needs relative positioning for the slot */
+    .grid {
+      position: relative;
+      padding-bottom: 40px;
+    }
+    
+    /* Screen flash effect when cartridge is inserted */
+    .crt-inner.flash {
+      animation: screenFlash 0.3s ease-out;
+    }
+    @keyframes screenFlash {
+      0% { filter: brightness(1); }
+      50% { filter: brightness(1.5); }
+      100% { filter: brightness(1); }
+    }
+
+    .cartridge-body {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, #3d3d42 0%, #2a2a2e 50%, #1f1f22 100%);
+      border-radius: 6px 6px 3px 3px;
+      box-shadow: 
+        inset 1px 1px 2px rgba(255,255,255,0.1),
+        inset -1px -1px 2px rgba(0,0,0,0.3),
+        0 10px 25px rgba(0,0,0,0.45);
+      overflow: hidden;
+    }
+
+    /* Horizontal Ridges at Top */
+    .cartridge-ridges {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: repeating-linear-gradient(
+        180deg,
+        #3a3a3e 0px,
+        #3a3a3e 3px,
+        #2d2d30 3px,
+        #2d2d30 5px
+      );
+      border-radius: 6px 6px 0 0;
+    }
+
+    /* Recessed Label Area */
+    .cartridge-label {
+      position: absolute;
+      top: 26px;
+      left: 8px;
+      right: 8px;
+      bottom: 26px;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 6px;
+      box-shadow: 
+        inset 0 2px 4px rgba(0,0,0,0.5),
+        inset 0 -1px 2px rgba(255,255,255,0.05);
+      text-align: center;
+      overflow: hidden;
+    }
+    .cartridge-label.basketball {
+      background: linear-gradient(145deg, #ff6b35 0%, #e85d04 40%, #c42a10 100%);
+    }
+    .cartridge-label.soccer {
+      background: linear-gradient(145deg, #2eb8b8 0%, #1e6091 50%, #1a365d 100%);
+    }
+
+    .cartridge-icon {
+      font-size: 44px;
+      margin-bottom: 2px;
+      filter: drop-shadow(0 3px 5px rgba(0,0,0,0.5));
+    }
+
+    .cartridge-title {
+      font-family: "Press Start 2P";
+      font-size: 9px;
+      color: #fff;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.7), 2px 2px 6px rgba(0,0,0,0.5);
+      margin-bottom: 3px;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .cartridge-desc {
+      font-family: "VT323";
+      font-size: 14px;
+      color: rgba(255,255,255,0.95);
+      line-height: 1.1;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .cartridge-play {
+      display: none;
+    }
+
+    /* Bottom connector area */
+    .cartridge-notch {
+      position: absolute;
+      bottom: 0;
+      left: 12%;
+      right: 12%;
+      height: 16px;
+      background: linear-gradient(180deg, #252528 0%, #1a1a1c 100%);
+      border-radius: 2px 2px 0 0;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .cartridge-notch::before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 8%;
+      right: 8%;
+      height: 6px;
+      background: repeating-linear-gradient(
+        90deg,
+        #3a3a3a 0px,
+        #3a3a3a 2px,
+        #252525 2px,
+        #252525 4px
+      );
+      border-radius: 1px;
+    }
+    .cartridge-notch::after {
+      display: none;
+    }
+
+    /* Brand text on sides */
+    .cartridge-edge-left {
+      position: absolute;
+      top: 38%;
+      left: 2px;
+      font-family: "Press Start 2P";
+      font-size: 4px;
+      color: #505050;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      letter-spacing: 1px;
+    }
+    .cartridge-edge-right {
+      position: absolute;
+      bottom: 20px;
+      right: 5px;
+      font-family: "VT323";
+      font-size: 8px;
+      color: #404040;
+      letter-spacing: 0.5px;
+    }
 
     .bar{ margin: 18px auto 0; width:min(1040px,96%); background:#0b2f4e; color:#b1d4ff; border: 6px solid #0f2e4d; border-radius: 12px; padding: 10px 14px; display:flex; gap:16px; align-items:center; overflow:hidden }
     .dot{ width:10px; height:10px; border-radius:50%; background:#ff5341; box-shadow:0 0 10px rgba(255,83,65,.9) }
@@ -143,11 +442,42 @@
     <main class="crt" role="main">
       <div class="crt-inner">
         <section class="grid" aria-label="Choose a game">
-          <article class="card">
-            <h3>Starting5</h3>
-            <p>Guess the colleges of NBA starting fives. New lineup every day at midnight!</p>
-            <a class="cta" href="/starting5">Play Now</a>
-          </article>
+          <!-- Starting5 Cartridge -->
+          <div class="cartridge-wrapper">
+            <a href="/starting5" class="cartridge" data-position="left">
+              <div class="cartridge-body">
+                <div class="cartridge-ridges"></div>
+                <div class="cartridge-edge-left">WHEREDHEGO</div>
+                <div class="cartridge-edge-right">WHG-01</div>
+                <div class="cartridge-label basketball">
+                  <span class="cartridge-icon">🏀</span>
+                  <div class="cartridge-title">STARTING5</div>
+                  <div class="cartridge-desc">Guess NBA colleges</div>
+                </div>
+                <div class="cartridge-notch"></div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Starting11 Cartridge -->
+          <div class="cartridge-wrapper">
+            <a href="/starting11" class="cartridge" data-position="right">
+              <div class="cartridge-body">
+                <div class="cartridge-ridges"></div>
+                <div class="cartridge-edge-left">WHEREDHEGO</div>
+                <div class="cartridge-edge-right">WHG-02</div>
+                <div class="cartridge-label soccer">
+                  <span class="cartridge-icon">⚽</span>
+                  <div class="cartridge-title">STARTING11</div>
+                  <div class="cartridge-desc">Name the nation</div>
+                </div>
+                <div class="cartridge-notch"></div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Central Console Slot -->
+          <div class="console-slot-center"></div>
         </section>
         <div class="scan" aria-hidden="true"></div>
         <div class="glare" aria-hidden="true"></div>
@@ -179,5 +509,54 @@
 
     <footer>Wheredhego</footer>
   </div>
+
+  <script>
+    document.querySelectorAll('.cartridge').forEach(cartridge => {
+      cartridge.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const href = this.getAttribute('href');
+        const position = this.getAttribute('data-position');
+        const crtInner = document.querySelector('.crt-inner');
+        const slot = document.querySelector('.console-slot-center');
+        const allCartridges = document.querySelectorAll('.cartridge');
+        
+        // Show the central slot
+        slot.classList.add('show');
+        
+        // Animate this cartridge based on position
+        this.classList.add('inserting');
+        if (position === 'left') {
+          this.classList.add('from-left');
+        } else if (position === 'right') {
+          this.classList.add('from-right');
+        } else {
+          this.classList.add('from-center');
+        }
+        
+        // Shift the other cartridge out of the way
+        allCartridges.forEach(other => {
+          if (other !== this) {
+            const otherPos = other.getAttribute('data-position');
+            if (otherPos === 'left') {
+              other.classList.add('shift-left');
+            } else {
+              other.classList.add('shift-right');
+            }
+          }
+        });
+        
+        // Flash the screen when cartridge is almost fully in
+        setTimeout(() => {
+          crtInner.classList.add('flash');
+        }, 650);
+        
+        // Navigate after animation completes
+        setTimeout(() => {
+          window.location.href = href;
+        }, 950);
+      });
+    });
+  </script>
 </body>
 </html>

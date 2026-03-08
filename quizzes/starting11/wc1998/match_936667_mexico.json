@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Mexico",
+    "country_code": "MEX"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "South Korea",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Jorge Campos",
+      "player_id": "102513",
+      "club": {
+        "name": "Chicago Fire",
+        "club_id": "432",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/432.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Claudio Su\u00e1rez",
+      "player_id": "39494",
+      "club": {
+        "name": "Deportivo Guadalajara",
+        "club_id": "6711",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6711.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Duilio Davino",
+      "player_id": "29563",
+      "club": {
+        "name": "CF Am\u00e9rica",
+        "club_id": "3631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3631.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Braulio Luna",
+      "player_id": "28100",
+      "club": {
+        "name": "UNAM Pumas",
+        "club_id": "7633",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7633.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "P\u00e1vel Pardo",
+      "player_id": "29579",
+      "club": {
+        "name": "Atlas Guadalajara",
+        "club_id": "8590",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8590.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Ra\u00fal Lara",
+      "player_id": "102892",
+      "club": {
+        "name": "CF Am\u00e9rica",
+        "club_id": "3631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3631.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Jaime Ordiales",
+      "player_id": "102895",
+      "club": {
+        "name": "Deportivo Toluca",
+        "club_id": "1804",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1804.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Alberto Garc\u00eda Aspe",
+      "player_id": "102515",
+      "club": {
+        "name": "CF Am\u00e9rica",
+        "club_id": "3631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3631.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Ram\u00f3n Ram\u00edrez",
+      "player_id": "39489",
+      "club": {
+        "name": "Deportivo Guadalajara",
+        "club_id": "6711",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6711.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Cuauht\u00e9moc Blanco",
+      "player_id": "28066",
+      "club": {
+        "name": "Club Necaxa",
+        "club_id": "1146",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1146.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Luis Hern\u00e1ndez",
+      "player_id": "80014",
+      "club": {
+        "name": "Club Necaxa",
+        "club_id": "1146",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1146.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

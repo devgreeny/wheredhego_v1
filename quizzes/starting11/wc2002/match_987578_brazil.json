@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Brazil",
+    "country_code": "BRA"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "Germany",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Marcos",
+      "player_id": "30421",
+      "club": {
+        "name": "Sociedade Esportiva Palmeiras",
+        "club_id": "1023",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1023.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Edm\u00edlson",
+      "player_id": "5343",
+      "club": {
+        "name": "Olympique Lyon",
+        "club_id": "1041",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1041.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Roque J\u00fanior",
+      "player_id": "5807",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "L\u00facio",
+      "player_id": "77",
+      "club": {
+        "name": "Bayer 04 Leverkusen",
+        "club_id": "15",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Gilberto Silva",
+      "player_id": "3194",
+      "club": {
+        "name": "Clube Atl\u00e9tico Mineiro",
+        "club_id": "330",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/330.png"
+      },
+      "position": {
+        "x": 58.27272727272727,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Kl\u00e9berson",
+      "player_id": "3365",
+      "club": {
+        "name": "Atl\u00e9tico Paranaense",
+        "club_id": "679",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/679.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Cafu",
+      "player_id": "5937",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Roberto Carlos",
+      "player_id": "7518",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Rivaldo",
+      "player_id": "3372",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 56.87272727272727,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Ronaldinho",
+      "player_id": "3373",
+      "club": {
+        "name": "Paris Saint-Germain",
+        "club_id": "583",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Ronaldo",
+      "player_id": "3140",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 17.1
+      }
+    }
+  ]
+}

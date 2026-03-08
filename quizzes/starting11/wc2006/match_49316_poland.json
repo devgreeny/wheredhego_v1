@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Poland",
+    "country_code": "POL"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Germany",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Artur Boruc",
+      "player_id": "15220",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Jacek Bak",
+      "player_id": "5472",
+      "club": {
+        "name": "Al-Rayyan SC",
+        "club_id": "3229",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3229.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Bartosz Bosacki",
+      "player_id": "18527",
+      "club": {
+        "name": "Lech Poznan",
+        "club_id": "238",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/238.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Michal Zewlakow",
+      "player_id": "9613",
+      "club": {
+        "name": "RSC Anderlecht",
+        "club_id": "58",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/58.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Marcin Baszczynski",
+      "player_id": "14892",
+      "club": {
+        "name": "Wisla Krak\u00f3w",
+        "club_id": "422",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/422.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Radoslaw Sobolewski",
+      "player_id": "24573",
+      "club": {
+        "name": "Wisla Krak\u00f3w",
+        "club_id": "422",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/422.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Arkadiusz Radomski",
+      "player_id": "4404",
+      "club": {
+        "name": "Austria Vienna",
+        "club_id": "14",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/14.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Jacek Krzynowek",
+      "player_id": "765",
+      "club": {
+        "name": "Bayer 04 Leverkusen",
+        "club_id": "15",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Ireneusz Jele\u0144",
+      "player_id": "16951",
+      "club": {
+        "name": "Wisla Plock",
+        "club_id": "2118",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2118.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Maciej Zurawski",
+      "player_id": "14922",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Ebi Smolarek",
+      "player_id": "4388",
+      "club": {
+        "name": "Borussia Dortmund",
+        "club_id": "16",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/16.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

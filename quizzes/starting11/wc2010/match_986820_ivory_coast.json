@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Ivory Coast",
+    "country_code": "IVO"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "North Korea",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Boubacar Copa",
+      "player_id": "13041",
+      "club": {
+        "name": "KSC Lokeren (-2020)",
+        "club_id": "498",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/498.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Kolo Tour\u00e9",
+      "player_id": "3202",
+      "club": {
+        "name": "Manchester City",
+        "club_id": "281",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/281.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Didier Zokora",
+      "player_id": "13389",
+      "club": {
+        "name": "Sevilla FC",
+        "club_id": "368",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Arthur Boka",
+      "player_id": "13038",
+      "club": {
+        "name": "VfB Stuttgart",
+        "club_id": "79",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/79.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Emmanuel Ebou\u00e9",
+      "player_id": "13058",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Yaya Tour\u00e9",
+      "player_id": "13091",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 42.3
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Romaric",
+      "player_id": "15808",
+      "club": {
+        "name": "Sevilla FC",
+        "club_id": "368",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+      },
+      "position": {
+        "x": 59.03636363636363,
+        "y": 34.6
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Cheik Tiot\u00e9",
+      "player_id": "33478",
+      "club": {
+        "name": "FC Twente Enschede",
+        "club_id": "317",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/317.png"
+      },
+      "position": {
+        "x": 40.836363636363636,
+        "y": 34.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Gervinho",
+      "player_id": "33481",
+      "club": {
+        "name": "LOSC Lille",
+        "club_id": "1082",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1082.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Abdul Kader Keita",
+      "player_id": "33366",
+      "club": {
+        "name": "Galatasaray",
+        "club_id": "141",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/141.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Didier Drogba",
+      "player_id": "3924",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

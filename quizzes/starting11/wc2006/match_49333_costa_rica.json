@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Costa Rica",
+    "country_code": "COS"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Poland",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 18,
+      "name": "Francisco Porras",
+      "player_id": "35377",
+      "club": {
+        "name": "Deportivo Saprissa",
+        "club_id": "4720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4720.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Luis Mar\u00edn",
+      "player_id": "35375",
+      "club": {
+        "name": "LD Alajuelense",
+        "club_id": "6478",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6478.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Michael Uma\u00f1a",
+      "player_id": "35380",
+      "club": {
+        "name": "Brujas FC (- 2011)",
+        "club_id": "8602",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8602.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Gabriel Badilla",
+      "player_id": "39566",
+      "club": {
+        "name": "Deportivo Saprissa",
+        "club_id": "4720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4720.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Christian Bola\u00f1os",
+      "player_id": "38163",
+      "club": {
+        "name": "Deportivo Saprissa",
+        "club_id": "4720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4720.png"
+      },
+      "position": {
+        "x": 39.5,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Mauricio Sol\u00eds",
+      "player_id": "16446",
+      "club": {
+        "name": "CSD Comunicaciones",
+        "club_id": "9709",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9709.png"
+      },
+      "position": {
+        "x": 60.5,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "W\u00e1lter Centeno",
+      "player_id": "35371",
+      "club": {
+        "name": "Deportivo Saprissa",
+        "club_id": "4720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4720.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 40.2
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Jervis Drummond",
+      "player_id": "38228",
+      "club": {
+        "name": "Deportivo Saprissa",
+        "club_id": "4720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4720.png"
+      },
+      "position": {
+        "x": 71.0,
+        "y": 33.9
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Leonardo Gonz\u00e1lez",
+      "player_id": "38222",
+      "club": {
+        "name": "CS Herediano",
+        "club_id": "2677",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2677.png"
+      },
+      "position": {
+        "x": 29.0,
+        "y": 33.9
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "R\u00f3nald G\u00f3mez",
+      "player_id": "35372",
+      "club": {
+        "name": "Deportivo Saprissa",
+        "club_id": "4720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4720.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Paulo Wanchope",
+      "player_id": "3230",
+      "club": {
+        "name": "CS Herediano",
+        "club_id": "2677",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2677.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

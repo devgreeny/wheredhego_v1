@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Togo",
+    "country_code": "TOG"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "France",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 16,
+      "name": "Kossi Agassa",
+      "player_id": "12028",
+      "club": {
+        "name": "FC Metz",
+        "club_id": "347",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/347.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Dar\u00e9 Nibomb\u00e9",
+      "player_id": "12967",
+      "club": {
+        "name": "RAEC Mons (-2015)",
+        "club_id": "1411",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1411.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Jean-Paul Abalo",
+      "player_id": "40008",
+      "club": {
+        "name": "APOEL Nicosia",
+        "club_id": "2784",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2784.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Richmond Forson",
+      "player_id": "39999",
+      "club": {
+        "name": "Le Poir\u00e9-sur-Vie VF",
+        "club_id": "9902",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9902.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Massamasso Tchangai",
+      "player_id": "40016",
+      "club": {
+        "name": "Benevento Calcio",
+        "club_id": "4171",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4171.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Yao Aziawonou",
+      "player_id": "4870",
+      "club": {
+        "name": "BSC Young Boys",
+        "club_id": "452",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/452.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Cheriffe Maman-Tour\u00e9",
+      "player_id": "13369",
+      "club": {
+        "name": "FC Metz",
+        "club_id": "347",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/347.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Moustapha Salifou",
+      "player_id": "1778",
+      "club": {
+        "name": "Stade Brestois 29",
+        "club_id": "3911",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3911.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Yao Junior S\u00e8naya",
+      "player_id": "19280",
+      "club": {
+        "name": "SC YF Juventus Z\u00fcrich",
+        "club_id": "2395",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2395.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Emmanuel Adebayor",
+      "player_id": "8883",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Mohamed Kader",
+      "player_id": "4823",
+      "club": {
+        "name": "EA Guingamp",
+        "club_id": "855",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/855.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Denmark",
+    "country_code": "DEN"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "France",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Thomas S\u00f6rensen",
+      "player_id": "3473",
+      "club": {
+        "name": "Sunderland AFC",
+        "club_id": "289",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/289.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Martin Laursen",
+      "player_id": "3503",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Ren\u00e9 Henriksen",
+      "player_id": "9686",
+      "club": {
+        "name": "Panathinaikos FC",
+        "club_id": "265",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/265.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Niclas Jensen",
+      "player_id": "3809",
+      "club": {
+        "name": "Manchester City",
+        "club_id": "281",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/281.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Thomas Helveg",
+      "player_id": "5802",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Stig T\u00f8fting",
+      "player_id": "324",
+      "club": {
+        "name": "Bolton Wanderers",
+        "club_id": "355",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/355.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Thomas Gravesen",
+      "player_id": "301",
+      "club": {
+        "name": "Everton FC",
+        "club_id": "29",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/29.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Christian Poulsen",
+      "player_id": "1443",
+      "club": {
+        "name": "FC Copenhagen",
+        "club_id": "190",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/190.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Martin J\u00f8rgensen",
+      "player_id": "5892",
+      "club": {
+        "name": "Udinese Calcio",
+        "club_id": "410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/410.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 30.4
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Dennis Rommedahl",
+      "player_id": "4361",
+      "club": {
+        "name": "PSV Eindhoven",
+        "club_id": "383",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/383.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Jon Dahl Tomasson",
+      "player_id": "4169",
+      "club": {
+        "name": "Feyenoord Rotterdam",
+        "club_id": "234",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/234.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

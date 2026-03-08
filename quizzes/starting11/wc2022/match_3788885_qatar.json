@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Qatar",
+    "country_code": "QAT"
+  },
+  "match": {
+    "tournament": "World Cup 2022",
+    "stage": "Match",
+    "opponent": "Netherlands",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 22,
+      "name": "Meshaal Barsham",
+      "player_id": "560423",
+      "club": {
+        "name": "Al-Sadd SC",
+        "club_id": "656",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/656.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Pedro Miguel",
+      "player_id": "228727",
+      "club": {
+        "name": "Al-Sadd SC",
+        "club_id": "656",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/656.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Boualem Khoukhi",
+      "player_id": "222669",
+      "club": {
+        "name": "Al-Sadd SC",
+        "club_id": "656",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/656.png"
+      },
+      "position": {
+        "x": 61.55,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Abdelkarim Hassan",
+      "player_id": "171412",
+      "club": {
+        "name": "Al-Sadd SC",
+        "club_id": "656",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/656.png"
+      },
+      "position": {
+        "x": 38.45,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Homam Al-Amin",
+      "player_id": "556713",
+      "club": {
+        "name": "Al-Gharafa SC",
+        "club_id": "6297",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6297.png"
+      },
+      "position": {
+        "x": 26.9,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Ismail Mohamad",
+      "player_id": "223908",
+      "club": {
+        "name": "Al-Duhail SC",
+        "club_id": "26091",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/26091.png"
+      },
+      "position": {
+        "x": 73.1,
+        "y": 56.3
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Assim Madibo",
+      "player_id": "336667",
+      "club": {
+        "name": "Al-Duhail SC",
+        "club_id": "26091",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/26091.png"
+      },
+      "position": {
+        "x": 39.5,
+        "y": 41.6
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Abdulaziz Hatim",
+      "player_id": "113915",
+      "club": {
+        "name": "Al-Rayyan SC",
+        "club_id": "3229",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3229.png"
+      },
+      "position": {
+        "x": 60.5,
+        "y": 41.6
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Hasan Al-Haydos",
+      "player_id": "86286",
+      "club": {
+        "name": "Al-Sadd SC",
+        "club_id": "656",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/656.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Akram Afif",
+      "player_id": "336646",
+      "club": {
+        "name": "Al-Sadd SC",
+        "club_id": "656",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/656.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Almoez Ali",
+      "player_id": "345095",
+      "club": {
+        "name": "Al-Duhail SC",
+        "club_id": "26091",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/26091.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

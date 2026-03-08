@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Tunisia",
+    "country_code": "TUN"
+  },
+  "match": {
+    "tournament": "World Cup 2022",
+    "stage": "Match",
+    "opponent": "Australia",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 16,
+      "name": "Aymen Dahmen",
+      "player_id": "569433",
+      "club": {
+        "name": "CS Sfaxien",
+        "club_id": "581",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/581.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Montassar Talbi",
+      "player_id": "496706",
+      "club": {
+        "name": "FC Lorient",
+        "club_id": "1158",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1158.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Yassine Meriah",
+      "player_id": "306330",
+      "club": {
+        "name": "Esperance Tunis",
+        "club_id": "3342",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3342.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Dylan Bronn",
+      "player_id": "450417",
+      "club": {
+        "name": "US Salernitana 1919",
+        "club_id": "380",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/380.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Ellyes Skhiri",
+      "player_id": "290587",
+      "club": {
+        "name": "1.FC K\u00f6ln",
+        "club_id": "3",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3.png"
+      },
+      "position": {
+        "x": 58.27272727272727,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "A\u00efssa La\u00efdouni",
+      "player_id": "233782",
+      "club": {
+        "name": "Ferencv\u00e1rosi TC",
+        "club_id": "279",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/279.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Mohamed Dr\u00e4ger",
+      "player_id": "192167",
+      "club": {
+        "name": "FC Luzern",
+        "club_id": "434",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/434.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 24,
+      "name": "Ali Abdi",
+      "player_id": "211474",
+      "club": {
+        "name": "SM Caen",
+        "club_id": "1162",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1162.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Youssef Msakni",
+      "player_id": "69110",
+      "club": {
+        "name": "Al-Arabi SC",
+        "club_id": "1230",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1230.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Na\u00efm Sliti",
+      "player_id": "184491",
+      "club": {
+        "name": "Al-Ettifaq FC",
+        "club_id": "7732",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7732.png"
+      },
+      "position": {
+        "x": 56.87272727272727,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Issam Jebali",
+      "player_id": "122635",
+      "club": {
+        "name": "Odense Boldklub",
+        "club_id": "173",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/173.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 17.1
+      }
+    }
+  ]
+}

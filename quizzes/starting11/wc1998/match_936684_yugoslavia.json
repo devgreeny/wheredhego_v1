@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Yugoslavia",
+    "country_code": "YUG"
+  },
+  "match": {
+    "tournament": "World Cup 1998",
+    "stage": "Match",
+    "opponent": "Germany",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 11,
+      "name": "Sinisa Mihajlovic",
+      "player_id": "5834",
+      "club": {
+        "name": "UC Sampdoria",
+        "club_id": "1038",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1038.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Goran Djorovic",
+      "player_id": "7488",
+      "club": {
+        "name": "Celta de Vigo",
+        "club_id": "940",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/940.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Zeljko Petrovic",
+      "player_id": "4505",
+      "club": {
+        "name": "Urawa Red Diamonds",
+        "club_id": "828",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/828.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Slobodan Komljenovic",
+      "player_id": "13",
+      "club": {
+        "name": "MSV Duisburg",
+        "club_id": "52",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/52.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Slavisa Jokanovic",
+      "player_id": "79065",
+      "club": {
+        "name": "CD Tenerife",
+        "club_id": "648",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/648.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Dragan Stojkovic",
+      "player_id": "102704",
+      "club": {
+        "name": "Nagoya Grampus",
+        "club_id": "1066",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1066.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Dejan Stankovic",
+      "player_id": "3428",
+      "club": {
+        "name": "Red Star Belgrade",
+        "club_id": "159",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/159.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Vladimir Jugovic",
+      "player_id": "5297",
+      "club": {
+        "name": "SS Lazio",
+        "club_id": "398",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/398.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Predrag Mijatovi\u0107",
+      "player_id": "24481",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 22,
+      "name": "Darko Kovacevic",
+      "player_id": "7479",
+      "club": {
+        "name": "Real Sociedad",
+        "club_id": "681",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/681.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Oliver Kahn",
+      "player_id": "206",
+      "club": {
+        "name": "Bayern Munich",
+        "club_id": "27",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/27.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 50.0
+      }
+    }
+  ]
+}

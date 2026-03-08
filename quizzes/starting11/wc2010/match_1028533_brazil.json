@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Brazil",
+    "country_code": "BRA"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "Netherlands",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 3,
+      "name": "L\u00facio",
+      "player_id": "77",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Juan",
+      "player_id": "1599",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Michel Bastos",
+      "player_id": "12142",
+      "club": {
+        "name": "Olympique Lyon",
+        "club_id": "1041",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1041.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Maicon",
+      "player_id": "18301",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Gilberto Silva",
+      "player_id": "3194",
+      "club": {
+        "name": "Panathinaikos FC",
+        "club_id": "265",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/265.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Dani Alves",
+      "player_id": "15951",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Felipe Melo",
+      "player_id": "35537",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 44.4
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Kak\u00e1",
+      "player_id": "3366",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 30.4
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Robinho",
+      "player_id": "15511",
+      "club": {
+        "name": "Manchester City",
+        "club_id": "281",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/281.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Lu\u00eds Fabiano",
+      "player_id": "19082",
+      "club": {
+        "name": "Sevilla FC",
+        "club_id": "368",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 22,
+      "name": "Sander Boschker",
+      "player_id": "4582",
+      "club": {
+        "name": "FC Twente Enschede",
+        "club_id": "317",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/317.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 50.0
+      }
+    }
+  ]
+}

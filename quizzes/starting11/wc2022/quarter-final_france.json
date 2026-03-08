@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "France",
+    "country_code": "FRA"
+  },
+  "match": {
+    "tournament": "World Cup 2022",
+    "stage": "Quarter-Final",
+    "date": "2022-12-10",
+    "opponent": "England"
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Hugo Lloris",
+      "player_id": "17965",
+      "club": {
+        "name": "Tottenham Hotspur",
+        "club_id": "148",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/148.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Rapha\u00ebl Varane",
+      "player_id": "164770",
+      "club": {
+        "name": "Manchester United",
+        "club_id": "985",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/985.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Dayot Upamecano",
+      "player_id": "344695",
+      "club": {
+        "name": "Bayern Munich",
+        "club_id": "27",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/27.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 22,
+      "name": "Theo Hern\u00e1ndez",
+      "player_id": "339808",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Jules Kound\u00e9",
+      "player_id": "411975",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Aur\u00e9lien Tchouam\u00e9ni",
+      "player_id": "413112",
+      "club": {
+        "name": "Real Madrid",
+        "club_id": "418",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/418.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Adrien Rabiot",
+      "player_id": "182913",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Kylian Mbapp\u00e9",
+      "player_id": "342229",
+      "club": {
+        "name": "Paris Saint-Germain",
+        "club_id": "583",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Ousmane Demb\u00e9l\u00e9",
+      "player_id": "288230",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Antoine Griezmann",
+      "player_id": "125781",
+      "club": {
+        "name": "Atl\u00e9tico de Madrid",
+        "club_id": "13",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/13.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Olivier Giroud",
+      "player_id": "82442",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

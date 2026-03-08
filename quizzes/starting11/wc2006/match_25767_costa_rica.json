@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Costa Rica",
+    "country_code": "COS"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Germany",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 18,
+      "name": "Francisco Porras",
+      "player_id": "35377",
+      "club": {
+        "name": "Deportivo Saprissa",
+        "club_id": "4720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4720.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Luis Mar\u00edn",
+      "player_id": "35375",
+      "club": {
+        "name": "LD Alajuelense",
+        "club_id": "6478",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6478.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Michael Uma\u00f1a",
+      "player_id": "35380",
+      "club": {
+        "name": "Brujas FC (- 2011)",
+        "club_id": "8602",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8602.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Douglas Sequeira",
+      "player_id": "35365",
+      "club": {
+        "name": "Real Salt Lake City",
+        "club_id": "6643",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6643.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Danny Fonseca",
+      "player_id": "35384",
+      "club": {
+        "name": "CS Cartagin\u00e9s",
+        "club_id": "18577",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18577.png"
+      },
+      "position": {
+        "x": 58.27272727272727,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Mauricio Sol\u00eds",
+      "player_id": "16446",
+      "club": {
+        "name": "CSD Comunicaciones",
+        "club_id": "9709",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9709.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Gilberto Mart\u00ednez",
+      "player_id": "5969",
+      "club": {
+        "name": "Brescia Calcio",
+        "club_id": "19",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/19.png"
+      },
+      "position": {
+        "x": 67.37272727272727,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Leonardo Gonz\u00e1lez",
+      "player_id": "38222",
+      "club": {
+        "name": "CS Herediano",
+        "club_id": "2677",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2677.png"
+      },
+      "position": {
+        "x": 32.372727272727275,
+        "y": 38.8
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "W\u00e1lter Centeno",
+      "player_id": "35371",
+      "club": {
+        "name": "Deportivo Saprissa",
+        "club_id": "4720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4720.png"
+      },
+      "position": {
+        "x": 42.872727272727275,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "R\u00f3nald G\u00f3mez",
+      "player_id": "35372",
+      "club": {
+        "name": "Deportivo Saprissa",
+        "club_id": "4720",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4720.png"
+      },
+      "position": {
+        "x": 56.87272727272727,
+        "y": 29.0
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Paulo Wanchope",
+      "player_id": "3230",
+      "club": {
+        "name": "CS Herediano",
+        "club_id": "2677",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2677.png"
+      },
+      "position": {
+        "x": 49.872727272727275,
+        "y": 17.1
+      }
+    }
+  ]
+}

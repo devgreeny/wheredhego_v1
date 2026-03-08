@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Nigeria",
+    "country_code": "NIG"
+  },
+  "match": {
+    "tournament": "World Cup 2014",
+    "stage": "Match",
+    "opponent": "Bosnia-Herzegovina",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Vincent Enyeama",
+      "player_id": "37760",
+      "club": {
+        "name": "LOSC Lille",
+        "club_id": "1082",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1082.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Joseph Yobo",
+      "player_id": "3270",
+      "club": {
+        "name": "Norwich City",
+        "club_id": "1123",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1123.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 22,
+      "name": "Kenneth Omeruo",
+      "player_id": "131708",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Juwon Oshaniwa",
+      "player_id": "223431",
+      "club": {
+        "name": "FC Ashdod",
+        "club_id": "6105",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6105.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Efe Ambrose",
+      "player_id": "81831",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "John Obi Mikel",
+      "player_id": "30739",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Ogenyi Onazi",
+      "player_id": "131709",
+      "club": {
+        "name": "SS Lazio",
+        "club_id": "398",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/398.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Michel Babatunde",
+      "player_id": "177688",
+      "club": {
+        "name": "Volyn Lutsk",
+        "club_id": "4482",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4482.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Ahmed Musa",
+      "player_id": "168337",
+      "club": {
+        "name": "CSKA Moscow",
+        "club_id": "2410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2410.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Peter Odemwingie",
+      "player_id": "12516",
+      "club": {
+        "name": "Stoke City",
+        "club_id": "512",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/512.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Emmanuel Emenike",
+      "player_id": "120630",
+      "club": {
+        "name": "Fenerbahce",
+        "club_id": "36",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/36.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

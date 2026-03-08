@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "New Zealand",
+    "country_code": "NEW"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "Slovakia",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Mark Paston",
+      "player_id": "13598",
+      "club": {
+        "name": "Wellington Phoenix",
+        "club_id": "8445",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8445.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Tommy Smith",
+      "player_id": "54381",
+      "club": {
+        "name": "Ipswich Town",
+        "club_id": "677",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/677.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Winston Reid",
+      "player_id": "37526",
+      "club": {
+        "name": "FC Midtjylland",
+        "club_id": "865",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/865.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Ryan Nelsen",
+      "player_id": "28878",
+      "club": {
+        "name": "Blackburn Rovers",
+        "club_id": "164",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/164.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Ivan Vicelich",
+      "player_id": "4618",
+      "club": {
+        "name": "Auckland City FC",
+        "club_id": "11391",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11391.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Simon Elliott",
+      "player_id": "26831",
+      "club": {
+        "name": "Without ClubWithout Club",
+        "club_id": "515",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/515.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Leo Bertos",
+      "player_id": "43145",
+      "club": {
+        "name": "Wellington Phoenix",
+        "club_id": "8445",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8445.png"
+      },
+      "position": {
+        "x": 69.6,
+        "y": 37.4
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Tony Lochhead",
+      "player_id": "39895",
+      "club": {
+        "name": "Wellington Phoenix",
+        "club_id": "8445",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/8445.png"
+      },
+      "position": {
+        "x": 30.4,
+        "y": 37.4
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Chris Killen",
+      "player_id": "37766",
+      "club": {
+        "name": "Middlesbrough FC",
+        "club_id": "641",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/641.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Rory Fallon",
+      "player_id": "46109",
+      "club": {
+        "name": "Plymouth Argyle",
+        "club_id": "2262",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2262.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Shane Smeltz",
+      "player_id": "51038",
+      "club": {
+        "name": "Gold Coast United",
+        "club_id": "15889",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15889.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 17.1
+      }
+    }
+  ]
+}

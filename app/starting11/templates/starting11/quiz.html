@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Starting11</title>
+    
+    <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('starting11.static', filename='style.css') }}">
+    
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+
+<body>
+    {% include '_auth_navbar.html' %}
+    
+    <div class="content">
+        <div class="header-container">
+            <h1 class="header-title">STARTING XI</h1>
+            <p class="header-subtitle">GUESS THE NATIONAL TEAM</p>
+            <p class="header-matchup">{{ data.match.tournament }}</p>
+            <p class="formation-note">Data from <a href="https://www.transfermarkt.com" target="_blank" rel="noopener">Transfermarkt</a> • This is a personal project • Formations may look off sometimes — 5-backs can appear as packed midfields but are likely wingbacks</p>
+        </div>
+        
+        {% if already_played %}
+        <p class="played-note">You have already played this quiz today.</p>
+        {% endif %}
+        
+        <form method="POST" action="{{ url_for('starting11.show_quiz') }}" id="quiz-form">
+            <input type="hidden" name="quiz_json_path" value="{{ quiz_json_path }}">
+            <input type="hidden" name="time_taken" id="time_taken_field" value="0">
+            <input type="hidden" name="hints_used" id="hints_used_field" value="0">
+            
+            <div class="pitch-container">
+                <div class="pitch">
+                    <div class="pitch-markings">
+                        <div class="center-circle"></div>
+                        <div class="center-line"></div>
+                        <div class="penalty-area penalty-top"></div>
+                        <div class="penalty-area penalty-bottom"></div>
+                        <div class="goal-area goal-top"></div>
+                        <div class="goal-area goal-bottom"></div>
+                    </div>
+                    
+                    {% for player in data.players %}
+                    {% set raw_y = 10 + (player.position.y - 15) * 75 / 58 %}
+                    {% set scaled_y = [[raw_y, 8] | max, 92] | min %}
+                    {% set raw_x = 6 + (player.position.x - 25) * 88 / 50 %}
+                    {% set scaled_x = [[raw_x, 6] | max, 94] | min %}
+                    <div class="player-marker" 
+                         data-player-name="{{ player.name }}"
+                         data-club-name="{{ player.club.name }}"
+                         style="left: {{ scaled_x }}%; top: {{ scaled_y }}%;">
+                        <div class="badge-container">
+                            <img src="{{ player.club.badge_url }}" 
+                                 alt="{{ player.club.name }}" 
+                                 class="club-badge"
+                                 onerror="this.src='https://tmssl.akamaized.net/images/wappen/head/0.png'">
+                        </div>
+                        <span class="jersey-number">#{{ player.jersey }}</span>
+                        <span class="club-name-tooltip"></span>
+                        <span class="player-name-hint" style="display: none;">{{ player.name.split(' ')[-1] }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <!-- Hints Section -->
+            <div class="hints-container">
+                <div class="hints-header">
+                    <span class="hints-label">NEED A HINT?</span>
+                    <span class="hints-score">Score: <span id="potential-score">3</span>/3</span>
+                </div>
+                
+                <div class="hints-buttons">
+                    <button type="button" class="hint-btn" id="hint-1" data-hint="1">
+                        <span class="hint-icon">1</span>
+                        <span class="hint-text">Confederation</span>
+                    </button>
+                    <button type="button" class="hint-btn" id="hint-2" data-hint="2" disabled>
+                        <span class="hint-icon">2</span>
+                        <span class="hint-text">Player Name</span>
+                    </button>
+                </div>
+                
+                <div class="hints-revealed">
+                    <div class="hint-reveal" id="hint-1-reveal" style="display: none;">
+                        <span class="hint-label">Confederation:</span>
+                        <span class="hint-value">{{ confederation }}</span>
+                    </div>
+                    <div class="hint-reveal" id="hint-2-reveal" style="display: none;">
+                        <span class="hint-label">Player:</span>
+                        <span class="hint-value" id="revealed-player-name"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="guess-container">
+                <label for="country_guess" class="guess-label">WHICH NATIONAL TEAM IS THIS?</label>
+                <select name="country_guess" id="country_guess" class="country-select" required {% if already_played %}disabled{% endif %}>
+                    <option value="" disabled selected>Select a country...</option>
+                    {% for country in countries %}
+                    <option value="{{ country }}">{{ country }}</option>
+                    {% endfor %}
+                </select>
+                
+                <button type="submit" class="submit-btn" {% if already_played %}disabled{% endif %}>
+                    Submit Guess
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        $(function() {
+            const quizId = {{ quiz_id|tojson }};
+            const alreadyPlayed = {{ 'true' if already_played else 'false' }};
+            let hintsUsed = 0;
+            
+            // Player names for hint 3
+            const playerNames = [];
+            $('.player-marker').each(function() {
+                playerNames.push($(this).data('player-name'));
+            });
+            
+            // Click on badge to show club name
+            $('.player-marker').on('click', function(e) {
+                e.stopPropagation();
+                const $this = $(this);
+                const clubName = $this.data('club-name');
+                const $tooltip = $this.find('.club-name-tooltip');
+                
+                // Hide all other tooltips
+                $('.club-name-tooltip').not($tooltip).removeClass('visible').text('');
+                
+                // Toggle this tooltip
+                if ($tooltip.hasClass('visible')) {
+                    $tooltip.removeClass('visible').text('');
+                } else {
+                    $tooltip.text(clubName).addClass('visible');
+                }
+            });
+            
+            // Click elsewhere to hide tooltips
+            $(document).on('click', function() {
+                $('.club-name-tooltip').removeClass('visible').text('');
+            });
+            
+            localStorage.setItem(`quizStart_starting11_${quizId}`, Date.now());
+            
+            // Update potential score display (3 pts no hints, 2 pts 1 hint, 1 pt 2 hints)
+            function updateScore() {
+                const score = 3 - hintsUsed;
+                $('#potential-score').text(score);
+            }
+            
+            // Hint button handlers
+            $('#hint-1').on('click', function() {
+                if ($(this).hasClass('used')) return;
+                $(this).addClass('used').prop('disabled', true);
+                $('#hint-1-reveal').slideDown(200);
+                $('#hint-2').prop('disabled', false);
+                hintsUsed = 1;
+                $('#hints_used_field').val(hintsUsed);
+                updateScore();
+            });
+            
+            $('#hint-2').on('click', function() {
+                if ($(this).hasClass('used')) return;
+                $(this).addClass('used').prop('disabled', true);
+                
+                // Pick a random player to reveal
+                const randomPlayer = playerNames[Math.floor(Math.random() * playerNames.length)];
+                $('#revealed-player-name').text(randomPlayer);
+                $('#hint-2-reveal').slideDown(200);
+                
+                // Also show name on the pitch for that player
+                $('.player-marker').each(function() {
+                    if ($(this).data('player-name') === randomPlayer) {
+                        $(this).find('.player-name-hint').show();
+                    }
+                });
+                
+                hintsUsed = 2;
+                $('#hints_used_field').val(hintsUsed);
+                updateScore();
+            });
+            
+            $('#quiz-form').on('submit', function() {
+                const start = localStorage.getItem(`quizStart_starting11_${quizId}`);
+                if (start) {
+                    const elapsed = Math.round((Date.now() - parseInt(start, 10)) / 1000);
+                    $('#time_taken_field').val(elapsed);
+                }
+            });
+            
+            $('#country_guess').select2({
+                width: '100%',
+                placeholder: 'Type or select a country...',
+                theme: 'classic',
+                allowClear: true,
+                tags: true
+            });
+            
+            if (alreadyPlayed) {
+                $('.submit-btn').prop('disabled', true);
+                $('#country_guess').prop('disabled', true);
+                $('.hint-btn').prop('disabled', true);
+            }
+        });
+    </script>
+</body>
+</html>

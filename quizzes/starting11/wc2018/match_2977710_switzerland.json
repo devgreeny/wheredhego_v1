@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Switzerland",
+    "country_code": "SWI"
+  },
+  "match": {
+    "tournament": "World Cup 2018",
+    "stage": "Match",
+    "opponent": "Serbia",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Yann Sommer",
+      "player_id": "42205",
+      "club": {
+        "name": "Borussia M\u00f6nchengladbach",
+        "club_id": "18",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/18.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Manuel Akanji",
+      "player_id": "284730",
+      "club": {
+        "name": "Borussia Dortmund",
+        "club_id": "16",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/16.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 22,
+      "name": "Fabian Sch\u00e4r",
+      "player_id": "135343",
+      "club": {
+        "name": "Deportivo de La Coru\u00f1a",
+        "club_id": "897",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/897.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Ricardo Rodr\u00edguez",
+      "player_id": "86784",
+      "club": {
+        "name": "AC Milan",
+        "club_id": "5",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/5.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Stephan Lichtsteiner",
+      "player_id": "2865",
+      "club": {
+        "name": "Juventus FC",
+        "club_id": "506",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/506.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Granit Xhaka",
+      "player_id": "111455",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Valon Behrami",
+      "player_id": "21905",
+      "club": {
+        "name": "Udinese Calcio",
+        "club_id": "410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/410.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Blerim Dzemaili",
+      "player_id": "9967",
+      "club": {
+        "name": "Bologna FC 1909",
+        "club_id": "1025",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1025.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Steven Zuber",
+      "player_id": "68033",
+      "club": {
+        "name": "TSG 1899 Hoffenheim",
+        "club_id": "533",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/533.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Xherdan Shaqiri",
+      "player_id": "86792",
+      "club": {
+        "name": "Stoke City",
+        "club_id": "512",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/512.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Haris Seferovic",
+      "player_id": "109256",
+      "club": {
+        "name": "SL Benfica",
+        "club_id": "294",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/294.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

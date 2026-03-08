@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Greece",
+    "country_code": "GRE"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "South Korea",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 12,
+      "name": "Alexandros Tzorvas",
+      "player_id": "24284",
+      "club": {
+        "name": "Panathinaikos FC",
+        "club_id": "265",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/265.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Avraam Papadopoulos",
+      "player_id": "12979",
+      "club": {
+        "name": "Olympiacos Piraeus",
+        "club_id": "683",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/683.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Loukas Vyntra",
+      "player_id": "16458",
+      "club": {
+        "name": "Panathinaikos FC",
+        "club_id": "265",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/265.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Vasilios Torosidis",
+      "player_id": "24977",
+      "club": {
+        "name": "Olympiacos Piraeus",
+        "club_id": "683",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/683.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Georgios Seitaridis",
+      "player_id": "9841",
+      "club": {
+        "name": "Panathinaikos FC",
+        "club_id": "265",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/265.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Alexandros Tziolis",
+      "player_id": "12883",
+      "club": {
+        "name": "AC Siena",
+        "club_id": "1387",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1387.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Konstantinos Katsouranis",
+      "player_id": "9852",
+      "club": {
+        "name": "Panathinaikos FC",
+        "club_id": "265",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/265.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Georgios Karagounis",
+      "player_id": "6106",
+      "club": {
+        "name": "Panathinaikos FC",
+        "club_id": "265",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/265.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Georgios Samaras",
+      "player_id": "6855",
+      "club": {
+        "name": "Celtic FC",
+        "club_id": "371",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/371.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Angelos Charisteas",
+      "player_id": "1519",
+      "club": {
+        "name": "1.FC Nuremberg",
+        "club_id": "4",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Theofanis Gekas",
+      "player_id": "16402",
+      "club": {
+        "name": "Hertha BSC",
+        "club_id": "44",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/44.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

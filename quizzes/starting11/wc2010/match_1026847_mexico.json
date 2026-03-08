@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Mexico",
+    "country_code": "MEX"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "Argentina",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "\u00d3scar P\u00e9rez",
+      "player_id": "29560",
+      "club": {
+        "name": "Jaguares de Chiapas",
+        "club_id": "4774",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4774.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Francisco Rodr\u00edguez",
+      "player_id": "28163",
+      "club": {
+        "name": "PSV Eindhoven",
+        "club_id": "383",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/383.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Ricardo Osorio",
+      "player_id": "31352",
+      "club": {
+        "name": "VfB Stuttgart",
+        "club_id": "79",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/79.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Carlos Salcido",
+      "player_id": "31434",
+      "club": {
+        "name": "PSV Eindhoven",
+        "club_id": "383",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/383.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Efra\u00edn Ju\u00e1rez",
+      "player_id": "66130",
+      "club": {
+        "name": "UNAM Pumas",
+        "club_id": "7633",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/7633.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Rafa M\u00e1rquez",
+      "player_id": "2904",
+      "club": {
+        "name": "FC Barcelona",
+        "club_id": "131",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/131.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Gerardo Torrado",
+      "player_id": "7713",
+      "club": {
+        "name": "CD Cruz Azul",
+        "club_id": "3711",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3711.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Andr\u00e9s Guardado",
+      "player_id": "20506",
+      "club": {
+        "name": "Deportivo de La Coru\u00f1a",
+        "club_id": "897",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/897.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Giovani dos Santos",
+      "player_id": "44674",
+      "club": {
+        "name": "Galatasaray",
+        "club_id": "141",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/141.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Adolfo Bautista",
+      "player_id": "29572",
+      "club": {
+        "name": "Deportivo Guadalajara",
+        "club_id": "6711",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6711.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Chicharito",
+      "player_id": "50935",
+      "club": {
+        "name": "Deportivo Guadalajara",
+        "club_id": "6711",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6711.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

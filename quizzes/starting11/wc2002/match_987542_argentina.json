@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Argentina",
+    "country_code": "ARG"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "England",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 12,
+      "name": "Pablo Cavallero",
+      "player_id": "7536",
+      "club": {
+        "name": "Celta de Vigo",
+        "club_id": "940",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/940.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Walter Samuel",
+      "player_id": "5938",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Mauricio Pochettino",
+      "player_id": "4767",
+      "club": {
+        "name": "Paris Saint-Germain",
+        "club_id": "583",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Diego Placente",
+      "player_id": "76",
+      "club": {
+        "name": "Bayer 04 Leverkusen",
+        "club_id": "15",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/15.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Diego Simeone",
+      "player_id": "5841",
+      "club": {
+        "name": "SS Lazio",
+        "club_id": "398",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/398.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Javier Zanetti",
+      "player_id": "1161",
+      "club": {
+        "name": "Inter Milan",
+        "club_id": "46",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/46.png"
+      },
+      "position": {
+        "x": 64.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Juan Pablo Sor\u00edn",
+      "player_id": "7925",
+      "club": {
+        "name": "Cruzeiro Esporte Clube",
+        "club_id": "609",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/609.png"
+      },
+      "position": {
+        "x": 36.0,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Juan Sebasti\u00e1n Ver\u00f3n",
+      "player_id": "3143",
+      "club": {
+        "name": "Manchester United",
+        "club_id": "985",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/985.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Kily Gonz\u00e1lez",
+      "player_id": "7438",
+      "club": {
+        "name": "Valencia CF",
+        "club_id": "1049",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1049.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Ariel Ortega",
+      "player_id": "4147",
+      "club": {
+        "name": "CA River Plate",
+        "club_id": "209",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/209.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Gabriel Batistuta",
+      "player_id": "5959",
+      "club": {
+        "name": "AS Roma",
+        "club_id": "12",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/12.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 17.1
+      }
+    }
+  ]
+}

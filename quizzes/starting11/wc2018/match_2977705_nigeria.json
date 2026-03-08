@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Nigeria",
+    "country_code": "NIG"
+  },
+  "match": {
+    "tournament": "World Cup 2018",
+    "stage": "Match",
+    "opponent": "Argentina",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 23,
+      "name": "Francis Uzoho",
+      "player_id": "295360",
+      "club": {
+        "name": "RC Deportivo Fabril",
+        "club_id": "11603",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11603.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "William Troost-Ekong",
+      "player_id": "192875",
+      "club": {
+        "name": "Bursaspor",
+        "club_id": "20",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/20.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Leon Balogun",
+      "player_id": "56100",
+      "club": {
+        "name": "1.FSV Mainz 05",
+        "club_id": "39",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/39.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 22,
+      "name": "Kenneth Omeruo",
+      "player_id": "131708",
+      "club": {
+        "name": "Kasimpasa",
+        "club_id": "10484",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/10484.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "John Obi Mikel",
+      "player_id": "30739",
+      "club": {
+        "name": "Tianjin Teda",
+        "club_id": "3187",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3187.png"
+      },
+      "position": {
+        "x": 39.5,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Wilfred Ndidi",
+      "player_id": "274839",
+      "club": {
+        "name": "Leicester City",
+        "club_id": "1003",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1003.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 40.2
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Peter Etebo",
+      "player_id": "409106",
+      "club": {
+        "name": "UD Las Palmas",
+        "club_id": "472",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/472.png"
+      },
+      "position": {
+        "x": 60.5,
+        "y": 38.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Victor Moses",
+      "player_id": "59866",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 71.0,
+        "y": 33.9
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Bryan Idowu",
+      "player_id": "178957",
+      "club": {
+        "name": "Amkar Perm",
+        "club_id": "4128",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4128.png"
+      },
+      "position": {
+        "x": 29.0,
+        "y": 33.9
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Ahmed Musa",
+      "player_id": "168337",
+      "club": {
+        "name": "CSKA Moscow",
+        "club_id": "2410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2410.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Kelechi Iheanacho",
+      "player_id": "295330",
+      "club": {
+        "name": "Leicester City",
+        "club_id": "1003",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1003.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

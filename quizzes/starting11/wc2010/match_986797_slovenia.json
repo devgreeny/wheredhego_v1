@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Slovenia",
+    "country_code": "SLO"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "United States",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Samir Handanovi\u010d",
+      "player_id": "28021",
+      "club": {
+        "name": "Udinese Calcio",
+        "club_id": "410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/410.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Bostjan Cesar",
+      "player_id": "24606",
+      "club": {
+        "name": "Grenoble Foot 38",
+        "club_id": "1290",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1290.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Marko Suler",
+      "player_id": "26128",
+      "club": {
+        "name": "KAA Gent",
+        "club_id": "157",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/157.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Bojan Jokic",
+      "player_id": "44317",
+      "club": {
+        "name": "Chievo Verona",
+        "club_id": "862",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/862.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Miso Brecko",
+      "player_id": "15300",
+      "club": {
+        "name": "1.FC K\u00f6ln",
+        "club_id": "3",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Aleksandar Radosavljevic",
+      "player_id": "25807",
+      "club": {
+        "name": "AE Larisa",
+        "club_id": "4603",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4603.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Robert Koren",
+      "player_id": "26946",
+      "club": {
+        "name": "West Bromwich Albion",
+        "club_id": "984",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/984.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Andraz Kirm",
+      "player_id": "28393",
+      "club": {
+        "name": "Wisla Krak\u00f3w",
+        "club_id": "422",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/422.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Valter Birsa",
+      "player_id": "26105",
+      "club": {
+        "name": "AJ Auxerre",
+        "club_id": "290",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/290.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Milivoje Novakovic",
+      "player_id": "16162",
+      "club": {
+        "name": "1.FC K\u00f6ln",
+        "club_id": "3",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Zlatan Ljubijankic",
+      "player_id": "34639",
+      "club": {
+        "name": "KAA Gent",
+        "club_id": "157",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/157.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    }
+  ]
+}

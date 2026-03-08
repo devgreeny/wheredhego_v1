@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Ivory Coast",
+    "country_code": "IVO"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Argentina",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Jean-Jacques Tizie",
+      "player_id": "28288",
+      "club": {
+        "name": "Esperance Tunis",
+        "club_id": "3342",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3342.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Kolo Tour\u00e9",
+      "player_id": "3202",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 12,
+      "name": "Abdoulaye M\u00e9\u00eft\u00e9",
+      "player_id": "5315",
+      "club": {
+        "name": "Olympique Marseille",
+        "club_id": "244",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/244.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Arthur Boka",
+      "player_id": "13038",
+      "club": {
+        "name": "RC Strasbourg Alsace",
+        "club_id": "667",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/667.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Emmanuel Ebou\u00e9",
+      "player_id": "13058",
+      "club": {
+        "name": "Arsenal FC",
+        "club_id": "11",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/11.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Didier Zokora",
+      "player_id": "13389",
+      "club": {
+        "name": "AS Saint-\u00c9tienne",
+        "club_id": "618",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/618.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Yaya Tour\u00e9",
+      "player_id": "13091",
+      "club": {
+        "name": "Olympiacos Piraeus",
+        "club_id": "683",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/683.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Bonaventure Kalou",
+      "player_id": "4164",
+      "club": {
+        "name": "Paris Saint-Germain",
+        "club_id": "583",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/583.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Kanga Akal\u00e9",
+      "player_id": "12060",
+      "club": {
+        "name": "AJ Auxerre",
+        "club_id": "290",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/290.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Abdul Kader Keita",
+      "player_id": "33366",
+      "club": {
+        "name": "LOSC Lille",
+        "club_id": "1082",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1082.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Didier Drogba",
+      "player_id": "3924",
+      "club": {
+        "name": "Chelsea FC",
+        "club_id": "631",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/631.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,694 @@
+/* ============================================================================
+   Starting11 Styles - Matching Starting5 Theme
+   ============================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', monospace;
+}
+
+:root {
+    --navy-900: #0f172a;
+    --navy-800: #1e293b;
+    --navy-700: #334155;
+    --gold: #facc15;
+    --light-gray: #e2e8f0;
+    --grayish: #94a3b8;
+    --green: #22c55e;
+    --pitch-green: #1e5631;
+    --pitch-dark: #163d22;
+    --pitch-line: rgba(255, 255, 255, 0.4);
+    --red: #ef4444;
+    --white: #ffffff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--navy-900);
+    color: var(--light-gray);
+    padding-top: 2rem;
+}
+
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header */
+.header-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.header-title {
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+    font-size: 0.7rem;
+    color: var(--light-gray);
+    margin-bottom: 0.3rem;
+}
+
+.header-matchup {
+    font-size: 0.6rem;
+    color: var(--grayish);
+}
+
+.formation-note {
+    font-size: 0.45rem;
+    color: var(--grayish);
+    margin-top: 0.5rem;
+    opacity: 0.7;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.4;
+}
+
+.formation-note a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.formation-note a:hover {
+    text-decoration: underline;
+}
+
+.played-note {
+    text-align: center;
+    color: var(--gold);
+    font-size: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: var(--navy-800);
+    border-radius: 0.5rem;
+}
+
+/* Half-Field Pitch Container */
+.pitch-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+    padding: 20px 15px;
+}
+
+.pitch-container.small {
+    max-width: 320px;
+    margin-bottom: 1rem;
+}
+
+/* Half-field - goal at BOTTOM */
+.pitch {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.92;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            var(--pitch-green) 0px,
+            var(--pitch-green) 18px,
+            var(--pitch-dark) 18px,
+            var(--pitch-dark) 36px
+        );
+    border: 2px solid var(--pitch-line);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Pitch Markings - Half field with goal at bottom */
+.pitch-markings {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* Center arc at TOP (half of center circle) - clipped by overflow:hidden */
+.center-circle {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    aspect-ratio: 1;
+    border: 2px solid var(--pitch-line);
+    border-radius: 50%;
+}
+
+/* Top line (center line) */
+.center-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--pitch-line);
+}
+
+/* Penalty area at BOTTOM */
+.penalty-area {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 22%;
+    border: 2px solid var(--pitch-line);
+}
+
+.penalty-top {
+    display: none;
+}
+
+.penalty-bottom {
+    bottom: 0;
+    border-bottom: none;
+}
+
+/* Goal area at BOTTOM */
+.goal-area {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 8%;
+    border: 2px solid var(--pitch-line);
+}
+
+.goal-top {
+    display: none;
+}
+
+.goal-bottom {
+    bottom: 0;
+    border-bottom: none;
+}
+
+/* Player Markers */
+.player-marker {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.player-marker:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    z-index: 10;
+}
+
+/* Badge container - card style like Starting5 */
+.badge-container {
+    width: 38px;
+    height: 38px;
+    background: var(--navy-900);
+    border: 2px solid var(--navy-800);
+    border-radius: 6px;
+    padding: 3px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Retro overlay on badges */
+.badge-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(250, 204, 21, 0.08) 0%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    pointer-events: none;
+}
+
+.club-badge {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: saturate(0.9) contrast(1.05);
+}
+
+.jersey-number {
+    margin-top: 3px;
+    background: rgba(15, 23, 42, 0.9);
+    color: var(--gold);
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-size: 0.45rem;
+    font-weight: bold;
+}
+
+.club-name-tooltip {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--navy-900);
+    color: var(--light-gray);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.35rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 100;
+    border: 1px solid var(--navy-700);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.club-name-tooltip.visible {
+    opacity: 1;
+}
+
+.player-name {
+    margin-top: 2px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--light-gray);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.35rem;
+    white-space: nowrap;
+}
+
+.player-name-hint {
+    margin-top: 2px;
+    background: var(--gold);
+    color: var(--navy-900);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.35rem;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+/* Hints Section */
+.hints-container {
+    background: var(--navy-800);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+}
+
+.hints-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.hints-label {
+    color: var(--light-gray);
+    font-size: 0.5rem;
+}
+
+.hints-score {
+    color: var(--gold);
+    font-size: 0.5rem;
+}
+
+.hints-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.hint-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--navy-900);
+    border: 2px solid var(--navy-700);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    max-width: 100px;
+}
+
+.hint-btn:hover:not(:disabled):not(.used) {
+    border-color: var(--gold);
+    background: rgba(250, 204, 21, 0.1);
+}
+
+.hint-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.hint-btn.used {
+    background: rgba(250, 204, 21, 0.15);
+    border-color: var(--gold);
+    opacity: 0.7;
+}
+
+.hint-icon {
+    width: 20px;
+    height: 20px;
+    background: var(--navy-700);
+    color: var(--light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.4rem;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.hint-btn.used .hint-icon {
+    background: var(--gold);
+    color: var(--navy-900);
+}
+
+.hint-text {
+    color: var(--grayish);
+    font-size: 0.35rem;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.hints-revealed {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.hint-reveal {
+    background: var(--navy-900);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.hint-reveal .hint-label {
+    color: var(--grayish);
+    font-size: 0.4rem;
+}
+
+.hint-reveal .hint-value {
+    color: var(--gold);
+    font-size: 0.45rem;
+}
+
+/* Guess Container */
+.guess-container {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem 1.5rem 2rem;
+    background: var(--navy-800);
+    border-radius: 12px;
+}
+
+.guess-label {
+    display: block;
+    color: var(--gold);
+    font-size: 0.6rem;
+    margin-bottom: 1.25rem;
+}
+
+.country-select {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.85rem;
+    font-size: 0.6rem;
+    font-family: 'Press Start 2P', monospace;
+    background: var(--navy-900);
+    color: var(--light-gray);
+    border: 2px solid var(--navy-700);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.submit-btn {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.9rem 1.75rem;
+    font-size: 0.65rem;
+    font-family: 'Press Start 2P', monospace;
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #16a34a;
+    transform: translateY(-1px);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+.submit-btn:disabled {
+    background: var(--navy-700);
+    color: var(--grayish);
+    cursor: not-allowed;
+}
+
+/* Results Page */
+.results-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--navy-800);
+    border-radius: 12px;
+}
+
+.result-icon {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.result-icon.correct {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--green);
+    animation: bounce 0.5s ease;
+}
+
+.result-icon.wrong {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--red);
+    animation: shake 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.result-answer {
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.result-match {
+    font-size: 0.5rem;
+    color: var(--grayish);
+    margin-bottom: 1rem;
+}
+
+.score-display {
+    margin: 1rem 0;
+}
+
+.score-value {
+    font-size: 1.6rem;
+    color: var(--gold);
+}
+
+.hints-used-text {
+    font-size: 0.45rem;
+    color: var(--grayish);
+    margin-bottom: 0.5rem;
+}
+
+.performance-text {
+    font-size: 0.55rem;
+    color: var(--light-gray);
+    margin-bottom: 0.5rem;
+}
+
+.percentile-text {
+    font-size: 0.5rem;
+    color: var(--grayish);
+}
+
+/* Share Button */
+.share-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.share-btn {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.55rem;
+    font-family: 'Press Start 2P', monospace;
+    background: var(--gold);
+    color: var(--navy-900);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.share-btn:hover {
+    background: #eab308;
+    transform: translateY(-1px);
+}
+
+.share-confirm {
+    display: inline-block;
+    margin-left: 1rem;
+    color: var(--green);
+    font-size: 0.5rem;
+}
+
+/* Lineup Reveal */
+.lineup-reveal {
+    background: var(--navy-800);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.lineup-reveal h3 {
+    color: var(--gold);
+    font-size: 0.65rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.lineup-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.lineup-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.5rem;
+    background: var(--navy-900);
+    border-radius: 6px;
+    font-size: 0.42rem;
+}
+
+.lineup-jersey {
+    color: var(--gold);
+    min-width: 1.8rem;
+}
+
+.lineup-name {
+    color: var(--light-gray);
+    flex: 1;
+}
+
+.lineup-club {
+    color: var(--grayish);
+    font-size: 0.38rem;
+}
+
+/* Select2 Theme Override */
+.select2-container--classic .select2-selection--single {
+    background: var(--navy-900) !important;
+    border: 2px solid var(--navy-700) !important;
+    border-radius: 8px !important;
+    height: auto !important;
+    padding: 0.65rem 0.75rem !important;
+}
+
+.select2-container--classic .select2-selection--single .select2-selection__rendered {
+    color: var(--light-gray) !important;
+    font-family: 'Press Start 2P', monospace !important;
+    font-size: 0.55rem !important;
+}
+
+.select2-container--classic .select2-dropdown {
+    background: var(--navy-900) !important;
+    border: 2px solid var(--navy-700) !important;
+    border-radius: 8px !important;
+}
+
+.select2-container--classic .select2-results__option {
+    color: var(--light-gray) !important;
+    font-family: 'Press Start 2P', monospace !important;
+    font-size: 0.5rem !important;
+    padding: 0.5rem !important;
+}
+
+.select2-container--classic .select2-results__option--highlighted {
+    background: var(--gold) !important;
+    color: var(--navy-900) !important;
+}
+
+.select2-container--classic .select2-search--dropdown .select2-search__field {
+    background: var(--navy-800) !important;
+    border: 1px solid var(--navy-700) !important;
+    border-radius: 6px !important;
+    color: var(--light-gray) !important;
+    font-family: 'Press Start 2P', monospace !important;
+    font-size: 0.5rem !important;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .header-title {
+        font-size: 1rem;
+    }
+    
+    .pitch-container {
+        padding: 15px 10px;
+    }
+    
+    .badge-container {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .jersey-number {
+        font-size: 0.36rem;
+        padding: 2px 4px;
+    }
+    
+    .player-name {
+        font-size: 0.3rem;
+    }
+    
+    .result-answer {
+        font-size: 1rem;
+    }
+    
+    .score-value {
+        font-size: 1.3rem;
+    }
+}

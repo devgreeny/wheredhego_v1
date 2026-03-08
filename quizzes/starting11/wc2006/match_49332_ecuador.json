@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Ecuador",
+    "country_code": "ECU"
+  },
+  "match": {
+    "tournament": "World Cup 2006",
+    "stage": "Match",
+    "opponent": "Germany",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 12,
+      "name": "Christian Mora",
+      "player_id": "35935",
+      "club": {
+        "name": "LDU Quito",
+        "club_id": "9855",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9855.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Jorge Guagua",
+      "player_id": "38766",
+      "club": {
+        "name": "CD El Nacional",
+        "club_id": "1143",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1143.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Giovanny Espinoza",
+      "player_id": "28079",
+      "club": {
+        "name": "LDU Quito",
+        "club_id": "9855",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9855.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 13,
+      "name": "Pa\u00fal Ambrosi",
+      "player_id": "38760",
+      "club": {
+        "name": "LDU Quito",
+        "club_id": "9855",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9855.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Ulises de la Cruz",
+      "player_id": "3842",
+      "club": {
+        "name": "Aston Villa",
+        "club_id": "405",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/405.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Edwin Tenorio",
+      "player_id": "37383",
+      "club": {
+        "name": "Barcelona SC Guayaquil",
+        "club_id": "3523",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3523.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Marlon Ayov\u00ed",
+      "player_id": "37368",
+      "club": {
+        "name": "Deportivo Quito",
+        "club_id": "944",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/944.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Antonio Valencia",
+      "player_id": "33544",
+      "club": {
+        "name": "Recreativo Huelva",
+        "club_id": "2867",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2867.png"
+      },
+      "position": {
+        "x": 69.53636363636363,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "\u00c9dison M\u00e9ndez",
+      "player_id": "2816",
+      "club": {
+        "name": "LDU Quito",
+        "club_id": "9855",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/9855.png"
+      },
+      "position": {
+        "x": 30.336363636363636,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "F\u00e9lix Borja",
+      "player_id": "38761",
+      "club": {
+        "name": "CD El Nacional",
+        "club_id": "1143",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1143.png"
+      },
+      "position": {
+        "x": 42.93636363636364,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Iv\u00e1n Kaviedes",
+      "player_id": "7561",
+      "club": {
+        "name": "CS Norte Am\u00e9rica",
+        "club_id": "25952",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/25952.png"
+      },
+      "position": {
+        "x": 56.93636363636363,
+        "y": 16.4
+      }
+    }
+  ]
+}

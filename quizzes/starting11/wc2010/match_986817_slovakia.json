@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Slovakia",
+    "country_code": "SLO"
+  },
+  "match": {
+    "tournament": "World Cup 2010",
+    "stage": "Match",
+    "opponent": "Italy",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Jan Mucha",
+      "player_id": "33195",
+      "club": {
+        "name": "Legia Warszawa",
+        "club_id": "255",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/255.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Jan Durica",
+      "player_id": "34421",
+      "club": {
+        "name": "Hannover 96",
+        "club_id": "42",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/42.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 3,
+      "name": "Martin Skrtel",
+      "player_id": "24180",
+      "club": {
+        "name": "Liverpool FC",
+        "club_id": "31",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/31.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Radoslav Zabavn\u00edk",
+      "player_id": "24856",
+      "club": {
+        "name": "1.FSV Mainz 05",
+        "club_id": "39",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/39.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Peter Pekar\u00edk",
+      "player_id": "51100",
+      "club": {
+        "name": "VfL Wolfsburg",
+        "club_id": "82",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/82.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Zdeno Strba",
+      "player_id": "48608",
+      "club": {
+        "name": "Skoda Xanthi",
+        "club_id": "128",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/128.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Juraj Kucka",
+      "player_id": "74943",
+      "club": {
+        "name": "AC Sparta Prague",
+        "club_id": "197",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/197.png"
+      },
+      "position": {
+        "x": 58.33636363636363,
+        "y": 45.1
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Marek Hamsik",
+      "player_id": "38593",
+      "club": {
+        "name": "SSC Napoli",
+        "club_id": "6195",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6195.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 31.1
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Erik Jendrisek",
+      "player_id": "41369",
+      "club": {
+        "name": "1.FC Kaiserslautern",
+        "club_id": "2",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 15,
+      "name": "Miroslav Stoch",
+      "player_id": "45559",
+      "club": {
+        "name": "FC Twente Enschede",
+        "club_id": "317",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/317.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 27.6
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "R\u00f3bert Vittek",
+      "player_id": "3531",
+      "club": {
+        "name": "MKE Ankarag\u00fcc\u00fc",
+        "club_id": "868",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/868.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

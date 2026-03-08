@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Mexico",
+    "country_code": "MEX"
+  },
+  "match": {
+    "tournament": "World Cup 2002",
+    "stage": "Match",
+    "opponent": "United States",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "\u00d3scar P\u00e9rez",
+      "player_id": "29560",
+      "club": {
+        "name": "CD Cruz Azul",
+        "club_id": "3711",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/3711.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Rafa M\u00e1rquez",
+      "player_id": "2904",
+      "club": {
+        "name": "AS Monaco",
+        "club_id": "162",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/162.png"
+      },
+      "position": {
+        "x": 32.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 5,
+      "name": "Manuel Vidrio",
+      "player_id": "7730",
+      "club": {
+        "name": "CF Pachuca",
+        "club_id": "4035",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4035.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 58.4
+      }
+    },
+    {
+      "jersey": 16,
+      "name": "Salvador Carmona",
+      "player_id": "31347",
+      "club": {
+        "name": "Deportivo Toluca",
+        "club_id": "1804",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1804.png"
+      },
+      "position": {
+        "x": 67.5,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Gerardo Torrado",
+      "player_id": "7713",
+      "club": {
+        "name": "Sevilla FC",
+        "club_id": "368",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/368.png"
+      },
+      "position": {
+        "x": 60.5,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 18,
+      "name": "Joahan Rodr\u00edguez",
+      "player_id": "106609",
+      "club": {
+        "name": "Santos Laguna",
+        "club_id": "1403",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1403.png"
+      },
+      "position": {
+        "x": 39.5,
+        "y": 39.5
+      }
+    },
+    {
+      "jersey": 11,
+      "name": "Braulio Luna",
+      "player_id": "28100",
+      "club": {
+        "name": "Club Necaxa",
+        "club_id": "1146",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1146.png"
+      },
+      "position": {
+        "x": 50.0,
+        "y": 36.0
+      }
+    },
+    {
+      "jersey": 7,
+      "name": "Ram\u00f3n Morales",
+      "player_id": "29577",
+      "club": {
+        "name": "Deportivo Guadalajara",
+        "club_id": "6711",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/6711.png"
+      },
+      "position": {
+        "x": 30.4,
+        "y": 32.5
+      }
+    },
+    {
+      "jersey": 21,
+      "name": "Jes\u00fas Arellano",
+      "player_id": "29571",
+      "club": {
+        "name": "CF Monterrey",
+        "club_id": "2407",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2407.png"
+      },
+      "position": {
+        "x": 69.6,
+        "y": 32.5
+      }
+    },
+    {
+      "jersey": 10,
+      "name": "Cuauht\u00e9moc Blanco",
+      "player_id": "28066",
+      "club": {
+        "name": "Real Valladolid CF",
+        "club_id": "366",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/366.png"
+      },
+      "position": {
+        "x": 57.0,
+        "y": 16.4
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Jared Borgetti",
+      "player_id": "29573",
+      "club": {
+        "name": "Santos Laguna",
+        "club_id": "1403",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/1403.png"
+      },
+      "position": {
+        "x": 43.0,
+        "y": 16.4
+      }
+    }
+  ]
+}

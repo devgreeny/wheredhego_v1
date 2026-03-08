@@ -1,0 +1,168 @@
+{
+  "answer": {
+    "country": "Russia",
+    "country_code": "RUS"
+  },
+  "match": {
+    "tournament": "World Cup 2014",
+    "stage": "Match",
+    "opponent": "Belgium",
+    "date": ""
+  },
+  "players": [
+    {
+      "jersey": 1,
+      "name": "Igor Akinfeev",
+      "player_id": "15570",
+      "club": {
+        "name": "CSKA Moscow",
+        "club_id": "2410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2410.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 71.0
+      }
+    },
+    {
+      "jersey": 4,
+      "name": "Sergey Ignashevich",
+      "player_id": "9644",
+      "club": {
+        "name": "CSKA Moscow",
+        "club_id": "2410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2410.png"
+      },
+      "position": {
+        "x": 58.68636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 14,
+      "name": "Vasiliy Berezutskiy",
+      "player_id": "15362",
+      "club": {
+        "name": "CSKA Moscow",
+        "club_id": "2410",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/2410.png"
+      },
+      "position": {
+        "x": 41.53636363636363,
+        "y": 59.1
+      }
+    },
+    {
+      "jersey": 23,
+      "name": "Dmitriy Kombarov",
+      "player_id": "38782",
+      "club": {
+        "name": "Spartak Moscow",
+        "club_id": "232",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/232.png"
+      },
+      "position": {
+        "x": 27.186363636363637,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 2,
+      "name": "Aleksey Kozlov",
+      "player_id": "24912",
+      "club": {
+        "name": "Dinamo Moscow",
+        "club_id": "121",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/121.png"
+      },
+      "position": {
+        "x": 73.03636363636363,
+        "y": 57.7
+      }
+    },
+    {
+      "jersey": 8,
+      "name": "Denis Glushakov",
+      "player_id": "55336",
+      "club": {
+        "name": "Spartak Moscow",
+        "club_id": "232",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/232.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 42.3
+      }
+    },
+    {
+      "jersey": 20,
+      "name": "Viktor Fayzulin",
+      "player_id": "40254",
+      "club": {
+        "name": "Zenit St. Petersburg",
+        "club_id": "964",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/964.png"
+      },
+      "position": {
+        "x": 59.03636363636363,
+        "y": 34.6
+      }
+    },
+    {
+      "jersey": 17,
+      "name": "Oleg Shatov",
+      "player_id": "59187",
+      "club": {
+        "name": "Zenit St. Petersburg",
+        "club_id": "964",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/964.png"
+      },
+      "position": {
+        "x": 40.836363636363636,
+        "y": 34.6
+      }
+    },
+    {
+      "jersey": 6,
+      "name": "Maksim Kanunnikov",
+      "player_id": "104201",
+      "club": {
+        "name": "Amkar Perm",
+        "club_id": "4128",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/4128.png"
+      },
+      "position": {
+        "x": 32.43636363636364,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 19,
+      "name": "Aleksandr Samedov",
+      "player_id": "15076",
+      "club": {
+        "name": "Lokomotiv Moskau",
+        "club_id": "932",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/932.png"
+      },
+      "position": {
+        "x": 67.43636363636364,
+        "y": 22.0
+      }
+    },
+    {
+      "jersey": 9,
+      "name": "Aleksandr Kokorin",
+      "player_id": "89086",
+      "club": {
+        "name": "Dinamo Moscow",
+        "club_id": "121",
+        "badge_url": "https://tmssl.akamaized.net/images/wappen/head/121.png"
+      },
+      "position": {
+        "x": 49.93636363636364,
+        "y": 17.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Starting11 - Results</title>
+    
+    <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('starting11.static', filename='style.css') }}">
+</head>
+
+<body>
+    {% include '_auth_navbar.html' %}
+    
+    <div class="content">
+        <div class="header-container">
+            <h1 class="header-title">STARTING XI</h1>
+            <p class="header-subtitle">RESULTS</p>
+        </div>
+        
+        <div class="results-container">
+            <div class="result-icon {% if is_correct %}correct{% else %}wrong{% endif %}">
+                {% if is_correct %}CORRECT{% else %}WRONG{% endif %}
+            </div>
+            
+            <h2 class="result-answer">
+                {{ data.answer.country }}
+            </h2>
+            
+            <p class="result-match">
+                {{ data.match.tournament }} {{ data.match.stage }}
+                vs {{ data.match.opponent }}
+            </p>
+            
+            <div class="score-display">
+                <span class="score-value">{{ score|int if score == score|int else score }}/{{ max_points|int }}</span>
+            </div>
+            
+            {% if hints_used is defined and hints_used > 0 %}
+            <p class="hints-used-text">Hints used: {{ hints_used }}</p>
+            {% endif %}
+            
+            <p class="performance-text">{{ performance_text }}</p>
+            
+            {% if percentile > 0 %}
+            <p class="percentile-text">
+                Better than {{ percentile }}% of players
+            </p>
+            {% endif %}
+        </div>
+        
+        <div class="pitch-container small">
+            <div class="pitch">
+                <div class="pitch-markings">
+                    <div class="center-circle"></div>
+                    <div class="center-line"></div>
+                    <div class="penalty-area penalty-top"></div>
+                    <div class="penalty-area penalty-bottom"></div>
+                </div>
+                
+                {% for player in data.players %}
+                {% set raw_y = 10 + (player.position.y - 15) * 75 / 58 %}
+                {% set scaled_y = [[raw_y, 8] | max, 92] | min %}
+                {% set raw_x = 6 + (player.position.x - 25) * 88 / 50 %}
+                {% set scaled_x = [[raw_x, 6] | max, 94] | min %}
+                <div class="player-marker revealed" 
+                     style="left: {{ scaled_x }}%; top: {{ scaled_y }}%;">
+                    <div class="badge-container">
+                        <img src="{{ player.club.badge_url }}" 
+                             alt="{{ player.club.name }}" 
+                             class="club-badge"
+                             onerror="this.src='https://tmssl.akamaized.net/images/wappen/head/0.png'">
+                    </div>
+                    <span class="player-name">{{ player.name.split(' ')[-1] }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="share-container">
+            <button id="share-btn" class="share-btn">📋 Share Results</button>
+            <span id="share-confirm" class="share-confirm" style="display:none;">Copied!</span>
+        </div>
+        
+        <div class="lineup-reveal">
+            <h3>The Starting XI</h3>
+            <div class="lineup-list">
+                {% for player in data.players %}
+                <div class="lineup-item">
+                    <span class="lineup-jersey">#{{ player.jersey }}</span>
+                    <span class="lineup-name">{{ player.name }}</span>
+                    <span class="lineup-club">{{ player.club.name }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const shareMessage = {{ share_message|tojson }};
+        
+        document.getElementById('share-btn').addEventListener('click', function() {
+            navigator.clipboard.writeText(shareMessage).then(function() {
+                document.getElementById('share-confirm').style.display = 'inline';
+                setTimeout(function() {
+                    document.getElementById('share-confirm').style.display = 'none';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
