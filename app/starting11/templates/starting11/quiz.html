@@ -56,6 +56,7 @@
                     <div class="player-marker" 
                          data-player-name="{{ player.name }}"
                          data-club-name="{{ player.club.name }}"
+                         data-position="{{ player.inferred_position }}"
                          style="left: {{ scaled_x }}%; top: {{ scaled_y }}%;">
                         <div class="badge-container">
                             <img src="{{ player.club.badge_url }}" 
@@ -75,26 +76,34 @@
             <div class="hints-container">
                 <div class="hints-header">
                     <span class="hints-label">NEED A HINT?</span>
-                    <span class="hints-score">Score: <span id="potential-score">3</span>/3</span>
+                    <span class="hints-score">Score: <span id="potential-score">4</span>/4</span>
                 </div>
                 
                 <div class="hints-buttons">
                     <button type="button" class="hint-btn" id="hint-1" data-hint="1">
                         <span class="hint-icon">1</span>
-                        <span class="hint-text">Confederation</span>
+                        <span class="hint-text">Show All 11</span>
                     </button>
                     <button type="button" class="hint-btn" id="hint-2" data-hint="2" disabled>
                         <span class="hint-icon">2</span>
+                        <span class="hint-text">Confederation</span>
+                    </button>
+                    <button type="button" class="hint-btn" id="hint-3" data-hint="3" disabled>
+                        <span class="hint-icon">3</span>
                         <span class="hint-text">Player Name</span>
                     </button>
                 </div>
                 
                 <div class="hints-revealed">
                     <div class="hint-reveal" id="hint-1-reveal" style="display: none;">
+                        <span class="hint-label">Revealed:</span>
+                        <span class="hint-value">All 11 players now visible</span>
+                    </div>
+                    <div class="hint-reveal" id="hint-2-reveal" style="display: none;">
                         <span class="hint-label">Confederation:</span>
                         <span class="hint-value">{{ confederation }}</span>
                     </div>
-                    <div class="hint-reveal" id="hint-2-reveal" style="display: none;">
+                    <div class="hint-reveal" id="hint-3-reveal" style="display: none;">
                         <span class="hint-label">Player:</span>
                         <span class="hint-value" id="revealed-player-name"></span>
                     </div>
@@ -115,6 +124,8 @@
                 </button>
             </div>
         </form>
+        
+        {% include '_countdown_timer.html' %}
     </div>
     
     <script>
@@ -125,25 +136,57 @@
             
             // Player names for hint 3
             const playerNames = [];
-            $('.player-marker').each(function() {
+            const $allPlayers = $('.player-marker');
+            $allPlayers.each(function() {
                 playerNames.push($(this).data('player-name'));
             });
             
-            // Click on badge to show club name
+            // Seeded random for consistent hidden players across refreshes
+            function seededRandom(seed) {
+                const x = Math.sin(seed) * 10000;
+                return x - Math.floor(x);
+            }
+            
+            // Create seed from quiz ID
+            let seed = 0;
+            for (let i = 0; i < quizId.length; i++) {
+                seed += quizId.charCodeAt(i) * (i + 1);
+            }
+            
+            // Hide 5 players at start (show only 6) - consistent based on quiz ID
+            const indices = [...Array(11).keys()];
+            for (let i = indices.length - 1; i > 0; i--) {
+                seed++;
+                const j = Math.floor(seededRandom(seed) * (i + 1));
+                [indices[i], indices[j]] = [indices[j], indices[i]];
+            }
+            const hiddenIndices = indices.slice(0, 5);
+            $allPlayers.each(function(index) {
+                if (hiddenIndices.includes(index)) {
+                    $(this).addClass('hidden-player');
+                }
+            });
+            
+            // Click on badge to show club name and position
             $('.player-marker').on('click', function(e) {
                 e.stopPropagation();
                 const $this = $(this);
-                const clubName = $this.data('club-name');
                 const $tooltip = $this.find('.club-name-tooltip');
                 
                 // Hide all other tooltips
                 $('.club-name-tooltip').not($tooltip).removeClass('visible').text('');
                 
+                // If hidden player (not revealed), show "Unknown"
+                const isHidden = $this.hasClass('hidden-player') && !$this.hasClass('revealed');
+                const clubName = isHidden ? 'Unknown' : $this.data('club-name');
+                const position = $this.data('position');
+                const displayText = isHidden ? 'Unknown' : `${position} • ${clubName}`;
+                
                 // Toggle this tooltip
                 if ($tooltip.hasClass('visible')) {
                     $tooltip.removeClass('visible').text('');
                 } else {
-                    $tooltip.text(clubName).addClass('visible');
+                    $tooltip.text(displayText).addClass('visible');
                 }
             });
             
@@ -154,16 +197,20 @@
             
             localStorage.setItem(`quizStart_starting11_${quizId}`, Date.now());
             
-            // Update potential score display (3 pts no hints, 2 pts 1 hint, 1 pt 2 hints)
+            // Update potential score display (4 pts no hints, 3 pts 1 hint, 2 pts 2 hints, 1 pt 3 hints)
             function updateScore() {
-                const score = 3 - hintsUsed;
+                const score = 4 - hintsUsed;
                 $('#potential-score').text(score);
             }
             
-            // Hint button handlers
+            // Hint 1: Reveal all 11 players
             $('#hint-1').on('click', function() {
                 if ($(this).hasClass('used')) return;
                 $(this).addClass('used').prop('disabled', true);
+                
+                // Reveal hidden players with animation
+                $('.player-marker.hidden-player').addClass('revealed');
+                
                 $('#hint-1-reveal').slideDown(200);
                 $('#hint-2').prop('disabled', false);
                 hintsUsed = 1;
@@ -171,14 +218,26 @@
                 updateScore();
             });
             
+            // Hint 2: Show confederation
             $('#hint-2').on('click', function() {
+                if ($(this).hasClass('used')) return;
+                $(this).addClass('used').prop('disabled', true);
+                $('#hint-2-reveal').slideDown(200);
+                $('#hint-3').prop('disabled', false);
+                hintsUsed = 2;
+                $('#hints_used_field').val(hintsUsed);
+                updateScore();
+            });
+            
+            // Hint 3: Reveal player name
+            $('#hint-3').on('click', function() {
                 if ($(this).hasClass('used')) return;
                 $(this).addClass('used').prop('disabled', true);
                 
                 // Pick a random player to reveal
                 const randomPlayer = playerNames[Math.floor(Math.random() * playerNames.length)];
                 $('#revealed-player-name').text(randomPlayer);
-                $('#hint-2-reveal').slideDown(200);
+                $('#hint-3-reveal').slideDown(200);
                 
                 // Also show name on the pitch for that player
                 $('.player-marker').each(function() {
@@ -187,7 +246,7 @@
                     }
                 });
                 
-                hintsUsed = 2;
+                hintsUsed = 3;
                 $('#hints_used_field').val(hintsUsed);
                 updateScore();
             });

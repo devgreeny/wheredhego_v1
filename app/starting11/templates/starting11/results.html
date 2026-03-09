@@ -32,9 +32,15 @@
             </h2>
             
             <p class="result-match">
-                {{ data.match.tournament }} {{ data.match.stage }}
+                {{ data.match.tournament }} • {{ data.match.stage }}<br>
                 vs {{ data.match.opponent }}
             </p>
+            
+            {% if transfermarkt_url %}
+            <a href="{{ transfermarkt_url }}" target="_blank" rel="noopener" class="transfermarkt-link">
+                View match on Transfermarkt →
+            </a>
+            {% endif %}
             
             <div class="score-display">
                 <span class="score-value">{{ score|int if score == score|int else score }}/{{ max_points|int }}</span>
@@ -98,6 +104,8 @@
                 {% endfor %}
             </div>
         </div>
+        
+        {% include '_countdown_timer.html' %}
     </div>
     
     <script>

@@ -493,6 +493,8 @@
       <div class="ticker"><span>Players today: 1,258 • All‑time guesses: 243,901 • Current streak record: 37 • New lineup drops at midnight ET!</span></div>
     </div>
 
+    {% include '_countdown_timer.html' %}
+
     <!-- User Authentication -->
     <div class="auth-section">
       {% if current_user.is_authenticated %}

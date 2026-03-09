@@ -129,13 +129,107 @@ def get_confederation(country):
     """Get confederation for a country, with fallback."""
     return CONFEDERATIONS.get(country, "Unknown")
 
+def calculate_formation(players):
+    """Calculate formation from player positions (e.g., '4-4-2')."""
+    if not players or len(players) != 11:
+        return "?"
+    
+    # Get y positions (excluding goalkeeper - lowest y)
+    y_positions = sorted([p['position']['y'] for p in players])
+    
+    # Goalkeeper is the one with lowest y (closest to goal at bottom)
+    outfield_y = y_positions[1:]  # Remove goalkeeper
+    
+    # Group players into lines based on y-position clusters
+    # Use a threshold to determine if players are on the same "line"
+    threshold = 8
+    lines = []
+    current_line = [outfield_y[0]]
+    
+    for y in outfield_y[1:]:
+        if y - current_line[-1] < threshold:
+            current_line.append(y)
+        else:
+            lines.append(len(current_line))
+            current_line = [y]
+    lines.append(len(current_line))
+    
+    # Format as formation string (e.g., "4-4-2")
+    return "-".join(str(n) for n in lines)
+
+def infer_position(player, all_players):
+    """Infer position name from x,y coordinates."""
+    x = player['position']['x']
+    y = player['position']['y']
+    
+    # Sort players by y to determine lines
+    sorted_by_y = sorted(all_players, key=lambda p: p['position']['y'], reverse=True)
+    
+    # Goalkeeper is highest y (closest to goal at bottom)
+    if player == sorted_by_y[0]:
+        return "GK"
+    
+    # Determine which line the player is on
+    y_values = sorted([p['position']['y'] for p in all_players], reverse=True)
+    
+    # Group into lines
+    threshold = 8
+    lines = [[y_values[0]]]
+    for yv in y_values[1:]:
+        if lines[-1][-1] - yv < threshold:
+            lines[-1].append(yv)
+        else:
+            lines.append([yv])
+    
+    # Find which line this player is on
+    player_line = 0
+    for i, line in enumerate(lines):
+        if any(abs(y - ly) < threshold for ly in line):
+            player_line = i
+            break
+    
+    # Determine left/center/right based on x
+    if x < 35:
+        side = "L"
+    elif x > 65:
+        side = "R"
+    else:
+        side = ""
+    
+    # Assign position based on line (0=GK, 1=DEF, 2+=MID/FWD)
+    num_lines = len(lines)
+    
+    if player_line == 1:  # Defenders
+        if side == "L":
+            return "LB"
+        elif side == "R":
+            return "RB"
+        else:
+            return "CB"
+    elif player_line == num_lines - 1:  # Forwards (last line)
+        if side == "L":
+            return "LW"
+        elif side == "R":
+            return "RW"
+        else:
+            return "ST"
+    else:  # Midfielders
+        if side == "L":
+            return "LM"
+        elif side == "R":
+            return "RM"
+        else:
+            return "CM"
+
 def performance_text(score, max_points):
-    if score == 3:
+    if score == 4:
         return "Perfect! No hints needed!"
-    elif score == 2:
+    elif score == 3:
         return "Great job! Just one hint."
+    elif score == 2:
+        return "Nice work with two hints!"
     elif score == 1:
-        return "Nice work figuring it out!"
+        return "Got it with all hints!"
     else:
         return "Better luck next time!"
 
@@ -186,12 +280,12 @@ def show_quiz():
             guess == normalized_answer
         )
         
-        # Score based on hints used: 3 pts (no hints), 2 pts (1 hint), 1 pt (2 hints), 0 if wrong
+        # Score based on hints used: 4 pts (no hints), 3 pts (1 hint), 2 pts (2 hints), 1 pt (3 hints), 0 if wrong
         if is_correct:
-            score = 3 - hints_used
+            score = 4 - hints_used
         else:
             score = 0
-        max_points = 3
+        max_points = 4
         
         if current_user.is_authenticated:
             current_user.save_game_score(
@@ -225,10 +319,16 @@ def show_quiz():
         
         perf_text = performance_text(score, max_points)
         
+        # Extract match ID from filename for Transfermarkt link
+        import re
+        match_id_match = re.search(r'match_(\d+)_', quiz_key)
+        match_id = match_id_match.group(1) if match_id_match else None
+        transfermarkt_url = f"https://www.transfermarkt.com/spielbericht/index/spielbericht/{match_id}" if match_id else None
+        
         date_str = datetime.utcnow().strftime("%B %-d, %Y")
         share_message = f"Starting XI – {date_str}\n"
-        share_message += f"{'✅' if is_correct else '❌'} {data['answer']['country']}\n"
-        share_message += f"Score: {int(score)}/{int(max_points)} (Hints: {hints_used})\n"
+        share_message += f"{'✅' if is_correct else '❌'} Score: {int(score)}/{int(max_points)}\n"
+        share_message += f"Hints used: {hints_used}\n"
         share_message += f"\nPlay: wheredhego.com/starting11"
         
         return render_template(
@@ -242,6 +342,7 @@ def show_quiz():
             performance_text=perf_text,
             share_message=share_message,
             quiz_json_path=qp,
+            transfermarkt_url=transfermarkt_url,
         )
     
     has_played_today_flag = False if TESTING_MODE else has_played_today('starting11')[0]
@@ -288,6 +389,12 @@ def show_quiz():
     country = data.get('answer', {}).get('country', '')
     confederation = get_confederation(country)
     first_letter = country[0].upper() if country else '?'
+    formation = calculate_formation(data.get('players', []))
+    
+    # Add inferred position to each player
+    players = data.get('players', [])
+    for player in players:
+        player['inferred_position'] = infer_position(player, players)
     
     return render_template(
         "starting11/quiz.html",
@@ -298,4 +405,5 @@ def show_quiz():
         already_played=has_played_today_flag,
         confederation=confederation,
         first_letter=first_letter,
+        formation=formation,
     )

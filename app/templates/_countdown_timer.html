@@ -1,0 +1,117 @@
+<!-- Countdown Timer to Next Quiz -->
+<div class="countdown-container">
+  <div class="countdown-label">Next quiz in</div>
+  <div class="countdown-timer" id="countdown-timer">
+    <span class="countdown-unit">
+      <span class="countdown-value" id="countdown-hours">00</span>
+      <span class="countdown-text">HR</span>
+    </span>
+    <span class="countdown-separator">:</span>
+    <span class="countdown-unit">
+      <span class="countdown-value" id="countdown-minutes">00</span>
+      <span class="countdown-text">MIN</span>
+    </span>
+    <span class="countdown-separator">:</span>
+    <span class="countdown-unit">
+      <span class="countdown-value" id="countdown-seconds">00</span>
+      <span class="countdown-text">SEC</span>
+    </span>
+  </div>
+</div>
+
+<style>
+  .countdown-container {
+    text-align: center;
+    padding: 12px 20px;
+    background: rgba(15, 46, 77, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(250, 204, 21, 0.2);
+    margin: 16px auto;
+    max-width: 300px;
+  }
+  
+  .countdown-label {
+    font-family: "VT323", monospace;
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .countdown-value {
+    font-family: "Press Start 2P", monospace;
+    font-size: 18px;
+    color: #facc15;
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+  }
+  
+  .countdown-text {
+    font-family: "VT323", monospace;
+    font-size: 10px;
+    color: #64748b;
+    margin-top: 2px;
+  }
+  
+  .countdown-separator {
+    font-family: "Press Start 2P", monospace;
+    font-size: 16px;
+    color: #facc15;
+    margin: 0 2px;
+    margin-bottom: 12px;
+  }
+  
+  @media (max-width: 500px) {
+    .countdown-value {
+      font-size: 14px;
+    }
+    .countdown-container {
+      padding: 10px 16px;
+    }
+  }
+</style>
+
+<script>
+  function updateCountdown() {
+    const now = new Date();
+    
+    // Calculate midnight ET (Eastern Time)
+    const et = new Date(now.toLocaleString("en-US", {timeZone: "America/New_York"}));
+    const midnight = new Date(et);
+    midnight.setDate(midnight.getDate() + 1);
+    midnight.setHours(0, 0, 0, 0);
+    
+    // Convert back to local time for comparison
+    const midnightET = new Date(midnight.toLocaleString("en-US", {timeZone: "America/New_York"}));
+    const nowET = new Date(now.toLocaleString("en-US", {timeZone: "America/New_York"}));
+    
+    // Calculate difference
+    let diff = midnight - et;
+    if (diff < 0) diff = 0;
+    
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    
+    document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
+  }
+  
+  // Update immediately and then every second
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
