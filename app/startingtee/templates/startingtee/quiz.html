@@ -229,34 +229,55 @@
             }
         });
         
-        // Autocomplete
+        // Autocomplete dropdown
         const input = document.getElementById('course_guess');
         const dropdown = document.getElementById('autocomplete-dropdown');
         
-        input.addEventListener('input', function() {
-            const val = this.value.toLowerCase().trim();
+        function showDropdown(filter = '') {
             dropdown.innerHTML = '';
-            dropdown.style.display = 'none';
+            const val = filter.toLowerCase().trim();
             
-            if (val.length < 2) return;
+            // Filter courses or show all if no filter
+            let matches = allCourses;
+            if (val.length > 0) {
+                matches = allCourses.filter(name => name.toLowerCase().includes(val));
+            }
             
-            const matches = allCourses
-                .filter(name => name.toLowerCase().includes(val))
-                .slice(0, 8);
+            if (matches.length === 0) {
+                dropdown.style.display = 'none';
+                return;
+            }
             
-            if (matches.length === 0) return;
-            
-            matches.forEach(name => {
+            // Show up to 15 matches (or all if fewer)
+            matches.slice(0, 15).forEach(name => {
                 const item = document.createElement('div');
                 item.className = 'autocomplete-item';
                 item.textContent = name;
-                item.addEventListener('click', () => {
+                item.addEventListener('mousedown', (e) => {
+                    e.preventDefault();
                     input.value = name;
                     dropdown.style.display = 'none';
                 });
                 dropdown.appendChild(item);
             });
+            
+            // Show count if more matches available
+            if (matches.length > 15) {
+                const more = document.createElement('div');
+                more.className = 'autocomplete-more';
+                more.textContent = `... and ${matches.length - 15} more (keep typing)`;
+                dropdown.appendChild(more);
+            }
+            
             dropdown.style.display = 'block';
+        }
+        
+        input.addEventListener('input', function() {
+            showDropdown(this.value);
+        });
+        
+        input.addEventListener('focus', function() {
+            showDropdown(this.value);
         });
         
         input.addEventListener('blur', () => {

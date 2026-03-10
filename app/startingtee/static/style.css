@@ -307,6 +307,16 @@ html, body {
     color: var(--navy-900);
 }
 
+.autocomplete-more {
+    padding: 0.5rem 0.75rem;
+    color: var(--grayish);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.35rem;
+    font-style: italic;
+    text-align: center;
+    border-top: 1px solid var(--navy-700);
+}
+
 /* Results Page */
 .results-container {
     text-align: center;

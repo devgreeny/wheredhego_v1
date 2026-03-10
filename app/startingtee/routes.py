@@ -1,6 +1,6 @@
 import os
 import json
-import random
+import hashlib
 from flask import (
     Blueprint,
     render_template,
@@ -10,7 +10,7 @@ from flask import (
     session,
 )
 from flask_login import current_user
-from datetime import datetime
+from datetime import datetime, date
 from app.starting5.models import db
 from .models import StartingTeeScore
 
@@ -20,6 +20,7 @@ bp = Blueprint('startingtee', __name__,
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 COURSES_FILE = os.path.join(PROJECT_ROOT, "quizzes", "startingtee", "us_open_courses.json")
+DAILY_COURSE_FILE = os.path.join(PROJECT_ROOT, "quizzes", "startingtee", "daily_course.json")
 
 # Cache courses data
 _CACHED_COURSES = None
@@ -43,6 +44,56 @@ def get_course_by_id(course_id):
         if course['id'] == course_id:
             return course
     return None
+
+
+def get_todays_course():
+    """Get today's course - same for all users.
+    
+    First checks for a manually set daily course file.
+    Falls back to deterministic date-based selection.
+    """
+    courses = load_courses()
+    if not courses:
+        return None
+    
+    # 1. Check for manually scheduled daily course (set by cron job)
+    if os.path.exists(DAILY_COURSE_FILE):
+        try:
+            with open(DAILY_COURSE_FILE, encoding="utf-8") as f:
+                daily_data = json.load(f)
+                # Check if it's for today
+                if daily_data.get('date') == date.today().isoformat():
+                    course_id = daily_data.get('course_id')
+                    course = get_course_by_id(course_id)
+                    if course:
+                        return course
+        except (json.JSONDecodeError, IOError):
+            pass
+    
+    # 2. Fallback: deterministic selection based on date
+    # Use date string as seed for consistent daily selection
+    today_str = date.today().isoformat()
+    hash_val = int(hashlib.md5(today_str.encode()).hexdigest(), 16)
+    course_index = hash_val % len(courses)
+    
+    return courses[course_index]
+
+
+def set_daily_course(course_id, target_date=None):
+    """Set the course for a specific date (used by cron job)."""
+    if target_date is None:
+        target_date = date.today()
+    
+    daily_data = {
+        'date': target_date.isoformat(),
+        'course_id': course_id,
+        'set_at': datetime.utcnow().isoformat()
+    }
+    
+    with open(DAILY_COURSE_FILE, 'w', encoding="utf-8") as f:
+        json.dump(daily_data, f, indent=2)
+    
+    return daily_data
 
 
 def performance_text(score, max_points):
@@ -160,14 +211,13 @@ def show_quiz():
     # GET request - show quiz
     has_played_today_flag = False if TESTING_MODE else has_played_today('startingtee')[0]
     
-    courses = load_courses()
-    if not courses:
+    # Get today's course (same for all users)
+    course = get_todays_course()
+    if not course:
         return "No courses available.", 500
     
-    # Pick a random course
-    course = random.choice(courses)
-    
-    # Get all course names for autocomplete
+    # Get all course names for autocomplete dropdown
+    courses = load_courses()
     all_course_names = sorted([c['name'] for c in courses])
     
     return render_template(
