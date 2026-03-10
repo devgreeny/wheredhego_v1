@@ -61,7 +61,15 @@ In **Static files** section, add entries for:
 - **URL**: `/starting5/static/`
 - **Directory**: `/home/yourusername/wheredhego/app/starting5/static/`
 
-**Gridiron11 Game:**
+**Starting11 Game (Soccer):**
+- **URL**: `/starting11/static/`
+- **Directory**: `/home/yourusername/wheredhego/app/starting11/static/`
+
+**Favicon Files:**
+- **URL**: `/favicon/`
+- **Directory**: `/home/yourusername/wheredhego/favicon/`
+
+**Gridiron11 Game (archived):**
 - **URL**: `/gridiron11/static/`
 - **Directory**: `/home/yourusername/wheredhego/app/gridiron11/static/`
 

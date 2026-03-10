@@ -23,6 +23,78 @@ CURRENT_DIR = os.path.join(PROJECT_ROOT, "quizzes", "starting11", "current")
 PRELOADED_DIR = os.path.join(PROJECT_ROOT, "quizzes", "starting11", "preloaded")
 ARCHIVE_DIR = os.path.join(PROJECT_ROOT, "quizzes", "starting11", "archive")
 
+# Cache quiz paths at module load time to avoid slow directory scanning on each request
+_CACHED_QUIZ_PATHS_BY_ERA = None
+
+# Tournament weights: recent cups (2022, 2018, 2014) get ~70% of picks
+# Older cups (2010, 2006, 2002, 1998) get ~30%
+TOURNAMENT_WEIGHTS = {
+    "wc2022": 25,  # Most recent - highest weight
+    "wc2018": 25,
+    "wc2014": 20,
+    "wc2010": 10,
+    "wc2006": 8,
+    "wc2002": 7,
+    "wc1998": 5,
+}
+
+def _load_quiz_paths_by_tournament():
+    """Load quiz paths organized by tournament (cached after first load)."""
+    global _CACHED_QUIZ_PATHS_BY_ERA
+    if _CACHED_QUIZ_PATHS_BY_ERA is not None:
+        return _CACHED_QUIZ_PATHS_BY_ERA
+    
+    paths_by_tournament = {}
+    
+    # Add preloaded quizzes as their own category
+    if os.path.exists(PRELOADED_DIR):
+        try:
+            preloaded = [os.path.join(PRELOADED_DIR, f) 
+                        for f in os.listdir(PRELOADED_DIR) if f.endswith(".json")]
+            if preloaded:
+                paths_by_tournament["preloaded"] = preloaded
+        except OSError:
+            pass
+    
+    # Add World Cup quizzes by tournament
+    for tournament in TOURNAMENT_WEIGHTS.keys():
+        tournament_dir = os.path.join(PROJECT_ROOT, "quizzes", "starting11", tournament)
+        if os.path.exists(tournament_dir):
+            try:
+                paths = [os.path.join(tournament_dir, f) 
+                        for f in os.listdir(tournament_dir) if f.endswith(".json")]
+                if paths:
+                    paths_by_tournament[tournament] = paths
+            except OSError:
+                pass
+    
+    _CACHED_QUIZ_PATHS_BY_ERA = paths_by_tournament
+    return _CACHED_QUIZ_PATHS_BY_ERA
+
+def _select_weighted_quiz():
+    """Select a random quiz with weighting toward recent World Cups."""
+    paths_by_tournament = _load_quiz_paths_by_tournament()
+    
+    if not paths_by_tournament:
+        return None
+    
+    # Build list of tournaments and their weights
+    available_tournaments = []
+    weights = []
+    
+    for tournament, paths in paths_by_tournament.items():
+        if paths:  # Only include tournaments with quizzes
+            available_tournaments.append(tournament)
+            # Use defined weight or default weight of 10 for preloaded/unknown
+            weights.append(TOURNAMENT_WEIGHTS.get(tournament, 10))
+    
+    if not available_tournaments:
+        return None
+    
+    # Pick a tournament based on weights, then a random quiz from that tournament
+    chosen_tournament = random.choices(available_tournaments, weights=weights, k=1)[0]
+    return random.choice(paths_by_tournament[chosen_tournament])
+
 # Countries from scraped World Cup data (1998-2022)
 COUNTRIES = [
     "Algeria", "Angola", "Argentina", "Australia", "Austria", "Belgium",
@@ -347,38 +419,22 @@ def show_quiz():
     
     has_played_today_flag = False if TESTING_MODE else has_played_today('starting11')[0]
     
-    os.makedirs(CURRENT_DIR, exist_ok=True)
-    os.makedirs(PRELOADED_DIR, exist_ok=True)
+    # 1. Check current directory (for daily scheduled quiz) - PRODUCTION PATH
+    quiz_path = None
+    try:
+        if os.path.exists(CURRENT_DIR):
+            current_files = [f for f in os.listdir(CURRENT_DIR) if f.endswith(".json")]
+            if current_files and not TESTING_MODE:
+                # In production, use the scheduled daily quiz (fast path)
+                quiz_path = os.path.join(CURRENT_DIR, current_files[0])
+    except OSError:
+        pass
     
-    # Collect all available quizzes from multiple sources
-    all_quiz_paths = []
-    
-    # 1. Check current directory (for daily scheduled quiz)
-    current_files = [f for f in os.listdir(CURRENT_DIR) if f.endswith(".json")]
-    if current_files and not TESTING_MODE:
-        # In production, use the scheduled daily quiz
-        quiz_path = os.path.join(CURRENT_DIR, current_files[0])
-    else:
-        # In testing mode or no current quiz, pool from all sources
-        
-        # Add preloaded quizzes
-        if os.path.exists(PRELOADED_DIR):
-            for f in os.listdir(PRELOADED_DIR):
-                if f.endswith(".json"):
-                    all_quiz_paths.append(os.path.join(PRELOADED_DIR, f))
-        
-        # Add all World Cup quizzes (1998-2022)
-        for tournament in ["wc2022", "wc2018", "wc2014", "wc2010", "wc2006", "wc2002", "wc1998"]:
-            tournament_dir = os.path.join(PROJECT_ROOT, "quizzes", "starting11", tournament)
-            if os.path.exists(tournament_dir):
-                for f in os.listdir(tournament_dir):
-                    if f.endswith(".json"):
-                        all_quiz_paths.append(os.path.join(tournament_dir, f))
-        
-        if not all_quiz_paths:
+    # 2. Fallback: Use weighted quiz selection (testing mode or no current quiz)
+    if quiz_path is None:
+        quiz_path = _select_weighted_quiz()
+        if not quiz_path:
             return "No quizzes available.", 500
-        
-        quiz_path = random.choice(all_quiz_paths)
     
     quiz_key = os.path.basename(quiz_path)
     
