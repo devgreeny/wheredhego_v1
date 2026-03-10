@@ -82,6 +82,7 @@
                              class="club-badge"
                              onerror="this.src='https://tmssl.akamaized.net/images/wappen/head/0.png'">
                     </div>
+                    <span class="jersey-number">#{{ player.jersey }}</span>
                     <span class="player-name hidden-name"></span>
                 </div>
                 {% endfor %}
@@ -104,6 +105,7 @@
                 {% for player in data.players %}
                 <div class="player-guess-card" data-correct="{{ player.name }}" data-jersey="{{ player.jersey }}">
                     <div class="card-top">
+                        <span class="card-position">{{ player.inferred_position }}</span>
                         <span class="card-jersey">#{{ player.jersey }}</span>
                         <span class="card-club">{{ player.club.name }}</span>
                     </div>

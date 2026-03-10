@@ -333,6 +333,11 @@ def show_quiz():
         with open(qp, encoding="utf-8") as f:
             data = json.load(f)
         
+        # Add inferred positions for results page
+        players = data.get('players', [])
+        for player in players:
+            player['inferred_position'] = infer_position(player, players)
+        
         quiz_key = os.path.basename(qp)
         time_taken = request.form.get("time_taken", type=int)
         hints_used = request.form.get("hints_used", type=int, default=0)
