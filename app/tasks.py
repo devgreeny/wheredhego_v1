@@ -52,6 +52,11 @@ def get_quiz_directories():
             'preloaded': os.path.join(project_root, "quizzes", "starting11", "preloaded"),
             'current': os.path.join(project_root, "quizzes", "starting11", "current"),
             'archive': os.path.join(project_root, "quizzes", "starting11", "archive")
+        },
+        'startingtee': {
+            'courses_file': os.path.join(project_root, "quizzes", "startingtee", "us_open_courses.json"),
+            'daily_file': os.path.join(project_root, "quizzes", "startingtee", "daily_course.json"),
+            'history_file': os.path.join(project_root, "quizzes", "startingtee", "course_history.json")
         }
     }
 
@@ -237,10 +242,90 @@ def update_starting11_game(dry_run: bool = False):
     return chosen_quiz
 
 
+def update_startingtee_game(dry_run: bool = False):
+    """Update StartingTee golf course game."""
+    import json
+    from datetime import date
+    
+    log_message("⛳ Starting StartingTee update...")
+    
+    dirs = get_quiz_directories()['startingtee']
+    
+    # Load courses
+    if not os.path.exists(dirs['courses_file']):
+        log_message("❌ No StartingTee courses file found", "ERROR")
+        return None
+    
+    try:
+        with open(dirs['courses_file'], encoding="utf-8") as f:
+            data = json.load(f)
+            courses = data.get('courses', [])
+    except Exception as e:
+        log_message(f"❌ Failed to load courses: {e}", "ERROR")
+        return None
+    
+    if not courses:
+        log_message("❌ No courses available in courses file", "ERROR")
+        return None
+    
+    # Load history to avoid recent repeats
+    history = {"recent_courses": []}
+    if os.path.exists(dirs['history_file']):
+        try:
+            with open(dirs['history_file'], encoding="utf-8") as f:
+                history = json.load(f)
+        except:
+            pass
+    
+    # Get courses not used in last 14 days
+    recent_ids = set(history.get('recent_courses', [])[-14:])
+    available = [c for c in courses if c['id'] not in recent_ids]
+    
+    # If all courses used recently, reset
+    if not available:
+        available = courses
+        log_message("ℹ️ All courses used recently, resetting pool", "WARNING")
+    
+    # Select random course
+    chosen_course = random.choice(available)
+    
+    if dry_run:
+        log_message(f"[DRY RUN] Would set daily course: {chosen_course['name']}")
+        return chosen_course['name']
+    
+    # Write daily course file
+    try:
+        daily_data = {
+            'date': date.today().isoformat(),
+            'course_id': chosen_course['id'],
+            'course_name': chosen_course['name'],
+            'set_at': datetime.now().isoformat()
+        }
+        
+        with open(dirs['daily_file'], 'w', encoding="utf-8") as f:
+            json.dump(daily_data, f, indent=2)
+        
+        # Update history
+        history['recent_courses'] = history.get('recent_courses', [])
+        history['recent_courses'].append(chosen_course['id'])
+        history['recent_courses'] = history['recent_courses'][-30:]  # Keep last 30
+        
+        with open(dirs['history_file'], 'w', encoding="utf-8") as f:
+            json.dump(history, f, indent=2)
+        
+        log_message(f"✅ Set daily course: {chosen_course['name']}", "SUCCESS")
+        log_message(f"⛳ StartingTee update completed", "SUCCESS")
+        return chosen_course['name']
+        
+    except Exception as e:
+        log_message(f"❌ Failed to update StartingTee: {e}", "ERROR")
+        return None
+
+
 # ─── CLI COMMANDS ─────────────────────────────────────────────────────────────
 @click.command('update-games')
 @click.option('--dry-run', is_flag=True, help='Preview what would be updated without making changes')
-@click.option('--games', default='all', type=click.Choice(['all', 'starting5', 'gridiron11', 'starting11']), 
+@click.option('--games', default='all', type=click.Choice(['all', 'starting5', 'gridiron11', 'starting11', 'startingtee']), 
               help='Which games to update')
 @with_appcontext
 def update_games_command(dry_run, games):
@@ -254,6 +339,7 @@ def update_games_command(dry_run, games):
     starting5_quiz = None
     gridiron11_quiz = None
     starting11_quiz = None
+    startingtee_quiz = None
     
     # Update games based on selection
     if games in ['all', 'starting5']:
@@ -264,6 +350,9 @@ def update_games_command(dry_run, games):
     
     if games in ['all', 'starting11']:
         starting11_quiz = update_starting11_game(dry_run)
+    
+    if games in ['all', 'startingtee']:
+        startingtee_quiz = update_startingtee_game(dry_run)
     
     # Summary
     log_message("📊 Update Summary:")
@@ -284,6 +373,12 @@ def update_games_command(dry_run, games):
         if dry_run and starting11_quiz:
             status = f'🔍 Would update: {starting11_quiz}'
         log_message(f"  ⚽ Starting11: {status}")
+    
+    if games in ['all', 'startingtee']:
+        status = '✅ ' + startingtee_quiz if startingtee_quiz else '❌ Failed or Skipped'
+        if dry_run and startingtee_quiz:
+            status = f'🔍 Would update: {startingtee_quiz}'
+        log_message(f"  ⛳ StartingTee: {status}")
     
     action = "preview completed" if dry_run else "updates completed"
     log_message(f"🎯 Game {action}!", "SUCCESS")
@@ -327,6 +422,19 @@ def update_starting11_command(dry_run):
     status = "completed" if quiz else "failed"
     log_message(f"⚽ Starting11 {action} {status}!", "SUCCESS" if quiz else "ERROR")
 
+@click.command('update-startingtee')
+@click.option('--dry-run', is_flag=True, help='Preview what would be updated without making changes')
+@with_appcontext
+def update_startingtee_command(dry_run):
+    """Update only the StartingTee golf game."""
+    if dry_run:
+        log_message("🔍 DRY RUN MODE - No changes will be made")
+    
+    quiz = update_startingtee_game(dry_run)
+    action = "preview" if dry_run else "update"
+    status = "completed" if quiz else "failed"
+    log_message(f"⛳ StartingTee {action} {status}!", "SUCCESS" if quiz else "ERROR")
+
 @click.command('game-status')
 @with_appcontext
 def game_status_command():
@@ -360,6 +468,30 @@ def game_status_command():
     
     log_message(f"  Current quiz: {current_s11[0] if current_s11 else 'None'}")
     log_message(f"  Preloaded quizzes: {len(preloaded_s11)} available")
+    
+    # StartingTee status
+    import json
+    log_message("⛳ StartingTee Status:")
+    daily_course = None
+    if os.path.exists(dirs['startingtee']['daily_file']):
+        try:
+            with open(dirs['startingtee']['daily_file'], encoding="utf-8") as f:
+                daily_data = json.load(f)
+                daily_course = f"{daily_data.get('course_name', 'Unknown')} ({daily_data.get('date', 'Unknown')})"
+        except:
+            pass
+    
+    courses_count = 0
+    if os.path.exists(dirs['startingtee']['courses_file']):
+        try:
+            with open(dirs['startingtee']['courses_file'], encoding="utf-8") as f:
+                data = json.load(f)
+                courses_count = len(data.get('courses', []))
+        except:
+            pass
+    
+    log_message(f"  Today's course: {daily_course if daily_course else 'Using date-based selection'}")
+    log_message(f"  Total courses: {courses_count} available")
 
 
 # ─── REGISTRATION FUNCTION ─────────────────────────────────────────────────────
@@ -369,6 +501,7 @@ def register_cli_commands(app):
     app.cli.add_command(update_starting5_command)
     app.cli.add_command(update_gridiron11_command)
     app.cli.add_command(update_starting11_command)
+    app.cli.add_command(update_startingtee_command)
     app.cli.add_command(game_status_command)
     
     app.logger.info("Game update CLI commands registered successfully")
@@ -388,11 +521,13 @@ if __name__ == "__main__":
             starting5_quiz = update_starting5_game(dry_run)
             gridiron11_quiz = update_gridiron11_game(dry_run)
             starting11_quiz = update_starting11_game(dry_run)
+            startingtee_quiz = update_startingtee_game(dry_run)
             
             log_message("📊 Update Summary:")
             log_message(f"  🏀 Starting5: {'✅ ' + starting5_quiz if starting5_quiz else '❌ Failed'}")
             log_message(f"  🏈 Skill Positions: {'✅ ' + gridiron11_quiz if gridiron11_quiz else '❌ Failed or Skipped'}")
             log_message(f"  ⚽ Starting11: {'✅ ' + starting11_quiz if starting11_quiz else '❌ Failed or Skipped'}")
+            log_message(f"  ⛳ StartingTee: {'✅ ' + startingtee_quiz if startingtee_quiz else '❌ Failed or Skipped'}")
             
         elif command == 'update-starting5':
             quiz = update_starting5_game(dry_run)
@@ -406,9 +541,13 @@ if __name__ == "__main__":
             quiz = update_starting11_game(dry_run)
             log_message(f"⚽ Starting11: {'✅ ' + quiz if quiz else '❌ Failed'}")
             
+        elif command == 'update-startingtee':
+            quiz = update_startingtee_game(dry_run)
+            log_message(f"⛳ StartingTee: {'✅ ' + quiz if quiz else '❌ Failed'}")
+            
         else:
             log_message(f"Unknown command: {command}", "ERROR")
-            log_message("Available commands: update-games, update-starting5, update-gridiron11, update-starting11")
+            log_message("Available commands: update-games, update-starting5, update-gridiron11, update-starting11, update-startingtee")
     else:
         log_message("Usage: python tasks.py [command] [--dry-run]")
-        log_message("Commands: update-games, update-starting5, update-gridiron11, update-starting11")
+        log_message("Commands: update-games, update-starting5, update-gridiron11, update-starting11, update-startingtee")
