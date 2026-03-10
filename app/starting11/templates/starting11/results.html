@@ -92,7 +92,38 @@
             <span id="share-confirm" class="share-confirm" style="display:none;">Copied!</span>
         </div>
         
-        <div class="lineup-reveal">
+        <!-- Player Guessing Game -->
+        <div class="player-guess-section" id="player-guess-section">
+            <h3>GUESS THE PLAYERS</h3>
+            <p class="guess-subtitle">Can you name the Starting XI?</p>
+            
+            <div class="player-guess-list" id="player-guess-list">
+                {% for player in data.players %}
+                <div class="player-guess-item" data-correct="{{ player.name }}" data-jersey="{{ player.jersey }}">
+                    <span class="lineup-jersey">#{{ player.jersey }}</span>
+                    <input type="text" 
+                           class="player-guess-input" 
+                           placeholder="Type player name..."
+                           autocomplete="off"
+                           data-index="{{ loop.index0 }}">
+                    <span class="guess-result" style="display:none;"></span>
+                    <span class="lineup-club hint-club">{{ player.club.name }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="player-guess-actions">
+                <button type="button" id="check-players-btn" class="submit-btn">Check Answers</button>
+                <button type="button" id="reveal-players-btn" class="hint-btn-reveal">Reveal All</button>
+            </div>
+            
+            <div class="player-score-display" id="player-score-display" style="display:none;">
+                <span class="player-score-text">Players correct: <strong id="players-correct">0</strong>/11</span>
+            </div>
+        </div>
+        
+        <!-- Revealed Lineup (shown after guessing) -->
+        <div class="lineup-reveal" id="lineup-reveal" style="display:none;">
             <h3>The Starting XI</h3>
             <div class="lineup-list">
                 {% for player in data.players %}
@@ -110,7 +141,131 @@
     
     <script>
         const shareMessage = {{ share_message|tojson }};
+        let allPlayers = [];
+        let guessesLocked = false;
         
+        // Load player database for autocomplete
+        fetch('{{ url_for("starting11.static", filename="players.json") }}')
+            .then(r => r.json())
+            .then(data => {
+                allPlayers = data.players.map(p => p.name);
+                setupAutocomplete();
+            })
+            .catch(() => console.log('Could not load players database'));
+        
+        function setupAutocomplete() {
+            document.querySelectorAll('.player-guess-input').forEach(input => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'autocomplete-wrapper';
+                input.parentNode.insertBefore(wrapper, input);
+                wrapper.appendChild(input);
+                
+                const dropdown = document.createElement('div');
+                dropdown.className = 'autocomplete-dropdown';
+                wrapper.appendChild(dropdown);
+                
+                input.addEventListener('input', function() {
+                    const val = this.value.toLowerCase().trim();
+                    dropdown.innerHTML = '';
+                    dropdown.style.display = 'none';
+                    
+                    if (val.length < 2) return;
+                    
+                    const matches = allPlayers
+                        .filter(name => name.toLowerCase().includes(val))
+                        .slice(0, 8);
+                    
+                    if (matches.length === 0) return;
+                    
+                    matches.forEach(name => {
+                        const item = document.createElement('div');
+                        item.className = 'autocomplete-item';
+                        item.textContent = name;
+                        item.addEventListener('click', () => {
+                            input.value = name;
+                            dropdown.style.display = 'none';
+                        });
+                        dropdown.appendChild(item);
+                    });
+                    dropdown.style.display = 'block';
+                });
+                
+                // Hide dropdown on blur (with delay for click)
+                input.addEventListener('blur', () => {
+                    setTimeout(() => dropdown.style.display = 'none', 200);
+                });
+            });
+        }
+        
+        // Normalize name for comparison (handle accents, case, etc.)
+        function normalizeName(name) {
+            return name.toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^a-z\s]/g, '')
+                .trim();
+        }
+        
+        // Check if guess matches (flexible matching)
+        function isCorrectGuess(guess, correct) {
+            const g = normalizeName(guess);
+            const c = normalizeName(correct);
+            
+            // Exact match
+            if (g === c) return true;
+            
+            // Last name match
+            const gLast = g.split(' ').pop();
+            const cLast = c.split(' ').pop();
+            if (gLast === cLast && gLast.length > 2) return true;
+            
+            // Contains full correct name
+            if (g.includes(c) || c.includes(g)) return true;
+            
+            return false;
+        }
+        
+        // Check all player guesses
+        document.getElementById('check-players-btn').addEventListener('click', function() {
+            if (guessesLocked) return;
+            guessesLocked = true;
+            
+            let correct = 0;
+            document.querySelectorAll('.player-guess-item').forEach(item => {
+                const input = item.querySelector('.player-guess-input');
+                const result = item.querySelector('.guess-result');
+                const correctName = item.dataset.correct;
+                const guess = input.value.trim();
+                
+                input.disabled = true;
+                result.style.display = 'inline';
+                
+                if (guess && isCorrectGuess(guess, correctName)) {
+                    result.textContent = '✓';
+                    result.className = 'guess-result correct';
+                    item.classList.add('guess-correct');
+                    correct++;
+                } else {
+                    result.textContent = correctName;
+                    result.className = 'guess-result wrong';
+                    item.classList.add('guess-wrong');
+                }
+            });
+            
+            document.getElementById('players-correct').textContent = correct;
+            document.getElementById('player-score-display').style.display = 'block';
+            document.getElementById('check-players-btn').style.display = 'none';
+            document.getElementById('reveal-players-btn').style.display = 'none';
+            document.getElementById('lineup-reveal').style.display = 'block';
+        });
+        
+        // Reveal all without guessing
+        document.getElementById('reveal-players-btn').addEventListener('click', function() {
+            guessesLocked = true;
+            document.getElementById('player-guess-section').style.display = 'none';
+            document.getElementById('lineup-reveal').style.display = 'block';
+        });
+        
+        // Share button
         document.getElementById('share-btn').addEventListener('click', function() {
             navigator.clipboard.writeText(shareMessage).then(function() {
                 document.getElementById('share-confirm').style.display = 'inline';
