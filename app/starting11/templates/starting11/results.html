@@ -59,7 +59,7 @@
             {% endif %}
         </div>
         
-        <div class="pitch-container small">
+        <div class="pitch-container small" id="results-pitch">
             <div class="pitch">
                 <div class="pitch-markings">
                     <div class="center-circle"></div>
@@ -74,6 +74,7 @@
                 {% set raw_x = 6 + (player.position.x - 25) * 88 / 50 %}
                 {% set scaled_x = [[raw_x, 6] | max, 94] | min %}
                 <div class="player-marker revealed" 
+                     data-player-name="{{ player.name.split(' ')[-1] }}"
                      style="left: {{ scaled_x }}%; top: {{ scaled_y }}%;">
                     <div class="badge-container">
                         <img src="{{ player.club.badge_url }}" 
@@ -81,7 +82,7 @@
                              class="club-badge"
                              onerror="this.src='https://tmssl.akamaized.net/images/wappen/head/0.png'">
                     </div>
-                    <span class="player-name">{{ player.name.split(' ')[-1] }}</span>
+                    <span class="player-name hidden-name"></span>
                 </div>
                 {% endfor %}
             </div>
@@ -94,27 +95,31 @@
         
         <!-- Player Guessing Game -->
         <div class="player-guess-section" id="player-guess-section">
-            <h3>GUESS THE PLAYERS</h3>
-            <p class="guess-subtitle">Can you name the Starting XI?</p>
+            <div class="guess-header">
+                <h3>GUESS THE PLAYERS</h3>
+                <p class="guess-subtitle">Name the Starting XI</p>
+            </div>
             
-            <div class="player-guess-list" id="player-guess-list">
+            <div class="player-guess-grid" id="player-guess-list">
                 {% for player in data.players %}
-                <div class="player-guess-item" data-correct="{{ player.name }}" data-jersey="{{ player.jersey }}">
-                    <span class="lineup-jersey">#{{ player.jersey }}</span>
+                <div class="player-guess-card" data-correct="{{ player.name }}" data-jersey="{{ player.jersey }}">
+                    <div class="card-top">
+                        <span class="card-jersey">#{{ player.jersey }}</span>
+                        <span class="card-club">{{ player.club.name }}</span>
+                    </div>
                     <input type="text" 
                            class="player-guess-input" 
-                           placeholder="Type player name..."
+                           placeholder="Player name..."
                            autocomplete="off"
                            data-index="{{ loop.index0 }}">
-                    <span class="guess-result" style="display:none;"></span>
-                    <span class="lineup-club hint-club">{{ player.club.name }}</span>
+                    <div class="card-result" style="display:none;"></div>
                 </div>
                 {% endfor %}
             </div>
             
             <div class="player-guess-actions">
                 <button type="button" id="check-players-btn" class="submit-btn">Check Answers</button>
-                <button type="button" id="reveal-players-btn" class="hint-btn-reveal">Reveal All</button>
+                <button type="button" id="reveal-players-btn" class="hint-btn-reveal">Skip & Reveal</button>
             </div>
             
             <div class="player-score-display" id="player-score-display" style="display:none;">
@@ -224,29 +229,39 @@
             return false;
         }
         
+        // Reveal names on the pitch
+        function revealPitchNames() {
+            document.querySelectorAll('#results-pitch .player-marker').forEach(marker => {
+                const nameSpan = marker.querySelector('.player-name');
+                const name = marker.dataset.playerName;
+                if (nameSpan && name) {
+                    nameSpan.textContent = name;
+                    nameSpan.classList.remove('hidden-name');
+                }
+            });
+        }
+        
         // Check all player guesses
         document.getElementById('check-players-btn').addEventListener('click', function() {
             if (guessesLocked) return;
             guessesLocked = true;
             
             let correct = 0;
-            document.querySelectorAll('.player-guess-item').forEach(item => {
+            document.querySelectorAll('.player-guess-card').forEach(item => {
                 const input = item.querySelector('.player-guess-input');
-                const result = item.querySelector('.guess-result');
+                const result = item.querySelector('.card-result');
                 const correctName = item.dataset.correct;
                 const guess = input.value.trim();
                 
                 input.disabled = true;
-                result.style.display = 'inline';
+                result.style.display = 'block';
                 
                 if (guess && isCorrectGuess(guess, correctName)) {
-                    result.textContent = '✓';
-                    result.className = 'guess-result correct';
+                    result.innerHTML = '<span class="result-correct">✓ Correct</span>';
                     item.classList.add('guess-correct');
                     correct++;
                 } else {
-                    result.textContent = correctName;
-                    result.className = 'guess-result wrong';
+                    result.innerHTML = '<span class="result-wrong">' + correctName + '</span>';
                     item.classList.add('guess-wrong');
                 }
             });
@@ -256,6 +271,7 @@
             document.getElementById('check-players-btn').style.display = 'none';
             document.getElementById('reveal-players-btn').style.display = 'none';
             document.getElementById('lineup-reveal').style.display = 'block';
+            revealPitchNames();
         });
         
         // Reveal all without guessing
@@ -263,6 +279,7 @@
             guessesLocked = true;
             document.getElementById('player-guess-section').style.display = 'none';
             document.getElementById('lineup-reveal').style.display = 'block';
+            revealPitchNames();
         });
         
         // Share button

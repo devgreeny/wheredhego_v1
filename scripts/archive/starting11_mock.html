@@ -1,0 +1,157 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body {
+                font-family: 'Press Start 2P', monospace, sans-serif;
+                background: #1a1a2e;
+                color: #facc15;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .pitch {
+                width: 500px;
+                height: 700px;
+                background: linear-gradient(to bottom, 
+                    #2d5a27 0%, #2d5a27 49%, 
+                    #ffffff 49%, #ffffff 51%,
+                    #2d5a27 51%, #2d5a27 100%);
+                border: 4px solid #fff;
+                border-radius: 8px;
+                position: relative;
+                box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            }
+            .pitch::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 120px;
+                height: 120px;
+                border: 3px solid rgba(255,255,255,0.5);
+                border-radius: 50%;
+            }
+            .player {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            .badge {
+                width: 50px;
+                height: 50px;
+                background: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 10px;
+                font-weight: bold;
+                color: #1a1a2e;
+                border: 3px solid #facc15;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+                margin: 0 auto;
+            }
+            .club-name {
+                font-size: 8px;
+                margin-top: 4px;
+                color: #fff;
+                text-shadow: 1px 1px 2px #000;
+                max-width: 80px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .info {
+                margin-top: 20px;
+                text-align: center;
+            }
+            .answer {
+                font-size: 20px;
+                margin-top: 20px;
+                padding: 15px 30px;
+                background: #facc15;
+                color: #1a1a2e;
+                border-radius: 8px;
+            }
+            .meta {
+                font-size: 10px;
+                color: #888;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>STARTING11 - GUESS THE NATIONAL TEAM</h1>
+        <div class="pitch">
+            
+        <div class="player" style="left: 50.0%; top: 74.0%;">
+            <div class="badge">AST</div>
+            <div class="club-name">Aston Villa</div>
+        </div>
+        
+        <div class="player" style="left: 90.0%; top: 58.0%;">
+            <div class="badge">ATL</div>
+            <div class="club-name">Atlético Madrid</div>
+        </div>
+        
+        <div class="player" style="left: 70.0%; top: 58.0%;">
+            <div class="badge">TOT</div>
+            <div class="club-name">Tottenham</div>
+        </div>
+        
+        <div class="player" style="left: 30.0%; top: 58.0%;">
+            <div class="badge">BEN</div>
+            <div class="club-name">Benfica</div>
+        </div>
+        
+        <div class="player" style="left: 10.0%; top: 58.0%;">
+            <div class="badge">LYO</div>
+            <div class="club-name">Lyon</div>
+        </div>
+        
+        <div class="player" style="left: 70.0%; top: 42.0%;">
+            <div class="badge">ATL</div>
+            <div class="club-name">Atlético Madrid</div>
+        </div>
+        
+        <div class="player" style="left: 50.0%; top: 42.0%;">
+            <div class="badge">BEN</div>
+            <div class="club-name">Benfica</div>
+        </div>
+        
+        <div class="player" style="left: 30.0%; top: 42.0%;">
+            <div class="badge">BRI</div>
+            <div class="club-name">Brighton</div>
+        </div>
+        
+        <div class="player" style="left: 80.0%; top: 26.0%;">
+            <div class="badge">PAR</div>
+            <div class="club-name">Paris Saint-Germain</div>
+        </div>
+        
+        <div class="player" style="left: 50.0%; top: 10.0%;">
+            <div class="badge">MAN</div>
+            <div class="club-name">Manchester City</div>
+        </div>
+        
+        <div class="player" style="left: 20.0%; top: 26.0%;">
+            <div class="badge">JUV</div>
+            <div class="club-name">Juventus</div>
+        </div>
+        
+        </div>
+        <div class="info">
+            <div class="meta">World Cup 2022 | Final | 4-3-3</div>
+            <div class="answer">🇦🇷 Argentina</div>
+        </div>
+    </body>
+    </html>
+    
