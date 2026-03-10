@@ -1,0 +1,634 @@
+/* ============================================================================
+   StartingTee Styles - Golf Course Guessing Game
+   ============================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', monospace;
+}
+
+:root {
+    --navy-900: #0f172a;
+    --navy-800: #1e293b;
+    --navy-700: #334155;
+    --gold: #facc15;
+    --light-gray: #e2e8f0;
+    --grayish: #94a3b8;
+    --green: #22c55e;
+    --fairway-green: #2d5a27;
+    --red: #ef4444;
+    --white: #ffffff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--navy-900);
+    color: var(--light-gray);
+    padding-top: 2rem;
+}
+
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header */
+.header-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.header-title {
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+    font-size: 0.7rem;
+    color: var(--light-gray);
+}
+
+.played-note {
+    text-align: center;
+    color: var(--gold);
+    font-size: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: var(--navy-800);
+    border-radius: 0.5rem;
+}
+
+/* Interactive Satellite Map */
+.satellite-container {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid var(--navy-700);
+}
+
+#map {
+    width: 100%;
+    height: 350px;
+    background: var(--navy-800);
+}
+
+@media (min-width: 500px) {
+    #map {
+        height: 400px;
+    }
+}
+
+/* Hide Leaflet attribution */
+.leaflet-control-attribution {
+    display: none !important;
+}
+
+.map-hint {
+    background: var(--navy-800);
+    color: var(--grayish);
+    font-size: 0.35rem;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0;
+    font-family: 'Press Start 2P', monospace;
+}
+
+/* Hints Section */
+.hints-container {
+    background: var(--navy-800);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.hints-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.hints-label {
+    color: var(--light-gray);
+    font-size: 0.5rem;
+}
+
+.hints-score {
+    color: var(--gold);
+    font-size: 0.5rem;
+}
+
+.hints-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.hint-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--navy-900);
+    border: 2px solid var(--navy-700);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    max-width: 100px;
+}
+
+.hint-btn:hover:not(:disabled):not(.used) {
+    border-color: var(--gold);
+    background: rgba(250, 204, 21, 0.1);
+}
+
+.hint-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.hint-btn.used {
+    background: rgba(250, 204, 21, 0.15);
+    border-color: var(--gold);
+    opacity: 0.7;
+}
+
+.hint-icon {
+    width: 20px;
+    height: 20px;
+    background: var(--navy-700);
+    color: var(--light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.4rem;
+}
+
+.hint-btn.used .hint-icon {
+    background: var(--gold);
+    color: var(--navy-900);
+}
+
+.hint-text {
+    color: var(--grayish);
+    font-size: 0.35rem;
+}
+
+.hints-revealed {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.hint-reveal {
+    background: var(--navy-900);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.hint-reveal .hint-label {
+    color: var(--grayish);
+    font-size: 0.4rem;
+    min-width: 80px;
+}
+
+.hint-reveal .hint-value {
+    color: var(--gold);
+    font-size: 0.45rem;
+}
+
+/* Guess Container */
+.guess-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--navy-800);
+    border-radius: 12px;
+    position: relative;
+}
+
+.guess-label {
+    display: block;
+    color: var(--gold);
+    font-size: 0.6rem;
+    margin-bottom: 1.25rem;
+}
+
+.course-input {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 0.55rem;
+    font-family: 'Press Start 2P', monospace;
+    background: var(--navy-900);
+    color: var(--light-gray);
+    border: 2px solid var(--navy-700);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.course-input:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.course-input::placeholder {
+    color: var(--grayish);
+}
+
+.submit-btn {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.9rem 1.75rem;
+    font-size: 0.65rem;
+    font-family: 'Press Start 2P', monospace;
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #16a34a;
+    transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+    background: var(--navy-700);
+    color: var(--grayish);
+    cursor: not-allowed;
+}
+
+/* Autocomplete */
+.autocomplete-dropdown {
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    top: calc(1.25rem + 0.6rem + 1.25rem + 0.85rem + 0.85rem + 2px + 0.5rem);
+    background: var(--navy-800);
+    border: 1px solid var(--navy-600);
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+}
+
+.autocomplete-item {
+    padding: 0.6rem 0.75rem;
+    color: var(--light-gray);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.45rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--navy-700);
+}
+
+.autocomplete-item:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-item:hover {
+    background: var(--gold);
+    color: var(--navy-900);
+}
+
+/* Results Page */
+.results-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: var(--navy-800);
+    border-radius: 12px;
+}
+
+.result-icon {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.result-icon.correct {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--green);
+    animation: bounce 0.5s ease;
+}
+
+.result-icon.wrong {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--red);
+    animation: shake 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.result-answer {
+    font-size: 0.8rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.result-location {
+    font-size: 0.5rem;
+    color: var(--grayish);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.score-display {
+    margin: 1rem 0;
+}
+
+.score-value {
+    font-size: 1.6rem;
+    color: var(--gold);
+}
+
+.hints-used-text {
+    font-size: 0.45rem;
+    color: var(--grayish);
+    margin-bottom: 0.5rem;
+}
+
+.performance-text {
+    font-size: 0.55rem;
+    color: var(--light-gray);
+    margin-bottom: 0.5rem;
+}
+
+.percentile-text {
+    font-size: 0.5rem;
+    color: var(--grayish);
+}
+
+/* Course Details */
+.course-details {
+    background: var(--navy-800);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-details h3 {
+    color: var(--gold);
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.detail-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--navy-700);
+}
+
+.detail-row:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.detail-label {
+    color: var(--grayish);
+    font-size: 0.4rem;
+    min-width: 90px;
+}
+
+.detail-value {
+    color: var(--light-gray);
+    font-size: 0.4rem;
+    font-family: 'Press Start 2P', monospace;
+    line-height: 1.5;
+}
+
+/* Share Button */
+.share-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.share-btn {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.55rem;
+    font-family: 'Press Start 2P', monospace;
+    background: var(--gold);
+    color: var(--navy-900);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.share-btn:hover {
+    background: #eab308;
+    transform: translateY(-1px);
+}
+
+.share-confirm {
+    display: inline-block;
+    margin-left: 1rem;
+    color: var(--green);
+    font-size: 0.5rem;
+}
+
+/* Play Again */
+.play-again {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.play-again-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.5rem;
+    font-family: 'Press Start 2P', monospace;
+    background: transparent;
+    color: var(--light-gray);
+    border: 2px solid var(--navy-600);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.play-again-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .header-title {
+        font-size: 1rem;
+    }
+    
+    .result-answer {
+        font-size: 0.7rem;
+    }
+    
+    .score-value {
+        font-size: 1.3rem;
+    }
+    
+    .hint-btn {
+        padding: 0.4rem 0.5rem;
+    }
+    
+    .hint-text {
+        font-size: 0.3rem;
+    }
+}
+
+/* ============================================================================
+   Modal Styles - Consistent Retro Theme
+   ============================================================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    background: var(--navy-800);
+    border: 2px solid var(--gold);
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    color: var(--gold);
+    text-align: center;
+    z-index: 999;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    width: 320px;
+}
+
+.modal-content {
+    font-size: 0.5rem;
+    line-height: 1.6;
+}
+
+.modal-content p {
+    margin-bottom: 1rem;
+    color: var(--light-gray);
+}
+
+.modal-btn {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: var(--gold);
+    color: var(--navy-900);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.45rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-btn:hover {
+    background: #eab308;
+    transform: translateY(-1px);
+}
+
+.modal-btn.secondary {
+    background: var(--navy-700);
+    color: var(--light-gray);
+    margin-left: 0.75rem;
+}
+
+.modal-btn.secondary:hover {
+    background: var(--navy-600);
+}
+
+/* Archive Modal */
+.archive-modal {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background: var(--navy-800);
+    border: 2px solid var(--gold);
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    color: var(--gold);
+    z-index: 1001;
+    text-align: center;
+    max-width: 90%;
+    width: 360px;
+}
+
+.archive-modal h3 {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.archive-modal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.archive-modal li {
+    margin-bottom: 0.5rem;
+}
+
+.archive-modal a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 0.4rem;
+    transition: color 0.2s ease;
+}
+
+.archive-modal a:hover {
+    color: var(--gold);
+}
+
+.close-btn {
+    display: block;
+    margin-bottom: 0.75rem;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.4rem;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    background: rgba(250, 204, 21, 0.1);
+}

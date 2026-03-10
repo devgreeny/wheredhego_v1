@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>StartingTee - Results</title>
+    
+    <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('startingtee.static', filename='style.css') }}">
+</head>
+
+<body>
+    {% include '_auth_navbar.html' %}
+    
+    <div class="content">
+        <div class="header-container">
+            <h1 class="header-title">STARTINGTEE</h1>
+            <p class="header-subtitle">RESULTS</p>
+        </div>
+        
+        <div class="results-container">
+            <div class="result-icon {% if is_correct %}correct{% else %}wrong{% endif %}">
+                {% if is_correct %}CORRECT{% else %}WRONG{% endif %}
+            </div>
+            
+            <h2 class="result-answer">
+                {{ course.name }}
+            </h2>
+            
+            <p class="result-location">
+                {% if course.city %}{{ course.city }}, {% endif %}{{ course.state | default('', true) }}<br>
+                {{ course.country | default('USA', true) }}
+            </p>
+            
+            <div class="score-display">
+                <span class="score-value">{{ score|int }}/{{ max_points|int }}</span>
+            </div>
+            
+            {% if hints_used is defined and hints_used > 0 %}
+            <p class="hints-used-text">Hints used: {{ hints_used }}</p>
+            {% endif %}
+            
+            <p class="performance-text">{{ performance_text }}</p>
+            
+            {% if percentile > 0 %}
+            <p class="percentile-text">
+                Better than {{ percentile }}% of players
+            </p>
+            {% endif %}
+        </div>
+        
+        <!-- Course Details -->
+        <div class="course-details">
+            <h3>Course Info</h3>
+            
+            <div class="detail-row">
+                <span class="detail-label">Tournaments:</span>
+                <span class="detail-value">{{ course.tournaments | join(', ') }}</span>
+            </div>
+            
+            {% if course.signature_hole %}
+            <div class="detail-row">
+                <span class="detail-label">Signature Hole:</span>
+                <span class="detail-value">{{ course.signature_hole }}</span>
+            </div>
+            {% endif %}
+            
+            {% if course.year_opened %}
+            <div class="detail-row">
+                <span class="detail-label">Opened:</span>
+                <span class="detail-value">{{ course.year_opened }}</span>
+            </div>
+            {% endif %}
+            
+            {% if course.recent_winners or course.recent_winner %}
+            <div class="detail-row">
+                <span class="detail-label">Recent Winners:</span>
+                <span class="detail-value">
+                    {% if course.recent_winners %}
+                        {% for winner in course.recent_winners[:3] %}
+                        {{ winner }}{% if not loop.last %}<br>{% endif %}
+                        {% endfor %}
+                    {% else %}
+                        {{ course.recent_winner | default('N/A', true) }}
+                    {% endif %}
+                </span>
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="share-container">
+            <button id="share-btn" class="share-btn">📋 Share Results</button>
+            <span id="share-confirm" class="share-confirm" style="display:none;">Copied!</span>
+        </div>
+        
+        <div class="play-again">
+            <a href="{{ url_for('startingtee.show_quiz') }}" class="play-again-btn">Play Again</a>
+        </div>
+        
+        {% include '_countdown_timer.html' %}
+    </div>
+    
+    <script>
+        const shareMessage = {{ share_message|tojson }};
+        
+        document.getElementById('share-btn').addEventListener('click', function() {
+            navigator.clipboard.writeText(shareMessage).then(function() {
+                document.getElementById('share-confirm').style.display = 'inline';
+                setTimeout(function() {
+                    document.getElementById('share-confirm').style.display = 'none';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

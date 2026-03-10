@@ -73,9 +73,15 @@
   .leaderboard-link {
     display: block;
     margin-top: 0.8rem;
-    font-size: 0.6rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.45rem;
     color: var(--gold);
     text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+  
+  .leaderboard-link:hover {
+    color: #eab308;
   }
   
   .results-leaderboard {
@@ -85,16 +91,22 @@
   .leaderboard-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.7rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.4rem;
   }
   .leaderboard-table th,
   .leaderboard-table td {
     border-bottom: 1px solid var(--navy-700);
-    padding: 0.4rem;
+    padding: 0.5rem 0.4rem;
     text-align: left;
   }
   .leaderboard-table th {
     text-align: left;
+    color: var(--gold);
+    font-size: 0.35rem;
+  }
+  .leaderboard-table td {
+    color: var(--light-gray);
   }
   
   @keyframes pack-drop {

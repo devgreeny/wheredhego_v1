@@ -7,6 +7,7 @@ def create_app():
     # Create the main app
     app = Flask(__name__)
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-wheredhego')
+    app.config['GOOGLE_MAPS_API_KEY'] = os.environ.get('GOOGLE_MAPS_API_KEY', 'AIzaSyBCkAy1hVC3fp0sKAQq01-TVN8LSCVouFQ')
     
     # Force HTTPS in production only
     @app.before_request
@@ -67,6 +68,13 @@ def create_app():
     # Register the starting11 blueprint (soccer)
     from app.starting11.routes import bp as starting11_bp
     app.register_blueprint(starting11_bp, url_prefix='/starting11')
+    
+    # Register the startingtee blueprint (golf)
+    from app.startingtee.routes import bp as startingtee_bp
+    app.register_blueprint(startingtee_bp, url_prefix='/startingtee')
+    
+    # Import startingtee models to register them
+    from app.startingtee import models as startingtee_models
     
     # NFL game archived - focusing on Starting5 only
     # from app.gridiron11.routes import bp as gridiron11_bp

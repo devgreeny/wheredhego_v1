@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>StartingTee</title>
+    
+    <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('startingtee.static', filename='style.css') }}">
+</head>
+
+<body>
+    {% include '_auth_navbar.html' %}
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <div class="content">
+        <div class="header-container">
+            <h1 class="header-title">STARTINGTEE</h1>
+            <p class="header-subtitle">GUESS THE U.S. OPEN COURSE</p>
+        </div>
+        
+        {% if already_played %}
+        <p class="played-note">You have already played today. Come back tomorrow!</p>
+        {% endif %}
+        
+        <form method="POST" action="{{ url_for('startingtee.show_quiz') }}" id="quiz-form">
+            <input type="hidden" name="course_id" value="{{ course.id }}">
+            <input type="hidden" name="time_taken" id="time_taken_field" value="0">
+            <input type="hidden" name="hints_used" id="hints_used_field" value="0">
+            
+            <!-- Interactive Satellite Map -->
+            <div class="satellite-container">
+                <div id="map" class="satellite-map"></div>
+                <p class="map-hint">🔍 Drag to explore, pinch/scroll to zoom</p>
+            </div>
+            
+            <!-- Hints Section -->
+            <div class="hints-container">
+                <div class="hints-header">
+                    <span class="hints-label">NEED A HINT?</span>
+                    <span class="hints-score">Score: <span id="potential-score">4</span>/4</span>
+                </div>
+                
+                <div class="hints-buttons">
+                    <button type="button" class="hint-btn" id="hint-1" data-hint="1">
+                        <span class="hint-icon">1</span>
+                        <span class="hint-text">State</span>
+                    </button>
+                    <button type="button" class="hint-btn" id="hint-2" data-hint="2" disabled>
+                        <span class="hint-icon">2</span>
+                        <span class="hint-text">Years</span>
+                    </button>
+                    <button type="button" class="hint-btn" id="hint-3" data-hint="3" disabled>
+                        <span class="hint-icon">3</span>
+                        <span class="hint-text">Winner</span>
+                    </button>
+                </div>
+                
+                <div class="hints-revealed">
+                    <div class="hint-reveal" id="hint-1-reveal" style="display: none;">
+                        <span class="hint-label">Location:</span>
+                        <span class="hint-value">{{ course.state | default('USA', true) }}</span>
+                    </div>
+                    <div class="hint-reveal" id="hint-2-reveal" style="display: none;">
+                        <span class="hint-label">U.S. Open Years:</span>
+                        <span class="hint-value">{{ course.us_open_years[-2:] | join(', ') if course.us_open_years else 'Multiple years' }}</span>
+                    </div>
+                    <div class="hint-reveal" id="hint-3-reveal" style="display: none;">
+                        <span class="hint-label">Recent Winner:</span>
+                        <span class="hint-value">{{ course.recent_winners[0] if course.recent_winners else course.recent_winner | default('N/A', true) }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Guess Input -->
+            <div class="guess-container">
+                <label for="course_guess" class="guess-label">WHICH COURSE IS THIS?</label>
+                <input type="text" 
+                       name="course_guess" 
+                       id="course_guess" 
+                       class="course-input"
+                       placeholder="Type course name..."
+                       autocomplete="off"
+                       required 
+                       {% if already_played %}disabled{% endif %}>
+                <div class="autocomplete-dropdown" id="autocomplete-dropdown"></div>
+                
+                <button type="submit" class="submit-btn" {% if already_played %}disabled{% endif %}>
+                    Submit Guess
+                </button>
+            </div>
+        </form>
+        
+        {% include '_countdown_timer.html' %}
+    </div>
+    
+    <script>
+        // Course coordinates from database (accurate!)
+        const courseLat = {{ course.coordinates.lat | default(0) }};
+        const courseLng = {{ course.coordinates.lng | default(0) }};
+        const courseName = {{ course.name | tojson }};
+        
+        console.log('📍 Course:', courseName);
+        console.log('📍 Coordinates:', courseLat, courseLng);
+        
+        // Initialize map centered on US
+        const map = L.map('map', {
+            center: [39.8283, -98.5795],
+            zoom: 4,
+            zoomControl: true,
+            attributionControl: false
+        });
+        
+        // ESRI Satellite tiles (free, no labels!)
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            maxZoom: 19,
+        }).addTo(map);
+        
+        map.zoomControl.setPosition('bottomright');
+        
+        // Use our stored coordinates directly - no geocoding needed!
+        function loadCourse() {
+            if (courseLat && courseLng) {
+                console.log('✓ Using stored coordinates');
+                map.flyTo([courseLat, courseLng], 16, { duration: 1.5 });
+                
+                // Fetch course boundary after animation
+                setTimeout(() => fetchBoundary(courseLat, courseLng), 1600);
+            } else {
+                console.log('❌ No coordinates stored for this course');
+            }
+        }
+        
+        function fetchBoundary(lat, lng) {
+            const delta = 0.02;
+            const bbox = `${lat-delta},${lng-delta},${lat+delta},${lng+delta}`;
+            const overpassUrl = `https://overpass-api.de/api/interpreter?data=[out:json];way["leisure"="golf_course"](${bbox});out geom;`;
+            
+            fetch(overpassUrl)
+                .then(r => r.json())
+                .then(data => {
+                    if (data && data.elements) {
+                        data.elements.forEach(el => {
+                            if (el.geometry && el.geometry.length > 2) {
+                                const coords = el.geometry.map(p => [p.lat, p.lon]);
+                                L.polygon(coords, {
+                                    color: '#22c55e',
+                                    weight: 2,
+                                    fillColor: '#22c55e',
+                                    fillOpacity: 0.15
+                                }).addTo(map);
+                            }
+                        });
+                        console.log('✓ Course boundary loaded');
+                    }
+                })
+                .catch(err => console.log('Boundary error:', err));
+        }
+        
+        // Load the course immediately
+        loadCourse();
+        
+        const courseId = {{ course.id|tojson }};
+        const alreadyPlayed = {{ 'true' if already_played else 'false' }};
+        const allCourses = {{ all_courses|tojson }};
+        let hintsUsed = 0;
+        
+        // Timer
+        localStorage.setItem(`quizStart_startingtee_${courseId}`, Date.now());
+        
+        // Update potential score
+        function updateScore() {
+            const score = 4 - hintsUsed;
+            document.getElementById('potential-score').textContent = score;
+        }
+        
+        // Hint 1: Location
+        document.getElementById('hint-1').addEventListener('click', function() {
+            if (this.classList.contains('used')) return;
+            this.classList.add('used');
+            this.disabled = true;
+            
+            document.getElementById('hint-1-reveal').style.display = 'flex';
+            document.getElementById('hint-2').disabled = false;
+            hintsUsed = 1;
+            document.getElementById('hints_used_field').value = hintsUsed;
+            updateScore();
+        });
+        
+        // Hint 2: Tournament
+        document.getElementById('hint-2').addEventListener('click', function() {
+            if (this.classList.contains('used')) return;
+            this.classList.add('used');
+            this.disabled = true;
+            
+            document.getElementById('hint-2-reveal').style.display = 'flex';
+            document.getElementById('hint-3').disabled = false;
+            hintsUsed = 2;
+            document.getElementById('hints_used_field').value = hintsUsed;
+            updateScore();
+        });
+        
+        // Hint 3: Recent Winner
+        document.getElementById('hint-3').addEventListener('click', function() {
+            if (this.classList.contains('used')) return;
+            this.classList.add('used');
+            this.disabled = true;
+            
+            document.getElementById('hint-3-reveal').style.display = 'flex';
+            hintsUsed = 3;
+            document.getElementById('hints_used_field').value = hintsUsed;
+            updateScore();
+        });
+        
+        // Form submit - record time
+        document.getElementById('quiz-form').addEventListener('submit', function() {
+            const start = localStorage.getItem(`quizStart_startingtee_${courseId}`);
+            if (start) {
+                const elapsed = Math.round((Date.now() - parseInt(start, 10)) / 1000);
+                document.getElementById('time_taken_field').value = elapsed;
+            }
+        });
+        
+        // Autocomplete
+        const input = document.getElementById('course_guess');
+        const dropdown = document.getElementById('autocomplete-dropdown');
+        
+        input.addEventListener('input', function() {
+            const val = this.value.toLowerCase().trim();
+            dropdown.innerHTML = '';
+            dropdown.style.display = 'none';
+            
+            if (val.length < 2) return;
+            
+            const matches = allCourses
+                .filter(name => name.toLowerCase().includes(val))
+                .slice(0, 8);
+            
+            if (matches.length === 0) return;
+            
+            matches.forEach(name => {
+                const item = document.createElement('div');
+                item.className = 'autocomplete-item';
+                item.textContent = name;
+                item.addEventListener('click', () => {
+                    input.value = name;
+                    dropdown.style.display = 'none';
+                });
+                dropdown.appendChild(item);
+            });
+            dropdown.style.display = 'block';
+        });
+        
+        input.addEventListener('blur', () => {
+            setTimeout(() => dropdown.style.display = 'none', 200);
+        });
+        
+        if (alreadyPlayed) {
+            document.querySelector('.submit-btn').disabled = true;
+            document.getElementById('course_guess').disabled = true;
+            document.querySelectorAll('.hint-btn').forEach(btn => btn.disabled = true);
+        }
+    </script>
+</body>
+</html>

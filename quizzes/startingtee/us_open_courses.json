@@ -1,0 +1,1233 @@
+{
+  "courses": [
+    {
+      "id": "oakmont_country_club",
+      "name": "Oakmont Country Club",
+      "city": "Plum",
+      "state": "Pennsylvania",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.52611111111111,
+        "lng": -79.82638888888889
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2025",
+        "2016",
+        "2007",
+        "1994",
+        "1983",
+        "1973",
+        "1962",
+        "1953",
+        "1935",
+        "1927"
+      ],
+      "recent_winners": [
+        "J. J. Spaun",
+        "Dustin Johnson",
+        "\u00c1ngel Cabrera",
+        "Ernie Els",
+        "Larry Nelson"
+      ],
+      "recent_winner": "J. J. Spaun"
+    },
+    {
+      "id": "pinehurst_resort",
+      "name": "Pinehurst Resort",
+      "city": "Pinehurst",
+      "state": "North Carolina",
+      "country": "USA",
+      "coordinates": {
+        "lat": 35.18944444444444,
+        "lng": -79.46777777777778
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2024",
+        "2014",
+        "2005",
+        "1999"
+      ],
+      "recent_winners": [
+        "Bryson DeChambeau",
+        "Martin Kaymer",
+        "Michael Campbell",
+        "Payne Stewart"
+      ],
+      "recent_winner": "Bryson DeChambeau"
+    },
+    {
+      "id": "los_angeles_country_club",
+      "name": "Los Angeles Country Club",
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "USA",
+      "coordinates": {
+        "lat": 34.06888888888889,
+        "lng": -118.42305555555556
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2023"
+      ],
+      "recent_winners": [
+        "Wyndham Clark"
+      ],
+      "recent_winner": "Wyndham Clark"
+    },
+    {
+      "id": "the_country_club",
+      "name": "The Country Club",
+      "city": "Brookline",
+      "state": "Massachusetts",
+      "country": "USA",
+      "coordinates": {
+        "lat": 42.31333333333333,
+        "lng": -71.15083333333334
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2022",
+        "1988",
+        "1963"
+      ],
+      "recent_winners": [
+        "Matt Fitzpatrick",
+        "Curtis Strange",
+        "Julius Boros"
+      ],
+      "recent_winner": "Matt Fitzpatrick"
+    },
+    {
+      "id": "torrey_pines_golf_course",
+      "name": "Torrey Pines Golf Course",
+      "city": "San Diego",
+      "state": "California",
+      "country": "USA",
+      "coordinates": {
+        "lat": 32.904444444444444,
+        "lng": -117.24527777777777
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2021",
+        "2008"
+      ],
+      "recent_winners": [
+        "Jon Rahm",
+        "Tiger Woods"
+      ],
+      "recent_winner": "Jon Rahm"
+    },
+    {
+      "id": "winged_foot_golf_club",
+      "name": "Winged Foot Golf Club",
+      "city": "Mamaroneck",
+      "state": "New York",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.962500000000006,
+        "lng": -73.75361111111111
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2020",
+        "2006",
+        "1984",
+        "1974",
+        "1959",
+        "1929"
+      ],
+      "recent_winners": [
+        "Bryson DeChambeau",
+        "Geoff Ogilvy",
+        "Fuzzy Zoeller",
+        "Hale Irwin",
+        "Billy Casper"
+      ],
+      "recent_winner": "Bryson DeChambeau"
+    },
+    {
+      "id": "pebble_beach_golf_links",
+      "name": "Pebble Beach Golf Links",
+      "city": "Pebble Beach",
+      "state": "California",
+      "country": "USA",
+      "coordinates": {
+        "lat": 36.56861111111112,
+        "lng": -121.95055555555555
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2019",
+        "2010",
+        "2000",
+        "1992",
+        "1982",
+        "1972"
+      ],
+      "recent_winners": [
+        "Gary Woodland",
+        "Graeme McDowell",
+        "Tiger Woods",
+        "Tom Kite",
+        "Tom Watson"
+      ],
+      "recent_winner": "Gary Woodland"
+    },
+    {
+      "id": "shinnecock_hills_golf_club",
+      "name": "Shinnecock Hills Golf Club",
+      "city": "Shinnecock Hills",
+      "state": "New York",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.89388888888889,
+        "lng": -72.44
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2018",
+        "2004",
+        "1995",
+        "1986",
+        "1896"
+      ],
+      "recent_winners": [
+        "Brooks Koepka",
+        "Retief Goosen",
+        "Corey Pavin",
+        "Raymond Floyd",
+        "James Foulis"
+      ],
+      "recent_winner": "Brooks Koepka"
+    },
+    {
+      "id": "erin_hills",
+      "name": "Erin Hills",
+      "city": "Shinnecock Hills",
+      "state": "New York",
+      "country": "USA",
+      "coordinates": {
+        "lat": 43.245,
+        "lng": -88.39500000000001
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2018",
+        "2004",
+        "1995",
+        "1986",
+        "1896"
+      ],
+      "recent_winners": [
+        "Brooks Koepka",
+        "Retief Goosen",
+        "Corey Pavin",
+        "Raymond Floyd",
+        "James Foulis"
+      ],
+      "recent_winner": "Brooks Koepka"
+    },
+    {
+      "id": "chambers_bay",
+      "name": "Chambers Bay",
+      "city": "University Place",
+      "state": "Washington",
+      "country": "USA",
+      "coordinates": {
+        "lat": 47.2,
+        "lng": -122.57
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2015"
+      ],
+      "recent_winners": [
+        "Jordan Spieth"
+      ],
+      "recent_winner": "Jordan Spieth"
+    },
+    {
+      "id": "merion_golf_club",
+      "name": "Merion Golf Club",
+      "city": "Ardmore",
+      "state": "Pennsylvania",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.00111111111111,
+        "lng": -75.31194444444444
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2013",
+        "1981",
+        "1971",
+        "1950",
+        "1934"
+      ],
+      "recent_winners": [
+        "Justin Rose",
+        "David Graham",
+        "Lee Trevino",
+        "Ben Hogan",
+        "Olin Dutra"
+      ],
+      "recent_winner": "Justin Rose"
+    },
+    {
+      "id": "olympic_club",
+      "name": "Olympic Club",
+      "city": "San Francisco",
+      "state": "California[a]",
+      "country": "USA",
+      "coordinates": {
+        "lat": 37.70888888888889,
+        "lng": -122.495
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2012",
+        "1998",
+        "1987",
+        "1966",
+        "1955"
+      ],
+      "recent_winners": [
+        "Webb Simpson",
+        "Lee Janzen",
+        "Scott Simpson",
+        "Billy Casper",
+        "Jack Fleck"
+      ],
+      "recent_winner": "Webb Simpson"
+    },
+    {
+      "id": "congressional_country_club",
+      "name": "Congressional Country Club",
+      "city": "Bethesda",
+      "state": "Maryland",
+      "country": "USA",
+      "coordinates": {
+        "lat": 38.99611111111111,
+        "lng": -77.17694444444444
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2011",
+        "1997",
+        "1964"
+      ],
+      "recent_winners": [
+        "Rory McIlroy",
+        "Ernie Els",
+        "Ken Venturi"
+      ],
+      "recent_winner": "Rory McIlroy"
+    },
+    {
+      "id": "bethpage_state_park",
+      "name": "Bethpage State Park",
+      "city": "Farmingdale",
+      "state": "New York[b]",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.7525,
+        "lng": -73.4675
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2009",
+        "2002"
+      ],
+      "recent_winners": [
+        "Lucas Glover",
+        "Tiger Woods"
+      ],
+      "recent_winner": "Lucas Glover"
+    },
+    {
+      "id": "olympia_fields_country_club",
+      "name": "Olympia Fields Country Club",
+      "city": "Olympia Fields",
+      "state": "Illinois",
+      "country": "USA",
+      "coordinates": {
+        "lat": 41.52111111111111,
+        "lng": -87.68694444444445
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2003",
+        "1928"
+      ],
+      "recent_winners": [
+        "Jim Furyk",
+        "Johnny Farrell"
+      ],
+      "recent_winner": "Jim Furyk"
+    },
+    {
+      "id": "southern_hills_country_club",
+      "name": "Southern Hills Country Club",
+      "city": "Shinnecock Hills",
+      "state": "New York",
+      "country": "USA",
+      "coordinates": {
+        "lat": 36.0726361,
+        "lng": -95.9496583
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2018",
+        "2004",
+        "1995",
+        "1986",
+        "1896"
+      ],
+      "recent_winners": [
+        "Brooks Koepka",
+        "Retief Goosen",
+        "Corey Pavin",
+        "Raymond Floyd",
+        "James Foulis"
+      ],
+      "recent_winner": "Brooks Koepka"
+    },
+    {
+      "id": "oakland_hills_country_club",
+      "name": "Oakland Hills Country Club",
+      "city": "Shinnecock Hills",
+      "state": "New York",
+      "country": "USA",
+      "coordinates": {
+        "lat": 42.54388888888889,
+        "lng": -83.27694444444444
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2018",
+        "2004",
+        "1995",
+        "1986",
+        "1896"
+      ],
+      "recent_winners": [
+        "Brooks Koepka",
+        "Retief Goosen",
+        "Corey Pavin",
+        "Raymond Floyd",
+        "James Foulis"
+      ],
+      "recent_winner": "Brooks Koepka"
+    },
+    {
+      "id": "baltusrol_golf_club",
+      "name": "Baltusrol Golf Club",
+      "city": "Springfield",
+      "state": "New Jersey",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.700833333333335,
+        "lng": -74.33
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1993",
+        "1980",
+        "1967",
+        "1954"
+      ],
+      "recent_winners": [
+        "Lee Janzen",
+        "Jack Nicklaus",
+        "Jack Nicklaus",
+        "Ed Furgol"
+      ],
+      "recent_winner": "Lee Janzen"
+    },
+    {
+      "id": "hazeltine_national_golf_club",
+      "name": "Hazeltine National Golf Club",
+      "city": "Chaska",
+      "state": "Minnesota",
+      "country": "USA",
+      "coordinates": {
+        "lat": 44.83388888888889,
+        "lng": -93.5911111111111
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1991",
+        "1970"
+      ],
+      "recent_winners": [
+        "Payne Stewart",
+        "Tony Jacklin"
+      ],
+      "recent_winner": "Payne Stewart"
+    },
+    {
+      "id": "medinah_country_club",
+      "name": "Medinah Country Club",
+      "city": "Medinah",
+      "state": "Illinois",
+      "country": "USA",
+      "coordinates": {
+        "lat": 41.96611111111111,
+        "lng": -88.04805555555555
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1990",
+        "1975",
+        "1949"
+      ],
+      "recent_winners": [
+        "Hale Irwin",
+        "Lou Graham",
+        "Cary Middlecoff"
+      ],
+      "recent_winner": "Hale Irwin"
+    },
+    {
+      "id": "oak_hill_country_club",
+      "name": "Oak Hill Country Club",
+      "city": "Rochester",
+      "state": "New York[c]",
+      "country": "USA",
+      "coordinates": {
+        "lat": 43.113055555555555,
+        "lng": -77.53305555555555
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1989",
+        "1968",
+        "1956"
+      ],
+      "recent_winners": [
+        "Curtis Strange",
+        "Lee Trevino",
+        "Cary Middlecoff"
+      ],
+      "recent_winner": "Curtis Strange"
+    },
+    {
+      "id": "inverness_club",
+      "name": "Inverness Club",
+      "city": "Toledo",
+      "state": "Ohio",
+      "country": "USA",
+      "coordinates": {
+        "lat": 41.646388888888886,
+        "lng": -83.65027777777779
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1979",
+        "1957",
+        "1931",
+        "1920"
+      ],
+      "recent_winners": [
+        "Hale Irwin",
+        "Dick Mayer",
+        "Billy Burke",
+        "Ted Ray"
+      ],
+      "recent_winner": "Hale Irwin"
+    },
+    {
+      "id": "cherry_hills_country_club",
+      "name": "Cherry Hills Country Club",
+      "city": "Shinnecock Hills",
+      "state": "New York",
+      "country": "USA",
+      "coordinates": {
+        "lat": 39.643055555555556,
+        "lng": -104.96305555555556
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2018",
+        "2004",
+        "1995",
+        "1986",
+        "1896"
+      ],
+      "recent_winners": [
+        "Brooks Koepka",
+        "Retief Goosen",
+        "Corey Pavin",
+        "Raymond Floyd",
+        "James Foulis"
+      ],
+      "recent_winner": "Brooks Koepka"
+    },
+    {
+      "id": "atlanta_athletic_club",
+      "name": "Atlanta Athletic Club",
+      "city": "Duluth",
+      "state": "Georgia[d]",
+      "country": "USA",
+      "coordinates": {
+        "lat": 34.004,
+        "lng": -84.1930444
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1976"
+      ],
+      "recent_winners": [
+        "Jerry Pate"
+      ],
+      "recent_winner": "Jerry Pate"
+    },
+    {
+      "id": "champions_golf_club",
+      "name": "Champions Golf Club",
+      "city": "Houston",
+      "state": "Texas",
+      "country": "USA",
+      "coordinates": {
+        "lat": 29.983055555555556,
+        "lng": -95.53111111111112
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1969"
+      ],
+      "recent_winners": [
+        "Orville Moody"
+      ],
+      "recent_winner": "Orville Moody"
+    },
+    {
+      "id": "bellerive_country_club",
+      "name": "Bellerive Country Club",
+      "city": "St. Louis",
+      "state": "Missouri[e]",
+      "country": "USA",
+      "coordinates": {
+        "lat": 38.66,
+        "lng": -90.48305555555555
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1965"
+      ],
+      "recent_winners": [
+        "Gary Player"
+      ],
+      "recent_winner": "Gary Player"
+    },
+    {
+      "id": "northwood_club",
+      "name": "Northwood Club",
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "USA",
+      "coordinates": {
+        "lat": 32.93194444444444,
+        "lng": -96.7925
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1952"
+      ],
+      "recent_winners": [
+        "Julius Boros"
+      ],
+      "recent_winner": "Julius Boros"
+    },
+    {
+      "id": "riviera_country_club",
+      "name": "Riviera Country Club",
+      "city": "Pacific Palisades",
+      "state": "California[f]",
+      "country": "USA",
+      "coordinates": {
+        "lat": 34.05,
+        "lng": -118.5
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1948"
+      ],
+      "recent_winners": [
+        "Ben Hogan"
+      ],
+      "recent_winner": "Ben Hogan"
+    },
+    {
+      "id": "st._louis_country_club",
+      "name": "St. Louis Country Club",
+      "city": "Ladue",
+      "state": "Missouri",
+      "country": "USA",
+      "coordinates": {
+        "lat": 38.650444,
+        "lng": -90.379306
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1947"
+      ],
+      "recent_winners": [
+        "Lew Worsham"
+      ],
+      "recent_winner": "Lew Worsham"
+    },
+    {
+      "id": "canterbury_golf_club",
+      "name": "Canterbury Golf Club",
+      "city": "Beachwood",
+      "state": "Ohio",
+      "country": "USA",
+      "coordinates": {
+        "lat": 41.469722222222224,
+        "lng": -81.52277777777778
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1946",
+        "1940"
+      ],
+      "recent_winners": [
+        "Lloyd Mangrum",
+        "Lawson Little"
+      ],
+      "recent_winner": "Lloyd Mangrum"
+    },
+    {
+      "id": "colonial_country_club_fort_worth",
+      "name": "Colonial Country Club (Fort Worth)",
+      "city": "Fort Worth",
+      "state": "Texas",
+      "country": "USA",
+      "coordinates": {
+        "lat": 32.716944444444444,
+        "lng": -97.37305555555555
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1941"
+      ],
+      "recent_winners": [
+        "Craig Wood"
+      ],
+      "recent_winner": "Craig Wood"
+    },
+    {
+      "id": "philadelphia_country_club",
+      "name": "Philadelphia Country Club",
+      "city": "Gladwyne",
+      "state": "Pennsylvania",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.06361111111111,
+        "lng": -75.29166666666667
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1939"
+      ],
+      "recent_winners": [
+        "Byron Nelson"
+      ],
+      "recent_winner": "Byron Nelson"
+    },
+    {
+      "id": "north_shore_country_club",
+      "name": "North Shore Country Club",
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "USA",
+      "coordinates": {
+        "lat": 42.075,
+        "lng": -87.78527777777778
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "2023"
+      ],
+      "recent_winners": [
+        "Wyndham Clark"
+      ],
+      "recent_winner": "Wyndham Clark"
+    },
+    {
+      "id": "fresh_meadow_country_club",
+      "name": "Fresh Meadow Country Club",
+      "city": "Queens",
+      "state": "New York",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.77583333333333,
+        "lng": -73.70861111111111
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1932"
+      ],
+      "recent_winners": [
+        "Gene Sarazen"
+      ],
+      "recent_winner": "Gene Sarazen"
+    },
+    {
+      "id": "interlachen_country_club",
+      "name": "Interlachen Country Club",
+      "city": "Edina",
+      "state": "Minnesota",
+      "country": "USA",
+      "coordinates": {
+        "lat": 44.915277777777774,
+        "lng": -93.37972222222221
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1930"
+      ],
+      "recent_winners": [
+        "Bobby Jones (a)"
+      ],
+      "recent_winner": "Bobby Jones (a)"
+    },
+    {
+      "id": "scioto_country_club",
+      "name": "Scioto Country Club",
+      "city": "Columbus",
+      "state": "Ohio",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.00194444444445,
+        "lng": -83.075
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1926"
+      ],
+      "recent_winners": [
+        "Bobby Jones (a)"
+      ],
+      "recent_winner": "Bobby Jones (a)"
+    },
+    {
+      "id": "worcester_country_club",
+      "name": "Worcester Country Club",
+      "city": "Worcester",
+      "state": "Massachusetts",
+      "country": "USA",
+      "coordinates": {
+        "lat": 42.32083333333334,
+        "lng": -71.7786111111111
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1925"
+      ],
+      "recent_winners": [
+        "Willie Macfarlane"
+      ],
+      "recent_winner": "Willie Macfarlane"
+    },
+    {
+      "id": "inwood_country_club",
+      "name": "Inwood Country Club",
+      "city": "Inwood",
+      "state": "New York",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.62111111111111,
+        "lng": -73.75611111111111
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1923"
+      ],
+      "recent_winners": [
+        "Bobby Jones (a)"
+      ],
+      "recent_winner": "Bobby Jones (a)"
+    },
+    {
+      "id": "skokie_country_club",
+      "name": "Skokie Country Club",
+      "city": "Glencoe",
+      "state": "Illinois",
+      "country": "USA",
+      "coordinates": {
+        "lat": 42.12833333333333,
+        "lng": -87.76194444444444
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1922"
+      ],
+      "recent_winners": [
+        "Gene Sarazen"
+      ],
+      "recent_winner": "Gene Sarazen"
+    },
+    {
+      "id": "columbia_country_club",
+      "name": "Columbia Country Club",
+      "city": "Chevy Chase",
+      "state": "Maryland",
+      "country": "USA",
+      "coordinates": {
+        "lat": 38.98916666666667,
+        "lng": -77.07833333333333
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1921"
+      ],
+      "recent_winners": [
+        "Jim Barnes"
+      ],
+      "recent_winner": "Jim Barnes"
+    },
+    {
+      "id": "brae_burn_country_club",
+      "name": "Brae Burn Country Club",
+      "city": "West Newton",
+      "state": "Massachusetts",
+      "country": "USA",
+      "coordinates": {
+        "lat": 42.3385194,
+        "lng": -71.2340278
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1919"
+      ],
+      "recent_winners": [
+        "Walter Hagen"
+      ],
+      "recent_winner": "Walter Hagen"
+    },
+    {
+      "id": "the_minikahda_club",
+      "name": "The Minikahda Club",
+      "city": "Minneapolis",
+      "state": "Minnesota",
+      "country": "USA",
+      "coordinates": {
+        "lat": 44.94305555555555,
+        "lng": -93.32194444444444
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1916"
+      ],
+      "recent_winners": [
+        "Chick Evans (a)"
+      ],
+      "recent_winner": "Chick Evans (a)"
+    },
+    {
+      "id": "midlothian_country_club",
+      "name": "Midlothian Country Club",
+      "city": "Midlothian",
+      "state": "Illinois",
+      "country": "USA",
+      "coordinates": {
+        "lat": 41.63111111111111,
+        "lng": -87.7461111111111
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1914"
+      ],
+      "recent_winners": [
+        "Walter Hagen"
+      ],
+      "recent_winner": "Walter Hagen"
+    },
+    {
+      "id": "grover_cleveland_golf_course",
+      "name": "Grover Cleveland Golf Course",
+      "city": "",
+      "state": "",
+      "country": "USA",
+      "coordinates": {
+        "lat": 42.961111111111116,
+        "lng": -78.80916666666667
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [],
+      "recent_winners": [],
+      "recent_winner": ""
+    },
+    {
+      "id": "chicago_golf_club",
+      "name": "Chicago Golf Club",
+      "city": "Wheaton",
+      "state": "Illinois",
+      "country": "USA",
+      "coordinates": {
+        "lat": 41.84861111111111,
+        "lng": -88.11611111111111
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1911",
+        "1900",
+        "1897"
+      ],
+      "recent_winners": [
+        "John McDermott",
+        "Harry Vardon",
+        "Joe Lloyd"
+      ],
+      "recent_winner": "John McDermott"
+    },
+    {
+      "id": "philadelphia_cricket_club",
+      "name": "Philadelphia Cricket Club",
+      "city": "Gladwyne",
+      "state": "Pennsylvania",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.06444444444444,
+        "lng": -75.20861111111111
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1939"
+      ],
+      "recent_winners": [
+        "Byron Nelson"
+      ],
+      "recent_winner": "Byron Nelson"
+    },
+    {
+      "id": "englewood_golf_club",
+      "name": "Englewood Golf Club",
+      "city": "Englewood",
+      "state": "New Jersey",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.871944444444445,
+        "lng": -73.97500000000001
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1909"
+      ],
+      "recent_winners": [
+        "George Sargent"
+      ],
+      "recent_winner": "George Sargent"
+    },
+    {
+      "id": "myopia_hunt_club",
+      "name": "Myopia Hunt Club",
+      "city": "South Hamilton",
+      "state": "Massachusetts",
+      "country": "USA",
+      "coordinates": {
+        "lat": 42.60888888888889,
+        "lng": -70.85888888888888
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1908",
+        "1905",
+        "1901",
+        "1898"
+      ],
+      "recent_winners": [
+        "Fred McLeod",
+        "Willie Anderson",
+        "Willie Anderson",
+        "Fred Herd"
+      ],
+      "recent_winner": "Fred McLeod"
+    },
+    {
+      "id": "onwentsia_club",
+      "name": "Onwentsia Club",
+      "city": "Lake Forest",
+      "state": "Illinois",
+      "country": "USA",
+      "coordinates": {
+        "lat": 42.24305555555556,
+        "lng": -87.84305555555555
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1906"
+      ],
+      "recent_winners": [
+        "Alex Smith"
+      ],
+      "recent_winner": "Alex Smith"
+    },
+    {
+      "id": "garden_city_golf_club",
+      "name": "Garden City Golf Club",
+      "city": "Garden City",
+      "state": "New York",
+      "country": "USA",
+      "coordinates": {
+        "lat": 40.72666666666667,
+        "lng": -73.64250000000001
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1902"
+      ],
+      "recent_winners": [
+        "Laurie Auchterlonie"
+      ],
+      "recent_winner": "Laurie Auchterlonie"
+    },
+    {
+      "id": "baltimore_country_club",
+      "name": "Baltimore Country Club",
+      "city": "Baltimore",
+      "state": "Maryland",
+      "country": "USA",
+      "coordinates": {
+        "lat": 39.44194444444444,
+        "lng": -76.66305555555556
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1899"
+      ],
+      "recent_winners": [
+        "Willie Smith"
+      ],
+      "recent_winner": "Willie Smith"
+    },
+    {
+      "id": "newport_country_club",
+      "name": "Newport Country Club",
+      "city": "Newport",
+      "state": "Rhode Island",
+      "country": "USA",
+      "coordinates": {
+        "lat": 41.46194444444445,
+        "lng": -71.34694444444445
+      },
+      "tournaments": [
+        "U.S. Open"
+      ],
+      "us_open_years": [
+        "1895"
+      ],
+      "recent_winners": [
+        "Horace Rawlins"
+      ],
+      "recent_winner": "Horace Rawlins"
+    }
+  ]
+}

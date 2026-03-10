@@ -172,22 +172,22 @@ body {
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* 11) Select2 Dropdown (“Enter Guess”) */
+/* 11) Select2 Dropdown ("Enter Guess") - Dark Retro Theme */
 .card .select2-container {
   width: 90% !important;
   margin: 0 auto 0.528rem;
 }
 
 .select2-container--classic .select2-selection--single {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding: 0.5rem 0.6rem !important;
   display: flex !important;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  height: 1.232rem;
-  background-color: #ffffff;
-  border-radius: 0.25rem;
+  height: auto !important;
+  background: var(--navy-900) !important;
+  border: 2px solid var(--navy-700) !important;
+  border-radius: 8px !important;
 }
 
 .select2-container--classic .select2-selection--single
@@ -195,10 +195,11 @@ body {
   display: block;
   width: 100%;
   text-align: center !important;
-  line-height: 1.232rem;
+  line-height: 1.4;
   padding: 0;
-  font-size: 0.484rem;
-  color: var(--grayish);
+  font-size: 0.45rem;
+  font-family: 'Press Start 2P', monospace !important;
+  color: var(--light-gray) !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -206,22 +207,42 @@ body {
 
 .select2-container--classic .select2-selection--single
   .select2-selection__arrow {
-  right: 0.264rem;
+  right: 0.4rem;
+}
+
+.select2-container--classic .select2-selection--single
+  .select2-selection__arrow b {
+  border-color: var(--gold) transparent transparent transparent !important;
+}
+
+.select2-container--classic .select2-dropdown {
+  background: var(--navy-900) !important;
+  border: 2px solid var(--navy-700) !important;
+  border-radius: 8px !important;
 }
 
 .select2-container--classic .select2-results__option {
-  color: #000000 !important;
+  color: var(--light-gray) !important;
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 0.4rem !important;
+  padding: 0.5rem !important;
 }
 
 .select2-container--classic
   .select2-results__option--highlighted[aria-selected] {
-  background-color: #e5e7eb !important;
-  color: #000000 !important;
+  background: var(--gold) !important;
+  color: var(--navy-900) !important;
 }
 
 .select2-container--classic
   .select2-search--dropdown .select2-search__field {
-  color: #000000 !important;
+  background: var(--navy-800) !important;
+  border: 1px solid var(--navy-700) !important;
+  border-radius: 6px !important;
+  color: var(--light-gray) !important;
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 0.4rem !important;
+  padding: 0.4rem !important;
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
@@ -271,40 +292,72 @@ body {
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* 14) Result Modal */
+/* 14) Result Modal - Consistent Retro Theme */
 .modal {
   display: none;
   position: fixed;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -35%);
-  background-color: var(--modal-bg);
+  background: var(--navy-800);
   border: 2px solid var(--gold);
-  padding: 0.88rem 1.232rem;
-  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
   color: var(--gold);
   text-align: center;
   z-index: 999;
-  margin-bottom: 2.64rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+  width: 320px;
+}
+
+.modal-content {
+  font-size: 0.5rem;
+  line-height: 1.6;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  color: var(--light-gray);
 }
 
 .modal-content .missed {
   color: var(--red);
-  font-size: 0.484rem;
-  margin: 0.44rem 0;
-  margin-top: 0.792rem;
+  font-size: 0.45rem;
+  margin: 0.5rem 0;
 }
 
-.play-again-modal {
+.play-again-modal,
+.modal-btn {
   display: inline-block;
-  margin-top: 0.616rem;
-  padding: 0.264rem 0.616rem;
-  background-color: var(--gold);
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: var(--gold);
   color: var(--navy-900);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.45rem;
   font-weight: bold;
-  border-radius: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
   text-decoration: none;
-  font-size: 0.484rem;
+  transition: all 0.2s ease;
+}
+
+.play-again-modal:hover,
+.modal-btn:hover {
+  background: #eab308;
+  transform: translateY(-1px);
+}
+
+.modal-btn.secondary {
+  background: var(--navy-700);
+  color: var(--light-gray);
+  margin-left: 0.75rem;
+}
+
+.modal-btn.secondary:hover {
+  background: #475569;
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
@@ -656,15 +709,31 @@ body {
   animation-delay: calc(var(--delay, 0s) + 0.5s);
 }
 
-.share-pill {
+.share-pill,
+.share-btn {
   background: var(--gold);
   color: var(--navy-900);
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
   margin-top: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.share-pill:hover,
+.share-btn:hover {
+  background: #eab308;
+  transform: translateY(-1px);
+}
+
+.share-confirm {
+  display: inline-block;
+  margin-left: 1rem;
+  color: var(--green);
+  font-size: 0.5rem;
 }
 
 .leaderboard-link {
@@ -681,38 +750,48 @@ body {
 .leaderboard-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.7rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.4rem;
 }
 .leaderboard-table th,
 .leaderboard-table td {
   border-bottom: 1px solid var(--navy-700);
-  padding: 0.4rem;
+  padding: 0.5rem 0.4rem;
 }
 .leaderboard-table th {
   text-align: left;
+  color: var(--gold);
+  font-size: 0.35rem;
+}
+.leaderboard-table td {
+  color: var(--light-gray);
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* Archive Modal */
+/* Archive Modal - Consistent Retro Theme */
 .archive-modal {
   display: none;
   position: fixed;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
-  background-color: var(--modal-bg);
+  background: var(--navy-800);
   border: 2px solid var(--gold);
-  padding: 1rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.25);
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   color: var(--gold);
   z-index: 1001;
   text-align: center;
-  font-family: 'Press Start 2P', monospace;
-  color: var(--gold);
-  z-index: 1001;
-  text-align: center;
+  max-width: 90%;
+  width: 360px;
 }
+
+.archive-modal h3 {
+  font-size: 0.6rem;
+  margin-bottom: 1rem;
+}
+
 .archive-modal ul {
   list-style: none;
   margin: 0;
@@ -720,18 +799,38 @@ body {
   max-height: 240px;
   overflow-y: auto;
 }
+
 .archive-modal li {
   margin-bottom: 0.5rem;
+}
+
+.archive-modal a {
+  color: var(--light-gray);
+  text-decoration: none;
+  font-size: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.archive-modal a:hover {
+  color: var(--gold);
 }
 
 .close-btn {
   display: block;
   margin-bottom: 0.75rem;
-  background: none;
+  background: transparent;
   border: 1px solid var(--gold);
   color: var(--gold);
-  padding: 0.25rem 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
   cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: rgba(250, 204, 21, 0.1);
 }
 
 .past-quiz-line {
