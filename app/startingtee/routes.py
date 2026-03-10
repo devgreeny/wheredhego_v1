@@ -68,7 +68,7 @@ def show_quiz():
     from app.utils.daily_limits import has_played_today, mark_played_today
     
     # TESTING MODE: Set to False for production
-    TESTING_MODE = True  # Keep True during development
+    TESTING_MODE = False  # Production: one play per day
     
     if request.method == "POST":
         if not TESTING_MODE:

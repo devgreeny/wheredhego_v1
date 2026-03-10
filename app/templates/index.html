@@ -66,19 +66,28 @@
     /* N64 Cartridge Grid */
     .grid{ 
       display: grid; 
-      gap: 32px; 
-      grid-template-columns: repeat(2, 1fr); 
-      max-width: 520px; 
+      gap: 28px; 
+      grid-template-columns: repeat(3, 1fr); 
+      max-width: 720px; 
       margin: 0 auto;
       padding: 10px;
     }
-    @media (max-width: 580px) { 
+    @media (max-width: 720px) { 
       .grid { 
-        grid-template-columns: 1fr; 
-        max-width: 220px;
+        grid-template-columns: repeat(2, 1fr); 
+        max-width: 440px;
         gap: 24px;
       }
-      /* On mobile, cartridges go straight down - use !important to override */
+    }
+    @media (max-width: 480px) { 
+      .grid { 
+        grid-template-columns: 1fr; 
+        max-width: 200px;
+        gap: 20px;
+      }
+    }
+    /* On mobile, cartridges go straight down - use !important to override */
+    @media (max-width: 580px) {
       .cartridge.inserting.from-left,
       .cartridge.inserting.from-right,
       .cartridge.inserting.from-center {
@@ -295,6 +304,9 @@
     .cartridge-label.soccer {
       background: linear-gradient(145deg, #2eb8b8 0%, #1e6091 50%, #1a365d 100%);
     }
+    .cartridge-label.golf {
+      background: linear-gradient(145deg, #4ade80 0%, #22c55e 40%, #166534 100%);
+    }
 
     .cartridge-title {
       font-family: "Press Start 2P";
@@ -464,7 +476,7 @@
           
           <!-- Starting11 Cartridge -->
           <div class="cartridge-wrapper">
-            <a href="/starting11" class="cartridge" data-position="right">
+            <a href="/starting11" class="cartridge" data-position="center">
               <div class="cartridge-body">
                 <div class="cartridge-ridges"></div>
                 <div class="cartridge-edge-left">WHEREDHEGO</div>
@@ -472,6 +484,23 @@
                 <div class="cartridge-label soccer">
                   <div class="cartridge-title">STARTING11</div>
                   <div class="cartridge-desc">Name the nation</div>
+                  <div class="cartridge-play">► PLAY</div>
+                </div>
+                <div class="cartridge-notch"></div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- StartingTee Cartridge -->
+          <div class="cartridge-wrapper">
+            <a href="/startingtee" class="cartridge" data-position="right">
+              <div class="cartridge-body">
+                <div class="cartridge-ridges"></div>
+                <div class="cartridge-edge-left">WHEREDHEGO</div>
+                <div class="cartridge-edge-right">WHG-03</div>
+                <div class="cartridge-label golf">
+                  <div class="cartridge-title">STARTINGTEE</div>
+                  <div class="cartridge-desc">Spot the course</div>
                   <div class="cartridge-play">► PLAY</div>
                 </div>
                 <div class="cartridge-notch"></div>
