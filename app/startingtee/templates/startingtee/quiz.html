@@ -11,6 +11,11 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('startingtee.static', filename='style.css') }}">
+    
+    <!-- Select2 for dropdown (same as other games) -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
 <body>
@@ -83,15 +88,12 @@
             <!-- Guess Input -->
             <div class="guess-container">
                 <label for="course_guess" class="guess-label">WHICH COURSE IS THIS?</label>
-                <input type="text" 
-                       name="course_guess" 
-                       id="course_guess" 
-                       class="course-input"
-                       placeholder="Type course name..."
-                       autocomplete="off"
-                       required 
-                       {% if already_played %}disabled{% endif %}>
-                <div class="autocomplete-dropdown" id="autocomplete-dropdown"></div>
+                <select name="course_guess" id="course_guess" class="course-select" required {% if already_played %}disabled{% endif %}>
+                    <option value="" disabled selected>Select a course...</option>
+                    {% for course_name in all_courses %}
+                    <option value="{{ course_name }}">{{ course_name }}</option>
+                    {% endfor %}
+                </select>
                 
                 <button type="submit" class="submit-btn" {% if already_played %}disabled{% endif %}>
                     Submit Guess
@@ -229,66 +231,22 @@
             }
         });
         
-        // Autocomplete dropdown
-        const input = document.getElementById('course_guess');
-        const dropdown = document.getElementById('autocomplete-dropdown');
-        
-        function showDropdown(filter = '') {
-            dropdown.innerHTML = '';
-            const val = filter.toLowerCase().trim();
-            
-            // Filter courses or show all if no filter
-            let matches = allCourses;
-            if (val.length > 0) {
-                matches = allCourses.filter(name => name.toLowerCase().includes(val));
-            }
-            
-            if (matches.length === 0) {
-                dropdown.style.display = 'none';
-                return;
-            }
-            
-            // Show up to 15 matches (or all if fewer)
-            matches.slice(0, 15).forEach(name => {
-                const item = document.createElement('div');
-                item.className = 'autocomplete-item';
-                item.textContent = name;
-                item.addEventListener('mousedown', (e) => {
-                    e.preventDefault();
-                    input.value = name;
-                    dropdown.style.display = 'none';
-                });
-                dropdown.appendChild(item);
+        // Initialize Select2 dropdown (same as other games)
+        $(function() {
+            $('#course_guess').select2({
+                width: '100%',
+                placeholder: 'Type or select a course...',
+                theme: 'classic',
+                allowClear: true,
+                tags: true
             });
             
-            // Show count if more matches available
-            if (matches.length > 15) {
-                const more = document.createElement('div');
-                more.className = 'autocomplete-more';
-                more.textContent = `... and ${matches.length - 15} more (keep typing)`;
-                dropdown.appendChild(more);
+            if (alreadyPlayed) {
+                $('.submit-btn').prop('disabled', true);
+                $('#course_guess').prop('disabled', true);
+                $('.hint-btn').prop('disabled', true);
             }
-            
-            dropdown.style.display = 'block';
-        }
-        
-        input.addEventListener('input', function() {
-            showDropdown(this.value);
         });
-        
-        input.addEventListener('focus', function() {
-            showDropdown(this.value);
-        });
-        
-        input.addEventListener('blur', () => {
-            setTimeout(() => dropdown.style.display = 'none', 200);
-        });
-        
-        if (alreadyPlayed) {
-            document.querySelector('.submit-btn').disabled = true;
-            document.getElementById('course_guess').disabled = true;
-            document.querySelectorAll('.hint-btn').forEach(btn => btn.disabled = true);
-        }
     </script>
 </body>
 </html>

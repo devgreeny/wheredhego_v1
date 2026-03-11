@@ -7,7 +7,6 @@ def create_app():
     # Create the main app
     app = Flask(__name__)
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-wheredhego')
-    app.config['GOOGLE_MAPS_API_KEY'] = os.environ.get('GOOGLE_MAPS_API_KEY', 'AIzaSyBCkAy1hVC3fp0sKAQq01-TVN8LSCVouFQ')
     
     # Force HTTPS in production only
     @app.before_request

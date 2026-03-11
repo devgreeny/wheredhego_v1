@@ -274,47 +274,106 @@ html, body {
     cursor: not-allowed;
 }
 
-/* Autocomplete */
-.autocomplete-dropdown {
-    position: absolute;
-    left: 1.5rem;
-    right: 1.5rem;
-    top: calc(1.25rem + 0.6rem + 1.25rem + 0.85rem + 0.85rem + 2px + 0.5rem);
-    background: var(--navy-800);
-    border: 1px solid var(--navy-600);
-    border-radius: 4px;
-    max-height: 200px;
-    overflow-y: auto;
-    z-index: 100;
-    display: none;
+/* Select2 Dark Theme Override */
+.select2-container--classic .select2-selection--single {
+    background: var(--navy-900) !important;
+    border: 2px solid var(--navy-700) !important;
+    border-radius: 8px !important;
+    height: auto !important;
+    padding: 0.5rem !important;
 }
 
-.autocomplete-item {
-    padding: 0.6rem 0.75rem;
-    color: var(--light-gray);
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.45rem;
-    cursor: pointer;
-    border-bottom: 1px solid var(--navy-700);
+.select2-container--classic .select2-selection--single:focus {
+    border-color: var(--gold) !important;
 }
 
-.autocomplete-item:last-child {
-    border-bottom: none;
+.select2-container--classic .select2-selection--single .select2-selection__rendered {
+    color: var(--light-gray) !important;
+    font-family: 'Press Start 2P', monospace !important;
+    font-size: 0.5rem !important;
+    line-height: 1.5 !important;
+    padding-left: 0.5rem !important;
 }
 
-.autocomplete-item:hover {
-    background: var(--gold);
-    color: var(--navy-900);
+.select2-container--classic .select2-selection--single .select2-selection__placeholder {
+    color: var(--grayish) !important;
 }
 
-.autocomplete-more {
-    padding: 0.5rem 0.75rem;
-    color: var(--grayish);
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.35rem;
-    font-style: italic;
-    text-align: center;
-    border-top: 1px solid var(--navy-700);
+.select2-container--classic .select2-selection--single .select2-selection__arrow {
+    background: transparent !important;
+    border-left: none !important;
+    height: 100% !important;
+}
+
+.select2-container--classic .select2-selection--single .select2-selection__arrow b {
+    border-color: var(--grayish) transparent transparent transparent !important;
+}
+
+.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent var(--gold) transparent !important;
+}
+
+.select2-container--classic .select2-dropdown {
+    background: var(--navy-800) !important;
+    border: 2px solid var(--navy-700) !important;
+    border-radius: 8px !important;
+    margin-top: 4px !important;
+}
+
+.select2-container--classic .select2-search--dropdown {
+    padding: 0.5rem !important;
+    background: var(--navy-800) !important;
+}
+
+.select2-container--classic .select2-search--dropdown .select2-search__field {
+    background: var(--navy-900) !important;
+    border: 1px solid var(--navy-700) !important;
+    border-radius: 4px !important;
+    color: var(--light-gray) !important;
+    font-family: 'Press Start 2P', monospace !important;
+    font-size: 0.45rem !important;
+    padding: 0.5rem !important;
+}
+
+.select2-container--classic .select2-search--dropdown .select2-search__field:focus {
+    border-color: var(--gold) !important;
+    outline: none !important;
+}
+
+.select2-container--classic .select2-results__option {
+    background: var(--navy-800) !important;
+    color: var(--light-gray) !important;
+    font-family: 'Press Start 2P', monospace !important;
+    font-size: 0.45rem !important;
+    padding: 0.6rem 0.75rem !important;
+    border-bottom: 1px solid var(--navy-700) !important;
+}
+
+.select2-container--classic .select2-results__option:last-child {
+    border-bottom: none !important;
+}
+
+.select2-container--classic .select2-results__option--highlighted {
+    background: var(--gold) !important;
+    color: var(--navy-900) !important;
+}
+
+.select2-container--classic .select2-results__option--selected {
+    background: rgba(250, 204, 21, 0.15) !important;
+    color: var(--gold) !important;
+}
+
+.select2-container--classic .select2-results {
+    max-height: 250px !important;
+    overflow-y: auto !important;
+}
+
+.select2-dropdown--below {
+    border-top: none !important;
+}
+
+.select2-dropdown--above {
+    border-bottom: none !important;
 }
 
 /* Results Page */
